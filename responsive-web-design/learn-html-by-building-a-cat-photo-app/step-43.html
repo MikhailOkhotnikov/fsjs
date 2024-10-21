@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Шаг 42</title>
+  <title>Шаг 43</title>
 </head>
 <body>
-  <h1>Шаг 42</h1>
-
-  <p>Элемент <code>button</code> используется для создания интерактивной кнопки.</p>
+  <h1>Шаг 43</h1>
 
   <p>
-    Добавьте элемент <code>button</code> с текстом <code>Отправить</code> под элементом input .
-    По умолчанию при нажатии на кнопку формы без каких-либо атрибутов форма отправляется в место, указанное в атрибуте action формы.
+    Несмотря на то, что вы добавили кнопку под полем ввода текста, на странице они отображаются рядом друг с другом.
+    Это происходит потому, что элементы <code>input</code> и <code>button</code> являются встроенными элементами, которые не отображаются на новых строках.
+  </p>
+
+  <p>
+    Добавленная вами кнопка по умолчанию отправляет форму. Однако использование поведения по умолчанию может привести к путанице.
+    Добавьте атрибут <code>type</code> со значением <code>submit</code> к <code>button</code> , чтобы было понятно, что это кнопка отправки.
   </p>
 
   <pre>
@@ -56,6 +59,7 @@
               &lt;h2&gt;Кошачья форма&lt;/h2&gt;
               &lt;form action="https://freecatphotoapp.com/submit-cat-photo"&gt;
                 &lt;input type="text" name="catphotourl" placeholder="cat photo URL" required&gt;
+                &lt;button&gt;Отправить&lt;/button&gt;
               &lt;/form&gt;
             &lt;/section&gt;
           &lt;/main&gt;
@@ -64,7 +68,7 @@
     </code>
   </pre>
 
-  <a href="step-41.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-43.html">Следующий</a>
+  <a href="step-42.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-44.html">Следующий</a>
 
 </body>
 </html>
