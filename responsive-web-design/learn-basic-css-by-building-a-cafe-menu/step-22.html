@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шаг 22</title>
+</head>
+<body>
+  <h1>Шаг 22</h1>
+
+  <p>Комментарии в CSS выглядят следующим образом:</p>
+
+  <p>Пример кода</p>
+  <pre>
+    <code>
+      /* прокомментируйте здесь */
+    </code>
+  </pre>
+
+  <p>
+    В вашем файле стилей закомментируйте строку, содержащую свойство <code>background-color</code> и значение,
+    чтобы увидеть эффект от изменения только элемента <code>#menu</code>. При этом фон снова станет белым.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Меню кафе&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div id="menu"&gt;
+              &lt;main&gt;
+              &lt;h1&gt;КЕМПЕР КАФЕ&lt;/h1&gt;
+              &lt;p&gt;Основано в 2020&lt;/p&gt;
+              &lt;section&gt;
+                &lt;h2&gt;Кофе&lt;/h2&gt;
+              &lt;/section&gt;
+              &lt;/main&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset>
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1, h2, p {
+          text-align: center;
+        }
+
+        body {
+          background-color: burlywood;
+        }
+
+        #menu {
+          width: 300px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-21.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-23.html">Следующий</a>
+
+</body>
+</html>
