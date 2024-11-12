@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шаг 43</title>
+</head>
+<body>
+  <h1>Шаг 43</h1>
+
+  <p>
+    Затем расположите остальные элементы <code>p</code> так, чтобы они находились на одной строке без пробелов между ними.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Меню кафе&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div class="menu"&gt;
+              &lt;main&gt;
+              &lt;h1&gt;КЕМПЕР КАФЕ&lt;/h1&gt;
+              &lt;p&gt;Основано в 2020&lt;/p&gt;
+              &lt;section&gt;
+                &lt;h2&gt;Кофе&lt;/h2&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="flavor"&gt;Французская ваниль&lt;/p&gt;&lt;p class="price"&gt;300&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p&gt;Макиато с карамелью&lt;/p&gt;
+                  &lt;p&gt;375&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p&gt;Тыквенная приправа&lt;/p&gt;
+                  &lt;p&gt;350&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p&gt;Фундук&lt;/p&gt;
+                  &lt;p&gt;400&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p&gt;Мокко&lt;/p&gt;
+                  &lt;p&gt;450&lt;/p&gt;
+                &lt;/article&gt;
+              &lt;/section&gt;
+              &lt;/main&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset>
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1, h2, p {
+          text-align: center;
+        }
+
+        body {
+          background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+        }
+
+        .menu {
+          width: 80%;
+          background-color: burlywood;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .flavor {
+          text-align: left;
+          width: 50%;
+        }
+        
+        .price {
+          text-align: right;
+          width: 50%;
+        }
+
+        .item p {
+          display: inline-block;
+        }        
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-42.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-44.html">Следующий</a>
+
+</body>
+</html>
