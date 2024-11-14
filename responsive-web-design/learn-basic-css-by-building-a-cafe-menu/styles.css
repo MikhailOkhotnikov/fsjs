@@ -1,3 +1,17 @@
 body {
-  background-color: grey;
+  background-color: white;
+}
+
+fieldset {
+  width: 48%;
+  display: inline-block;
+}
+
+.html {
+  margin-right: auto;
+}
+
+.css {
+  margin-left: auto;
+  align-items: top;
 }
