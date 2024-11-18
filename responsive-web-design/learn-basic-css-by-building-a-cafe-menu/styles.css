@@ -2,6 +2,21 @@ body {
   background-color: white;
 }
 
+code {
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  background: grey;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+pre code {
+  border: none;
+  background: none;
+  padding: none;
+}
+
 fieldset {
   width: 48%;
   display: inline-block;
