@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 87</title>
+</head>
+<body>
+  <h1>Шаг 87</h1>
+
+  <p>
+    Теперь примените класс <code>address</code> к <code>p</code> элементу, содержащему адрес улицы <code>123 Free Code Camp Drive</code>.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;title&gt;Меню кафе&lt;/title&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div class="menu"&gt;
+              &lt;main&gt;
+              &lt;h1&gt;КЕМПЕР КАФЕ&lt;/h1&gt;
+              &lt;p class="established"&gt;Основано в 2020&lt;/p&gt;
+              &lt;hr&gt;
+              &lt;section&gt;
+                &lt;h2&gt;Кофе&lt;/h2&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="flavor"&gt;Французская ваниль&lt;/p&gt;&lt;p class="price"&gt;300&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="flavor"&gt;Макиато с карамелью&lt;/p&gt;&lt;p class="price"&gt;375&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="flavor"&gt;Тыквенная приправа&lt;/p&gt;&lt;p class="price"&gt;350&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="flavor"&gt;Фундук&lt;/p&gt;&lt;p class="price"&gt;400&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="flavor"&gt;Мокко&lt;/p&gt;&lt;p class="price"&gt;450&lt;/p&gt;
+                &lt;/article&gt;
+              &lt;/section&gt;
+              &lt;section&gt;
+                &lt;h2&gt;Десерты&lt;/h2&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="dessert"&gt;Пончик&lt;/p&gt;&lt;p class="price"&gt;150&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="dessert"&gt;Вишневый пирог&lt;/p&gt;&lt;p class="price"&gt;275&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="dessert"&gt;Чизкейк&lt;/p&gt;&lt;p class="price"&gt;300&lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article class="item"&gt;
+                  &lt;p class="dessert"&gt;Булочка с корицей&lt;/p&gt;&lt;p class="price"&gt;250&lt;/p&gt;
+                &lt;/article&gt;
+              &lt;/section&gt;
+              &lt;/main&gt;
+              &lt;hr class="bottom-line"&gt;
+              &lt;footer&gt;
+                &lt;p&gt;
+                  &lt;a href="https://www.freecodecamp.org" targer="_blank"&gt;Посетите наш веб-сайт&lt;/a&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                  123 Free Code Camp Drive
+                &lt;/p&gt;
+              &lt;/footer&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1, h2, p {
+          text-align: center;
+        }
+    
+        body {
+          background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+          font-family: sans-serif;
+          padding: 20px;
+        }
+
+        hr {
+          height: 2px;
+          background-color: brown;
+          border-color: brown;
+        }
+
+        .bottom-line {
+          margin-top: 25px;
+        }
+    
+        h1, h2 {
+          font-family: Impact, serif;
+        }
+    
+        .menu {
+          width: 80%;
+          max-width: 500px;
+          background-color: burlywood;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 20px;
+        }
+    
+        .flavor, .dessert {
+          text-align: left;
+          width: 75%;
+        }
+        
+        .price {
+          text-align: right;
+          width: 25%;
+        }
+    
+        .item p {
+          display: inline-block;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          font-size: 18px;
+        }
+        
+        .established {
+          font-style: italic;
+        }
+    
+        h1 {
+          font-size: 40px;
+          margin-top: 0;
+          margin-bottom: 15px;
+        }
+        
+        h2 {
+          font-size: 30px;
+        }
+
+        /* FOOTER */
+        footer {
+          font-size: 14px;
+        }
+
+        .address {
+          margin-bottom: 5px;
+        }
+
+        a {
+          color: black;
+        }
+
+        a:visited {
+          color: black;
+        }
+
+        a:hover {
+          color: brown;
+        }
+
+        a:active {
+          color: brown;
+        }
+
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-86.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-88.html">Следующий</a>
+
+</body>
+</html>
