@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 13</title>
+</head>
+<body>
+  <h1>Шаг 13</h1>
+
+  <p>
+    Ваш маркер выглядел бы лучше, если бы он был расположен по центру страницы.
+    Простой способ сделать это — использовать <i>свойство сокращения</i> <code>margin</code>.
+  </p>
+
+  <p>
+    В последнем проекте вы устанавливали поля для элементов по отдельности с помощью таких свойств, как <code>margin-top</code> и <code>margin-left</code>.
+    Сокращённое свойство <code>margin</code> позволяет легко устанавливать несколько полей одновременно.
+  </p>
+
+  <p>
+    Чтобы расположить маркер по центру страницы, задайте для его свойства <code>margin</code> значение <code>auto</code>.
+    Это устанавливает значения <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code> и <code>margin-left</code> как <code>auto</code>.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          background-color: red;
+          height: 25px;
+          width: 200px;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-12.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-14.html">Следующий</a>
+
+</body>
+</html>
