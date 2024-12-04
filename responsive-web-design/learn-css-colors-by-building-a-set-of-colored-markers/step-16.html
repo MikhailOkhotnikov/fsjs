@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 16</title>
+</head>
+<body>
+  <h1>Шаг 16</h1>
+
+  <p>
+    Чтобы придать маркерам разные цвета, вам нужно будет добавить уникальный класс к каждому из них. 
+    Несколько классов можно добавить к элементу, перечислив их в атрибуте <code>class</code> и разделив пробелом. 
+    Например, следующий код добавляет классы <code>animal</code> и <code>dog</code> к элементу <code>div</code>.
+  </p>
+
+  <p>Пример кода</p>
+  <pre>
+    <code>
+      &lt;div class="animal dog"&gt;&lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Если вы добавляете несколько классов к HTML-элементу, стили первых перечисленных вами классов могут быть переопределены более поздними классами.
+  </p>
+
+  <p>
+    Для начала добавьте класс <code>one</code> к первому элементу <code>div</code> с классом <code>marker</code>.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker"&gt;&lt;/div&gt;
+              &lt;div class="marker"&gt;&lt;/div&gt;
+              &lt;div class="marker"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          background-color: red;
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-15.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-17.html">Следующий</a>
+
+</body>
+</html>
