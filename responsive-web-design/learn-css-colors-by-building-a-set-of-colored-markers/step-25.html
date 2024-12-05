@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 25</title>
+</head>
+<body>
+  <h1>Шаг 25</h1>
+
+  <p>
+    Теперь добавьте немного вертикального пространства между вашими маркерами и краем элемента <code>container</code> в котором они находятся.
+  </p>
+
+  <p>
+    В правиле CSS <code>.container</code> используйте сокращённое свойство <code>padding</code> для добавления <code>10px</code> отступов сверху и снизу, 
+    а также установите отступы слева и справа на <code>0</code>. 
+    Это работает так же, как сокращённое свойство <code>margin</code>, которое вы использовали ранее.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker one"&gt;&lt;/div&gt;
+              &lt;div class="marker two"&gt;&lt;/div&gt;
+              &lt;div class="marker three"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+        .container {
+          background-color: rgb(0, 0, 0);
+        }
+
+        .one {
+          background-color: rgb(255, 0, 0);
+        }
+
+        .two {
+          background-color: rgb(0, 127, 0);
+        }
+
+        .three {
+          background-color: rgb(0, 0, 255);
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-24.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-26.html">Следующий</a>
+
+</body>
+</html>
