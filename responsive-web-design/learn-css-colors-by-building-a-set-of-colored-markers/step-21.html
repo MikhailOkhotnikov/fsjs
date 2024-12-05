@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 21</title>
+</head>
+<body>
+  <h1>Шаг 21</h1>
+
+  <p>
+    Существуют две основные цветовые модели: аддитивная модель RGB (red-красный, green-зеленый, blue-синий), используемая в электронных устройствах, 
+    и субтрактивная модель CMYK (cyan-голубой, magenta-пурпурный, yellow-желтый, black-черный), используемая в печати.
+  </p>
+
+  <p>
+    В этом проекте вы будете работать с моделью RGB. 
+    Это означает, что цвета начинаются с черного и меняются по мере введения различных уровней красного, зеленого и синего. 
+    Простой способ увидеть это — использовать функцию CSS <code>rgb</code>.
+  </p>
+
+  <p>
+    Создайте новое правило CSS, нацеленное на класс <code>container</code> и установите для него <code>background-color</code> чёрный цвет с помощью <code>rgb(0, 0, 0)</code>.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker one"&gt;&lt;/div&gt;
+              &lt;div class="marker two"&gt;&lt;/div&gt;
+              &lt;div class="marker three"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+        .one {
+          background-color: red;
+        }
+
+        .two {
+          background-color: green;
+        }
+
+        .three {
+          background-color: blue;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-20.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-22.html">Следующий</a>
+
+</body>
+</html>
