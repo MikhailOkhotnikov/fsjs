@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 36</title>
+</head>
+<body>
+  <h1>Шаг 36</h1>
+
+  <p>
+    Цветовой круг — это круг, в котором похожие цвета, или оттенки, расположены близко друг к другу, 
+    а разные — дальше друг от друга. Например, чистый красный цвет находится между оттенками розового и оранжевого.
+  </p>
+
+  <p>
+    Два цвета, расположенные напротив друг друга на цветовом круге, называются <i>дополнительные цвета</i>. Если смешать два дополнительных цвета, получится серый. 
+    Но если расположить их рядом, эти цвета создадут сильный визуальный контраст и будут казаться ярче.
+  </p>
+
+  <p>
+    В функции <code>rgb</code> для правила CSS <code>.one</code> установите максимальное значение <code>255</code> красного для получения чистого красного цвета. 
+    В функции rgb для правила CSS <code>.two</code> установите максимальное значение <code>255</code> зелёного и синего для получения голубого цвета.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker one"&gt;&lt;/div&gt;
+              &lt;div class="marker two"&gt;&lt;/div&gt;
+              &lt;div class="marker three"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+        .container {
+          background-color: rgb(255, 255, 255);
+          padding: 10px 0;
+        }
+
+        .one {
+          background-color: rgb(0, 0, 0);
+        }
+
+        .two {
+          background-color: rgb(0, 0, 0);
+        }
+
+        .three {
+          background-color: rgb(0, 0, 0);
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-35.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-37.html">Следующий</a>
+
+</body>
+</html>
