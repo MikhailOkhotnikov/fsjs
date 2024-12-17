@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 48</title>
+</head>
+<body>
+  <h1>Шаг 48</h1>
+
+  <p>
+    Цветовая модель <i>HSL</i>, или оттенок(hue), насыщенность(saturation) и яркость(lightness), — это ещё один способ представления цветов.
+  </p>
+
+  <p>
+    Функция CSS <code>hsl</code> принимает 3 значения: число от 0 до 360 для оттенка, процент от 0 до 100 для насыщенности и процент от 0 до 100 для яркости.
+  </p>
+
+  <p>
+    Если представить себе цветовой круг, то красный цвет находится под углом 0 градусов,
+    зелёный — под углом 120 градусов, а синий — под углом 240 градусов.
+  </p>
+
+  <p>
+    Насыщенность — это интенсивность цвета от 0%, или серого, до 100% для чистого цвета.
+    К значениям насыщенности и яркости необходимо добавить знак процента <code>%</code>.
+  </p>
+
+  <p>
+    Яркость — это то, насколько ярким кажется цвет: от 0% (полностью черный) до 100% (полностью белый), при этом 50% — нейтральный цвет.
+  </p>
+
+  <p>
+    В правиле  CSS <code>.blue</code> используйте функцию <code>hsl</code> для изменения свойства <code>background-color</code> на чистый синий цвет. 
+    Задайте оттенок <code>240</code>, насыщенность <code>100%</code> и яркость <code>50%</code>.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker red"&gt;&lt;/div&gt;
+              &lt;div class="marker green"&gt;&lt;/div&gt;
+              &lt;div class="marker blue"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+        .container {
+          background-color: rgb(255, 255, 255);
+          padding: 10px 0;
+        }
+
+        .red {
+          background-color: rgb(255, 0, 0);
+        }
+
+        .green {
+          background-color: #007F00;
+        }
+
+        .blue {
+          background-color: rgb(0, 0, 0);
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-47.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-49.html">Следующий</a>
+
+</body>
+</html>
