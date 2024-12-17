@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 46</title>
+</head>
+<body>
+  <h1>Шаг 46</h1>
+
+  <p>
+    Очень распространённый способ применения цвета к элементу с помощью CSS — использование <i>шестнадцатеричных(hexadecimal)</i> значений. 
+    Хотя шестнадцатеричные значения кажутся сложными, на самом деле это просто ещё одна форма значений RGB.
+  </p>
+
+  <p>
+    Шестнадцатеричные значения цвета начинаются с символа <code>#</code> и состоят из шести символов от 0 до 9 и от A до F. 
+    Первая пара символов обозначает красный цвет, вторая пара — зелёный, а третья пара — синий. Например, <code>#4B5320</code>.
+  </p>
+
+  <p>
+    В селекторе классов <code>.green</code> задайте для свойства <code>background-color</code> шестнадцатеричный код цвета со 
+    значениями <code>00</code> для красного, <code>FF</code> для зелёного и <code>00</code> для синего.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker red"&gt;&lt;/div&gt;
+              &lt;div class="marker green"&gt;&lt;/div&gt;
+              &lt;div class="marker blue"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+        .container {
+          background-color: rgb(255, 255, 255);
+          padding: 10px 0;
+        }
+
+        .red {
+          background-color: rgb(255, 0, 0);
+        }
+
+        .green {
+          background-color: rgb(0, 0, 0);
+        }
+
+        .blue {
+          background-color: rgb(0, 0, 0);
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-45.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-47.html">Следующий</a>
+
+</body>
+</html>
