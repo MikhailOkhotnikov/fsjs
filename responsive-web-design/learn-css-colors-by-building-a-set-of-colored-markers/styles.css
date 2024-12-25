@@ -14,12 +14,21 @@ code {
 pre code {
   border: none;
   background: none;
-  padding: none;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
 }
 
 fieldset {
-  width: 48%;
+  width: 49%;
+  max-width: 49%;
+  min-width: 49%;
+  overflow-x: auto;
   display: inline-block;
+  padding: 0;
+  margin: 0;
 }
 
 .html {
