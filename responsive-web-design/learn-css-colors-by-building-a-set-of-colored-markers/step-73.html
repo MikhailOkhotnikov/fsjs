@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 73</title>
+</head>
+<body>
+  <h1>Шаг 73</h1>
+
+  <p>
+    <i>Непрозрачность(opacity)</i> описывает, насколько что-то непрозрачно. Например, сплошная стена непрозрачна, и свет не может пройти сквозь неё. 
+    Но стакан для питья гораздо более прозрачен, и сквозь него можно увидеть другую сторону.
+  </p>
+
+  <p>
+    С помощью свойства CSS <code>opacity</code> вы можете управлять степенью непрозрачности или прозрачности элемента. 
+    При значении <code>0</code> или 0% элемент будет полностью прозрачным, а при <code>1.0</code> или 100% элемент будет полностью непрозрачным, как по умолчанию.
+  </p>
+
+  <p>В правиле CSS <code>.sleeve</code> установите для свойства <code>opacity</code> значение <code>0.5</code>.</p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker red"&gt;
+                &lt;div class="sleeve"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="marker green"&gt;&lt;/div&gt;
+              &lt;div class="marker blue"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+        .sleeve {
+          width: 110px;
+          height: 25px;
+          background-color: white;
+        }
+
+        .container {
+          background-color: rgb(255, 255, 255);
+          padding: 10px 0;
+        }
+
+        .red {
+          background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+        }
+
+        .green {
+          background: linear-gradient(#55680D, #71F53E, #116C31);
+        }
+
+        .blue {
+          background: linear-gradient( hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%) );
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-72.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-74.html">Следующий</a>
+
+</body>
+</html>
