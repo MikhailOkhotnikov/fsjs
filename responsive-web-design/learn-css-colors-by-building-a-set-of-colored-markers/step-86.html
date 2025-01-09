@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 86</title>
+</head>
+<body>
+  <h1>Шаг 86</h1>
+
+  <p>
+    Последнее, что вам нужно сделать, — это добавить лёгкую тень к каждому маркеру, чтобы они выглядели ещё более реалистично.
+  </p>
+
+  <p>
+    Свойство <code>box-shadow</code> позволяет применить одну или несколько теней вокруг элемента. Вот базовый синтаксис:
+  </p>
+
+  <p>Пример кода</p>
+
+  <pre>
+    <code>
+      box-shadow: offsetX offsetY color;
+    </code>
+  </pre>
+
+  <p>
+    Вот как работают значения offsetX и offsetY:
+  </p>
+
+  <p> - оба <code>offsetX</code> и <code>offsetY</code> принимают числовые значения в <code>px</code> и других единицах CSS</p>
+  <p> - положительное значение <code>offsetX</code> перемещает тень вправо, а отрицательное значение - влево</p>
+  <p> - положительное значение <code>offsetY</code> перемещает тень вниз, а отрицательное - вверх</p>
+  <p> - если вам нужно нулевое значение (<code>0</code>) для любого или для обоих <code>offsetX</code> и <code>offsetY</code>, вам не нужно добавлять единицу измерения. 
+      Каждый браузер понимает, что нулевое значение означает отсутствие изменений.</p>
+
+  <p>
+    Высота и ширина тени определяются высотой и шириной элемента, к которому она применяется. 
+    Вы также можете использовать необязательное значение <code>spreadRadius</code>, чтобы увеличить радиус действия тени. 
+    Подробнее об этом позже.
+  </p>
+
+  <p>
+    Начните с добавления простой тени к красному маркеру.
+  </p>
+
+  <p>
+    В правиле CSS <code>.red</code> добавьте свойство <code>box-shadow</code> со значениями <code>5px</code> для <code>offsetX</code>, 
+    <code>5px</code> для <code>offsetY</code> и <code>red</code> для <code>color</code>.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker red"&gt;
+                &lt;div class="cap"&gt;&lt;/div&gt;
+                &lt;div class="sleeve"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="marker green"&gt;
+                &lt;div class="cap"&gt;&lt;/div&gt;
+                &lt;div class="sleeve"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="marker blue"&gt;
+                &lt;div class="cap"&gt;&lt;/div&gt;
+                &lt;div class="sleeve"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+        .cap {
+          width: 60px;
+          height: 25px;
+        }
+
+        .sleeve {
+          width: 110px;
+          height: 25px;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-left: 10px double rgba(0, 0, 0, 0.75);
+        }
+
+        .cap, .sleeve {
+          display: inline-block;
+        }
+
+        .container {
+          background-color: rgb(255, 255, 255);
+          padding: 10px 0;
+        }
+
+        .red {
+          background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+        }
+
+        .green {
+          background: linear-gradient(#55680D, #71F53E, #116C31);
+        }
+
+        .blue {
+          background: linear-gradient( hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%) );
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-85.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-87.html">Следующий</a>
+
+</body>
+</html>
