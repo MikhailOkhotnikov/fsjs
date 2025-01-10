@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 91</title>
+</head>
+<body>
+  <h1>Шаг 91</h1>
+
+  <p>
+    Затем обновите значение <code>color</code> свойства <code>box-shadow</code> красного маркера.
+  </p>
+
+  <p>
+    Замените именованный цвет функцией <code>rgba</code>. 
+    Используйте значения <code>83</code> для красного, <code>14</code> для зелёного, <code>14</code> для синего и <code>0.8</code> для альфа-канала.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Цветные маркеры&lt;/title&gt;      
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Цветные маркеры CSS&lt;/h1&gt;
+            &lt;div class="container"&gt;
+              &lt;div class="marker red"&gt;
+                &lt;div class="cap"&gt;&lt;/div&gt;
+                &lt;div class="sleeve"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="marker green"&gt;
+                &lt;div class="cap"&gt;&lt;/div&gt;
+                &lt;div class="sleeve"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="marker blue"&gt;
+                &lt;div class="cap"&gt;&lt;/div&gt;
+                &lt;div class="sleeve"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1 {
+          text-align: center;
+        }
+
+        .marker {
+          height: 25px;
+          width: 200px;
+          margin: 10px auto;
+        }
+
+        .cap {
+          width: 60px;
+          height: 25px;
+        }
+
+        .sleeve {
+          width: 110px;
+          height: 25px;
+          background-color: rgba(255, 255, 255, 0.5);
+          border-left: 10px double rgba(0, 0, 0, 0.75);
+        }
+
+        .cap, .sleeve {
+          display: inline-block;
+        }
+
+        .container {
+          background-color: rgb(255, 255, 255);
+          padding: 10px 0;
+        }
+
+        .red {
+          background: linear-gradient(rgb(122, 74, 14), rgb(245, 62, 113), rgb(162, 27, 27));
+          box-shadow: 0 0 20px 0 red;
+        }
+
+        .green {
+          background: linear-gradient(#55680D, #71F53E, #116C31);
+          box-shadow: 5px 5px 5px green;
+        }
+
+        .blue {
+          background: linear-gradient( hsl(186, 76%, 16%), hsl(223, 90%, 60%), hsl(240, 56%, 42%) );
+          box-shadow: 0 0 0 5px blue;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-90.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-92.html">Следующий</a>
+
+</body>
+</html>
