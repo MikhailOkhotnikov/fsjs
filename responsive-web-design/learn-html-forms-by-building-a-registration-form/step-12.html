@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 12</title>
+</head>
+<body>
+  <h1>Шаг 12</h1>
+
+  <p>
+    Атрибут <code>method</code> указывает, как отправлять данные формы по URL-адресу, указанному в <code>action</code> атрибуте. 
+    Данные формы могут быть отправлены через <code>GET</code> запрос в виде параметров URL (с помощью <code>method="get"</code>) 
+    или через <code>POST</code> запрос в виде данных в теле запроса (с помощью <code>method="post"</code>).
+  </p>
+
+  <p>
+    Установите <code>method</code> атрибут для отправки данных вашей формы через <code>POST</code> запрос.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;title>Registration Form&lt;/title&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Форма регистрации&lt;/h1&gt;
+            &lt;p&gt;Пожалуйста, заполните эту форму необходимой информацией&lt;/p&gt;
+            &lt;form action="https://register-demo.freecodecamp.org"&gt;&lt;/form&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          width: 100%;
+          height: 100vh;
+          margin: 0;
+          background-color: #1b1b32;
+          color: #f5f6f7;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-11.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-13.html">Следующий</a>
+
+</body>
+</html>
