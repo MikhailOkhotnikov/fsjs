@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 16</title>
+</head>
+<body>
+  <h1>Шаг 16</h1>
+
+  <p>
+    Единица измерения <code>rem</code> относится к корневому элементу <code>em</code> и зависит от размера шрифта элемента <code>html</code>.
+  </p>
+
+  <p>
+    Поскольку элементы label по умолчанию отображаются в одну строку, они все отображаются рядом друг с другом на одной строке, что затрудняет чтение текста. 
+    Чтобы они отображались на отдельных строках, добавьте <code>display: block</code> к элементу <code>label</code> и 
+    добавьте <code>margin</code> <code>0.5rem 0</code>, чтобы отделить их друг от друга.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;title>Registration Form&lt;/title&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Форма регистрации&lt;/h1&gt;
+            &lt;p&gt;Пожалуйста, заполните эту форму необходимой информацией&lt;/p&gt;
+            &lt;form action="https://register-demo.freecodecamp.org" method="post"&gt;
+              &lt;fieldset&gt;
+                &lt;label&gt;Введите свое имя:&lt;/label&gt;
+                &lt;label&gt;Введите свою фамилию:&lt;/label&gt;
+                &lt;label&gt;Введите свой Email:&lt;/label&gt;
+                &lt;label&gt;Создайте новый пароль:&lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;fieldset&gt;&lt;/fieldset&gt;
+              &lt;fieldset&gt;&lt;/fieldset&gt;
+            &lt;/form&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          width: 100%;
+          height: 100vh;
+          margin: 0;
+          background-color: #1b1b32;
+          color: #f5f6f7;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-15.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-17.html">Следующий</a>
+
+</body>
+</html>
