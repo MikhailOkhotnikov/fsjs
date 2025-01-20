@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 28</title>
+</head>
+<body>
+  <h1>Шаг 28</h1>
+
+  <p>
+    В настоящее время пользователи могут отправить форму, не отметив радиокнопки. 
+    Хотя ранее вы использовали атрибут <code>required</code> для указания того, что поле обязательно для заполнения, 
+    в этом случае он не сработает, потому что добавление <code>required</code> к обоим полям приведёт к тому, что пользователи получат неверную информацию.
+  </p>
+
+  <p>
+    Чтобы решить эту проблему, вы можете указать, что именно нужно, добавив элемент <code>legend</code> с текстом <code>Тип учетной записи (обязательно)</code>
+     перед элементами <code>label</code> во втором <code>fieldset</code>. 
+    Затем добавьте атрибут <code>checked</code> к элементу ввода <code>Личный</code>, чтобы форма отправлялась с необходимыми данными.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;title>Registration Form&lt;/title&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Форма регистрации&lt;/h1&gt;
+            &lt;p&gt;Пожалуйста, заполните эту форму необходимой информацией&lt;/p&gt;
+            &lt;form action="https://register-demo.freecodecamp.org" method="post"&gt;
+              &lt;fieldset&gt;
+                &lt;label for="first-name"&gt;Введите свое имя: &lt;input id="first-name" type="text" required /&gt;&lt;/label&gt;
+                &lt;label for="last-name"&gt;Введите свою фамилию: &lt;input id="last-name" type="text" required /&gt;&lt;/label&gt;
+                &lt;label for="email"&gt;Введите свой Email: &lt;input id="email" type="email" required /&gt;&lt;/label&gt;
+                &lt;label for="new-password"&gt;Создайте новый пароль: &lt;input id="new-password" type="password" required pattern="[a-z0-5]{8,}" /&gt;&lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;fieldset&gt;
+                &lt;label&gt;&lt;input type="radio" name="account-type" /&gt; Личный&lt;/label&gt;
+                &lt;label&gt;&lt;input type="radio" name="account-type" /&gt; Деловой&lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;fieldset&gt;&lt;/fieldset&gt;
+              &lt;input type="submit" value="Отправить" /&gt;
+            &lt;/form&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          width: 100%;
+          height: 100vh;
+          margin: 0;
+          background-color: #1b1b32;
+          color: #f5f6f7;
+        }
+
+        label {
+          display: block;
+          margin: 0.5rem 0;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-27.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-29.html">Следующий</a>
+
+</body>
+</html>
