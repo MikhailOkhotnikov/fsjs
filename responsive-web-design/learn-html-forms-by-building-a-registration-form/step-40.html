@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Шаг 39</title>
+  <title>Шаг 40</title>
 </head>
 <body>
-  <h1>Шаг 39</h1>
+  <h1>Шаг 40</h1>
 
   <p>
-    Свяжите соответствующие элементы формы и их <code>label</code> элементы вместе.
+    <code>textarea</code> кажется слишком маленьким. Чтобы придать ему начальный размер, вы можете добавить атрибуты <code>rows</code> и <code>cols</code>.
   </p>
 
   <p>
-    Используйте <code>profile-picture</code>, <code>age</code>, <code>referrer</code> и <code>bio</code> в качестве значений соответствующих <code>id</code> атрибутов.
+    Добавьте начальный размер <code>3</code> строк и <code>30</code> столбцов.
   </p>
 
   <fieldset>
@@ -44,10 +44,10 @@
                 &lt;label for="business-account"&gt;&lt;input type="radio" name="account-type" id="business-account" /&gt; Деловой&lt;/label&gt;
               &lt;/fieldset&gt;
               &lt;fieldset&gt;
-                &lt;label&gt;Загрузите фотографию профиля: &lt;input type="file" /&gt;&lt;/label&gt;
-                &lt;label&gt;Введите свой возраст (лет): &lt;input type="number" min="13" max="120" /&gt;&lt;/label&gt;
-                &lt;label&gt;Как вы узнали о нас?
-                  &lt;select&gt;
+                &lt;label for="profile-picture"&gt;Загрузите фотографию профиля: &lt;input type="file" id="profile-picture" /&gt;&lt;/label&gt;
+                &lt;label for="age"&gt;Введите свой возраст (лет): &lt;input type="number" id="age" min="13" max="120" /&gt;&lt;/label&gt;
+                &lt;label for="referrer"&gt;Как вы узнали о нас?
+                  &lt;select id="referrer"&gt;
                     &lt;option value=""&gt;(выберите один)&lt;/option&gt;
                     &lt;option value="1"&gt;Новости freeCodeCamp&lt;/option&gt;
                     &lt;option value="2"&gt;Канал  freeCodeCamp на YouTube&lt;/option&gt;
@@ -55,8 +55,8 @@
                     &lt;option value="4"&gt;Другой&lt;/option&gt;
                   &lt;/select&gt;
                 &lt;/label&gt;
-                &lt;label&gt;Предоставьте биографию:
-                  &lt;textarea>&lt;/textarea&gt;
+                &lt;label for="bio"&gt;Предоставьте биографию:
+                  &lt;textarea id="bio"&gt;&lt;/textarea&gt;
                 &lt;/label&gt;
               &lt;/fieldset&gt;
               &lt;label for="terms-and-conditions"&gt;&lt;input type="checkbox" id="terms-and-conditions" required /&gt;Я принимаю &lt;a href="https://www.freecodecamp.org/news/terms-of-service/"&gt;правила и условия&lt;/a&gt;&lt;/label&gt;
@@ -88,7 +88,7 @@
     </pre>
     </fieldset>
     
-    <a href="step-38.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-40.html">Следующий</a>
+    <a href="step-39.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-41.html">Следующий</a>
 
 </body>
 </html>
