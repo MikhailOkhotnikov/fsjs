@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 47</title>
+</head>
+<body>
+  <h1>Шаг 47</h1>
+
+  <p>
+    Чтобы немного отделить элементы <code>fieldset</code>, выделите их и присвойте им <code>border-bottom</code> равными <code>3px solid #3b3b4f</code>.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;title>Registration Form&lt;/title&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Форма регистрации&lt;/h1&gt;
+            &lt;p&gt;Пожалуйста, заполните эту форму необходимой информацией&lt;/p&gt;
+            &lt;form action="https://register-demo.freecodecamp.org" method="post"&gt;
+              &lt;fieldset&gt;
+                &lt;label for="first-name"&gt;Введите свое имя: &lt;input id="first-name" name="first-name" type="text" required /&gt;&lt;/label&gt;
+                &lt;label for="last-name"&gt;Введите свою фамилию: &lt;input id="last-name" name="last-name" type="text" required /&gt;&lt;/label&gt;
+                &lt;label for="email"&gt;Введите свой Email: &lt;input id="email" name="email" type="email" required /&gt;&lt;/label&gt;
+                &lt;label for="new-password"&gt;Создайте новый пароль: &lt;input id="new-password" name="new-password" type="password" required pattern="[a-z0-5]{8,}" /&gt;&lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;fieldset&gt;
+                &lt;legend&gt;Тип учетной записи (обязательно)&lt;/legend&gt;
+                &lt;label for="personal-account"&gt;&lt;input type="radio" name="account-type" id="personal-account" checked /&gt; Личный&lt;/label&gt;
+                &lt;label for="business-account"&gt;&lt;input type="radio" name="account-type" id="business-account" /&gt; Деловой&lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;fieldset&gt;
+                &lt;label for="profile-picture"&gt;Загрузите фотографию профиля: &lt;input type="file" id="profile-picture" name="file" /&gt;&lt;/label&gt;
+                &lt;label for="age"&gt;Введите свой возраст (лет): &lt;input type="number" id="age" name="age" min="13" max="120" /&gt;&lt;/label&gt;
+                &lt;label for="referrer"&gt;Как вы узнали о нас?
+                  &lt;select id="referrer" name="referrer"&gt;
+                    &lt;option value=""&gt;(выберите один)&lt;/option&gt;
+                    &lt;option value="1"&gt;Новости freeCodeCamp&lt;/option&gt;
+                    &lt;option value="2"&gt;Канал  freeCodeCamp на YouTube&lt;/option&gt;
+                    &lt;option value="3"&gt;Форум freeCodeCamp&lt;/option&gt;
+                    &lt;option value="4"&gt;Другой&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/label&gt;
+                &lt;label for="bio"&gt;Предоставьте биографию:
+                  &lt;textarea id="bio" name="bio" placeholder="Мне нравится кодить на пляже..." rows="3" cols="30"&gt;&lt;/textarea&gt;
+                &lt;/label&gt;
+              &lt;/fieldset&gt;
+              &lt;label for="terms-and-conditions"&gt;
+                &lt;input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required /&gt;Я принимаю &lt;a href="https://www.freecodecamp.org/news/terms-of-service/"&gt;правила и условия&lt;/a&gt;
+              &lt;/label&gt;
+              &lt;input type="submit" value="Отправить" /&gt;
+            &lt;/form&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          width: 100%;
+          height: 100vh;
+          margin: 0;
+          background-color: #1b1b32;
+          color: #f5f6f7;
+          font-family: Tahoma;
+          font-size: 16px;
+        }
+
+        h1, p {
+          margin: 1em auto;
+          text-align: center;
+        }
+
+        form {
+          margin: 0 auto;
+          max-width: 500px;
+          min-width: 300px;
+          width: 60vw;
+        }
+
+        fieldset {
+          border: 0;
+          padding: 2rem 0;
+        }
+
+        label {
+          display: block;
+          margin: 0.5rem 0;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-46.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-48.html">Следующий</a>
+
+</body>
+</html>
