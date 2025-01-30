@@ -4,21 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Шаг 62</title>
+  <title>Шаг 66</title>
 </head>
 <body>
-  <h1>Шаг 62</h1>
-
-  <p>
-    Большинство браузеров по умолчанию добавляют собственные свойства CSS и значения для различных элементов. 
-    Если вы присмотритесь, то заметите, что <code>input</code> file меньше, чем другие текстовые <code>input</code> элементы. 
-    По умолчанию для элементов <code>input</code>, в которые можно вводить данные, задан <code>padding</code> <code>1px 2px</code>.
-  </p>
-
-  <p>
-    Используя другой селектор атрибутов, оформите <code>input</code> с помощью <code>type</code> равного <cide>file</cide>, 
-    чтобы это было то же заполнение, что и у других <code>input</code> элементов.
-  </p>
+  <h1>В итоге ваш код должен выглядеть следующим образом:</h1>
 
   <fieldset>
     <legend>Файл index.html</legend>
@@ -63,7 +52,7 @@
                 &lt;/label&gt;
               &lt;/fieldset&gt;
               &lt;label for="terms-and-conditions"&gt;
-                &lt;input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" required /&gt;Я принимаю &lt;a href="https://www.freecodecamp.org/news/terms-of-service/"&gt;правила и условия&lt;/a&gt;
+                &lt;input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" class="inline" required /&gt;Я принимаю &lt;a href="https://www.freecodecamp.org/news/terms-of-service/"&gt;правила и условия&lt;/a&gt;
               &lt;/label&gt;
               &lt;input type="submit" value="Отправить" /&gt;
             &lt;/form&gt;
@@ -97,6 +86,7 @@
           max-width: 500px;
           min-width: 300px;
           width: 60vw;
+          padding-bottom: 2em;
         }
 
         fieldset {
@@ -143,11 +133,19 @@
           min-width: 300px;
         }
 
+        input[type="file"] {
+          padding: 1px 2px;
+        }
+
+        a {
+          color: #dfdfe2;
+        }
+
       </code>
     </pre>
     </fieldset>
     
-    <a href="step-61.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-63.html">Следующий</a>
+    <a href="step-65.html">Предыдущий</a> <a href="index.html">Содержание</a>
 
 </body>
 </html>
