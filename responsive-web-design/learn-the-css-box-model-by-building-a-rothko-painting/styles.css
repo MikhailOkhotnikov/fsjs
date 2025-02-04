@@ -1,0 +1,61 @@
+body {
+  background-color: white;
+}
+
+code {
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  background: grey;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+pre code {
+  border: none;
+  background: none;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+fieldset {
+  width: 49%;
+  max-width: 49%;
+  min-width: 49%;
+  overflow-x: auto;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  margin-right: auto;
+}
+
+.css {
+  margin-left: auto;
+  align-items: top;
+}
+
+li {
+  border: 1px solid;
+  display: inline-flex;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 3px;
+  background-color: grey;
+}
+
+li a {
+  text-decoration: none;
+  color: blue;
+  margin: auto;
+}
+
+li a:visited {
+  color: black;
+}
