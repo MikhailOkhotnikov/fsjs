@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 13</title>
+</head>
+<body>
+  <h1>Шаг 13</h1>
+
+  <p>
+    Выровняйте свой текст .header по центру. 
+    Сделайте текст заглавными буквами, используя свойство <code>text-transform</code> со значением <code>uppercase</code> в качестве параметра.
+  </p>
+
+  <p>
+    Добавьте внутренний отступ <code>32px</code> со всех сторон. Задайте фон <code>#0a0a23</code> и текст <code>#fff</code> в качестве значений цвета.
+  </p>
+
+  <p>
+    Добавьте <code>border-bottom</code> с <code>4px solid #fdb347</code> в качестве значения.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Фотогалерея&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header class="header"&gt;
+              &lt;h1&gt;фотогалерея css flexbox&lt;/h1&gt;
+            &lt;/header&gt;
+            &lt;div class="gallery"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg"&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        * {
+          box-sizing: border-box;
+        }
+        .gallery img {
+          width: 100%;
+          max-width: 350px;
+          height: 300px;
+        }
+        body {
+          margin: 0;
+          font-family: sans-serif;
+          background-color: #f5f6f7;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-12.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-14.html">Следующий</a>
+
+</body>
+</html>
