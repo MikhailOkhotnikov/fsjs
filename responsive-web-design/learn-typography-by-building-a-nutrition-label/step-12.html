@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 12</title>
+</head>
+<body>
+  <h1>Шаг 12</h1>
+
+  <p>
+    Помните, что использование тегов <code>h1</code>, <code>h2</code> и подобных определяет семантическую структуру вашего HTML. 
+    Однако вы можете настроить CSS этих элементов, чтобы контролировать визуальный поток и иерархию.
+  </p>
+
+  <p>
+    Создайте правило <code>h1</code> и установите свойство <code>font-weight</code> на <code>800</code>. Это сделает текст <code>h1</code> более жирным.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title>Пищевая этикетка&lt;/title&gt;
+            &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div class="label"&gt;
+              &lt;h1&gt;Пищевая ценность&lt;/h1&gt;
+              &lt;p&gt;8 порций в контейнере&lt;/p&gt;
+              &lt;p&gt;Размер порции 2/3 стакана (55 г)&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        * {
+          box-sizing: border-box;
+        }
+
+        html {
+          font-size: 16px;
+        }
+
+        body {
+          font-family: "Open Sans", sans-serif;
+        }
+
+        .label {
+          border: 2px solid black;
+          width: 270px;
+          margin: 20px auto;
+          padding: 0 7px;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-11.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-13.html">Следующий</a>
+
+</body>
+</html>
