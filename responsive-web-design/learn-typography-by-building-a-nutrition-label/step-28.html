@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 28</title>
+</head>
+<body>
+  <h1>Шаг 28</h1>
+
+  <p>
+    Вы можете заметить, что внизу вашего элемента <code>.large</code> все еще есть небольшая граница. 
+    Чтобы сбросить ее, задайте вашему селектору <code>.large, .medium</code> свойство <code>border</code>, установленное на <code>0</code>.
+  </p>
+
+  <p>
+    Примечание: класс <code>medium</code>(средний) будет использоваться позже для более тонких полосок на этикетке с информацией о пищевой ценности.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title>Пищевая этикетка&lt;/title&gt;
+            &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div class="label"&gt;
+              &lt;header&gt;
+                &lt;h1 class="bold"&gt;Пищевая ценность&lt;/h1&gt;
+                &lt;div class="divider"&gt;&lt;/div&gt;
+                &lt;p&gt;8 порций в контейнере&lt;/p&gt;
+                &lt;p class="bold"&gt;Размер порции &lt;span&gt;2/3 стакана (55 г)&lt;/span&gt;&lt;/p&gt;
+              &lt;/header&gt;
+              &lt;div class="divider large"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        * {
+          box-sizing: border-box;
+        }
+
+        html {
+          font-size: 16px;
+        }
+
+        body {
+          font-family: "Open Sans", sans-serif;
+        }
+
+        .label {
+          border: 2px solid black;
+          width: 270px;
+          margin: 20px auto;
+          padding: 0 7px;
+        }
+
+        header h1 {
+          text-align: center;
+          margin: -4px 0;
+          letter-spacing: 0.15px;
+        }
+
+        p {
+          display: flex;
+          justify-content: space-between;
+          margin: 0;
+        }
+
+        .divider {
+          border-bottom: 1px solid #888989;
+          margin: 2px 0;
+        }
+
+        .bold {
+          font-weight: 800;
+        }
+
+        .large {
+          height: 10px;
+        }
+
+        .large, .medium {
+          background-color: black;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-27.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-29.html">Следующий</a>
+
+</body>
+</html>
