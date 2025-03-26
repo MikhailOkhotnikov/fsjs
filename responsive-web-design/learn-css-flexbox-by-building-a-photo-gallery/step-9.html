@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 9</title>
+</head>
+<body>
+  <h1>Шаг 9</h1>
+
+  <p>
+    Модель размера <code>border-box</code> делает противоположность <code>content-box</code>. 
+    Общая ширина элемента, включая <code>padding</code> и <code>border</code>, будет явно заданной шириной. 
+    Содержимое элемента сожмется, чтобы освободить место для <code>padding</code> и <code>border</code>.
+  </p>
+
+  <p>
+    Измените свойство <code>box-sizing</code> на <code>border-box</code>. 
+    Обратите внимание, как теперь синие границы изображения вписываются в красную границу галереи.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Фотогалерея&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header class="header"&gt;
+              &lt;h1&gt;фотогалерея css flexbox&lt;/h1&gt;
+            &lt;/header&gt;
+            &lt;div class="gallery"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg"&gt;
+              &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg"&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+    </fieldset>
+    
+    <fieldset class="css">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        * {
+          box-sizing: content-box;
+        }
+        .gallery {
+          width: 50%;
+          border: 5px solid red;
+        }
+        img {
+          width: 100%;
+          padding: 5px;
+          border: 5 px solid blue;
+        }
+      </code>
+    </pre>
+    </fieldset>
+    
+    <a href="step-8.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-10.html">Следующий</a>
+
+</body>
+</html>
