@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Шаг 21</title>
+</head>
+<body>
+  <h1>Шаг 21</h1>
+
+  <p>
+    Теперь <code>.one</code> центрирован по горизонтали, но его верхнее поле выходит за пределы холста и попадает на границу фрейма, смещая весь холст на 20 пикселей вниз.
+  </p>
+
+  <p>
+    Добавьте внутренний отступ(<code>padding</code>) в <code>1px</code> к элементу <code>.canvas</code>, чтобы дать элементу <code>.one</code> что-то твердое, от чего можно было бы отталкиваться.
+  </p>
+
+  <fieldset>
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Картина Ротко&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div class="frame"&gt;
+              &lt;div class="canvas"&gt;
+                &lt;div class="one"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+  
+  <fieldset class="css">
+  <legend>Файл styles.css</legend>
+  <pre>
+    <code>
+      .canvas {
+        width: 500px;
+        height: 600px;
+        background-color: #4d0f00;
+      }
+      .frame {
+        border: solid black 50px;
+        width: 500px;
+        padding: 50px;
+        margin: 20px auto;
+      }
+      .one {
+        width: 425px;
+        height: 150px;
+        background-color: #efb762;
+        margin: 20px auto;
+      }
+    </code>
+  </pre>
+  </fieldset>
+  
+  <a href="step-20.html">Предыдущий</a> <a href="index.html">Содержание</a> <a href="step-22.html">Следующий</a>
+
+</body>
+</html>
