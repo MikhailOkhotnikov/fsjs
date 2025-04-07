@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Какова роль элемента Link в HTML и как его можно использовать для ссылок на внешние таблицы стилей?</title>
+</head>
+<body>
+  <h1>Какова роль элемента Link в HTML и как его можно использовать для ссылок на внешние таблицы стилей?</h1>
+
+  <p>
+    Посмотрите видео или прочтите стенограмму и ответьте на вопросы ниже.
+  </p>
+
+  <video controls src="https://youtu.be/Xdyig5C-oSU" width="500"></video>
+
+  <p>Стенограмма</p>
+
+  <p>
+    Давайте узнаем об элементе <code>link</code> и о том, как использовать его для ссылки на внешние таблицы стилей.
+  </p>
+
+  <p>
+    Элемент <code>link</code> используется для ссылок на внешние ресурсы, такие как таблицы стилей и значки сайта. 
+    Вот базовый синтаксис для использования элемента <code>link</code> для внешнего CSS-файла:
+  </p>
+
+  <pre>
+    <code>
+      &lt;link rel="stylesheet" href="./styles.css" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Атрибут <code>rel</code> используется для указания связи между связанным ресурсом и HTML-документом. 
+    В данном случае нам нужно указать, что этот связанный ресурс является <code>stylesheet</code>.
+  </p>
+
+  <p>
+    Считается, что лучше всего разделять HTML и CSS в разных файлах. 
+    Разработчики будут использовать элемент <code>link</code> для внешнего CSS-файла вместо того, чтобы писать всё в HTML-документе.
+  </p>
+
+  <p>
+    Атрибут <code>href</code> используется для указания местоположения URL-адреса внешнего ресурса.
+  </p>
+
+  <p>
+    В этом примере <code>dot</code>(точка) с косой чертой в конце указывает компьютеру искать файл <code>styles.css</code> в текущей папке или каталоге.
+  </p>
+
+  <p>
+    Элемент <code>link</code> должен быть помещён внутрь элемента <code>head</code>, как показано в следующем примере:
+  </p>
+
+  <pre>
+    <code>
+      &lt;head&gt;
+        &lt;meta charset="UTF-8" /&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+        &lt;title&gt;Пример элемента link (ссылка)&lt;/title&gt;
+        &lt;link rel="stylesheet" href="./styles.css" /&gt;
+      &lt;/head&gt;
+    </code>
+  </pre>
+
+  <p>
+    Часто в профессиональных кодовых базах можно увидеть несколько элементов <code>link</code> со ссылками на разные таблицы стилей, шрифты и иконки. 
+    Вот пример использования элемента <code>link</code> для ссылки на внешний шрифт Google под названием <i>Playwright Cuba</i>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+      &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
+      &lt;link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Google Fonts — это набор бесплатных пользовательских шрифтов с открытым исходным кодом, которые вы можете использовать в любом проекте. 
+    Вы можете выбрать, какие шрифты вы хотите использовать, и Google предоставит вам необходимый код HTML и CSS. 
+    В этом примере значение <code>preconnect</code> для атрибута <code>rel</code> указывает браузеру на необходимость создать предварительное 
+    соединение со значением, указанным в атрибуте <code>href</code>. 
+    Это делается для ускорения загрузки внешних ресурсов.
+  </p>
+
+  <p>
+    Другой распространённый вариант использования элемента <code>link</code> — создание ссылок на значки. Вот пример ссылки на значок:
+  </p>
+
+  <pre>
+    <code>
+      &lt;link rel="icon" href="favicon.ico" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    favicon, что означает «любимый значок», — это небольшой значок, который обычно отображается на вкладке браузера рядом с названием сайта. 
+    Многие сайты используют favicon для отображения значка своего бренда.
+  </p>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
