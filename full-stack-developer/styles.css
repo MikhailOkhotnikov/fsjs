@@ -21,3 +21,42 @@ pre {
   margin: 0;
 }
 
+li.cell {
+  border: 1px solid;
+  display: inline-flex;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin: 3px;
+  background-color: grey;
+}
+
+li.cell a {
+  text-decoration: none;
+  color: blue;
+  margin: auto;
+}
+
+li.cell a:visited {
+  color: black;
+}
+
+fieldset.chapter {
+  width: 49%;
+  max-width: 49%;
+  min-width: 49%;
+  overflow-x: auto;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  margin-right: auto;
+}
+
+.css {
+  margin-left: auto;
+  align-items: top;
+}
+
