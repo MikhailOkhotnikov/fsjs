@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое элементы Div и когда их следует использовать?</title>
+</head>
+<body>
+  <h1>Что такое элементы Div и когда их следует использовать?</h1>
+
+  <p>
+    Теперь, когда мы разобрались, что такое HTML, перейдём к самому интересному! 
+    Я собираюсь рассмотреть элемент <i>Content Division(разделение контента)</i>, или, другими словами, <code>div</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div&gt;&lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Мне нравится представлять <code>div</code> как прекрасное существо, которое может быть чем угодно. 
+    Мы можем задать <code>div</code> высоту(<code>height</code>), ширину(<code>width</code>) и 
+    цвет фона(background color) с помощью CSS — или, другими словами, стилизации, о которой мы поговорим на следующих лекциях.
+  </p>
+
+  <p>
+    Мы также можем использовать его в очень простой форме без стилизации, чтобы связать другие элементы вместе. 
+    Например, мы можем создать div, поместить в него заголовок и абзац, и теперь эти два элемента будут сгруппированы:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div&gt;
+        &lt;h1&gt;Я - заголовок&lt;/h1&gt;
+        &lt;p&gt;Я - абзац&lt;/p&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Просто имейте в виду, что при группировке этих элементов могут быть более эффективные элементы. Например, можно выбрать элемент <code>section</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;section&gt;
+        &lt;h1&gt;Я - заголовок&lt;/h1&gt;
+        &lt;p&gt;Я - абзац&lt;/p&gt;
+      &lt;/section&gt;
+    </code>
+  </pre>
+
+  <p>
+    Это связано с тем, что элемент <code>section</code> имеет семантическое значение. Семантика — это значение слов или фраз в языке. 
+    В HTML, который является языком, элементы также имеют своё семантическое значение. 
+    Это означает, что при использовании элемента <code>section</code> браузер распознаёт его семантическое значение и 
+    воспринимает его как раздел — на настольных компьютерах, мобильных устройствах и так далее.
+  </p>
+
+  <p>
+    Мы подробнее рассмотрим эту тему позже. Пока просто знайте, что у <code>div</code> этого нет. 
+    Это как таинственный призрак. Давайте посмотрим, что ещё можно сделать с <code>div</code>, на следующей лекции.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+
+    <div>
+      <p>Какое семантическое значение имеет элемент <code>div</code>?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Элемент <code>div</code> представляет собой контейнер для вводного контента или набора навигационных ссылок.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Элемент <code>div</code> определяет нижний колонтитул документа или раздела.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Элемент <code>div</code> определяет содержимое главной страницы и должен быть уникальным.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Элемент <code>div</code> не имеет семантического значения.</label>
+    </div>
+
+    <div>
+      <p>Какой из следующих вариантов синтаксиса является правильным для элемента <code>div</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">&lt;divEl&gt;Контент находится здесь&lt;/divEl&gt;</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">&lt;div&gt;Контент находится здесь&lt;/div&gt;</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">&lt;divElement&gt;Контент находится здесь&lt;/divElement&gt;</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">&lt;divGroup&gt;Контент находится здесь&lt;/divGroup&gt;</label>
+    </div>
+
+    <div>
+      <p>Какой из следующих HTML-элементов обычно используется для группировки контента в отдельные разделы?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Элемент <code>section</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Элемент <code>aside</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Элемент <code>nav</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Элемент <code>h1</code></label>
+    </div>
+    <br>
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
