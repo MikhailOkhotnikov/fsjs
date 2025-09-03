@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое идентификаторы и классы и когда следует их использовать?</title>
+</head>
+<body>
+  <h1>Что такое идентификаторы и классы и когда следует их использовать?</h1>
+
+  <p>
+    Атрибут <code>id</code> добавляет уникальный идентификатор HTML-элементу. 
+    В этом примере есть элемент <code>h1</code> с <i>идентификатором</i> <code>title</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;h1 id="title"&gt;Страница с обзором фильма&lt;/h1&gt;
+    </code>
+  </pre>
+
+  <p>
+    Вы можете ссылаться на идентификатор(<code>id</code>) заголовка(<code>title</code>) в JavaScript или CSS. 
+    Вот пример CSS, где идентификатор заголовка используется для изменения цвета(<code>color</code>) текста на красный(<code>red</code>):
+  </p>
+
+  <pre>
+    <code>
+      #title {
+        color: red;
+      }
+    </code>
+  </pre>
+
+  <p>
+    Хэш-символ (<code>#</code>) перед <code>title</code> сообщает компьютеру, что вы хотите настроить <i>таргетинг на идентификатор</i> с этим значением. 
+    Значения идентификаторов(<code>id</code>) не следует использовать более одного раза, и они всегда должны быть уникальными. Еще одна вещь, 
+    на которую следует обратить внимание в отношении значений идентификаторов, заключается в том, что в них не должно быть пробелов. 
+    Вот пример применения слов <code>main</code> и <code>heading</code> к значению атрибута <code>id</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;h1 id="main heading"&gt;Основной заголовок&lt;/h1&gt;
+    </code>
+  </pre>
+
+  <p>
+    Браузеры будут воспринимать этот пробел как часть идентификатора, что приведет к нежелательным проблемам при стилизации и написании скриптов. 
+    Значения атрибута <code>id</code> должны содержать только буквы, цифры, подчеркивания и тире.
+  </p>
+
+  <br>
+
+  <p>
+    В отличие от атрибута <code>id</code>, значение атрибута <code>class</code> не обязательно должно быть уникальным и может содержать пробелы. 
+    Вот пример применения класса <code>box</code> к элементу <code>div</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div class="box"&gt;&lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Если вы хотите добавить к элементу несколько имён классов, разделите их пробелом. 
+    Вот обновлённый пример применения нескольких классов к элементу <code>div</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div class="box red-box"&gt;&lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Чтобы применить набор стилей к этому классу <code>box</code>, вы можете сослаться на него в CSS-коде. 
+    Вот пример настройки свойств ширины(<code>width</code>), высоты(<code>height</code>) и границы(<code>border</code>) для элемента с именем класса <code>box</code>:
+  </p>
+
+  <pre>
+    <code>
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+      }
+    </code>
+  </pre>
+
+  <p>
+    Символ точки (<code>.</code>) перед <code>box</code> сообщает компьютеру, что вы хотите настроить <i>таргетинг на класс</i> с этим значением. 
+    При запуске кода он выполнит поиск по всему HTML-документу, чтобы найти все элементы с этим именем класса и применить эти стили.
+  </p>
+
+  <p>
+    Итак, подведем итог: когда следует использовать идентификатор(<code>id</code>), а когда — класс(<code>class</code>)? 
+    Классы лучше всего использовать, когда нужно применить набор стилей ко многим элементам. 
+    Если вы хотите настроить таргетинг на конкретный элемент, лучше всего использовать идентификатор, поскольку эти значения должны быть уникальными.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Когда следует использовать идентификатор, а когда класс?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Используйте <code>class</code>, если вам нужен уникальный идентификатор, который должен применяться только к одному элементу.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Используйте <code>id</code>, если вам нужен уникальный идентификатор для определенного элемента, и используйте <code>class</code>, если вы хотите применить стили или поведение к нескольким элементам.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Используйте <code>id</code>, если вы хотите единообразно оформить несколько элементов в разных частях вашей веб-страницы.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Используйте <code>id</code>, если вы хотите применить стили, которые можно легко переопределить другими стилями в вашем CSS.</label>
+    </div>
+
+    <div>
+      <p>Что произойдет, если вы используете один и тот же идентификатор более одного раза в своём HTML-коде?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Это может привести к нежелательным результатам и проблемам при попытке применения стилей или выборе элемента в JavaScript.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Программа завершится сбоем.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Ничего не произойдет.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">В окне браузера появится всплывающее предупреждающее сообщение.</label>
+    </div>
+
+    <div>
+      <p>Какое из следующих значений НЕ является правильным для атрибута <code>id</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">id="heading"</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">id="main-heading"</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">id="main"</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">id="main heading"</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
