@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css ">
+  <title>Что такое HTML-сущности и каковы некоторые распространенные примеры?</title>
+</head>
+<body>
+  <h1>Что такое HTML-сущности и каковы некоторые распространенные примеры?</h1>
+
+  <p>
+    HTML-сущность, или ссылка на символ, — это набор символов, используемый для представления зарезервированного символа в HTML. 
+    В этом примере представлен элемент абзаца, в который вложен элемент изображения:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;Это элемент &lt;img /&gt;&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Текст на экране должен быть таким: <code>Это элемент &lt;img/&gt;</code>. Однако сейчас текст выглядит так: <code>Это элемент</code>. 
+    Это происходит потому, что HTML-анализатор, обнаруживая символ «меньше» (<code>&lt;</code>), за которым следует имя HTML-тега, интерпретирует его как HTML-элемент.
+  </p>
+
+  <p>
+    Чтобы исправить эту проблему, можно использовать HTML-сущности. 
+    Вот обновлённый пример с использованием правильных HTML-сущностей для символов «меньше»(<code>&amp;lt;</code>) и «больше» (<code>&amp;gt;</code>).
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;Это элемент &amp;lt;img /&amp;gt;&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Такие типы ссылок на символы называются именованными ссылками на символы. 
+    Именованные ссылки начинаются со знака амперсанда (<code>&amp;</code>) и заканчиваются точкой с запятой(<code>;</code>).
+    Благодаря использованию именованной ссылки на символ HTML-анализатор не спутает его с реальным HTML-элементом. 
+    Вот как выглядит обновлённый элемент абзаца на странице: <code>Это элемент &lt;img /&gt;</code>.
+    Теперь пользователи смогут увидеть весь синтаксис элемента изображения именно так, как вы задумали.
+  </p>
+
+  <p>
+    Другим типом символьной ссылки является десятичная числовая ссылка. Вот пример использования десятичной числовой ссылки для символа «меньше»:
+  </p>
+
+  <pre>
+    <code>&amp;#60;</code>
+  </pre>
+
+  <p>
+    Эта ссылка на символ начинается со знака амперсанда и символа решетки (<code>#</code>), за которыми следует одна или несколько десятичных цифр, 
+    после которых следует точка с запятой.
+  </p>
+
+  <p>
+    Последний тип символьной ссылки — шестнадцатеричная числовая ссылка. Вот пример использования шестнадцатеричной числовой ссылки для символа «меньше»:
+  </p>
+
+  <pre>
+    <code>&amp;#x3C;</code>
+  </pre>
+
+  <p>
+    Эта ссылка на символ начинается со знака амперсанда, символа решётки и буквы (<code>x</code>). 
+    Затем следует одна или несколько шестнадцатеричных цифр ASCII, а заканчивается точкой с запятой.
+  </p>
+
+  <p>
+    Итак, какие ещё примеры использования HTML-сущностей существуют? 
+    Вы часто видите их применение для таких символов, как знак авторского права (&copy; - <code>&amp;copy;</code>), кавычки (&quot; - <code>&amp;quot;</code>), 
+    символ товарного знака (&trade; - <code>&amp;trade;</code>) и знак амперсанда(&amp; - <code>&amp;amp;</code>).
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Что такое HTML-сущность (ссылка на символ)?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Набор шрифтов Google.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Группа изображений и подписей.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Набор символов, используемый для представления кода JavaScript.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Набор символов, используемый для представления зарезервированного символа в HTML.</label>
+    </div>
+
+    <div>
+      <p>Каковы три типа ссылок на символы?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Ссылки на именованные, римские и шестнадцатеричные числовые символы.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Ссылки на восьмеричные, именованные и двоичные символы.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Ссылки на именованные, десятичные и шестнадцатеричные числовые символы.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Асимметричные, десятичные и шестнадцатеричные числовые ссылки на символы.</label>
+    </div>
+
+    <div>
+      <p>Какой из следующих вариантов синтаксиса является правильным для ссылки на именованный символ?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">&amp;amp;</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">;amp;</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">&amp;amp>></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">&amp;amp&amp;</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
