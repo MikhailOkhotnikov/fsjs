@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Какова роль тегов Open Graph и как они влияют на SEO?</title>
+</head>
+<body>
+  <h1>Какова роль тегов Open Graph и как они влияют на SEO?</h1>
+  
+  <p>
+    Протокол Open Graph позволяет управлять отображением контента вашего сайта в различных социальных сетях, таких как Facebook, LinkedIn и многих других. 
+    Настраивая эти свойства Open Graph, вы можете побудить пользователей кликнуть по ссылке и взаимодействовать с вашим контентом. 
+    Эти свойства можно задать с помощью набора <code>meta</code>-элементов в HTML-разделе <code>head</code>.
+  </p>
+
+  <p>
+    Первое важное свойство OG, которое следует включить, — это <code>title</code>. Вот пример настройки <code>title</code> OG для домашней страницы freeCodeCamp:
+  </p>
+
+  <pre>
+    <code>
+      &lt;meta content="freeCodeCamp.org" property="og:title" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Для атрибута <code>property</code> необходимо указать значение <code>og:title</code>. 
+    В атрибуте <code>content</code> нужно указать заголовок, который будет отображаться в социальных сетях.
+  </p>
+
+  <p>
+    Следующим важным свойством OG является тип(<code>type</code>). Вот пример использования <code>type</code> OG для домашней страницы freeCodeCamp:
+  </p>
+
+  <pre>
+    <code>
+      &lt;meta property="og:type" content="website" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Свойство <code>type</code> используется для представления типа контента, публикуемого в социальных сетях. 
+    Примерами такого контента являются статьи, веб-сайты, видео или музыка.
+  </p>
+
+  <p>
+    Третьим важным свойством OG является изображение(<code>image</code>). Вот пример установки <code>image</code> OG для главной страницы freeCodeCamp:
+  </p>
+
+  <pre>
+    <code>
+      &lt;meta
+        content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+        property="og:image"
+      /&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере изображение Open Graph указывает на логотип freeCodeCamp. 
+    Все эти изображения должны быть высокого качества, с правильными размерами и соотношением сторон. 
+    Большинство социальных сетей устанавливают критерии требований к изображениям, которые помогут вам обеспечить корректное отображение вашего контента на их сайте. 
+    Например, на странице документации developer.facebook.com указано:
+  </p>
+
+  <q>
+    Для оптимального отображения на устройствах с высоким разрешением используйте изображения размером не менее 1200 на 630 пикселей. 
+    Для отображения постов со ссылками на страницы с более крупными изображениями следует использовать изображения размером не менее 600 на 315 пикселей.
+  </q>
+
+  <p>
+    Четвёртым важным свойством OG будет <code>url</code>. Вот пример настройки <code>url</code> OG для домашней страницы freeCodeCamp:
+  </p>
+
+  <pre>
+    <code>
+      &lt;meta property="og:url" content="https://www.freecodecamp.org" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Вы можете настроить множество других свойств Open Graph, таких как <code>description</code>, <code>audio</code>, <code>video</code> и <code>locale</code>. 
+    Однако наиболее важными Open Graph являются <code>url</code>, <code>image</code>, <code>type</code> и <code>title</code>.
+  </p>
+
+  <p>
+    Как же эти свойства Open Graph влияют на поисковую оптимизацию? 
+    Когда ваш контент публикуется в социальных сетях, грамотно продуманные свойства Open Graph могут улучшить его внешний вид в лентах пользователей. 
+    Это может привести к повышению CTR(<i>Click-Through Rate — метрика в интернет-маркетинге, показатель кликабельности</i>), что может быть сигналом для поисковых систем о релевантности и интересности вашего контента.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Для чего используются свойства Open Graph?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Для встраивания интерактивного мультимедийного контента непосредственно в веб-страницы.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Чтобы настроить, как контент вашего сайта будет отображаться на различных платформах социальных сетей.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Для создания динамических всплывающих рекламных объявлений на веб-сайтах.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Для шифрования конфиденциальных данных, передаваемых между веб-серверами и браузерами пользователей.</label>
+    </div>
+
+    <div>
+      <p>Что делает <code>property="og:title"</code> в элементе <code>meta</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Он автоматически настраивает размер шрифта и стиль заголовка веб-страницы в зависимости от предпочтений пользователя.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Он указывает браузеру отображать определенный смайлик или эмодзи в качестве заголовка веб-страницы.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Он заставляет веб-страницу воспроизводить определенный аудиофайл, если его заголовок отображается во вкладке браузера.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Он определяет заголовок содержимого вашей веб-страницы при его публикации в социальных сетях.</label>
+    </div>
+
+    <div>
+      <p>Что делает <code>property="og:type"</code> в элементе <code>meta</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Он выбирает стиль шрифта страницы по умолчанию.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">При загрузке веб-страницы появляется всплывающая реклама.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Он определяет тип контента, используемого на вашей веб-странице при ее публикации на платформах социальных сетей.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Он изменяет цвет фона веб-страницы в зависимости от часового пояса пользователя.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
