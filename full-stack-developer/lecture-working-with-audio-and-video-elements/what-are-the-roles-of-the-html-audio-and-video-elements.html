@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Какова роль HTML аудио и видео элементов и как они работают?</title>
+</head>
+<body>
+  <h1>Какова роль HTML аудио и видео элементов и как они работают?</h1>
+
+  <p>
+    Элементы <code>audio</code> и <code>video</code> позволяют добавлять аудио и видео контент в HTML-документы. 
+    Элемент <code>audio</code> поддерживает популярные аудио форматы, такие как mp3, wav и ogg. 
+    Элемент <code>video</code> поддерживает форматы mp4, ogg и webm.
+  </p>
+
+  <p>
+    Чтобы включить аудио контент на вашу веб-страницу, вы можете использовать элемент <code>audio</code> с атрибутом <code>src</code>, 
+    указывающим на расположение вашего аудиофайла:
+  </p>
+
+  <pre>
+    <code>
+      &lt;audio src="music.mp3"&gt;&lt;/audio&gt;
+    </code>
+  </pre>
+
+  <p>
+    Если вы попробуете запустить этот пример, вы увидите, что на странице ничего не отображается. 
+    Однако, если вы проверите страницу с помощью инструментов разработчика, то увидите, что элемент <code>audio</code> действительно присутствует на странице. 
+    Если вы хотите видеть аудиоплеер на странице, вы можете добавить элемент <code>audio</code> с атрибутом <code>controls</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;audio src="music.mp3" controls&gt;&lt;/audio&gt;
+    </code>
+  </pre>
+
+  <p>
+    Атрибут <code>controls</code> позволяет пользователям управлять воспроизведением звука, включая регулировку громкости, приостановку и возобновление воспроизведения. 
+    Атрибут <code>controls</code> — это логический атрибут, который можно добавить к элементу для включения встроенных элементов управления воспроизведением. 
+    Если он не указан, элементы управления отображаться не будут.
+  </p>
+
+  <p>
+    Помимо атрибутов <code>src</code> и <code>controls</code>, есть несколько других атрибутов, расширяющих функциональность элемента <code>audio</code>. 
+    Атрибут <code>loop</code> — это логический атрибут, который обеспечивает непрерывное воспроизведение звука. 
+    Вот пример использования атрибута <code>loop</code> для воспроизведения одной из песен Куинси Ларсона под названием «Can't Stay Down»:
+  </p>
+
+  <pre>
+    <code>
+      &lt;audio
+        src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+        loop
+        controls
+      &gt;&lt;/audio&gt;
+    </code>
+  </pre>
+
+  <p>
+    Когда песня дойдёт до конца, она вернётся к началу и воспроизведётся снова. Другой атрибут, который можно использовать, — это атрибут <code>muted</code>. 
+    При наличии этого логического атрибута в элементе <code>audio</code> воспроизведение звука будет запущено без звука. 
+    Вот пример использования атрибута <code>muted</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;audio
+        src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+        loop
+        controls
+        muted
+      &gt;&lt;/audio&gt;
+    </code>
+  </pre>
+
+  <p>
+    При запуске песни в браузере вы ничего не услышите. Чтобы услышать музыку, нужно нажать на значок громкости.
+  </p>
+
+  <p>
+    Что касается типов аудио файлов, существуют различия в поддержке разных браузеров. 
+    Чтобы это учесть, можно использовать элементы <code>source</code> внутри элемента <code>audio</code>, и браузер выберет первый распознаваемый им источник. 
+    Вот пример использования нескольких элементов <code>source</code> для элемента <code>audio</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;audio controls&gt;
+        &lt;source src="audio.ogg" type="audio/ogg" /&gt;
+        &lt;source src="audio.wav" type="audio/wav" /&gt;
+        &lt;source src="audio.mp3" type="audio/mpeg" /&gt;
+      &lt;/audio&gt;
+    </code>
+  </pre>
+
+  <p>
+    Браузер сначала начнет с типа ogg, и если он не сможет воспроизвести аудио, то перейдет к следующему типу в списке.
+  </p>
+
+  <p>
+    Все атрибуты, которые мы изучили до сих пор, также поддерживаются элементом <code>video</code>. 
+    Вот пример использования элемента <code>video</code> с атрибутами <code>loop</code>, <code>controls</code> и <code>muted</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;video
+        src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+        loop
+        controls
+        muted
+      &gt;&lt;/video&gt;
+    </code>
+  </pre>
+
+  <p>
+    Для атрибута <code>src</code>(источника) мы используем видео «Big Buck Bunny» с archive.org. 
+    Если вы хотите показывать изображение во время загрузки видео, можно использовать атрибут <code>poster</code>. 
+    Этот атрибут недоступен для элементов <code>audio</code> и уникален для элемента <code>video</code>. 
+    Вот пример использования атрибута <code>poster</code> с контентом, предоставленным peach.blender.org:
+  </p>
+
+  <pre>
+    <code>
+      &lt;video
+        src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+        loop
+        controls
+        muted
+        poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+        width="620"
+      &gt;&lt;/video&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере также используется атрибут <code>width</code>, устанавливающий <i>ширину</i> в 620 пикселей, чтобы видео лучше умещалось на экране.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какой атрибут позволяет запустить аудио в беззвучном режиме?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Атрибут <code>mute</code>.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Атрибут <code>quiet</code>.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Атрибут <code>pause</code>.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Атрибут <code>muted</code>.</label>
+    </div>
+
+    <div>
+      <p>Какой атрибут позволяет видеть кнопки воспроизведения и паузы?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Атрибут <code>loop</code>.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Атрибут <code>controls</code>.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Атрибут <code>details</code>.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Атрибут <code>muted</code>.</label>
+    </div>
+
+    <div>
+      <p>Каково назначение атрибута <code>poster</code> в элементе <code>video</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Чтобы установить источник видео.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Для управления воспроизведением видео.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Для отображения изображения во время загрузки видео.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Чтобы отключить звук видео.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
