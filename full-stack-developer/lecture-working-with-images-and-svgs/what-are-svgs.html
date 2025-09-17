@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое SVG и когда следует их использовать?</title>
+</head>
+<body>
+  <h1>Что такое SVG и когда следует их использовать?</h1>
+
+  <p>
+    Во-первых, необходимо понять, как работают изображения. Распространённые форматы изображений, такие как PNG и JPG, относятся к растровым. 
+    Это, по сути, означает, что они основаны на пикселях, то есть данные отслеживают значение цвета в каждом пикселе.
+  </p>
+
+  <p>
+    Большой недостаток растровых изображений заключается в том, что они плохо масштабируются. 
+    Если вы когда-либо пытались увеличить размер PNG-файла, вы могли заметить, что он становится пикселизированным или размытым.
+  </p>
+
+  <p>
+    SVG — это другой тип изображения. SVG расшифровывается как масштабируемая векторная графика(<i>scalable vector graphic</i>). 
+    Векторная графика отслеживает данные на основе траекторий и уравнений для построения точек, линий и кривых. 
+    Фактически это означает, что векторную графику, как и SVG, можно масштабировать до любого размера без потери качества.
+  </p>
+
+  <p>
+    SVG-изображения обладают дополнительным преимуществом — они хранят данные в формате XML. 
+    Это означает, что вы можете использовать их непосредственно в коде как HTML-код с помощью элемента <code>svg</code>. 
+    Кроме того, это позволяет программно изменять цвет изображения.
+  </p>
+
+  <pre>
+    <code>
+      &lt;svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+        &lt;circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="yellow" /&gt;
+        &lt;circle cx="35" cy="40" r="5" fill="black" /&gt;
+        &lt;circle cx="65" cy="40" r="5" fill="black" /&gt;
+        &lt;path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent" /&gt;
+      &lt;/svg&gt;
+    </code>
+  </pre>
+
+  <p>
+    Этот код SVG рисует смайлик, комбинируя несколько базовых элементов:
+  </p>
+
+  <ul>
+    <li>Элемент <code>svg</code> — это контейнер для всего рисунка. Он задаёт пространство, в котором отображаются все фигуры. 
+      Всё, что вы хотите нарисовать с помощью SVG, например, круги, линии или контуры, помещается внутрь элемента <code>svg</code>.</li>
+    <li>Элемент круг(<code>circle</code>) используется для создания лица и глаз. Один большой круг образует жёлтое лицо, а два круга поменьше — глаза.</li>
+    <li>Элемент контура(<code>path</code>) используется для рисования улыбки. Он создаёт изогнутую линию рта.</li>
+    <li>Каждый элемент SVG имеет атрибуты, которые управляют его внешним видом и положением в области рисования.</li>
+  </ul>
+
+  <p>
+    Итак, когда же вам стоит использовать SVG? Отличный пример — иконки. 
+    Если вы хотите создать собственные маркеры или добавить иконки к ссылкам для представления платформ социальных сетей, SVG — лучший подход. 
+    Одна из самых популярных библиотек иконок, Font Awesome, использует SVG-изображения для своих иконок. 
+    SVG также отлично подходит для логотипов веб-страниц, поскольку идеально масштабируется. Он позволяет адаптировать макет к любому адаптивному дизайну. 
+    В следующий раз, когда у вас будет локальный SVG-файл, попробуйте открыть его в текстовом редакторе и поэкспериментировать с кодом.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Что такое растровое изображение?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Изображение, в котором хранятся пути, линии, точки и кривые.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Изображение, в котором хранятся данные о цвете для каждого пикселя.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Все изображения являются растровыми.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Изображение, которое легко масштабируется.</label>
+    </div>
+
+    <div>
+      <p>Что такое векторное изображение?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Изображение, в котором хранятся пути, линии, точки и кривые.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Изображение, в котором хранятся данные о цвете для каждого пикселя.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Все изображения векторные.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Изображение, которое трудно масштабировать.</label>
+    </div>
+
+    <div>
+      <p>Как SVG хранит данные?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">В виде пикселей.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">В двоичном виде.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">В шестнадцатеричном формате.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">В формате XML.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
