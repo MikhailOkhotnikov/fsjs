@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое заменяемые элементы и каковы некоторые примеры?</title>
+</head>
+<body>
+  <h1>Что такое заменяемые элементы и каковы некоторые примеры?</h1>
+
+  <p>
+    Заменяемый элемент — это элемент, содержимое которого определяется внешним ресурсом, а не самим CSS. 
+    CSS, или каскадные таблицы стилей, используются для добавления стилей к веб-странице. 
+    Примерами заменяемых элементов являются изображения, элементы <code>iframe</code> и видео.
+  </p>
+
+  <p>
+    Заменяя элементы, вы можете управлять их положением или компоновкой. Но CSS не может напрямую изменять содержимое этого элемента. 
+    Это проще объяснить на примерах. Рассмотрим элемент image, который встраивает изображение на веб-страницу:
+  </p>
+
+  <pre>
+    <code>
+      &lt;img src="example-img-url" alt="Описательный текст находится здесь"&gt;
+    </code>
+  </pre>
+
+  <p>
+    Сам элемент заменяется внешним объектом: изображением. 
+    CSS-код может управлять такими вещами, как позиционирование изображения или применение к нему фильтра, но вы не можете изменить само изображение. 
+    Более наглядным примером может служить элемент <code>iframe</code>, который встраивает внешний сайт в вашу веб-страницу:
+  </p>
+
+  <pre>
+    <code>
+      &lt;iframe src="https://www.example.com" title="Пример сайта"&gt;&lt;/iframe&gt;
+    </code>
+  </pre>
+
+  <p>
+    Типичными примерами использования элемента <code>iframe</code> являются встраивание карт или видео YouTube на страницу. 
+    Сам элемент заменяется внешним объектом: сайтом. CSS-код может изменить расположение встроенного сайта, но вы не можете изменить его содержимое. 
+    Если копнуть глубже, то если на встроенном сайте есть элемент <code>h1</code>, ваш CSS-код не сможет задать его стили. 
+    Вы не можете изменить размер, цвет шрифта и т. д.
+  </p>
+
+  <p>
+    Существуют и другие заменяемые элементы, такие как видео(<code>video</code>) и встроенный контент(<code>embed</code>). 
+    Некоторые элементы ведут себя как заменяемые элементы при определённых обстоятельствах. 
+    Вот пример элемента ввода(<code>input</code>) с атрибутом <code>type</code>, установленным на <code>image</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;input type="image" alt="Описательный текст находится здесь" src="example-img-url"&gt;
+    </code>
+  </pre>
+
+  <p>
+    Этот тип <code>input</code> считается заменяемым элементом, но другие типы <code>input</code>, такие как <code>text</code> или <code>email</code>, 
+    не являются заменяемыми элементами.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какой стиль можно применить к заменяемому элементу?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Размер шрифта.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Макет или позиционирование.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Цвет определенного текста.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Любой.</label>
+    </div>
+
+    <div>
+      <p>Чем заменяется заменяемый элемент?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Внешний объект.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Другой элемент.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Некоторый CSS.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Всем из перечисленного.</label>
+    </div>
+
+    <div>
+      <p>Какой из этих элементов является заменяемым?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>h1</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>p</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>iframe</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>a</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
