@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как встроить видео на свою страницу с помощью элемента iframe?</title>
+</head>
+<body>
+  <h1>Как встроить видео на свою страницу с помощью элемента iframe?</h1>
+
+  <p>
+    Во-первых, что такое элемент <code>iframe</code>? <code>iframe</code> расшифровывается как <i>inline frame(встроенный фрейм)</i>. 
+    Это встроенный элемент, используемый для встраивания другого HTML-контента непосредственно в HTML-страницу. 
+    Этим HTML-контентом может быть видео, карта, другой HTML-элемент или даже другие веб-страницы. Вот как выглядит синтаксис элемента <code>iframe</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;iframe
+        src="video-url"
+        width="width-value"
+        height="height-value"
+        allowfullscreen
+      &gt;&lt;/iframe&gt;
+    </code>
+  </pre>
+
+  <p>
+    Атрибут <code>src</code> указывает URL-адрес страницы, которую вы хотите встроить. 
+    Атрибут <code>width</code> определяет ширину <code>iframe</code>. Атрибут <code>height</code> определяет высоту <code>iframe</code>. 
+    Атрибут <code>allowfullscreen</code> позволяет пользователю отображать <code>iframe</code> в полноэкранном режиме. 
+    Также рекомендуется указывать атрибут <code>title</code> для <code>iframe</code>, поскольку он важен для доступности.
+  </p>
+
+  <p>
+    Чтобы встроить видео в <code>iframe</code>, вы можете скопировать его напрямую с популярных видеосервисов, таких как YouTube и Vimeo, 
+    или определить его самостоятельно с помощью атрибута <code>src</code>, указывающего на URL-адрес этого видео. 
+    Вот пример встраивания популярного курса freeCodeCamp с YouTube:
+  </p>
+
+  <pre>
+    <code>
+      &lt;h1&gt;Видеоролик freeCodeCamp на YouTube, встроенный в элемент iframe&lt;/h1&gt;
+
+      &lt;iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/PkZNo7MFNFg?si=-UBVIUNM3csdeiWF"
+        title="Видеоплеер YouTube"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      &gt;&lt;/iframe&gt;
+    </code>
+  </pre>
+
+  <p>
+    Затем вы можете настроить <code>iframe</code> по своему усмотрению или даже создать свой собственный, скопировав ссылку на видео YouTube и вставив её в качестве URL-адреса. 
+    Важно заменить https://youtu.be на https://youtube.com/embed/.
+  </p>
+
+  <p>
+    youtu.be — это домен, который вы используете при копировании ссылки, 
+    а youtube.com/embed/ — домен, необходимый для встраивания видео с помощью элемента <code>iframe</code>. Вот пример:
+  </p>
+
+  <pre>
+    <code>
+      &lt;iframe
+        src="https://youtube.com/embed/gp5H0Vw39yw?si=Rb_2nDK6abv1iIAM"
+        title="Курс Typescript от freeCodeCamp"
+        width="500"
+        height="285"
+        allowfullscreen
+      &gt;&lt;/iframe&gt;
+    </code>
+  </pre>
+
+  <p>
+    Обратите внимание, что видео может быть откуда угодно. 
+    Оно не обязательно должно быть с таких видеосервисов, как YouTube и Vimeo. Вот видео с Pixabay, встроенное с помощью элемента <code>iframe</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;h1&gt;Видео из Pixabay, встроенное в элемент iframe&lt;/h1&gt;
+
+      &lt;iframe
+        src="https://cdn.pixabay.com/video/2022/07/24/125310-733046613_large.mp4"
+        width="500"
+        height="285"
+      &gt;&lt;/iframe&gt;
+    </code>
+  </pre>
+
+  <p>
+    Не забывайте, что вы также можете встроить карту, другую веб-страницу или HTML-код непосредственно в элемент <code>iframe</code>. 
+    Вот карта, которую мне удалось встроить с помощью элемента <code>iframe</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;h1&gt;Карта из Openstreetmap.org, встроенная в элемент iframe&lt;/h1&gt;
+
+      &lt;iframe
+        width="425"
+        height="350"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=3.006134033203125%2C6.150112578753815%2C3.6357879638671875%2C6.749850810550778&amp;layer=mapnik"
+        style="border: 1px solid black"
+      &gt;
+      &lt;/iframe&gt;
+      &lt;br /&gt;
+      &lt;small&gt;
+        &lt;a href="https://www.openstreetmap.org/#map=11/6.4501/3.3210"&gt;
+          Просмотр увеличенной карты
+        &lt;/a&gt;
+      &lt;/small&gt;
+    </code>
+  </pre>
+
+  <p>
+    Если вы хотите встроить HTML напрямую в элемент <code>iframe</code>, вам необходимо использовать атрибут <code>srcdoc</code> вместо <code>src</code>.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Что означает iframe?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Международный frame.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Встроенная форма.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Встроенный frame.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Встроенный элемент формы.</label>
+    </div>
+
+    <div>
+      <p>Какой атрибут элемента <code>iframe</code> определяет источник того, что вы хотите встроить?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>src</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>url</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>frameborder</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>cross-origin</code></label>
+    </div>
+
+    <div>
+      <p>Какой атрибут элемента <code>iframe</code> следует использовать вместо <code>src</code>, если вы хотите встроить HTML напрямую?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>html</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>document</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>srcweb</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>srcdoc</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
