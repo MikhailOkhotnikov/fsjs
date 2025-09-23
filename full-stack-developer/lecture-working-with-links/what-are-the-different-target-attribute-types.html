@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Каковы различные типы целевых атрибутов и как они работают?</title>
+</head>
+<body>
+  <h1>Каковы различные типы целевых атрибутов и как они работают?</h1>
+
+  <p>
+    Возможно, вы видели атрибут <code>target</code> в элементах-якорях(anchor) или ссылках. Этот важный атрибут сообщает браузеру, где открыть URL-адрес элемента-якоря:
+  </p>
+
+  <pre>
+    <code>
+      &lt;a href="https://freecodecamp.org" target="_blank"&gt;Посетите freeCodeCamp&lt;/a&gt;
+    </code>
+  </pre>
+
+  <p>
+    Для этого атрибута существует четыре важных возможных значения. Обратите внимание, что каждому значению предшествует символ подчеркивания.
+  </p>
+
+  <p>
+    Первое значение — <code>_self</code>, что является значением по умолчанию. Ссылка открывается в текущем контексте браузера. 
+    В большинстве случаев это текущая вкладка или окно.
+  </p>
+
+  <p>
+    Второе значение — <code>_blank</code>, что означает, что ссылка открывается в новом контексте браузера. Обычно это происходит в новой вкладке. 
+    Но некоторые пользователи могут настроить свои браузеры на открытие нового окна.
+  </p>
+
+  <p>
+    Третье значение — <code>_parent</code>, которое открывает ссылку в родительском элементе текущего контекста. 
+    Например, если на вашем сайте есть <code>iframe</code>, значение <code>_parent</code> в этом <code>iframe</code> откроется во вкладке/окне вашего сайта, 
+    а не во встроенном фрейме.
+  </p>
+
+  <p>
+    Четвёртое значение — <code>_top</code>, которое открывает ссылку в самом верхнем контексте браузера — «родитель родителя». 
+    Это похоже на <code>_parent</code>, но ссылка всегда будет открываться в полной вкладке/окне браузера, даже для вложенных фреймов.
+  </p>
+
+  <p>
+    Пятое значение, <code>_unfencedTop</code>, в настоящее время используется для экспериментального API FencedFrame. 
+    На момент прочтения этой лекции у вас, вероятно, ещё не будет причин использовать его.
+  </p>
+
+  <p>
+    Выбор правильного значения <code>target</code> для контроля конечного пункта назначения пользователей является важным фактором при создании веб-сайта.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Из скольких текущих значений <code>target</code> можно выбирать?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">2</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">4</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">3</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">1</label>
+    </div>
+
+    <div>
+      <p>Где откроется ссылка с <code>target="_blank"</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">В новом окне или вкладке.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">В том же окне или вкладке.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">На втором мониторе.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">На компьютере соседа.</label>
+    </div>
+
+    <div>
+      <p>Каково поведение по умолчанию, если вы не установили <code>target</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Открывается в новом окне или вкладке.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Открывается в родительском контексте.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Открывается в том же окне или вкладке.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Не открывается.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
