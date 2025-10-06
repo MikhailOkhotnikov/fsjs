@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Почему важно иметь хорошую структурную иерархию?</title>
+</head>
+<body>
+  <h1>Почему важно иметь хорошую структурную иерархию?</h1>
+
+  <p>
+    Важнейшим аспектом создания структурной иерархии является правильное использование элементов заголовков. 
+    Элементы заголовков нумеруются как <code>h1</code>, <code>h2</code>, <code>h3</code> и т. д. 
+    Эти номера соответствуют уровню заголовка для данного элемента.
+  </p>
+
+  <p>
+    Как и в текстовом документе, не следует использовать заголовки в неправильном порядке. 
+    Элемент <code>h1</code> — это заголовок верхнего уровня. 
+    На странице редко встречается больше одного такого элемента, и обычно он должен располагаться перед всем контентом.
+  </p>
+
+  <p>
+    Ваш элемент <code>h2</code> — это подзаголовок. Он всегда должен располагаться после элемента <code>h1</code> и может располагаться после вводного текста. 
+    В отличие от элемента <code>h1</code>, на странице может быть несколько элементов <code>h2</code>. Часто это используется для разграничения различных разделов контента.
+  </p>
+
+  <p>
+    Следуя шаблону, элемент <code>h3</code> всегда должен располагаться после элемента <code>h2</code>. 
+    То есть, никогда не следует переходить сразу от <code>h1</code> к <code>h3</code>. 
+    Однако на одном уровне может быть несколько заголовков. Например, этот код корректен:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div&gt;
+        &lt;section&gt;
+          &lt;h1&gt;Курс freeCodeCamp&lt;/h1&gt;
+          &lt;h2&gt;Изучите Front-End разработку&lt;/h2&gt;
+          &lt;h2&gt;Изучите Back-End разработку&lt;/h2&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Но этот код не будет правильным, потому что <code>h3</code> предшествует <code>h2</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div&gt;
+        &lt;section&gt;
+          &lt;h1&gt;Курс freeCodeCamp&lt;/h1&gt;
+          &lt;h3&gt;Изучите Front-End разработку&lt;/h3&gt;
+          &lt;h2&gt;Изучите Back-End разработку&lt;/h2&gt;
+        &lt;/section&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Может возникнуть соблазн использовать определенный элемент заголовка из-за его стиля, например <code>h1</code> для большого текста:
+  </p>
+
+  <pre>
+    <code>
+      &lt;article&gt;
+        &lt;p&gt;
+          Вот некоторые из них
+          &lt;h1&gt;Крупный текст&lt;/h1&gt;
+        &lt;/p&gt;
+      &lt;/article&gt;
+    </code>
+  </pre>
+
+  <p>
+    Вместо этого вам следует выбрать соответствующий элемент для структуры вашего документа и использовать CSS для достижения желаемого стиля.
+  </p>
+
+  <p>
+    Использование правильной иерархии важно для обеспечения доступности. 
+    Вспомогательные технологии, такие как программы экранного доступа, опираются на структуру веб-страницы, 
+    чтобы определить, как анализировать и информировать пользователя о ней. 
+    Использование элемента <code>h3</code> после элемента <code>h1</code> может создать у пользователя программы экранного доступа впечатление, 
+    что он случайно пропустил важный контент из-за отсутствия элемента <code>h2</code>.
+  </p>
+
+  <p>
+    Правильная структура также важна для SEO. Поисковые системы используют автоматизацию для анализа содержимого вашей веб-страницы и определения того, 
+    когда и где она должна отображаться в результатах поиска. 
+    Если структура страницы некорректна, поисковые системы могут не ранжировать ваш сайт в релевантных результатах поиска.
+  </p>
+
+  <p>
+    Наконец, в зависимости от того, насколько некорректна ваша структура, ваш HTML-код может быть даже технически некорректным. 
+    В этом случае браузеру приходится фактически угадывать, что вы имели в виду. 
+    И то, что он угадывает, может быть совсем не тем, что вам нужно.
+  </p>
+
+  <p>
+    Как вы сегодня узнали, существует множество причин использовать правильную структурную иерархию на странице. Помните об этом при разработке новых проектов.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Почему структурная иерархия важна?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Доступность</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">SEO</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Чтобы браузеры понимали, что мы имеем в виду</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Всё вышеперечисленное</label>
+    </div>
+
+    <div>
+      <p>Какой элемент заголовка должен предшествовать элементу <code>h3</code>?</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>h5</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>h2</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>h6</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>h4</code></label>
+    </div>
+
+    <div>
+      <p>Как создать более крупный текст на странице?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Используйте любой элемент и оформляйте его с помощью CSS.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Используйте <code>h1</code>, поскольку он уже содержит большой текст.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Используйте элемент <code>span</code>.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Используйте правильный структурный элемент и оформите его с помощью CSS.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
