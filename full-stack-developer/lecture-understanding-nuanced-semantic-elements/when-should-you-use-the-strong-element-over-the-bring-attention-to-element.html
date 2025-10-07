@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Когда следует использовать элемент «Сильный», а когда элемент «Привлечь внимание»?</title>
+</head>
+<body>
+  <h1>Когда следует использовать элемент «Сильный», а когда элемент «Привлечь внимание»?</h1>
+
+  <p>
+    Элемент «привлечь внимание»(<i>bring attention to</i>, <code>b</code>) обычно используется для выделения ключевых слов в аннотациях или названий продуктов в обзорах. 
+    Обычно браузеры выделяют этот текст жирным шрифтом. 
+    Вот пример использования элемента <code>b</code> для выделения названий продуктов в этом обзоре:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;
+        Мы протестировали несколько продуктов, в том числе &lt;b&gt;SuperSound 3000&lt;/b&gt; для качественного звука, 
+        &lt;b&gt;QuickCharge Pro&lt;/b&gt; для быстрой зарядки и &lt;b&gt;Пылесос EcoClean&lt;/b&gt; для уборки. 
+        Первые два показали хорошие результаты, но &lt;b&gt;Пылесос EcoClean&lt;/b&gt; не оправдал ожиданий.
+      &lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Браузер выделяет эти части текста жирным шрифтом. Это визуальное выделение привлечёт внимание читателей к названиям продуктов.
+  </p>
+
+  <p>
+    Если вам необходимо подчеркнуть важность текста, вместо элемента <code>b</code> следует использовать элемент <i>«сильный»</i>(<code>strong</code>).
+  </p>
+
+  <p>
+    <code>strong</code> — это семантический HTML-элемент, который выделяет важный или срочный текст. 
+    Вот пример использования элемента <code>strong</code> для обозначения очень важного предупреждения о возможных аллергических реакциях покупателей на продукт:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;
+        &lt;strong&gt;Внимание: &lt;/strong&gt; Этот продукт может вызывать аллергические реакции.
+      &lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Элемент <code>strong</code> передает чувство срочности.
+  </p>
+
+  <p>
+    Визуально они очень похожи, поскольку по умолчанию оба отображаются жирным шрифтом. Но их значения совершенно разные. 
+    В то время как элемент «привлечь внимание» лишь привлекает внимание к тексту, не указывая на его более высокий уровень важности, элемент <code>strong</code> делает нечто большее. 
+    Он передаёт ощущение важности или срочности. В этом их главное отличие.
+  </p>
+
+  <p>
+    Чтобы сделать выбор между ними, примите во внимание цель текста и его важность в окружающем контенте.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какой элемент HTML используется для привлечения внимания к определенной части текста без указания ее особой важности?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>strong</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>mark</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>em</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>b</code></label>
+    </div>
+
+    <div>
+      <p>Какой элемент HTML используется для обозначения текста, который особенно важен или срочный?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>strong</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>b</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>em</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>mark</code></label>
+    </div>
+
+    <div>
+      <p>В чем основное различие между <code>b</code> и <code>strong</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Разницы нет — оба варианта делают текст жирным.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>b</code> — для визуального акцента, а <code>strong</code> — для подчеркивания важности.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>strong</code> — для стилизации, а <code>b</code> — для подчеркивания важности.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Оба они используются только в презентационных целях.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
