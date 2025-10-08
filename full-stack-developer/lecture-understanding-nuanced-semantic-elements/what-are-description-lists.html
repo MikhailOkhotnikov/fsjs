@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое списки описаний и когда следует их использовать?</title>
+</head>
+<body>
+  <h1>Что такое списки описаний и когда следует их использовать?</h1>
+
+  <p>
+    Списки описаний(<em>description lists</em>) идеально подходят для представления терминов и определений в организованном и удобном для чтения формате, 
+    как в глоссарии или настоящем словаре, где вы можете найти слова с соответствующими им определениями.
+  </p>
+
+  <p>
+    Это пример списка описаний в HTML с двумя терминами и соответствующими им данными:
+  </p>
+
+  <pre>
+    <code>
+      &lt;dl&gt;
+        &lt;dt&gt;HTML&lt;/dt&gt;
+        &lt;dd&gt;Язык гипертекстовой разметки&lt;/dd&gt;
+        &lt;dt&gt;CSS&lt;/dt&gt;
+        &lt;dd&gt;Каскадные таблицы стилей&lt;/dd&gt;
+      &lt;/dl&gt;
+    </code>
+  </pre>
+
+  <p>
+    В данном случае термины — это аббревиатуры HTML и CSS, а подробности — их расшифровки. 
+    Подробности также могут быть определениями или другой информацией, связанной с терминами.
+  </p>
+
+  <p>
+    Для определения списка описаний вам понадобятся три HTML-элемента. 
+    Во-первых, элемент списка описаний, <code>dl</code>(<em>description list</em>), который является контейнером для всего списка. 
+    Как видите, в примере он обволакивает все остальные элементы списка описаний.
+  </p>
+
+  <p>
+    Затем один элемент описания термина, <code>dt</code>(<em>description term</em>), для каждого термина. 
+    В данном случае список описаний содержит два термина, <code>HTML</code> и <code>CSS</code>, поэтому в нём два таких элемента.
+  </p>
+
+  <p>
+    И наконец, после каждого термина вы увидите элемент описания, <code>dd</code>(<em>description details</em>), содержащий описание или сведения, связанные с этим термином. 
+    В данном примере это <code>язык гипертекстовой разметки</code> и <code>каскадные таблицы стилей</code>.
+  </p>
+
+  <p>
+    В браузере каждый термин отображается вместе с соответствующим описанием. По умолчанию описания имеют небольшой отступ вправо для визуального различения.
+  </p>
+
+  <p>
+    Но списки описаний не ограничиваются только терминами и определениями. Они гораздо более универсальны. Вот рецепт из двух ингредиентов.
+  </p>
+
+  <pre>
+    <code>
+      &lt;dl&gt;
+        &lt;dt&gt;Мука&lt;/dt&gt;
+        &lt;dd&gt;2 стакана&lt;/dd&gt;
+        &lt;dt&gt;Сахар&lt;/dt&gt;
+        &lt;dd&gt;1/2 стакана&lt;/dd&gt;
+      &lt;/dl&gt;
+    </code>
+  </pre>
+
+  <p>
+    Весь список описаний находится в элементе <code>dl</code>. Первый ингредиент, <code>Мука</code>, находится в элементе <code>dt</code>. 
+    Затем вы можете увидеть, сколько этого ингредиента вам понадобится: <code>2 стакана</code>. 
+    Этот элемент находится в элементе <code>dd</code> сразу после соответствующего ингредиента.
+  </p>
+
+  <p>
+    Та же структура повторяется и для <code>Сахар</code>. 
+    В данном случае в рецепте всего два ингредиента, но если бы их было больше, та же структура могла бы повторяться во всём списке описания.
+  </p>
+
+  <p>
+    В браузере вы увидите ингредиенты, выровненные по левому краю, а количество с отступом, чтобы визуально разделить их.
+  </p>
+
+  <p>
+    Списки описаний также можно использовать для описания характеристик продукта, часто задаваемых вопросов, контактной информации и метаданных. 
+    По сути, когда у вас есть два связанных фрагмента информации в формате пары «ключ-значение», где один выступает в качестве метки (ключа), 
+    а другой — в качестве дополнительной связанной информации (значения), вы можете использовать список описаний.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какой HTML-тег используется для определения всего списка описаний?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>dt</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>dd</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>dl</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>li</code></label>
+    </div>
+
+    <div>
+      <p>Какой HTML-тег используется для представления термина в списке описаний?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>dl</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>dt</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>dd</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>li</code></label>
+    </div>
+
+    <div>
+      <p>Какой HTML-тег используется для определения или предоставления более подробной информации о термине в списке описаний?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>dl</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>dt</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>dd</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>li</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
