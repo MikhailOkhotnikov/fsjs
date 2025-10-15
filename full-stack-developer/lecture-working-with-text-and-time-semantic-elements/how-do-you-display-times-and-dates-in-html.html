@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как отображать время и дату в HTML?</title>
+</head>
+<body>
+  <h1>Как отображать время и дату в HTML?</h1>
+
+  <p>
+    Элемент времени(<code>time</code>) используется для представления определенного момента времени.
+  </p>
+
+  <p>
+    Вот пример использования элемента <code>time</code> для обозначения восьми часов вечера.
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;Бронирование начинается с &lt;time datetime="20:00"&gt;20:00&lt;/time&gt;&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Атрибут <code>datetime</code> используется для перевода даты и времени в машиночитаемый формат.
+  </p>
+
+  <p>
+    Это важно, поскольку это помогает в работе поисковой системы и помогает браузеру эффективнее обрабатывать информацию о дате и времени.
+  </p>
+
+  <p>
+    Значение атрибута <code>datetime</code> должно быть либо допустимым годом, либо допустимым месяцем, либо допустимым временем, либо локальной датой, 
+    либо глобальной датой, либо допустимой строкой длительности.
+  </p>
+
+  <p>
+    Вот еще один пример использования элемента времени для представления конкретной даты:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;
+        Выпускной будет проходить &lt;time datetime="2024-06-15T15:00"&gt;15 июня&lt;/time&gt;
+      &lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Значение атрибута <code>datetime</code> имеет формат ISO 8601. ISO 8601 — это международный стандарт представления даты и времени.
+  </p>
+
+  <p>
+    Первая часть этого значения — год, месяц и день. Заглавная буква <code>T</code> в значении служит разделителем между датой и временем(<em>time</em>).
+  </p>
+
+  <p>
+    Всякий раз, когда вам необходимо представить события, даты публикаций или встречи, лучше всего использовать элемент времени.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Чем полезен атрибут <code>datetime</code> в элементе <code>time</code>?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Он выделяет текст жирным шрифтом.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Он переводит даты и время в машиночитаемый формат.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Добавляет цвет к тексту.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Создает гиперссылки на другие страницы.</label>
+    </div>
+
+    <div>
+      <p>Каков правильный формат значения атрибута <code>datetime</code> согласно ISO 8601?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>YYYY-MM-DDTHH:MM:SS</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>DD-MM-YYYY HH:MM</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>MM-DD-YYYY HH:MM AM/PM</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>YYYY/MM/DD HH:MM:SS</code></label>
+    </div>
+
+    <div>
+      <p>Что означает заглавная буква «T» в значении даты и времени ISO 8601?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Часовой пояс.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Разделитель между датой и временем.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Название документа.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Температура.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
