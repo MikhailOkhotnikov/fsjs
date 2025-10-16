@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как отображать математические уравнения и химические формулы в HTML?</title>
+</head>
+<body>
+  <h1>Как отображать математические уравнения и химические формулы в HTML?</h1>
+
+  <p>
+    Элемент "надстрочный индекс"(<code>sup</code>, superscript) используется для отображения текста в виде надстрочного индекса. 
+    Надстрочный индекс — это символ или буква, печатаемая над обычной строкой текста.
+  </p>
+
+  <p>
+    Вот пример использования надстрочного элемента для иллюстрации показателей степеней:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;2&lt;sup&gt;2&lt;/sup&gt; (2 в квадрате) равно 4.&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере число 2 заключено в теги <code>sup</code> для обозначения надстрочного индекса внутри абзаца. 
+    В окне предварительного просмотра вы увидите, что второе число 2 меньше и немного выше первого числа 2.
+  </p>
+
+  <p>
+    Элемент «надстрочный индекс» обычно используется для обозначения показателей степеней, надстрочных букв и порядковых числительных. 
+    Вот пример использования элемента «надстрочный индекс» для обозначения надстрочных букв:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;
+        Монсеньор часто пишется как &lt;strong&gt;М&lt;sup&gt;gr&lt;/sup&gt;&lt;/strong&gt;.
+      &lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Надстрочные буквы обозначают буквы, написанные надстрочным шрифтом, обычно для обозначения сокращений. 
+    В данном примере буквы <code>g</code> и <code>r</code> заключены в надстрочные теги для наглядности сокращения.
+  </p>
+
+  <p>
+    Важно отметить, что элемент надстрочного индекса следует использовать только в типографских целях. 
+    Если вы хотите оформить текст с приподнятой базовой линией, вместо элемента надстрочного индекса следует использовать CSS.
+  </p>
+
+  <p>
+    Для представления химических уравнений в HTML используется элемент "нижний индекс"<code>subscript</code>. 
+    Этот элемент использует нижний индекс, который отображает заниженную базовую линию с использованием более мелкого текста.
+  </p>
+
+  <p>
+    Вот пример использования нижнего индексного элемента для отображения химического представления углекислого газа.
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;CO&lt;sub&gt;2&lt;/sub&gt;&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Число два заключено в тег <code>sub</code>, чтобы проиллюстрировать, что символ должен быть нижним индексом.
+  </p>
+
+  <p>
+    К распространенным вариантам использования элемента нижнего индекса относятся химические формулы, сноски и переменные нижние индексы.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Каково основное назначение надстрочного элемента в HTML?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Для отображения текста другим цветом.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Для отображения текста шрифтом меньшего размера.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Для отображения текста в виде надстрочного индекса над обычной строкой текста.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Для подчеркивания текста.</label>
+    </div>
+
+    <div>
+      <p>Какой из приведенных ниже примеров является примером правильного использования надстрочного элемента?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>&lt;p&gt;2&lt;sub&gt;2&lt;/sub&gt; (2 в квадрате) это 4.&lt;/p&gt;</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>&lt;p&gt;2&lt;sup&gt;2&lt;/sup&gt; (2 в квадрате) это 4.&lt;/p&gt;</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>&lt;p&gt;2&lt;sul&gt;2&lt;/sul&gt; (2 в квадрате) это 4.&lt;/p&gt;</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>&lt;p&gt;2&lt;sutp&gt;2&lt;/sutp&gt; (2 в нижнем индексе) это 4.&lt;/p&gt;</code></label>
+    </div>
+
+    <div>
+      <p>Что следует использовать вместо надстрочного элемента, если вы хотите оформить текст с приподнятой базовой линией по типографским причинам?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Элемент <code>sub</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">CSS</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Элемент <code>strong</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Элемент <code>em</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
