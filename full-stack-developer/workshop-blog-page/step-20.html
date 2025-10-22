@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 20</title>
+</head>
+<body>
+  <h1>Шаг 20</h1>
+
+  <p>
+    В разделе Контакты необходимо указать контактную информацию автора блога. Для этого используется элемент <code>address</code>.
+  </p>
+
+  <p>
+    Элемент <code>address</code> используется для представления контактной информации человека или организации.
+  </p>
+
+  <p>
+    Вот пример использования элемента <code>address</code> для физического адреса. Элемент <code>br</code> здесь используется для создания разрыва(<em>break</em>) строки между текстом.
+  </p>
+
+  <details>
+    <summary>Пример кода:</summary>
+
+    <pre>
+      <code>
+        &lt;address&gt;
+          ул. Советская, д. 123 &lt;br /&gt;
+          г. Пенза, Россия
+        &lt;/address&gt;
+      </code>
+    </pre>
+
+  </details>
+
+  <p>
+    Под элементом <code>h2</code> добавьте элемент <code>address</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;title&gt;Блог мистера Уискерса&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header&gt;
+              &lt;h1&gt;Добро пожаловать на страницу блога мистера Уискерса!&lt;/h1&gt;
+              &lt;figure&gt;
+                &lt;img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/1.jpg" alt="кот в саду"&gt;
+                &lt;figcaption&gt;Мистер Уискерс в саду&lt;/figcaption&gt;
+              &lt;/figure&gt;
+              &lt;nav&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#about"&gt;Обо мне&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#posts"&gt;Посты&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#contact"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/nav&gt;
+            &lt;/header&gt;
+            &lt;main&gt;
+              &lt;section id="about"&gt;
+                &lt;h2&gt;Обо мне&lt;/h2&gt;
+                &lt;p&gt;
+                  Привет! Меня зовут Джейн Доу, я страстная писательница, которая черпает бесконечное вдохновение в проделках своего любимого кота, мистера Уискерса.
+                &lt;/p&gt;
+                &lt;p&gt;
+                  Его игривый характер и неиссякаемая энергия держат меня в тонусе. Я его так люблю.
+                &lt;/p&gt;
+              &lt;/section&gt;
+              &lt;section id="posts"&gt;
+                &lt;h2&gt;Посты&lt;/h2&gt;
+                &lt;article&gt;
+                  &lt;h3&gt;Первый день мистера Уискерса дома&lt;/h3&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+                    quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+                    quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+                    quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+                    quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+                  &lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article&gt;
+                  &lt;h3&gt;Первая ванна мистера Уискерса&lt;/h3&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+                    quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+                    quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+                    quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+                    quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+                  &lt;/p&gt;
+                &lt;/article&gt;
+                &lt;article&gt;
+                  &lt;h3&gt;Первый день рождения мистера Уискерса&lt;/h3&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+                    quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+                    quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+                  &lt;/p&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                    quod, voluptates, quae, quos quibusdam dolorum quia nemo repudiandae
+                    quidem voluptatum quas. Quisquam quod, voluptates, quae, quos
+                    quibusdam dolorum quia nemo repudiandae quidem voluptatum quas.
+                  &lt;/p&gt;
+                &lt;/article&gt;
+              &lt;/section&gt;
+            &lt;/main&gt;
+            &lt;footer&gt;
+              &lt;section id="contact"&gt;
+                &lt;h2&gt;Контакты&lt;/h2&gt;
+                
+              &lt;/section&gt;
+            &lt;/footer&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+    
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-19.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-21.html">Следующий</a>
+
+</body>
+</html>
