@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Создайте центр событий</title>
+</head>
+<body>
+  <h1>Создайте центр событий</h1>
+
+  <p>
+    Создайте приложение, функционально похожее на <a href="final-lab-event-hub.html">этот проект-пример</a>. Постарайтесь не копировать проект-пример, а придайте ему свой собственный стиль.
+  </p>
+
+  <p>
+    В этой лабораторной работе вы будете использовать семантические элементы HTML для создания структуры веб-страницы. 
+    Вы добавите контент и изображения, чтобы она выглядела как настоящий центр событий.
+  </p>
+
+  <p>
+    <b>Цель</b>: реализовать приведенные ниже пользовательские истории и пройти все тесты, необходимые для завершения лабораторной работы.
+  </p>
+
+  <p>Истории пользователей:</p>
+
+  <ol>
+    <li>У вас должен быть элемент <code>header</code>.</li>
+    <li>Внутри элемента <code>header</code> должен быть элемент <code>h1</code>, содержащий текст <code>Центр событий</code>, и элемент <code>nav</code>.</li>
+    <li>Внутри элемента <code>nav</code> должен быть неупорядоченный список из двух элементов, содержащих ссылки на разные разделы страницы. 
+      Первый элемент должен содержать текст <code>Предстоящие события</code>, а второй — текст <code>Прошедшие события</code>.</li>
+    <li>Каждая ссылка должна быть представлена ​​элементом <code>a</code> с атрибутом <code>href</code>, который ссылается на соответствующий раздел страницы,
+      <code>#upcoming-events</code> и <code>#past-events</code> соответственно.</li>
+    <li>У вас должен быть элемент <code>main</code>, содержащий различные разделы страницы.</li>
+    <li>Внутри элемента <code>main</code> должно быть два элемента <code>section</code>.</li>
+    <li>Первый элемент <code>section</code> должен иметь атрибут <code>id</code> со значением <code>upcoming-events</code>.</li>
+    <li>
+      Внутри раздела <code>#upcoming-events</code> у вас должно быть:
+      <ul>
+        <li>Элемент <code>h2</code> с текстом <code>Предстоящие события</code>.</li>
+        <li>Два элемента <code>article</code>. Каждая статья должна представлять событие и должна содержать:
+          <ul>
+            <li>Элемент <code>h3</code> для названия мероприятия.</li>
+            <li>Элемент <code>p</code> для описания события. При желании вы можете добавить дату внизу.</li>
+          </ul>        
+        </li>
+      </ul>
+    </li>
+    <li>Второй элемент <code>section</code> должен иметь атрибут <code>id</code> со значением <code>past-events</code>.</li>
+    <li>
+      Внутри раздела <code>#past-events</code> у вас должно быть:
+      <ul>
+        <li>Элемент <code>h2</code> с текстом <code>Прошедшие события</code>.</li>
+        <li>Два элемента <code>article</code>. Каждый элемент <code>article</code> должен представлять прошедшее событие и должен иметь:
+          <ul>
+            <li>Элемент <code>h3</code> для названия мероприятия,</li>
+            <li>Элемент <code>p</code> для описания события. При желании вы можете добавить дату внизу.</li>
+            <li>Элемент изображения с атрибутом <code>src</code>, указывающим на файл изображения, и атрибутом <code>alt</code> с описанием изображения.</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>
+    <b>Примечание</b>: Вы можете использовать любой текст для описания и дат мероприятий. При желании вы можете использовать следующие URL-адреса изображений:
+  </p>
+  <ul>
+    <li><code>https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg</code></li>
+    <li><code>https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg</code></li>
+  </ul>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Центр событий&lt;/title&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+            &lt;header&gt;
+                &lt;h1&gt;Центр событий&lt;/h1&gt;
+                &lt;nav&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#upcoming-events"&gt;Upcoming Events&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#past-events"&gt;Past Events&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+            &lt;/header&gt;
+            &lt;main&gt;
+                &lt;section id="upcoming-events"&gt;
+                    &lt;h2&gt;Предстоящие события&lt;/h2&gt;
+                    &lt;article&gt;
+                        &lt;h3&gt;Конференция по искусственному интеллекту и машинному обучению 2025&lt;/h3&gt;
+                        &lt;p&gt;Присоединяйтесь к нам, чтобы подробно ознакомиться с последними достижениями в области искусственного интеллекта и машинного обучения. Лидеры отрасли поделятся идеями и практическими примерами того, как ИИ преобразует различные секторы.&lt;/p&gt;
+                        &lt;p&gt;
+                            Дата:&lt;time datetime="2025-11-15T15:00"&gt;15 ноября 2025&lt;/time&gt;
+                        &lt;/p&gt;
+                    &lt;/article&gt;
+                    &lt;article&gt;
+                        &lt;h3&gt;Учебный лагерь по веб-разработке&lt;/h3&gt;
+                        &lt;p&gt;Практический семинар, предназначенный для разработчиков, стремящихся улучшить свои навыки работы с современными веб-технологиями, включая React, Node.js и GraphQL. Идеально подходит как для новичков, так и для опытных разработчиков.&lt;/p&gt;
+                        &lt;p&gt;
+                            Дата:&lt;time datetime="2025-12-15T15:00"&gt;15 декабря 2025&lt;/time&gt;
+                        &lt;/p&gt;
+                    &lt;/article&gt;
+                &lt;/section&gt;
+                &lt;section id="past-events"&gt;
+                    &lt;h2&gt;Прошедшие события&lt;/h2&gt;
+                    &lt;article&gt;
+                        &lt;h3&gt;Саммит по кибербезопасности 2025&lt;/h3&gt;
+                        &lt;p&gt;Мероприятие, посвящённое последним тенденциям и угрозам в сфере кибербезопасности. Эксперты обсудили стратегии защиты данных и обеспечения конфиденциальности в цифровом мире.&lt;/p&gt;
+                        &lt;p&gt;
+                            Дата:&lt;time datetime="2025-06-15T15:00"&gt;15 июня 2025&lt;/time&gt;
+                        &lt;/p&gt;
+                        &lt;img src="https://cdn.freecodecamp.org/curriculum/labs/past-event1.jpg" alt="Фото с Саммита по кибербезопасности 2025" /&gt;
+                    &lt;/article&gt;
+                    &lt;article&gt;
+                        &lt;h3&gt;Блокчейн Экспо 2025&lt;/h3&gt;
+                        &lt;p&gt;Комплексное мероприятие, посвящённое будущему технологии блокчейн. Среди тем были децентрализованные финансы (DeFi), смарт-контракты и влияние блокчейна на различные отрасли.&lt;/p&gt;
+                        &lt;p&gt;
+                            Дата:&lt;time datetime="2025-07-15T15:00"&gt;15 июля 2025&lt;/time&gt;
+                        &lt;/p&gt;
+                        &lt;img src="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg" alt="Изображение с выставки Blockchain Expo 2025" /&gt;
+                    &lt;/article&gt;
+                &lt;/section&gt;
+            &lt;/main&gt;
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Тесты</h2>
+
+  <ol>
+    <li>У вас должен быть элемент <code>header</code>.</li>
+    <li>Элемент <code>header</code> должен располагаться после открывающего тега <code>body</code>.</li>
+    <li>Внутри элемента <code>header</code> должен быть элемент <code>h1</code>, содержащий текст <code>Центр событий</code>.</li>
+    <li>Внутри элемента <code>header</code>, после элемента <code>h1</code>, должен располагаться элемент <code>nav</code>.</li>
+    <li>Ваш элемент <code>nav</code> должен содержать неупорядоченный список из двух элементов.</li>
+    <li>Первым элементом неупорядоченного списка должна быть ссылка.</li>
+    <li>Вторым элементом неупорядоченного списка должна быть ссылка.</li>
+    <li>Текст первого элемента в неупорядоченном списке должен быть <code>Предстоящие события</code>.</li>
+    <li>Первый элемент в неупорядоченном списке должен иметь атрибут <code>href</code>, равный <code>#upcoming-events</code></li>
+    <li>Текст второго элемента в неупорядоченном списке должен быть <code>Прошедшие события</code>.</li>
+    <li>Второй элемент в неупорядоченном списке должен иметь атрибут <code>href</code>, равный <code>#past-events</code></li>
+    <li>После закрывающего тега <code>/header</code> должен располагаться элемент <code>main</code>.</li>
+    <li>Внутри элемента <code>main</code> должно быть два элемента <code>section</code>.</li>
+    <li>Ваш первый элемент <code>section</code> должен иметь атрибут <code>id</code> со значением <code>upcoming-events</code>.</li>
+    <li>Ваш второй элемент <code>section</code> должен иметь атрибут <code>id</code> со значением <code>past-events</code>.</li>
+    <li>Внутри <code>#upcoming-events</code> раздела, у вас должен быть элемент <code>h2</code> с текстом <code>Предстоящие события</code></li>
+    <li>Внутри <code>#upcoming-events</code> раздела, у вас должно быть два элемента <code>article</code> под элементом <code>h2</code>.</li>
+    <li>Оба элемента статьи внутри раздела <code>#upcoming-events</code> должны иметь элемент <code>h3</code> для заголовка мероприятия.</li>
+    <li>Оба элемента статьи внутри раздела <code>#upcoming-events</code> должны иметь элемент абзаца для описания события.</li>
+    <li>Внутри <code>#past-events</code> раздела, у вас должен быть элемент <code>h2</code> с текстом <code>Прошедшие события</code></li>
+    <li>Внутри <code>#past-events</code> раздела, у вас должно быть два элемента <code>article</code> под элементом <code>h2</code>.</li>
+    <li>Оба элемента статьи внутри раздела <code>#past-events</code> должны иметь элемент <code>h3</code> для заголовка мероприятия.</li>
+    <li>Оба элемента статьи внутри раздела <code>#past-events</code> должны иметь элемент абзаца для описания события.</li>
+    <li>Оба элемента статьи внутри раздела <code>#past-events</code> должны иметь элемент изображения.</li>
+    <li>Оба элемента изображения внутри раздела <code>#past-events</code> должны иметь атрибут <code>src</code>, указывающий на файл изображения.</li>
+    <li>Оба элемента изображения внутри раздела <code>#past-events</code> должны иметь атрибут <code>alt</code> с описанием изображения.</li>
+    <li>Каждый элемент <code>h3</code> должен иметь заголовок события.</li>
+    <li>Каждый элемент <code>p</code> должен иметь описание события.</li>
+  </ol>
+
+  <p><a href="final-lab-event-hub.html">Проверить результат</a></p>
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
