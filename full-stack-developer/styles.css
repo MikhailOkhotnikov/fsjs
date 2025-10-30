@@ -1,5 +1,6 @@
 body {
-  background-color: white;
+  background-color: #272733;
+  color: rgba(255, 255, 255, 0.829);
 }
 
 code {
@@ -59,4 +60,44 @@ fieldset.chapter {
   margin-left: auto;
   align-items: top;
 }
+
+.block-label {
+    align-self: center;
+    border: 1px solid;
+    font-size: .85rem;
+    padding: 1px 4px 1px;
+    top: -1px;
+    position: relative;
+    border-radius: 3px;
+}
+
+.block-label-workshop {
+    border-color: #3b93f8;
+    color: #3b93f8;
+}
+
+.block-label-lab {
+    border-color: #acd157;
+    color: #acd157;
+}
+
+.block-label-lecture {
+    border-color: #ffc300;
+    color: #ffc300;
+}
+
+.block-label-review {
+    border-color: #dbb8ff;
+    color: #dbb8ff;
+}
+
+.block-label-quiz {
+    border-color: #ffadad;
+    color: #ffadad;
+}
+
+a:visited {
+  color: whitesmoke;
+}
+
 
