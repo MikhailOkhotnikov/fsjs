@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Создайте HTML аудио и видео плеер</title>
+</head>
+<body>
+  <h1>Создайте HTML аудио и видео плеер</h1>
+
+  <p>
+    Создайте приложение, функционально похожее на <a href="final-an-html-audio-and-video-player.html">этот пример проекта</a>. Постарайтесь не копировать пример проекта, а придайте ему свой собственный стиль.
+  </p>
+
+  <p>
+    <b>Цель</b>: реализовать приведенные ниже пользовательские истории и пройти все тесты, необходимые для завершения лабораторной работы.
+  </p>
+
+  <p>Истории пользователей:</p>
+
+  <ol>
+    <li>Для основного заголовка страницы необходим элемент <code>h1</code>.</li>
+    <li>У вас должно быть два элемента <code>section</code>.</li>
+    <li>Внутри первого элемента <code>section</code> должен быть элемент <code>h2</code> для заголовка воспроизводимого видео.</li>
+    <li>Под элементом <code>h2</code> должен располагаться элемент <code>video</code> с атрибутами <code>controls</code> и <code>width</code>. 
+      Атрибут <code>width</code> должен иметь значение <code>640</code>.</li>
+    <li>
+      Внутри элемента <code>video</code> должен быть элемент <code>source</code> с атрибутом <code>src</code>, указывающим на видеофайл, и атрибутом <code>type</code>.
+      <ul>
+        <li>Вы можете использовать: <code>https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4</code>.</li>
+      </ul>
+    </li>
+    <li>Внутри второго элемента <code>section</code> должен быть элемент <code>h2</code> для названия воспроизводимой песни.</li>
+    <li>
+      Под элементом <code>h2</code> должен располагаться элемент <code>audio</code> с атрибутами <code>controls</code> и <code>loop</code>, 
+      а также атрибут <code>src</code>, указывающий на аудиофайл.
+      <ul>
+        <li>Вы можете использовать <code>https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3</code>.</li>
+        <li>Или <code>https://cdn.freecodecamp.org/curriculum/js-music-player/we-are-going-to-make-it.mp3</code>.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8" /&gt;
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/&gt;
+          &lt;title&gt;Лабораторная HTML аудио и видео.&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Тесты</h2>
+
+  <ol>
+    <li>Для основного заголовка страницы необходим элемент <code>h1</code>.</li>
+    <li>Ваш <code>h1</code> не должен быть пустым.</li>
+    <li>У вас должен быть только один элемент <code>h1</code>.</li>
+    <li>У вас должно быть два элемента <code>section</code>.</li>
+    <li>Внутри первого элемента <code>section</code> должен быть элемент <code>h2</code> для заголовка воспроизводимого видео.</li>
+    <li>Под элементом <code>h2</code> должен располагаться элемент <code>video</code>.</li>
+    <li>Элемент <code>video</code> должен иметь атрибут <code>controls</code>.</li>
+    <li>Элементу <code>video</code> следует присвоить атрибут <code>width</code>, равный <code>640</code>.</li>
+    <li>Внутри элемента <code>video</code> должен быть элемент <code>source</code>.</li>
+    <li>Элемент <code>source</code> должен иметь атрибут <code>src</code>, указывающий на видеофайл.</li>
+    <li>Элемент <code>source</code> должен иметь атрибут <code>type</code></li>
+    <li>Атрибут <code>type</code> должен соответствовать типу расширения файла, указанному в атрибуте <code>src</code>.</li>
+    <li>Внутри второго элемента <code>section</code> должен быть элемент <code>h2</code> для названия воспроизводимой песни.</li>
+    <li>Все ваши элементы <code>h2</code> должны содержать текст.</li>
+    <li>Под вторым элементом <code>h2</code> должен располагаться элемент <code>audio</code>.</li>
+    <li>Элемент <code>audio</code> должен иметь атрибут <code>controls</code>.</li>
+    <li>Элемент <code>audio</code> должен иметь атрибут <code>loop</code>.</li>
+    <li>Элемент <code>audio</code> должен иметь атрибут <code>src</code>, указывающий на аудиофайл.</li>
+  </ol>
+  
+  <p><a href="final-an-html-audio-and-video-player.html">Проверить результат</a></p>
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
