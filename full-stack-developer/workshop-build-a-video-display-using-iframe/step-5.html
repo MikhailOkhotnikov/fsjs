@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 5</title>
+</head>
+<body>
+  <h1>Шаг 5</h1>
+
+  <p>
+    Один из атрибутов — <code>allow</code>. Это своего рода список разрешений, сообщающий браузеру, какие функции <code>iframe</code> может использовать.
+  </p>
+
+  <p>
+    Вот элемент <code>iframe</code> с атрибутом <code>allow</code>:
+  </p>
+
+  <details>
+    <summary>Пример кода:</summary>
+
+    <pre>
+      <code>
+        &lt;iframe
+          allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture web-share"
+        &gt;&lt;/iframe&gt;
+      </code>
+    </pre>
+
+  </details>
+
+  <p>
+    Добавьте атрибут <code>allow</code> со значениями <code>accelerometer</code>, <code>autoplay</code> и <code>clipboard-write</code>.
+  </p>
+
+  <p>
+    <code>accelerometer</code> позволяет <code>iframe</code> использовать датчики движения, чтобы он мог определять такие вещи, как наклон и вращение устройства. 
+    Функция <code>autoplay</code> позволяет автоматически начинать воспроизведение видео, 
+    а функция <code>clipboard-write</code> позволяет <code>iframe</code> записывать данные в буфер обмена пользователя.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;title&gt;Отображение видео в iframe&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;iframe Видеодисплей&lt;/h1&gt;
+            &lt;iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/I0_951_MPE0"
+
+            &gt;
+            
+            &lt;/iframe&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+    
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-4.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-6.html">Следующий</a>
+
+</body>
+</html>
