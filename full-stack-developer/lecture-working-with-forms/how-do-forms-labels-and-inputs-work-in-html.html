@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как работают формы, метки и поля ввода в HTML?</title>
+</head>
+<body>
+  <h1>Как работают формы, метки и поля ввода в HTML?</h1>
+
+  <p>
+    Элемент <code>form</code> в HTML используется для сбора информации о пользователе, такой как имя и адрес электронной почты. Вот пример элемента <code>form</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;form action="url-goes-here"&gt;
+        &lt;!-- элементы ввода идут сюда --&gt;
+      &lt;/form&gt;
+    </code>
+  </pre>
+
+  <p>
+    Атрибут <code>action</code> указывает, куда будут отправлены данные формы после отправки. 
+    Для сбора конкретной информации, например, имен и адресов электронной почты, используется элемент <code>input</code>. Вот пример использования элемента <code>input</code>:
+  </p>
+
+  <p>
+    Включите интерактивный редактор и взаимодействуйте с элементом <code>input</code> в окне предварительного просмотра, введя свое имя в поле.
+  </p>
+
+  <pre>
+    <code>
+      &lt;form action=""&gt;
+        &lt;input type="text" /&gt;
+      &lt;/form&gt;
+    </code>
+  </pre>
+
+  <p>
+    Элементы <code>input</code> являются пустыми и не имеют закрывающих тегов. Атрибут <code>type</code> определяет тип данных, ожидаемый от пользователя. 
+    В данном случае данные будут представлены в виде обычного текста. 
+    Чтобы добавить метку для поля ввода, используйте элемент <code>label</code>. Вот пример использования элемента <code>label</code> с текстом <code>Полное имя:</code>.
+  </p>
+
+  <p>
+    Нажмите на текст <code>Полное имя</code> в окне предварительного просмотра, и вы увидите, что поле ввода станет активным. 
+    Для работы с примером необходимо включить интерактивный редактор.
+  </p>
+
+  <pre>
+    <code>
+      &lt;form action=""&gt;
+        &lt;label&gt;
+          Полное имя:
+          &lt;input type="text" /&gt;
+        &lt;/label&gt;
+      &lt;/form&gt;
+    </code>
+  </pre>
+
+  <p>
+    Вкладывая <code>input</code> в элемент <code>label</code>, вы создаёте неявную связь между меткой и полем ввода. 
+    Термин «неявный» относится к чему-то, что понимается или подразумевается без необходимости явного указания или определения с помощью дополнительных атрибутов или элементов. 
+    Чтобы явно связать <code>label</code> с <code>input</code>, можно использовать атрибут <code>for</code>. 
+    Ниже приведён пример использования атрибута <code>for</code> для метки адреса электронной почты.
+  </p>
+
+  <p>
+    Взаимодействуйте с элементом <code>input</code> в окне предварительного просмотра, введя поддельный адрес электронной почты, например, <code>jane@example.com</code>. 
+    Для взаимодействия с примером необходимо включить интерактивный редактор.
+  </p>
+
+  <pre>
+    <code>
+      &lt;form action=""&gt;
+        &lt;label for="email"&gt; адрес электронной почты: &lt;/label&gt;
+        &lt;input type="email" id="email" /&gt;
+      &lt;/form&gt;
+    </code>
+  </pre>
+  
+  <p>
+    При использовании явной связи значения атрибутов <code>for</code> и <code>id</code> должны быть одинаковыми. 
+    В данном случае оба значения равны <code>email</code>. Тип <code>email</code> в поле ввода обеспечивает базовую проверку корректности форматирования адресов электронной почты. 
+    Если вы хотите показать пользователям дополнительные подсказки относительно ожидаемого ввода, можно использовать атрибут <code>placeholder</code>(заполнитель). 
+    Ниже приведен пример использования атрибута <code>placeholder</code> в поле ввода email.
+  </p>
+
+  <p>
+    Включите интерактивный редактор, нажмите на поле ввода адреса электронной почты и начните вводить адрес электронной почты, и вы увидите, как заполнитель текста исчезнет.
+  </p>
+
+  <pre>
+    <code>
+      &lt;form action=""&gt;
+        &lt;label for="email"&gt; адрес электронной почты: &lt;/label&gt;
+        &lt;input type="email" id="email" placeholder="example@email.com" /&gt;
+      &lt;/form&gt;
+    </code>
+  </pre>
+
+  <p>
+    В качестве текста-заполнителя вы хотите предоставить краткий текст, который будет полезен, чтобы показать формат и тип данных, которые вы ожидаете от своих пользователей. 
+    В этом случае текст-заполнитель <code>example@email.com</code> показывает пользователю, что он должен ввести правильно отформатированный адрес электронной почты.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какова роль атрибута for внутри элемента label?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Указывает цвет текста метки.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Он используется для явного связывания метки с полем ввода.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Он определяет выравнивание метки внутри контейнера.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Он определяет функцию JavaScript, которая будет выполняться при щелчке по метке.</label>
+    </div>
+
+    <div>
+      <p>Какое из следующих значений является правильным для атрибута <code>type</code>, используемого внутри полей ввода?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>choice</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>text-box</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>numberinput</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>text</code></label>
+    </div>
+
+    <div>
+      <p>Какова роль атрибута <code>placeholder</code> внутри элемента <code>input</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Он используется для предоставления подсказки или примера текста в поле ввода.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Он определяет тип поля ввода.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Он определяет начальное значение, отображаемое в поле ввода.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Указывает максимальную длину символов, допустимую в поле ввода.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
