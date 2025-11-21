@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Какие существуют типы кнопок и когда следует их использовать?</title>
+</head>
+<body>
+  <h1>Какие существуют типы кнопок и когда следует их использовать?</h1>
+
+  <p>
+    Элемент <code>button</code> используется для выполнения определённого действия при активации. Вот пример элемента <code>button</code> с текстом <code>Начать игру</code>.
+  </p>
+
+  <pre>
+    <code>
+      &lt;button&gt;Начать игру&lt;/button&gt;
+    </code>
+  </pre>
+
+  <p>
+    Другие примеры использования элемента <code>button</code> включают отправку формы, отображение модального окна или открытие/закрытие бокового меню. 
+    Элемент <code>button</code> имеет атрибут <code>type</code>, который управляет поведением кнопки при её активации. 
+    Первым возможным значением атрибута <code>type</code> будет тип <code>button</code>. 
+    Вот пример использования элемента <code>button</code> с типом <code>button</code> и текстом <code>Показать оповещение</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;button type="button"&gt;Показать оповещение&lt;/button&gt;
+    </code>
+  </pre>
+
+  <p>
+    По умолчанию кнопка не выполняет никаких действий при активации. 
+    Однако вы можете добавить код JavaScript, чтобы сделать кнопку интерактивной, например, отображая оповещение, как в данном случае.
+  </p>
+
+  <p>
+    Нажмите кнопку <code>Показать оповещение</code>, чтобы увидеть всплывающее оповещение на экране. Для работы с примером необходимо включить интерактивный редактор.
+  </p>
+
+  <p>
+    <strong>ПРИМЕЧАНИЕ</strong>: Этот интерактивный пример использует JavaScript, но вам не нужно беспокоиться о понимании кода JavaScript. Вы изучите JavaScript в следующих модулях.
+  </p>
+
+  <details>
+    <summary>Пример кода</summary>
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;button type="button"&gt;Показать оповещение&lt;/button&gt;
+          &lt;script src="index.js"&gt;&lt;/script&gt;
+        </code>
+      </pre>
+    </fieldset>
+    <fieldset class="css chapter">
+      <legend>Файл index.js</legend>
+      <pre>
+        <code>
+          const btn = document.querySelector("button");
+          btn.addEventListener("click", () => alert("Вы нажали на кнопку оповещения"));
+        </code>
+      </pre>
+    </fieldset>
+  </details>
+
+  <p>
+    Другим возможным значением атрибута <code>type</code> является значение <code>submit</code>. 
+    Ниже приведен пример использования элемента <code>button</code> с типом <code>submit</code>.
+  </p>
+
+  <pre>
+    <code>
+      &lt;form action=""&gt;
+        &lt;label for="email"&gt;Адрес электронной почты:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" /&gt;
+        &lt;button type="submit"&gt;Отправить форму&lt;/button&gt;
+      &lt;/form&gt;
+    </code>
+  </pre>
+
+  <p>
+    Внутри этого элемента <code>form</code> есть <code>label</code> и <code>input</code> для ввода адреса электронной почты пользователя. 
+    Когда пользователь нажимает кнопку <code>Отправить форму</code>, его данные отправляются на сервер и обрабатываются. 
+    Третье возможное значение атрибута <code>type</code> — значение <code>reset</code>(<em>сбросить</em>). 
+    Вот пример элемента <code>form</code> с кнопками сброса и отправки.
+  </p>
+
+  <p>
+    Включите интерактивный редактор и взаимодействуйте с полем адреса электронной почты в окне предварительного просмотра, указав поддельный адрес. 
+    Затем нажмите кнопку сброса, и ваш адрес исчезнет из поля.
+  </p>
+
+  <pre>
+    <code>
+      &lt;form action=""&gt;
+        &lt;label for="email"&gt;Адрес электронной почты:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" /&gt;
+        &lt;button type="reset"&gt;Сбросить форму&lt;/button&gt;
+        &lt;button type="submit"&gt;Отправить форму&lt;/button&gt;
+      &lt;/form&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом модифицированном примере элементы <code>label</code> и <code>input</code> используются для сбора адреса электронной почты пользователя. 
+    Когда пользователь нажимает кнопку сброса, все введённые данные удаляются. 
+    Важно отметить, что кнопки сброса обычно не являются лучшим решением, поскольку они могут привести к случайному сбросу данных пользователем. 
+    Кроме того, большое количество кнопок в форме может загромождать пользовательский интерфейс.
+  </p>
+
+  <p>
+    Другой способ создания кнопок в HTML — использование элемента <code>input</code>. 
+    У элемента <code>input</code> также есть атрибут <code>type</code> с возможными значениями: <code>submit</code>, <code>reset</code> и <code>button</code>. 
+    Вот пример использования элемента <code>input</code> с типом <code>button</code>:
+  </p>
+
+  <details>
+    <summary>Пример кода</summary>
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;input class="start-btn" type="button" value="Начать игру" /&gt;
+          &lt;script src="index.js"&gt;&lt;/script&gt;
+        </code>
+      </pre>
+    </fieldset>
+    <fieldset class="css chapter">
+      <legend>Файл index.js</legend>
+      <pre>
+        <code>
+          document.addEventListener("DOMContentLoaded", () => {
+            const btn = document.querySelector(".start-btn");
+            btn.addEventListener("click", () => {
+              const paraEl = document.createElement("p");
+              const bodyEl = document.querySelector("body");
+
+              bodyEl.appendChild(paraEl);
+              paraEl.textContent = "Игра началась!!!";
+            });
+          });
+        </code>
+      </pre>
+    </fieldset>
+  </details>
+
+  <p>
+    Атрибут <code>value</code> используется для отображения текста кнопки. 
+    В чём же разница между элементами <code>input</code> и <code>button</code>? Элементы <code>input</code> являются пустыми, то есть не могут иметь дочерних узлов, 
+    таких как текст, и могут иметь только начальный тег. 
+    С другой стороны, элемент <code>button</code> обеспечивает большую гибкость, поскольку в него можно вкладывать текст, изображения и значки.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какое из следующих значений НЕ является допустимым для атрибута <code>type</code> внутри кнопок?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>src</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>button</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>reset</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>submit</code></label>
+    </div>
+
+    <div>
+      <p>Какова роль <code>type="reset"</code> внутри элемента <code>button</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Он отправляет данные формы.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Он сбрасывает только элементы <code>textarea</code>.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Он сбрасывает форму.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Для <code>type="reset"</code> поведение отсутствует.</label>
+    </div>
+
+    <div>
+      <p>Какой еще элемент можно использовать для обозначения кнопки?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>img</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>form</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>header</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>input</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
