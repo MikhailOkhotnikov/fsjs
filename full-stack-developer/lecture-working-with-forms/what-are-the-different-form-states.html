@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Каковы различные состояния формы и почему они важны?</title>
+</head>
+<body>
+  <h1>Каковы различные состояния формы и почему они важны?</h1>
+
+  <p>
+    В HTML элементы управления формами, как и поля ввода, могут находиться на разных стадиях или в разных состояниях, 
+    например в состоянии <code>focused</code>(<em>фокуса</em>), в состоянии <code>readonly</code>(<em>только для чтения</em>) или 
+    в <code>disabled</code>(<em>отключенном</em>) состоянии.
+  </p>
+
+  <p>
+    Первое состояние считается состоянием по умолчанию(<code>default</code>). По умолчанию поле адреса электронной почты пустое. 
+    Именно так поле адреса электронной почты выглядит при первом отображении на странице.
+  </p>
+
+  <pre>
+    <code>
+      &lt;input type="email" name="email" id="email" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Когда пользователь щёлкает по элементу управления формы или выбирает его клавишей Tab на клавиатуре, это означает, что он находится в фокусе(<code>focused</code>). 
+    Когда поле ввода находится в фокусе, большинство браузеров отображают синюю подсвеченную рамку вокруг него. Но вы можете добавить дополнительные стили в CSS.
+  </p>
+
+  <p>
+    Щёлкните по любой части пустого пространства в окне предварительного просмотра и нажмите клавишу <code>Tab</code>, чтобы увидеть состояние фокуса. 
+    Для предпросмотра необходимо включить интерактивный редактор.
+  </p>
+
+  <pre>
+    <code>
+      &lt;input type="email" name="email" id="email" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Другое состояние формы — отключено(<code>disabled</code>). Это состояние показывает пользователям, что поле ввода невозможно сфокусировать или активировать.
+  </p>
+
+  <p>
+    Включите интерактивный редактор и попробуйте нажать на поле ввода электронной почты, и вы заметите, что оно больше не будет фокусироваться.
+  </p>
+
+  <pre>
+    <code>
+      &lt;input disabled type="email" name="email" id="email" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Подобно состоянию <code>focused</code>, вы можете добавить дополнительные стили для состояния <code>disabled</code> с помощью CSS.
+  </p>
+
+  <p>
+    Другой тип состояния формы — это состояние <code>readonly</code>. 
+    Это состояние, когда элемент управления формы, например, поле ввода, не может быть отредактирован пользователем. 
+    Ниже приведён пример настройки поля ввода электронной почты в режиме «только для чтения». 
+    Атрибут <code>value</code> используется для установки значения, отображаемого в поле ввода.
+  </p>
+
+  <p>
+    Включите интерактивный редактор и попробуйте изменить текущее значение<code> example@email.com</code> в окне предварительного просмотра, и вы заметите, что это невозможно.
+  </p>
+
+  <pre>
+    <code>
+      &lt;input readonly type="email" name="email" id="email" /&gt;
+    </code>
+  </pre>
+
+  <p>
+    Ключевое различие между состоянием <code>disabled</code> и состоянием <code>readonly</code> заключается в том, 
+    что в состоянии <code>readonly</code> можно установить фокус, а в <code>disabled</code> — нет.
+  </p>
+
+  <p>
+    Понимание различных состояний формы важно, поскольку они обеспечивают удобство использования, предоставляя четкую обратную связь и рекомендации при обработке ошибок.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какой атрибут используется для отключения полей ввода?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>readonly</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>required</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>checked</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>disabled</code></label>
+    </div>
+
+    <div>
+      <p>Какой атрибут используется для обозначения поля ввода, доступного только для чтения?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>checked</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>readonly</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>size</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>capture</code></label>
+    </div>
+
+    <div>
+      <p>Когда наступает состояние фокусировки?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Когда поле ввода отключено и с ним невозможно взаимодействовать.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Когда поле ввода проверено и выводится сообщение об ошибке.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Когда пользователь нажимает на поле ввода или выбирает его с помощью клавиши Tab, чтобы сделать его в фокусе.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Когда поле ввода предварительно заполнено браузером значениями по умолчанию.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
