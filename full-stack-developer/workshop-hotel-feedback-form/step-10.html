@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 10</title>
+</head>
+<body>
+  <h1>Шаг 10</h1>
+
+  <p>
+    Ваша форма отзыва об отеле также должна содержать адрес электронной почты пользователя.
+  </p>
+
+  <p>
+    Начните с добавления в форму нового элемента <code>label</code> с текстом <code>Адрес электронной почты(обязательно):</code>. 
+    Атрибут <code>for</code> элемента <code>label</code> должен иметь значение <code>email</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;title&gt;Форма обратной связи отеля&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header&gt;
+              &lt;h1&gt;Форма обратной связи отеля&lt;/h1&gt;
+              &lt;p&gt;Спасибо за то, что остановились у нас. Пожалуйста, оставьте отзыв о вашем недавнем пребывании.&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;main&gt;
+              &lt;form method="POST" action="https://hotel-feedback.freecodecamp.org"&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Персональная информация&lt;/legend&gt;
+                  &lt;label for="full-name"&gt;Имя(обязательно):&lt;/label&gt;
+                  &lt;input type="text" id="full-name" name="name" placeholder="например, Джон Доу" required&gt;
+                  
+                &lt;/fieldset&gt;
+              &lt;/form&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-9.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-11.html">Следующий</a>
+
+</body>
+</html>
