@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 13</title>
+</head>
+<body>
+  <h1>Шаг 13</h1>
+
+  <p>
+    Форма отзыва об отеле должна предоставлять пользователям возможность указать свой возраст.
+  </p>
+
+  <p>
+    Начните с добавления в форму элемента <code>label</code> с текстом <code>Возраст(необязательно):</code>.
+  </p>
+
+  <p>
+    Атрибут <code>for</code> должен быть установлен на <code>age</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;title&gt;Форма обратной связи отеля&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header&gt;
+              &lt;h1&gt;Форма обратной связи отеля&lt;/h1&gt;
+              &lt;p&gt;Спасибо за то, что остановились у нас. Пожалуйста, оставьте отзыв о вашем недавнем пребывании.&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;main&gt;
+              &lt;form method="POST" action="https://hotel-feedback.freecodecamp.org"&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Персональная информация&lt;/legend&gt;
+                  &lt;label for="full-name"&gt;Имя(обязательно):&lt;/label&gt;
+                  &lt;input type="text" id="full-name" name="name" placeholder="например, Джон Доу" required size="20"&gt;
+                  &lt;label for="email"&gt;Адрес электронной почты(обязательно):&lt;/label&gt;
+                  &lt;input type="email" name="email" id="email" placeholder="example@email.com" required size="20"&gt;
+                  
+                &lt;/fieldset&gt;
+              &lt;/form&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-12.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-14.html">Следующий</a>
+
+</body>
+</html>
