@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 16</title>
+</head>
+<body>
+  <h1>Шаг 16</h1>
+
+  <p>
+    Если вы хотите, чтобы пользователи выбрали один вариант из списка, вы можете использовать набор переключателей (radio buttons).
+  </p>
+
+  <p>
+    Вот пример двух радиокнопок:
+  </p>
+
+  <details>
+    <summary>Пример кода</summary>
+    <pre>
+      <code>
+        &lt;input type="radio" id="yes" name="first-time"&gt;
+        &lt;label for="yes"&gt;Да&lt;/label&gt;
+        &lt;input type="radio" id="no" name="first-time"&gt;
+        &lt;label for="no"&gt;Нет&lt;/label&gt;
+      </code>
+    </pre>
+  </details>
+
+  <p>
+    В этом примере переключатели сгруппированы по одному и тому же значению атрибута <code>name</code>. 
+    Это означает, что одновременно можно выбрать только один переключатель.
+  </p>
+
+  <p>
+    Ниже элемента <code>legend</code> добавьте <code>radio</code> кнопку с идентификатором <code>yes-option</code> и 
+    атрибутом <code>name</code> со значением <code>hotel-stay</code>.
+  </p>
+
+  <p>
+    Под <code>radio</code> кнопкой добавьте элемент <code>label</code> с текстом <code>Да</code> и атрибутом <code>for</code>, установленным на <code>yes-option</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;title&gt;Форма обратной связи отеля&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header&gt;
+              &lt;h1&gt;Форма обратной связи отеля&lt;/h1&gt;
+              &lt;p&gt;Спасибо за то, что остановились у нас. Пожалуйста, оставьте отзыв о вашем недавнем пребывании.&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;main&gt;
+              &lt;form method="POST" action="https://hotel-feedback.freecodecamp.org"&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Персональная информация&lt;/legend&gt;
+                  &lt;label for="full-name"&gt;Имя(обязательно):&lt;/label&gt;
+                  &lt;input type="text" id="full-name" name="name" placeholder="например, Джон Доу" required size="20"&gt;
+                  &lt;label for="email"&gt;Адрес электронной почты(обязательно):&lt;/label&gt;
+                  &lt;input type="email" name="email" id="email" placeholder="example@email.com" required size="20"&gt;
+                  &lt;label for="age"&gt;Возраст(необязательно):&lt;/label&gt;
+                  &lt;input type="number" name="age" id="age" min="3" max="120"&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Вы впервые остановились в нашем отеле?&lt;/legend&gt;
+
+                &lt;/fieldset&gt;
+              &lt;/form&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-15.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-17.html">Следующий</a>
+
+</body>
+</html>
