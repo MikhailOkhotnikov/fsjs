@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 19</title>
+</head>
+<body>
+  <h1>Шаг 19</h1>
+
+  <p>
+    Если вы хотите, чтобы пользователь выбрал несколько вариантов из списка, вы можете использовать флажки(<em>checkboxes</em>).
+  </p>
+
+  <p>
+    Вот пример того, как работать с флажками, предназначенными для выбора блюд:
+  </p>
+
+  <details>
+    <summary>Пример кода</summary>
+    <pre>
+      <code>
+        &lt;fieldset&gt;
+          &lt;legend&gt;Варианты блюд&lt;/legend&gt;
+          &lt;input type="checkbox" id="pizza" name="food" value="pizza"&gt;
+          &lt;label for="pizza"&gt;Пицца&lt;/label&gt;
+          &lt;input type="checkbox" id="burger" name="food" value="burger"&gt;
+          &lt;label for="burger"&gt;Бургер&lt;/label&gt;
+        &lt;/fieldset&gt;
+      </code>
+    </pre>
+  </details>
+
+  <p>
+    Атрибут <code>value</code> используется для указания значения, которое будет отправлено на сервер при отправке формы.
+  </p>
+
+  <p>
+    Ниже элемента <code>legend</code> добавьте <code>input</code> с типом <code>checkbox</code>, 
+    с атрибутами <code>id</code>, <code>name</code> и <code>value</code>, установленными на <code>ads</code>.
+  </p>
+
+  <p>
+    Примечание: ADS (Advertisement) — общий термин, обозначающий рекламные объявления в цифровой среде.
+  </p>
+
+  <p>
+    Под <code>input</code> с типом <code>checkbox</code> добавьте элемент <code>label</code> с текстом <code>Реклама в социальных сетях</code>. 
+    Атрибут <code>for</code> должен быть установлен на значение <code>ads</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;title&gt;Форма обратной связи отеля&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header&gt;
+              &lt;h1&gt;Форма обратной связи отеля&lt;/h1&gt;
+              &lt;p&gt;Спасибо за то, что остановились у нас. Пожалуйста, оставьте отзыв о вашем недавнем пребывании.&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;main&gt;
+              &lt;form method="POST" action="https://hotel-feedback.freecodecamp.org"&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Персональная информация&lt;/legend&gt;
+                  &lt;label for="full-name"&gt;Имя(обязательно):&lt;/label&gt;
+                  &lt;input type="text" id="full-name" name="name" placeholder="например, Джон Доу" required size="20"&gt;
+                  &lt;label for="email"&gt;Адрес электронной почты(обязательно):&lt;/label&gt;
+                  &lt;input type="email" name="email" id="email" placeholder="example@email.com" required size="20"&gt;
+                  &lt;label for="age"&gt;Возраст(необязательно):&lt;/label&gt;
+                  &lt;input type="number" name="age" id="age" min="3" max="120"&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Вы впервые остановились в нашем отеле?&lt;/legend&gt;
+                  &lt;input type="radio" name="hotel-stay" id="yes-option"&gt;
+                  &lt;label for="yes-option"&gt;Да&lt;/label&gt;
+                  &lt;input type="radio" name="hotel-stay" id="no-option"&gt;
+                  &lt;label for="no-option"&gt;Нет&lt;/label&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Почему вы выбрали именно наш отель?(Отметьте все подходящие варианты)&lt;/legend&gt;
+
+                &lt;/fieldset&gt;                
+              &lt;/form&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-18.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-20.html">Следующий</a>
+
+</body>
+</html>
