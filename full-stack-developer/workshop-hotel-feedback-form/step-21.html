@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 21</title>
+</head>
+<body>
+  <h1>Шаг 21</h1>
+
+  <p>
+    Далее добавьте еще один чекбокс, у которого атрибуты <code>id</code>, <code>name</code> и <code>value</code> будут установлены на <code>location</code>.
+  </p>
+
+  <p>
+    Для элемента <code>label</code> текст поля установите на <code>Местоположение</code>, а атрибут <code>for</code> на значение <code>location</code>.
+  </p>
+
+  <p>
+    Ниже элемента <code>label</code> добавьте еще один чекбокс с атрибутами <code>id</code>, <code>name</code> и <code>value</code>, установленными на <code>reputation</code>.
+  </p>
+
+  <p>
+    Для элемента <code>label</code> текст поля установите на <code>Репутация</code>, а атрибут <code>for</code> на значение <code>reputation</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;title&gt;Форма обратной связи отеля&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;header&gt;
+              &lt;h1&gt;Форма обратной связи отеля&lt;/h1&gt;
+              &lt;p&gt;Спасибо за то, что остановились у нас. Пожалуйста, оставьте отзыв о вашем недавнем пребывании.&lt;/p&gt;
+            &lt;/header&gt;
+            &lt;main&gt;
+              &lt;form method="POST" action="https://hotel-feedback.freecodecamp.org"&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Персональная информация&lt;/legend&gt;
+                  &lt;label for="full-name"&gt;Имя(обязательно):&lt;/label&gt;
+                  &lt;input type="text" id="full-name" name="name" placeholder="например, Джон Доу" required size="20"&gt;
+                  &lt;label for="email"&gt;Адрес электронной почты(обязательно):&lt;/label&gt;
+                  &lt;input type="email" name="email" id="email" placeholder="example@email.com" required size="20"&gt;
+                  &lt;label for="age"&gt;Возраст(необязательно):&lt;/label&gt;
+                  &lt;input type="number" name="age" id="age" min="3" max="120"&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Вы впервые остановились в нашем отеле?&lt;/legend&gt;
+                  &lt;input type="radio" name="hotel-stay" id="yes-option"&gt;
+                  &lt;label for="yes-option"&gt;Да&lt;/label&gt;
+                  &lt;input type="radio" name="hotel-stay" id="no-option"&gt;
+                  &lt;label for="no-option"&gt;Нет&lt;/label&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                  &lt;legend&gt;Почему вы выбрали именно наш отель?(Отметьте все подходящие варианты)&lt;/legend&gt;
+                  &lt;input type="checkbox" name="ads" id="ads" value="ads"&gt;
+                  &lt;label for="ads"&gt;Реклама в социальных сетях&lt;/label&gt;
+                  &lt;input type="checkbox" name="recommendation" id="recommendation" value="recommendation"&gt;
+                  &lt;label for="recommendation"&gt;Персональная рекомендация&lt;/label&gt;
+
+                &lt;/fieldset&gt;                
+              &lt;/form&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-20.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-22.html">Следующий</a>
+
+</body>
+</html>
