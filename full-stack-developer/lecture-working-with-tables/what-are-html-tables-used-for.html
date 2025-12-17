@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Для чего используются HTML-таблицы, и для чего их использовать не следует?</title>
+</head>
+<body>
+  <h1>Для чего используются HTML-таблицы, и для чего их использовать не следует?</h1>
+
+  <p>
+    В наши дни HTML-таблицы используются не так часто, как раньше. 
+    Но, будучи фронтенд-разработчиком, вы всё равно должны быть с ними знакомы. 
+    Таблицы — один из первых способов отображения данных в браузере, появившихся ещё в 1990-х годах.
+  </p>
+
+  <p>
+    Вот пример кода, использованного для генерации таблицы из Бюро статистики труда США:
+  </p>
+
+  <details>
+    <summary>Пример кода</summary>
+    <pre>
+      <code>
+        &lt;table id="quickfacts"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th colspan="2"&gt;Краткие сведения: Разработчики программного обеспечения, аналитики по обеспечению качества и тестировщики&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Средняя заработная плата в 2023 году&lt;/th&gt;
+              &lt;td&gt;
+                130 160 долларов в год
+                &lt;br&gt;62,58 доллара в час
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Типичное образование начального уровня&lt;/th&gt;
+              &lt;td&gt;Степень бакалавра&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Опыт работы по смежной специальности&lt;/th&gt;
+              &lt;td&gt;Отсутствует&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Обучение на рабочем месте&lt;/th&gt;
+              &lt;td&gt;Отсутствует&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Количество рабочих мест, 2022&lt;/th&gt;
+              &lt;td&gt;1,795,300&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Перспективы трудоустройства на 2022-32 годы&lt;/th&gt;
+              &lt;td&gt;25% (намного быстрее, чем в среднем)&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Изменение условий занятости, 2022-32 годы&lt;/th&gt;
+              &lt;td&gt;451,200&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Если бы у этой таблицы был нижний колонтитул, он был бы здесь.&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+      </code>
+    </pre>
+  </details>
+
+  <p>
+    Как видите, здесь есть основной элемент <code>table</code> с <code>id</code> равным <code>quickfacts</code>. 
+    Внутри него находится элемент заголовка таблицы (<code>thead</code>, <em>table head</em>), элемент тела таблицы (<code>tbody</code>, <em>table body</em>) 
+    и элемент нижней части таблицы (<code>tfoot</code>, <em>table foot</em>).
+  </p>
+
+  <p>
+    Элементы заголовка, тела и нижнего колонтитула таблицы могут содержать некоторое количество строк таблицы (<code>tr</code>, <em>table rows</em>). 
+    Каждая строка таблицы может содержать заголовок таблицы (<code>th</code>, <em>table header</em>), который обозначает данные в этой строке. 
+    Она также может содержать некоторое количество отдельных ячеек данных, называемых данными таблицы (<code>td</code>, <em>table data</em>).
+  </p>
+
+  <p>
+    Итак, это множество HTML-элементов. Но не пугайтесь – они подчиняются простой иерархии.
+  </p>
+
+  <p>
+    Вот самая простая таблица, которую мы можем создать, включающая все эти элементы:
+  </p>
+
+  <details>
+    <summary>Пример кода</summary>
+    <pre>
+      <code>
+        &lt;table&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Заголовок этой таблицы&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Первая строка&lt;/th&gt;
+              &lt;td&gt;
+                Первая ячейка данных
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Вторая строка&lt;/th&gt;
+              &lt;td&gt;
+                Вторая ячейка данных
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;th&gt;В нижней части этой таблицы может содержаться дата публикации, информация об авторах или другие метаданные.&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+      </code>
+    </pre>
+  </details>
+
+  <p>
+    Как видите, сами данные всегда находятся внутри элемента <code>tr</code>, а внутри этого элемента <code>tr</code> находится элемент <code>th</code>
+     с заголовком и элемент <code>td</code> с данными.
+  </p>
+
+  <p>
+    На некоторых сайтах для создания таблиц предпочитают использовать элементы <code>div</code> вместо более подходящего элемента <code>table</code>.
+  </p>
+
+  <p>
+    Хотя табличные данные можно отображать с помощью обычных элементов <code>div</code>, всё же лучше использовать элемент <code>table</code>.
+  </p>
+
+  <p>
+    Много лет назад разработчики могли использовать <code>table</code> для размещения не содержащих данных элементов на веб-странице. 
+    Это никогда не считалось лучшей практикой. Но вы можете встретить некоторые кодовые базы, где таблицы до сих пор используются подобным образом.
+  </p>
+
+  <p>
+    В настоящее время разработчики используют CSS flexbox и grid для компоновки своих дизайнов. Мы подробно рассмотрим эти инструменты позже.
+  </p>
+
+  <p>
+    На данный момент используйте HTML-таблицы по их прямому назначению: для отображения табличных данных.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какие элементы в HTML-таблице содержатся внутри элемента <code>tr</code>?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>thead</code> и <code>tfoot</code>.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>td</code> и <code>th</code>.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>table</code> и <code>tbody</code>.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>div</code> и <code>span</code>.</label>
+    </div>
+
+    <div>
+      <p>Какие из перечисленных разделов являются основными в HTML-таблице?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>table</code>, <code>div</code> и <code>span</code>.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>header</code>, <code>section</code> и <code>footer</code>.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>thead</code>, <code>tbody</code> и <code>tfoot</code>.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>article</code>, <code>aside</code> и <code>nav</code>.</label>
+    </div>
+
+    <div>
+      <p>Каково основное рекомендуемое применение HTML-таблиц сегодня?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Создание макетов страниц.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Отображение табличных данных.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Оформление с помощью CSS.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Встраивание изображений.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
