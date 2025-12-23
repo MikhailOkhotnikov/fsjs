@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как использовать инспектор DOM и инструменты разработчика для отладки и сборки проектов</title>
+</head>
+<body>
+  <h1>Как использовать инспектор DOM и инструменты разработчика для отладки и сборки проектов</h1>
+
+  <p>
+    При разработке проектов вы часто будете сталкиваться с проблемами, когда ваши программы работают не так, как ожидается.
+  </p>
+
+  <p>
+    Программисты часто называют проблемы багами(<em>bugs, баги</em>). Процесс поиска и исправления этих ошибок называется отладкой(<em>debugging, дебаггинг</em>).
+  </p>
+
+  <p>
+    Для отладки кода вам понадобятся некоторые инструменты, предоставляемые вашим браузером.
+  </p>
+
+  <p>
+    Двумя важными инструментами, которые следует использовать, являются инспектор DOM и инструменты разработчика.
+  </p>
+
+  <p>
+    Инспектор DOM позволяет проверить HTML-структуру текущей страницы.
+  </p>
+
+  <p>
+    DOM расшифровывается как Document Object Model (объектная модель документа). 
+    Это древовидная структура, представляющая элементы на странице. Подробнее о DOM вы узнаете в последующих модулях.
+  </p>
+
+  <p>
+    Инструменты разработчика позволяют проверять HTML, CSS и JavaScript страницы, на которой вы находитесь.
+  </p>
+
+  <p>
+    Давайте рассмотрим пример HTML-кода, содержащий небольшую ошибку в элементе <code>a</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;a href="https://www.freecodecamp.org/larn/"&gt;freeCodeCamp curriculum&lt;/a&gt;
+    </code>
+  </pre>
+
+  <p>
+    При нажатии на ссылку вы попадете на страницу 404. 
+    Страница 404 — это страница ошибки, которая появляется, когда пользователь пытается получить доступ к веб-странице, которой нет на сервере.
+  </p>
+
+  <p>
+    Предполагается, что ссылка будет вести на учебный курс freeCodeCamp.
+  </p>
+
+  <p>
+    Чтобы выяснить, в чем может быть проблема, вы можете воспользоваться инструментами разработчика.
+  </p>
+
+  <p>
+    Чтобы открыть инструменты разработчика в браузере, щелкните правой кнопкой мыши на странице и выберите <code>Inspect</code>(Просмотреть код элемента).
+  </p>
+
+  <p>
+    Также вы можете использовать сочетание клавиш <code>Ctrl+Shift+I</code> на клавиатуре ПК или <code>Command+Option+I</code> на клавиатуре Mac.
+  </p>
+
+  <p>
+    Когда вы открываете инструменты разработчика в Google Chrome, вы увидите несколько вкладок. 
+    Первая вкладка называется <code>Elements</code>(Элементы). На этой вкладке отображается HTML-структура страницы, на которой вы находитесь.
+  </p>
+
+  <p>
+    Вторая вкладка называется <code>Console</code>(Консоль). На этой вкладке отображаются любые ошибки, которые могут возникать на странице.
+  </p>
+
+  <p>
+    В случае, если у вас неработающая ссылка, вы можете проверить консоль, чтобы увидеть сообщения об ошибках для этой ссылки. 
+    Чаще всего для неработающих ссылок отображается ошибка 404. Ошибка 404 означает, что страница не найдена.
+  </p>
+
+  <p>
+    Это указывает на то, что проблема заключается в URL-адресе в элементе <code>a</code>. При проверке значения атрибута <code>href</code> вы увидите опечатку.
+  </p>
+
+  <p>
+    В данный момент в консоли отображается сообщение <code>/larn</code>, а не ошибка 404, но правильный URL должен быть <code>/learn</code>. 
+    После исправления ссылки всё будет работать как положено.
+  </p>
+
+  <p>
+    В ходе сертификации вы узнаете больше о работе с инструментами разработчика, но это лишь краткий пример того, как они могут помочь вам в отладке кода.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Как называется процесс поиска и исправления ошибок в коде?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Scanning</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Building</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Debugging</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Scripting</label>
+    </div>
+
+    <div>
+      <p>Как называется древовидная структура, представляющая элементы на странице?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">BOM</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">DOM</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Python</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">CSS</label>
+    </div>
+
+    <div>
+      <p>Какова роль вкладки «Элементы» в инструментах разработчика?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Она отображает HTML-структуру страницы, на которой вы находитесь.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Она отображает структуру CSS страницы, на которой вы находитесь.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Она показывает вам структуру JavaScript страницы, на которой вы находитесь.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Она показывает вам PHP-структуру страницы, на которой вы находитесь.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
