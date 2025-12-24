@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Обзор HTML-таблиц и форм</title>
+</head>
+<body>
+  <h1>Обзор HTML-таблиц и форм</h1>
+
+  <h2>Элементы и атрибуты HTML-формы</h2>
+
+  <ul>
+    <li><b>Элемент <code>form</code>:</b> используется для создания HTML-формы для ввода данных пользователем.</li>
+    <li><b>Атрибут <code>action</code>:</b> используется для указания URL-адреса, куда должны быть отправлены данные формы.</li>
+    <li>
+      <b>Атрибут <code>method</code>:</b> используется для указания метода HTTP, который будет применяться при отправке данных формы. 
+      Наиболее распространенные методы — <code>GET</code> и <code>POST</code>.
+    </li>
+
+      <pre>
+        <code>
+          &lt;form method="здесь-размещается-значение" action="здесь-размещается-URL"&gt;
+            &lt;!-- Здесь размещаются входные данные. --&gt;
+          &lt;/form&gt;
+        </code>
+      </pre>
+
+    <li><b>Элемент <code>input</code>:</b> используется для создания поля ввода для ввода данных пользователем.</li>
+    <li>
+      <b>Атрибут <code>type</code>:</b> используется для указания типа поля ввода. 
+      Например: <code>text</code>(текст), <code>email</code>(электронная почта), <code>number</code>(число), <code>radio</code>(радио), <code>checkbox</code>(флажок) и т. д..
+    </li>
+    <li><b>Атрибут <code>placeholder</code>:</b> используется для отображения подсказки пользователю, показывающей, что нужно ввести в поле ввода.</li>
+    <li>
+      <b>Атрибут <code>value</code>:</b> используется для указания значения поля ввода. 
+      Если поле ввода имеет тип <code>button</code>, атрибут <code>value</code> можно использовать для установки текста кнопки.
+    </li>
+    <li>
+      <b>Атрибут <code>name</code>:</b> используется для присвоения имени полю ввода, которое служит ключом при отправке данных формы. 
+      Для переключателей (радиокнопок) присвоение им одинакового <code>name</code> группирует их вместе, так что одновременно можно выбрать только один вариант из группы.
+    </li>
+    <li><b>Атрибут <code>size</code>:</b> используется для определения количества символов, которые должны быть видны, когда пользователь вводит текст в поле ввода.</li>
+    <li><b>Атрибут <code>min</code>:</b> может использоваться с типами ввода, например, <code>number</code>, для указания минимального допустимого значения в поле ввода.</li>
+    <li><b>Атрибут <code>max</code>:</b> может использоваться с типами ввода, такими как <code>number</code>, для указания максимально допустимого значения в поле ввода.</li>
+    <li><b>Атрибут <code>minlength</code>:</b> используется для указания минимального количества символов, необходимых для заполнения поля ввода.</li>
+    <li><b>Атрибут <code>maxlength</code>:</b> используется для указания максимального количества символов, разрешенных в поле ввода.</li>
+    <li><b>Атрибут <code>required</code>:</b> используется для указания того, что поле ввода должно быть обязательно заполнено перед отправкой формы.</li>
+    <li><b>Атрибут <code>disabled</code>:</b> используется для указания того, что поле ввода должно быть отключено.</li>
+    <li><b>Атрибут <code>readonly</code>:</b> используется для указания того, что поле ввода доступно только для чтения.</li>
+
+    <pre>
+      <code>
+        &lt;!-- Текстовое поле ввода --&gt;
+        &lt;input 
+          type="text"
+          id="name"
+          name="name"
+          placeholder="например, Иванов Иван" 
+          size="20"
+          minlength="5"
+          maxlength="30"
+          required
+        /&gt;
+
+        &lt;!-- Числовое поле ввода --&gt;
+        &lt;input 
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="2"
+          max="10"
+          disabled
+        /&gt;
+
+        &lt;!-- Кнопка--&gt;
+        &lt;input type="button" value="Показать оповещение" /&gt;
+      </code>
+    </pre>
+
+    <li><b>Элемент <code>label</code>:</b> используется для создания метки для поля ввода.</li>
+    <li><b>Атрибут <code>for</code>:</b> используется для указания того, к какому полю ввода относится метка.</li>
+    <li><b>Неявная привязка к форме:</b> поля ввода можно связать с метками, заключив поле ввода в элемент <code>label</code>.</li>
+    
+    <pre>
+      <code>
+        &lt;form action=""&gt;
+          &lt;label&gt;
+            ФИО:
+            &lt;input type="text" /&gt;
+          &lt;/label&gt;
+        &lt;/form&gt;
+      </code>
+    </pre>
+
+    <li><b>Явная привязка к форме:</b> поля ввода можно связать с метками, используя атрибут <code>for</code> элемента <code>label</code>.</li>
+
+    <pre>
+      <code>
+        &lt;form action=""&gt;
+          &lt;label for="email"&gt;Адрес электронной почты: &lt;/label&gt;
+          &lt;input type="email" id="email" /&gt;
+        &lt;/form&gt;
+      </code>
+    </pre>
+
+    <li>
+      <b>Элемент <code>button</code>:</b> используется для создания кликабельной кнопки. 
+      Кнопка также может иметь атрибут <code>type</code>, который используется для управления поведением кнопки при её активации. 
+      Например: <code>submit</code>, <code>reset</code>, <code>button</code>.
+    </li>
+
+    <pre>
+      <code>
+        &lt;button type="button"&gt;Показать форму&lt;/button&gt;
+        &lt;button type="submit"&gt;Отправить форму&lt;/button&gt;
+        &lt;button type="reset"&gt;Сбросить форму&lt;/button&gt;
+      </code>
+    </pre>
+
+    <li><b>Элемент <code>fieldset</code>:</b> используется для группировки связанных полей ввода.</li>
+    <li><b>Элемент <code>legend</code>:</b> используется для добавления подписи, описывающей группу входных данных.</li>
+
+    <pre>
+      <code>
+        &lt;!-- Группа радиокнопок --&gt;
+        &lt;fieldset&gt;
+          &lt;legend&gt;Вы впервые остановились в нашем отеле?&lt;/legend&gt;
+
+          &lt;label for="yes-option"&gt;Да&lt;/label&gt;
+          &lt;input id="yes-option" type="radio" name="hotel-stay" value="yes" /&gt;
+
+          &lt;label for="no-option"&gt;Нет&lt;/label&gt;
+          &lt;input id="no-option" type="radio" name="hotel-stay" value="no" /&gt;
+        &lt;/fieldset&gt;
+
+        &lt;!-- Группа флажков --&gt;
+        &lt;fieldset&gt;
+          &lt;legend&gt;
+            Почему вы выбрали именно наш отель для проживания? (Отметьте все подходящие варианты)
+          &lt;/legend&gt;
+
+          &lt;label for="location"&gt;Местоположение&lt;/label&gt;
+          &lt;input type="checkbox" id="location" name="location" value="location" /&gt;
+
+          &lt;label for="price"&gt;Цена&lt;/label&gt;
+          &lt;input type="checkbox" id="price" name="price" value="price" /&gt;
+        &lt;/fieldset&gt;
+      </code>
+    </pre>
+
+    <li><b>Состояние фокусировки(focused state):</b> это состояние поля ввода, когда оно выбрано пользователем.</li>
+  </ul>
+
+  <h2>Работа с элементами и атрибутами HTML-таблиц</h2>
+
+  <ul>
+    <li><b>Элемент <code>table</code>:</b> используется для создания HTML <em>таблицы</em>.</li>
+    <li><b>Элемент Table Head (<code>thead</code>):</b> используется для группировки содержимого <em>заголовков</em> в HTML-таблице.</li>
+    <li><b>Элемент Table Row (<code>tr</code>):</b> используется для создания <em>строки</em> в HTML-таблице.</li>
+    <li><b>Элемент Table Header (<code>th</code>):</b> используется для создания <em>ячейки заголовка</em> в HTML-таблице.</li>
+    <li><b>Элемент Table body (<code>tbody</code>):</b> используется для группировки <em>основного содержимого</em> в HTML-таблице.</li>
+    <li><b>Элемент Table Data Cell (<code>td</code>):</b> используется для создания <em>ячейки данных</em> в HTML-таблице.</li>
+    <li><b>Элемент Table Foot (<code>tfoot</code>):</b> используется для группировки содержимого <em>нижнего колонтитула</em> в HTML-таблице.</li>
+    <li><b>Элемент <code>caption</code>:</b> используется для добавления заголовка HTML-таблицы.</li>
+    <li><b>Атрибут <code>colspan</code>:</b> используется для указания количества столбцов, которые должна занимать ячейка таблицы.</li>
+
+    <pre>
+      <code>
+        &lt;table&gt;
+          &lt;caption&gt;Оценки за итоговый экзамен по математическому анализу&lt;/caption&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Фамилия&lt;/th&gt;
+              &lt;th&gt;Имя&lt;/th&gt;
+              &lt;th&gt;Оценка&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Иванов&lt;/td&gt;
+                &lt;td&gt;Иван&lt;/td&gt;
+                &lt;td&gt;5&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Петров&lt;/td&gt;
+                &lt;td&gt;Пётр&lt;/td&gt;
+                &lt;td&gt;4&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Сидоров&lt;/td&gt;
+                &lt;td&gt;Сидор&lt;/td&gt;
+                &lt;td&gt;3&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Михайлов&lt;/td&gt;
+                &lt;td&gt;Михаил&lt;/td&gt;
+                &lt;td&gt;4&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;Дмитриев&lt;/td&gt;
+                &lt;td&gt;Дмитрий&lt;/td&gt;
+                &lt;td&gt;5&lt;/td&gt;
+              &lt;/tr&gt;                 
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;td colspan="2"&gt;Средняя оценка&lt;/td&gt;                  
+              &lt;td&gt;4,2&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+      </code>
+    </pre>
+
+  </ul>
+
+  <h2>Работа с инструментами HTML</h2>
+
+  <ul>
+    <li><b>Валидатор HTML:</b> инструмент, проверяющий синтаксис HTML-кода на предмет его корректности.</li>
+    <li><b>Инспектор DOM:</b> инструмент, позволяющий проверять и изменять HTML-структуру веб-страницы.</li>
+    <li><b>Devtools:</b> набор инструментов для веб-разработчиков, встроенных непосредственно в браузер, которые помогают отлаживать, профилировать и анализировать веб-страницы.</li>
+  </ul>
+
+  <h3>Назначение</h3>
+
+  <div>
+    <input type="checkbox" name="assignment" id="assignment">
+    <label for="assignment">Повторили темы и концепции семантического HTML.</label>
+  </div>
+
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
