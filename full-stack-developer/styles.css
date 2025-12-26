@@ -96,8 +96,17 @@ fieldset.chapter {
     color: #ffadad;
 }
 
+.block-label-cert-project {
+  border-color: #f8577c;
+  color: #f8577c;
+}
+
 a:visited {
   color: whitesmoke;
+}
+
+.anchor-cert-project {
+  text-decoration: none;
 }
 
 

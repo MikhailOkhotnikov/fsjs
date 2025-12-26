@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Финал</title>
+</head>
+<body>
+  <h1>Финиш</h1>
+
+  <h2>В итоге ваш код должен выглядеть следующим образом:</h2>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+          &lt;link rel="stylesheet" href="../styles.css"&gt;
+          &lt;title&gt;Форма опроса&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1 id="title"&gt;Форма опроса&lt;/h1&gt;
+
+          &lt;p id="description"&gt;Описание формы опроса&lt;/p&gt;
+
+          &lt;form id="survey-form" action="https://register-demo.freecodecamp.org" method="post" class="survey-form"&gt;
+
+            &lt;fieldset&gt;
+              &lt;label for="name" id="name-label"&gt;Введите имя: &lt;input type="text" id="name" placeholder="Имя" required&gt;&lt;/label&gt;
+              &lt;label for="email" id="email-label"&gt;Введие email: &lt;input type="email" name="email" id="email" placeholder="email-адрес" required&gt;&lt;/label&gt;
+              &lt;label for="number" id="number-label"&gt;Введите возраст: &lt;input type="number" name="number" placeholder="возраст" id="number" min="6" max="120" required&gt;&lt;/label&gt;
+            &lt;/fieldset&gt;
+
+            &lt;fieldset&gt;
+              &lt;label for="dropdown"&gt;Статус:
+                &lt;select name="dropdown" id="dropdown"&gt;
+                  &lt;option value="1"&gt;Студент&lt;/option&gt;
+                  &lt;option value="2"&gt;Работающий&lt;/option&gt;
+                &lt;/select&gt;
+              &lt;/label&gt;      
+            &lt;/fieldset&gt;
+            
+            &lt;fieldset&gt;
+              &lt;legend&gt;Тип учетной записи:&lt;/legend&gt;
+              &lt;label for="personal-account"&gt;&lt;input type="radio" name="radio" id="personal-account" checked class="inline" value="1"&gt; Личный&lt;/label&gt;
+              &lt;label for="business-account"&gt;&lt;input type="radio" name="radio" id="business-account" class="inline" value="2"&gt; Деловой&lt;/label&gt;
+            &lt;/fieldset&gt;
+
+            &lt;fieldset&gt;
+              &lt;legend&gt;Откуда вы о нас узнали?&lt;/legend&gt;
+              &lt;label for="checkbox-one"&gt;&lt;input type="checkbox" name="checkbox" id="checkbox-one" class="inline" value="1"&gt; Соцсети&lt;/label&gt;
+              &lt;label for="checkbox-two"&gt;&lt;input type="checkbox" name="checkbox" id="checkbox-two" class="inline" value="2"&gt; Друзья/знакомые&lt;/label&gt;
+              &lt;label for="checkbox-three"&gt;&lt;input type="checkbox" name="checkbox" id="checkbox-three" class="inline" value="3"&gt; Случайно зашел&lt;/label&gt;
+            &lt;/fieldset&gt;
+
+            &lt;label for="about-me"&gt;Расскажите о себе:
+              &lt;textarea name="about-me" id="about-me" cols="30" rows="10"&gt;&lt;/textarea&gt;
+            &lt;/label&gt;
+
+            &lt;input type="submit" id="submit" class="submit" value="Отправить"&gt;
+
+          &lt;/form&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>

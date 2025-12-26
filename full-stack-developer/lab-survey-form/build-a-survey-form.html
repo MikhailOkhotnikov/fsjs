@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Создайте форму опроса</title>
+</head>
+<body>
+  <h1>Создайте форму опроса</h1>
+
+  <p>
+    Создайте приложение, функционально похожее на <a href="final-a-survey-form.html">этот пример проекта</a>. 
+    Старайтесь не копировать пример проекта, придайте ему свой собственный стиль.
+  </p>
+
+  <p>
+    <b>Цель:</b> Выполнить приведенные ниже пользовательские истории и добиться успешного прохождения всех тестов для завершения лабораторной работы.
+  </p>
+
+  <p>
+    Пользовательские истории:
+  </p>
+
+  <ol>
+    <li>Заголовок страницы должен быть размещен в элементе <code>h1</code> с идентификатором <code>title</code>.</li>
+    <li>Краткое пояснение должно быть размещено в элементе <code>p</code> с идентификатором <code>description</code>.</li>
+    <li>Вам потребуется элемент <code>form</code> с идентификатором <code>survey-form</code>.</li>
+    <li>Внутри элемента формы должно быть обязательное поле <code>input</code> для вашего имени, 
+      имеющее идентификатор <code>name</code> и <code>type</code> равный <code>text</code>.</li>
+    <li>Внутри элемента формы должно быть обязательное поле <code>input</code> для вашего адреса электронной почты с идентификатором <code>email</code>.</li>
+    <li>Если вы введете адрес электронной почты с неправильным форматированием, вы увидите ошибку проверки HTML5.</li>
+    <li>Внутри элемента формы должно быть поле <code>input</code> для ввода числа, имеющее идентификатор <code>number</code>.</li>
+    <li>Ввод чисел не должен принимать нечисловые значения, либо путем запрета их ввода, либо путем отображения ошибки валидации HTML5 (в зависимости от вашего браузера).</li>
+    <li>Если вы введете числа, выходящие за пределы диапазона, заданного атрибутами <code>min</code> и <code>max</code>, вы увидите ошибку валидации HTML5.</li>
+    <li>Для полей ввода имени, электронной почты и номера телефона необходимо добавить в форму соответствующие элементы <code>label</code>, 
+      описывающие назначение каждого поля и имеющие следующие идентификаторы: <code>name-label</code>, <code>email-label</code> и <code>number-label</code>.</li>
+    <li>Для полей ввода имени, электронной почты и номера телефона следует добавить <code>placeholder</code> с описанием или инструкциями для каждого поля.</li>
+    <li>Внутри элемента формы должен находиться элемент <code>select</code> с идентификатором dropdown и как минимум двумя вариантами выбора.</li>
+    <li>Внутри элемента формы можно выбрать вариант из группы, состоящей как минимум из двух переключателей, сгруппированных по атрибуту <code>name</code>.</li>
+    <li>Внутри элемента формы можно выбрать несколько полей из ряда флажков, каждый из которых должен иметь атрибут <code>value</code>.</li>
+    <li>Внутри элемента формы должно быть поле <code>textarea</code> для дополнительных комментариев.</li>
+    <li>Внутри элемента формы должна быть кнопка с идентификатором <code>submit</code> для отправки всех введенных данных.</li>
+  </ol>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Форма опроса&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Тесты</h2>
+
+  <ol>
+    <li>Вам нужен элемент <code>h1</code> с <code>id</code> равным <code>title</code>.</li>
+    <li>Ваш <code>#title</code> не должен быть пустым.</li>
+    <li>У вас должен быть элемент <code>p</code> с <code>id</code> равным <code>description</code>.</li>
+    <li>Ваше <code>#description</code> не должно быть пустым.</li>
+    <li>Вам потребуется элемент <code>form</code> с <code>id</code> равным <code>survey-form</code>.</li>
+    <li>Вам потребуется элемент <code>input</code> с <code>id</code> равным <code>name</code>.</li>
+    <li>Ваш <code>#name</code> должен содержать <code>type</code> равный <code>text</code>.</li>
+    <li>Ваше <code>#name</code> должен потребовать ввода.</li>
+    <li>Ваше <code>#name</code> должно быть потомком <code>#survey-form</code>.</li>
+    <li>Вам потребуется элемент <code>input</code> с <code>id</code> равным <code>email</code>.</li>
+    <li>В вашем <code>#email</code> должен быть указан <code>type</code> равный <code>email</code>.</li>
+    <li>Ваш <code>#email</code> должен потребовать ввода.</li>
+    <li>Ваш <code>#email</code> должен быть потомком <code>#survey-form</code>.</li>
+    <li>Вам потребуется элемент <code>input</code> с <code>id</code> равным <code>number</code>.</li>
+    <li>Ваш <code>#number</code> должен быть потомком <code>#survey-form</code>.</li>
+    <li>Ваш <code>#number</code> должен иметь <code>type</code> равный <code>number</code>.</li>
+    <li>Ваш <code>#number</code> должен иметь атрибут <code>min</code> с числовым значением.</li>
+    <li>Ваш <code>#number</code> должен иметь атрибут <code>max</code> с числовым значением.</li>
+    <li>У вас должен быть элемент <code>label</code> с <code>id</code> равным <code>name-label</code>.</li>
+    <li>У вас должен быть элемент <code>label</code> с <code>id</code> равным <code>email-label</code>.</li>
+    <li>У вас должен быть элемент <code>label</code> с <code>id</code> равным <code>number-label</code>.</li>
+    <li>Ваш <code>#name-label</code> должен содержать текст, описывающий вводимые данные.</li>
+    <li>Ваш <code>#email-label</code> должен содержать текст, описывающий вводимые данные.</li>
+    <li>Ваш <code>#number-label</code> должен содержать текст, описывающий вводимые данные.</li>
+    <li>Ваш <code>#name-label</code> должен быть потомком <code>#survey-form</code>.</li>
+    <li>Ваш <code>#email-label</code> должен быть потомком <code>#survey-form</code>.</li>
+    <li>Ваш <code>#number-label</code> должен быть потомком <code>#survey-form</code>.</li>
+    <li>Ваш <code>#name</code> должен содержать атрибут <code>placeholder</code> и значение.</li>
+    <li>Ваш <code>#email</code> должен содержать атрибут <code>placeholder</code> и значение.</li>
+    <li>Ваш <code>#number</code> должен содержать атрибут <code>placeholder</code> и значение.</li>
+    <li>Вам потребуется поле <code>select</code> с <code>id</code> равным <code>dropdown</code>.</li>
+    <li>В вашем <code>#dropdown</code> должно быть как минимум два выбираемых (не отключенных) элемента <code>option</code>.</li>
+    <li>Ваш <code>#dropdown</code> должен быть потомком <code>#survey-form</code>.</li></li>
+    <li>У вас должно быть как минимум два элемента <code>input</code> с <code>type</code> равным <code>radio</code>(радиокнопки).</li>
+    <li>У вас должно быть как минимум две радиокнопки, которые являются потомками <code>#survey-form</code>.</li>
+    <li>Все ваши радиокнопки должны иметь атрибут <code>value</code> и значение.</li>
+    <li>Все ваши радиокнопки должны иметь атрибут <code>name</code> и значение.</li>
+    <li>В каждой группе радиокнопок должно быть как минимум две радиокнопки.</li>
+    <li>У вас должно быть как минимум два элемента <code>input</code> с <code>type</code> равным <code>checkbox</code>(флажки), 
+      которые являются потомками <code>#survey-form</code>.</li>
+    <li>Все ваши флажки внутри <code>#survey-form</code> должны иметь атрибут <code>value</code> и значение.</li>
+    <li>У вас должен быть хотя бы один элемент <code>textarea</code>, который является потомком <code>#survey-form</code>.</li>
+    <li>Вам потребуется элемент <code>input</code> или <code>button</code> с <code>id</code> равным <code>submit</code>.</li>
+    <li>В вашем <code>#submit</code> должен быть указан атрибут <code>type</code> равный <code>submit</code>.</li>
+    <li>Ваш <code>#submit</code> должен быть потомком <code>#survey-form</code>.</li>
+  </ol>
+
+  <p><a href="final-a-survey-form.html">Проверить результат</a></p>
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
