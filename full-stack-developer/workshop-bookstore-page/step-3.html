@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,20 @@
   <h1>Шаг 3</h1>
 
   <p>
-    Элемент <code>div</code> используется как контейнер для группировки других HTML-элементов. 
-    Он в основном используется для группировки HTML-элементов с общим набором стилей CSS.
+    Теперь улучшите структуру вашего HTML-документа, чтобы убедиться, что страница правильно закодирована и хорошо отображается на экранах всех размеров.
   </p>
 
   <p>
-    Под элементом <code>p</code> добавьте элемент <code>div</code>. Этот элемент будет контейнером для ваших карточек книг.
+    Добавьте атрибут <code>lang</code> к элементу <code>html</code> и установите для него значение <code>ru</code>. Затем внутри элемента <code>head</code> добавьте:
+  </p>
+
+  <ul>
+    <li>тег <code>meta charset="UTF-8"</code></li>
+    <li>тег <code>meta name="viewport" content="width=device-width, initial-scale=1.0"</code></li>
+  </ul>
+
+  <p>
+    Теперь добавьте элемент <code>body</code> под разделом <code>head</code>. Сюда будет помещен весь видимый контент вашей страницы.
   </p>
 
   <fieldset class="html chapter">
@@ -23,16 +31,11 @@
     <pre>
       <code>
         &lt;!DOCTYPE html&gt;
-        &lt;html lang="ru"&gt;
+        &lt;html&gt;
           &lt;head&gt;
-            &lt;meta charset="UTF-8" /&gt;
             &lt;title&gt;Книжный магазин XYZ&lt;/title&gt;
-          &lt;/head&gt;
-          &lt;body&gt;
-            &lt;h1&gt;Книжный магазин XYZ&lt;/h1&gt;
-            &lt;p&gt;Просмотрите нашу коллекцию удивительных книг!&lt;/p&gt;
 
-          &lt;/body&gt;
+          &lt;/head&gt;
         &lt;/html&gt;
       </code>
     </pre>
