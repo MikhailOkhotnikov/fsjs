@@ -10,24 +10,7 @@
   <h1>Шаг 7</h1>
 
   <p>
-    Атрибут <code>class</code> используется для идентификации одного или нескольких элементов при стилизации. 
-    В отличие от атрибута <code>id</code>, имена классов не обязательно должны быть уникальными: несколько элементов могут иметь один и тот же класс.
-  </p>
-
-  <p>
-    Вот пример:
-  </p>
-  <details>
-    <summary>Пример кода:</summary>
-    <pre>
-      <code>
-        &lt;p class="example"&gt;пример абзаца&lt;/p&gt;
-      </code>
-    </pre>
-  </details>
-
-  <p>
-    Добавьте атрибут <code>class</code> к элементу <code>div</code> и установите для него значение <code>card-container</code>.
+    Внутри первого элемента, имеющего класс <code>card</code>, добавьте элемент <code>h2</code> с текстом <code>Научное приключение Салли</code>.
   </p>
 
   <fieldset class="html chapter">
@@ -38,14 +21,15 @@
         &lt;html lang="ru"&gt;
           &lt;head&gt;
             &lt;meta charset="UTF-8" /&gt;
-            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
             &lt;title&gt;Книжный магазин XYZ&lt;/title&gt;
           &lt;/head&gt;
           &lt;body&gt;
             &lt;h1&gt;Книжный магазин XYZ&lt;/h1&gt;
             &lt;p&gt;Просмотрите нашу коллекцию удивительных книг!&lt;/p&gt;
-            &lt;div&gt;
-
+            &lt;div class="card-container"&gt;
+              &lt;div class="card" id="sally-adventure-book"&gt;
+              
+              &lt;/div&gt;
             &lt;/div&gt;
           &lt;/body&gt;
         &lt;/html&gt;
