@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 5</title>
+</head>
+<body>
+  <h1>Шаг 5</h1>
+
+  <p>
+    На странице блога размещено всего три записи, заключенные в обычные элементы <code>div</code>. 
+    Но было бы лучше использовать семантические элементы для обертывания каждой записи.
+  </p>
+
+  <p>
+    Замените каждый элемент <code>div</code>, который оборачивает каждую запись в блоге, на элемент <code>article</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;title&gt;Блог Camperbot&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;Добро пожаловать в блог Camperbot!&lt;/h1&gt;
+          &lt;nav&gt;
+            &lt;h2&gt;Навигация&lt;/h2&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="#post1"&gt;Моё путешествие&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#post2"&gt;Доступность&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#post3"&gt;Следующие шаги&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/nav&gt;
+
+          &lt;div&gt;
+            &lt;h2 id="post1"&gt;Мой путь к обучению программированию&lt;/h2&gt;
+            &lt;p&gt;Я начал изучать программирование несколько месяцев назад, и это было невероятно!&lt;/p&gt;
+            &lt;h3&gt;Первые трудности&lt;/h3&gt;
+            &lt;p&gt;Поначалу синтаксис был очень запутанным.&lt;/p&gt;            
+            &lt;h3&gt;Прорывы&lt;/h3&gt;
+            &lt;p&gt;В конце концов, все начало вставать на свои места.&lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div&gt;
+            &lt;h2 id="post2"&gt;Вопросы доступности&lt;/h2&gt;
+            &lt;p&gt;Сегодня я узнал, что не все пользуются интернетом так же, как я.&lt;/p&gt;
+            &lt;h3&gt;Программы чтения с экрана&lt;/h3&gt;
+            &lt;p&gt;Эти инструменты помогают пользователям с нарушениями зрения просматривать веб-сайты.&lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div&gt;
+            &lt;h2 id="post3"&gt;Что дальше?&lt;/h2&gt;
+            &lt;p&gt;Я с нетерпением жду возможности погрузиться в JavaScript и создавать интерактивные функции!&lt;/p&gt;
+            &lt;h3&gt;Скоро: Мой первый проект на JavaScript!&lt;/h3&gt;
+            &lt;p&gt;Следите за обновлениями, вас ждут интересные интерактивные функции блога.&lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;h3&gt;Свяжитесь со мной&lt;/h3&gt;
+          &lt;p&gt;Напишите мне по электронной почте: camperbot@blog.io&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-4.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-6.html">Следующий</a>
+
+</body>
+</html>
