@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Почему важно, чтобы входные данные имели связанную с ними метку?</title>
+</head>
+<body>
+  <h1>Почему важно, чтобы поля ввода имели связанную с ними метку?</h1>
+
+  <p>
+    Метки на полях ввода могут показаться мелочью, но они играют решающую роль в упрощении использования форм для всех пользователей.
+  </p>
+
+  <p>
+    Метки помогают людям с ограниченными возможностями, делают формы более удобными для всех пользователей и, в конечном итоге, повышают коэффициент конверсии форм.
+  </p>
+
+  <p>
+    Давайте разберемся, почему добавление меток к элементам ввода важно для обеспечения доступности и удобства использования.
+  </p>
+
+  <p>
+    Программы чтения с экрана часто используют метки для описания назначения полей ввода. Для корректной работы метка должна быть программно связана с полем ввода. 
+    Хотя существует несколько способов сделать это, наиболее распространенным является использование элемента <code>label</code> в HTML.
+  </p>
+
+  <p>
+    Вот как связать метку(<code>label</code>) с полем ввода(<code>input</code>):
+  </p>
+
+  <pre>
+    <code>
+      &lt;form&gt;
+        &lt;label for="name"&gt;Ваше Имя&lt;/label&gt;
+        &lt;input type="text" id="name" /&gt;
+      &lt;/form&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере атрибут <code>for</code> элемента <code>label</code> связан с <code>id</code> элемента <code>input</code>. 
+    Эта связь позволяет программам чтения с экрана озвучивать метку, когда поле ввода находится в фокусе, 
+    что позволяет пользователям программ чтения с экрана понимать назначение поля ввода.
+  </p>
+
+  <p>
+    Присвоение меток всем полям ввода также полезно для SEO. 
+    Благодаря правильно присвоенным меткам поисковые системы лучше понимают содержимое страницы, что положительно сказывается на ее позиции в результатах поиска.
+  </p>
+
+  <p>
+    Но важно понимать, что вы создаёте контент для людей, а не для поисковых систем. Поэтому следует убедиться, что метки максимально понятны и информативны.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Почему добавление меток к элементам ввода важно для обеспечения доступности?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Они обеспечивают визуальное оформление полей ввода.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Они помогают программам чтения с экрана описать назначение полей ввода.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Они увеличивают скорость загрузки веб-страниц.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Они позволяют полям ввода принимать данные различных типов.</label>
+    </div>
+
+    <div>
+      <p>Как правильно программно связать метку с полем ввода в HTML?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Присвойте обоим элементам один и тот же атрибут <code>name</code>.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Установите атрибут <code>for</code> метки так, чтобы он соответствовал <code>id</code> поля ввода.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Разместите элемент <code>label</code> сразу после элемента <code>input</code> в DOM.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Вместо метки используйте <code>placeholder</code>.</label>
+    </div>
+
+    <div>
+      <p>Помимо доступности, какое еще преимущество дает связывание меток с входными данными?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Это значительно ускоряет загрузку страницы.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Это может помочь поисковым системам лучше понимать содержимое страницы.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Это позволяет автоматически принимать на вход данные различных типов.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Программа автоматически переводит надписи для пользователей из других стран.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
