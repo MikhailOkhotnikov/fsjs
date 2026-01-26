@@ -4,16 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css">
-  <title>Шаг 10</title>
+  <title>Шаг 11</title>
 </head>
 <body>
-  <h1>Шаг 10</h1>
+  <h1>Шаг 11</h1>
 
   <p>
-    Далее добавьте третью строку в таблицу. Начните с добавления еще одного элемента <code>tr</code>`. 
-    Внутри этого элемента <code>tr</code> добавьте элемент <code>th</code> с атрибутом <code>scope</code>, 
-    установленным на <code>row</code>, и текстовым содержимым <code>11:00 AM</code>. 
-    Затем ниже этого элемента <code>th</code> добавьте элемент <code>td</code> с текстовым содержимым <code>Пауза</code>.
+    В настоящий момент элемент <code>td</code> с текстом <code>Пауза</code> занимает только одну колонку. Но было бы здорово, если бы он занимал все три колонки.
+  </p>
+
+  <p>
+    Как вы помните из предыдущих семинаров и уроков, атрибут <code>colspan</code> позволяет ячейке таблицы занимать несколько столбцов.
+  </p>
+
+  <details>
+    <summary>Пример кода</summary>
+    <pre>
+      <code>
+        &lt;tr&gt;
+          &lt;td colspan="3"&gt;Общее количество баллов&lt;/td&gt;
+        &lt;/tr&gt;
+      </code>
+    </pre>
+  </details>
+
+  <p>
+    Добавьте атрибут <code>colspan</code> к элементу <code>td</code> и установите его значение равным <code>3</code>.
   </p>
 
   <fieldset class="html chapter">
@@ -51,7 +67,12 @@
                   &lt;td&gt;CSS для начинающих&lt;/td&gt;
                   &lt;td&gt;Принципы инклюзивного дизайна&lt;/td&gt;
                 &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;th scope="row"&gt;11:00 AM&lt;/th&gt;
 
+                  &lt;td&gt;Пауза&lt;/td&gt;
+                  
+                &lt;/tr&gt;
               &lt;/tbody&gt;
             &lt;/table&gt;
           &lt;/body&gt;
@@ -69,8 +90,7 @@
     </pre>
   </fieldset>
 
-  <a href="step-9.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-11.html">Следующий</a>
-
+  <a href="step-10.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-12.html">Следующий</a>
 
 </body>
 </html>
