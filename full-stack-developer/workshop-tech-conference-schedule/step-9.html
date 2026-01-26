@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 9</title>
+</head>
+<body>
+  <h1>Шаг 9</h1>
+
+  <p>
+    Теперь пришло время добавить еще одну строку в таблицу.
+  </p>
+
+  <p>
+    Для начала добавьте еще один элемент <code>tr</code>. 
+    Внутри этого элемента <code>tr</code> добавьте элемент <code>th</code> с атрибутом <code>scope</code>, 
+    установленным на <code>row</code>, и текстовым содержимым <code>10:00 AM</code>.
+  </p>
+
+  <p>
+    Затем добавьте три элемента <code>td</code> со следующим текстовым содержимым:
+  </p>
+
+  <ul>
+    <li>Подробный анализ доступности</li>
+    <li>CSS для начинающих</li>
+    <li>Принципы инклюзивного дизайна</li>
+  </ul>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;title&gt;Расписание технологической конференции 2026&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Расписание технологической конференции 2026&lt;/h1&gt;
+            &lt;table&gt;
+              &lt;caption&gt;Расписание по треку и времени&lt;/caption&gt;
+              &lt;thead&gt;
+                &lt;tr&gt;
+                  &lt;th scope="col"&gt;Время&lt;/th&gt;
+                  &lt;th scope="col"&gt;Трек А&lt;/th&gt;
+                  &lt;th scope="col"&gt;Трек Б&lt;/th&gt;
+                  &lt;th scope="col"&gt;Трек В&lt;/th&gt;                  
+                &lt;/tr&gt;
+              &lt;/thead&gt;
+              &lt;tbody&gt;
+                &lt;tr&gt;
+                  &lt;th scope="row"&gt;9:00 AM&lt;/th&gt;                  
+                  &lt;td&gt;Основной доклад: Будущее технологий&lt;/td&gt;
+                  &lt;td&gt;Введение в веб-разработку&lt;/td&gt;
+                  &lt;td&gt;UX для всех&lt;/td&gt;
+                &lt;/tr&gt;
+                
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-8.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-10.html">Следующий</a>
+
+</body>
+</html>
