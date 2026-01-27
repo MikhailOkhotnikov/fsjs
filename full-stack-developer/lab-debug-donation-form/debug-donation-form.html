@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Отладка формы пожертвования</title>
+</head>
+<body>
+  <h1>Отладка формы пожертвования</h1>
+
+  <p>
+    Местная благотворительная организация создала веб-сайт с формой для пожертвований, но в нем есть несколько проблем, которые необходимо исправить. 
+    Форма недоступна для людей с ограниченными возможностями и содержит ошибки синтаксиса HTML.
+  </p>
+
+  <p>
+    Ваша задача — исправить все ошибки, чтобы форма работала корректно и была доступна всем пользователям. 
+    Выполните пункты в приведенных ниже пользовательских историях и нажмите «Запустить тесты», чтобы проверить, исправили ли вы все ошибки.
+  </p>
+
+  <p>Истории пользователей:</p>
+
+  <ol>
+    <li>Элементы ввода являются пустыми элементами и не должны иметь закрывающих тегов. Удалите все закрывающие теги <code>/input</code> из формы.</li>
+    <li>
+      Добавьте элементы <code>label</code> к каждому полю ввода формы, чтобы пользователи знали, для чего предназначено каждое поле. 
+      Текст метки должен соответствовать тексту, расположенному рядом с каждым полем ввода.
+    </li>
+    <li>В поле <code>Адрес электронной почты</code> следует указывать тип <code>email</code>, а не <code>text</code>.</li>
+    <li>
+      Каждый элемент <code>label</code> следует связать с соответствующим элементом <code>input</code>, 
+      используя атрибут <code>for</code> для <code>label</code> и соответствующий атрибут <code>id</code> для <code>input</code>.
+    </li>
+    <li>
+      Добавьте атрибут <code>required</code> к текстовым полям ввода, полям ввода электронной почты и числовым полям (но не к флажку или кнопке отправки), 
+      чтобы гарантировать, что пользователи заполнят необходимую информацию.
+    </li>
+  </ol>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;title&gt;Форма пожертвования&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;Форма пожертвования&lt;/h1&gt;
+          &lt;form&gt;
+            
+            ФИО:
+            &lt;input type="text" name="name"&gt;&lt;/input&gt;
+
+            Адрес электронной почты:
+            &lt;input type="text" name="email"&gt;
+
+            Сумма пожертвования (₽):
+            &lt;input type="number" name="amount"&gt;&lt;/input&gt;
+
+            &lt;input type="checkbox" name="newsletter"&gt;&lt;/input&gt;
+            Подписаться
+
+            &lt;input type="submit" value="Отправить"&gt;&lt;/input&gt;
+          &lt;/form&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Тесты</h2>
+
+  <ol>
+    <li>В вашем коде не должно быть закрывающих тегов <code>/input</code>.</li>
+    <li>В вашей форме должно быть ровно пять <code>input</code>.</li>
+    <li>В вашей форме должно быть ровно четыре элемента <code>label</code>.</li>
+    <li>Первая метка должна содержать текст <code>Полное имя:</code>.</li>
+    <li>Первый <code>input</code> должен иметь атрибут <code>required</code>.</li>
+    <li>На второй метке должен быть текст <code>Адрес электронной почты:</code>.</li>
+    <li>Второй <code>input</code> должен иметь атрибут <code>required</code>.</li>
+    <li>На третьей метке должен быть текст <code>Сумма пожертвования (₽):</code>.</li>
+    <li>Третий элемент <code>input</code> должен иметь атрибут <code>required</code>.</li>
+    <li>Четвертая метка должна содержать текст <code>Подписаться</code>.</li>
+    <li>Каждый элемент <code>input</code> следует связать с элементом <code>label</code>, используя атрибуты <code>for</code> и <code>id</code>.</li>
+    <li>В поле <code>Адрес электронной почты</code> следует ввести тип <code>email</code>.</li>
+    <li>В <code>input</code> с типом <code>checkbox</code> не должно быть атрибута <code>required</code>.</li>
+    <li>Кнопка отправки не должна иметь атрибута <code>required</code>.</li>
+  </ol>
+
+  <p><a href="final-debug-donation-form.html">Проверить результат</a></p>
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
