@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>В чём цель WAI-ARIA и как она работает?</title>
+</head>
+<body>
+  <h1>В чём цель WAI-ARIA и как она работает?</h1>
+
+  <p>
+    Обеспечение доступности статического контента может быть относительно простым делом, но с динамическим контентом могут возникнуть более сложные задачи. 
+    Именно здесь на помощь приходит WAI-ARIA.
+  </p>
+
+  <p>
+    Давайте рассмотрим, что такое WAI-ARIA, каково её назначение, как она работает и приведём несколько примеров.
+  </p>
+
+  <p>
+    WAI-ARIA расшифровывается как Web Accessibility Initiative - Accessible Rich Internet Applications 
+    (Инициатива по обеспечению доступности веб-сайтов — доступные многофункциональные интернет-приложения). 
+    Это спецификация, повышающая доступность динамического контента и компонентов пользовательского интерфейса (UI, User Interface).
+  </p>
+
+  <p>
+    Следует отметить, что WCAG и WAI-ARIA — это не одно и то же. 
+    WCAG предоставляет общие рекомендации по доступности веб-сайтов, в то время как WAI-ARIA предлагает конкретные правила для обеспечения доступности 
+    динамического и интерактивного контента для пользователей вспомогательных технологий.
+  </p>
+
+  <p>
+    Таким образом, основная цель WAI-ARIA — улучшить доступность динамического контента и компонентов пользовательского интерфейса, 
+    для которых отсутствуют собственные HTML-эквиваленты.
+  </p>
+
+  <p>
+    WAI-ARIA работает за счет введения набора атрибутов, которые можно добавлять к HTML-элементам для предоставления дополнительной семантической информации. 
+    Эти атрибуты подразделяются на роли, состояния и свойства.
+  </p>
+
+  <p>
+    Роль ARIA определяет назначение элемента на веб-сайте или в веб-приложении. Вот пример установки роли для элемента <code>div</code> в значение <code>button</code>.
+  </p>
+
+  <pre>
+    <code>
+      &lt;div role="button"&gt;Нажмите сюда&lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Таким образом, вы сообщаете вспомогательным технологиям, что элемент является кнопкой. Однако роли не предоставляют никакой функциональности. 
+    Простое присвоение <code>div role="button"</code> не заставит его вести себя как кнопка. 
+    Чтобы он выглядел и вел себя как кнопка, вам потребуется использовать CSS и JavaScript для достижения желаемого результата.
+  </p>
+
+  <p>
+    Вот пример использования HTML, CSS и JavaScript для создания пользовательского элемента <code>button</code>.
+  </p>
+
+  <p>
+    <b>Примечание:</b> Не беспокойтесь о том, чтобы пытаться понять код CSS и JavaScript. Вы изучите эти языки в последующих модулях.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link href="styles.css" rel="stylesheet"&gt;
+        &lt;div id="custom-btn" role="button"&gt;Нажмите сюда&lt;/div&gt;
+        &lt;script src="index.js"&gt;&lt;/script&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        #custom-btn {
+          display: inline-block;
+          padding: 0.4em 1em;
+          font-size: 1rem;
+          font-family: sans-serif;
+          color: buttontext;
+          background-color: buttonface;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          cursor: pointer;
+          user-select: none;
+          text-align: center;
+        }
+
+        #custom-btn:focus {
+          outline: 2px solid Highlight;
+          outline-offset: 2px;
+        }
+
+        #custom-btn:active {
+          background-color: #ddd;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="js chapter">
+    <legend>Файл index.js</legend>
+    <pre>
+      <code>
+        const button = document.getElementById("custom-btn");
+
+        button.addEventListener("click", () => {
+          alert("Button clicked!");
+        });
+
+        button.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault(); 
+            button.click();
+          }
+        });
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Всегда лучше использовать стандартную <code>button</code> или <code>input</code> с атрибутом <code>type="button"</code>.
+  </p>
+
+  <p>
+    Свойства ARIA предоставляют дополнительные сведения об элементах. Например, свойство <code>aria-labelledby</code> позволяет связать элемент с определенной меткой:
+  </p>
+
+  <pre>
+    <code>
+      &lt;h2 id="header-id"&gt;О freeCodeCamp&lt;/h2&gt;
+      &lt;button id="button-id" aria-labelledby="header-id button-id"&gt;Узнать больше&lt;/button&gt;
+    </code>
+  </pre>
+
+  <p>
+    Это сделает элементы понятными и удобными для пользователей вспомогательных технологий.
+  </p>
+
+  <p>
+    Чтобы максимально эффективно использовать WAI-ARIA, старайтесь по возможности использовать нативный HTML, поскольку он, как правило, 
+    обеспечивает лучшую доступность «из коробки».
+  </p>
+
+  <p>
+    Используйте WAI-ARIA только тогда, когда HTML не справляется, и не забывайте тестировать с помощью вспомогательных технологий, 
+    таких как программы чтения с экрана, или привлекайте к тестированию людей с ограниченными возможностями. 
+    Также убедитесь, что состояния и свойства WAI-ARIA обновляются в реальном времени вместе с содержимым. 
+    Избегайте чрезмерного использования ARIA, так как это часто может вызывать путаницу.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Каково основное назначение атрибутов WAI-ARIA в HTML?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Изменить визуальный облик элементов.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Для предоставления дополнительной семантической информации в целях обеспечения доступности.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Для отображения всплывающих подсказок на элементах.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Для добавления анимации к элементам.</label>
+    </div>
+
+    <div>
+      <p>Как WAI-ARIA способствует повышению доступности веб-сайтов?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">За счёт повышения скорости загрузки страницы.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Путем введения атрибутов, предоставляющих дополнительную семантическую информацию.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Путем шифрования данных.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Путем создания визуальных эффектов для элементов.</label>
+    </div>
+
+    <div>
+      <p>Что означает аббревиатура WAI-ARIA?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Инициатива по обеспечению доступности веб-сайтов — передовые адаптивные интернет-приложения</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Интерфейс веб-доступности — Интернет-приложения с доступными ресурсами</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Инициатива по обеспечению доступности веб-сайтов — Доступные многофункциональные интернет-приложения</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Интерфейс веб-приложения — доступность и функциональность.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
