@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что представляют собой роли в ARIA?</title>
+</head>
+<body>
+  <h1>Что представляют собой роли в ARIA?</h1>
+
+  <p>
+    <b>ПРИМЕЧАНИЕ:</b> Некоторые из этих интерактивных примеров могут содержать код CSS и JavaScript. 
+    Не беспокойтесь о том, чтобы пытаться понять код. Предварительный просмотр предназначен для иллюстрации основных моментов, обсуждаемых в уроке. 
+    Чтобы просмотреть предварительный просмотр, вам необходимо включить интерактивный редактор.
+  </p>
+
+  <p>
+    ARIA расшифровывается как Accessible Rich Internet Applications (доступные многофункциональные интернет-приложения).
+  </p>
+
+  <p>
+    Роли ARIA определяют семантическое значение элементов HTML. 
+    Они необходимы для обеспечения доступности веб-контента для людей, использующих вспомогательные технологии, такие как программы чтения с экрана.
+  </p>
+
+  <p>
+    В HTML есть семантические и несемантические элементы, различающиеся тем, передают ли они смысл своего содержимого или нет.
+  </p>
+
+  <p>
+    Многие семантические HTML-элементы уже имеют роль ARIA, назначенную по умолчанию. Например, элемент <code>button</code> имеет роль ARIA по умолчанию <code>button</code>.
+  </p>
+
+  <pre>
+    <code>
+      &lt;button&gt;Пример кнопки&lt;/button&gt;
+    </code>
+  </pre>
+
+  <p>
+    Однако несемантические элементы не выполняют никакой роли. 
+    Например, программы чтения с экрана не смогут определить назначение элемента <code>div</code>, если вы явно не укажете его роль.
+  </p>
+
+  <pre>
+    <code>
+      &lt;div&gt;
+        &lt;!-- здесь размещаются дополнительные элементы --&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Чтобы указать роль элемента в соответствии со спецификацией ARIA, достаточно добавить атрибут <code>role</code>, 
+    например, так: <code>role="ARIA role"</code>, где <code>ARIA role</code> — это имя роли в спецификации ARIA.
+  </p>
+
+  <p>
+    Вот пример использования атрибута <code>role</code> со значением <code>alert</code>:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;div class="alert" id="exp-warning" role="alert"&gt;
+          &lt;span class="hidden"&gt;Ваша авторизация завершится через 3 минуты.&lt;/span&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .alert {
+          background-color: #fff3cd;
+          border: 1px solid #ffeeba;
+          color: #856404;
+          padding: 1em;
+          margin-top: 1em;
+          border-radius: 4px;
+          font-weight: bold;
+        }
+
+        .alert span {
+          display: inline-block;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Важно отметить, что указание роли для элемента делает только одно: оно сообщает вспомогательным технологиям о назначении элемента. 
+    Это не добавляет элементу никакой функциональности или поведения. 
+    Если люди ожидают, что роль будет вести себя определенным образом, то задача разработчика — добавить это ожидаемое поведение.
+  </p>
+
+  <p>
+    Например, добавление атрибута <code>role</code> со значением <code>button</code> к элементу <code>div</code> не делает 
+    его автоматически кликабельным или пригодным для использования с клавиатурой. 
+    Задача разработчика — добавить ожидаемое поведение, позволяющее элементу <code>div</code> действовать как кнопка, 
+    и в большинстве случаев лучше просто использовать элемент <code>button</code>.
+  </p>
+
+  <p>
+    Существует шесть основных категорий ролей в ARIA:
+  </p>
+
+  <ul>
+    <li>Роли в структуре документа(Document structure roles)</li>
+    <li>Роли виджетов(Widget roles)</li>
+    <li>Роли-ориентиры(Landmark roles)</li>
+    <li>Роли динамически изменяющихся областей(Live region roles)</li>
+    <li>Роли окон(Window roles)</li>
+    <li>Абстрактные роли(Abstract roles)</li>
+  </ul>
+
+  <p>
+    Давайте рассмотрим их подробнее.
+  </p>
+
+  <p>
+    Роли структуры документа определяют общую структуру веб-страницы. 
+    Благодаря этим ролям вспомогательные технологии могут понимать взаимосвязи между различными разделами и помогать пользователям ориентироваться в контенте.
+  </p>
+
+  <p>
+    Однако большинство ролей структуры документа не используются в современной веб-разработке, поскольку браузеры уже поддерживают эквивалентные семантические элементы HTML, 
+    которым следует отдавать приоритет, когда это возможно.
+  </p>
+
+  <p>
+    Следует указать роли, для которых нет эквивалентного семантического элемента. 
+    Например: панель инструментов(<code>toolbar</code>), всплывающая подсказка(<code>tooltip</code>), лента новостей(<code>feed</code>), 
+    математика(<code>math</code>), презентация(<code>presentation</code>), нет(<code>none</code>) и заметка(<code>note</code>).
+  </p>
+
+  <p>
+    Существуют и другие похожие роли, но это наиболее часто используемые. Это пример <code>div</code> с ролью ARIA <code>math</code>. 
+    В <code>div</code> содержится математическое уравнение.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;div role="math" aria-label="x squared + y squared = 3"&gt;
+          x&lt;sup&gt;2&lt;/sup&gt; + y&lt;sup&gt;2&lt;/sup&gt; = 3
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .math-expression {
+          font-family: "Times New Roman", serif;
+          font-size: 1.2rem;
+          background-color: #f4f4f4;
+          border-left: 4px solid #007acc;
+          padding: 0.75em 1em;
+          margin-top: 1em;
+          display: inline-block;
+        }
+
+        .math-expression sup {
+          font-size: 0.8em;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Вы также заметите, что у этого <code>div</code> есть атрибут <code>aria-label</code>. Значение этого атрибута должно быть строкой, представляющей выражение.
+  </p>
+
+  <p>
+    Роли виджетов определяют назначение и функциональность интерактивных элементов, таких как полосы прокрутки.
+  </p>
+
+  <p>
+    Примеры ролей виджетов включают полосу прокрутки(<code>scrollbar</code>), поле поиска(<code>searchbox</code>), 
+    разделитель(<code>separator</code>, при наличии возможности фокусировки), ползунок(<code>slider</code>), кнопку вращения(<code>spinbutton</code>), 
+    переключатель(<code>switch</code>), вкладку(<code>tab</code>), панель вкладок(<code>tabpanel</code>) и элемент дерева(<code>treeitem</code>).
+  </p>
+
+  <p>
+    Вот пример поля поиска:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;div class="search-container" role="search"&gt;
+          &lt;label for="searchbox" class="visually-hidden"&gt;Поиск&lt;/label&gt;
+
+          &lt;div
+            id="searchbox"
+            class="searchbox"
+            role="searchbox"
+            aria-label="Search the site"
+            tabindex="0"
+            contenteditable="true"&gt;
+          &lt;/div&gt;
+
+          &lt;button type="button" aria-label="Submit search"&gt;Поиск&lt;/button&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .search-container {
+          display: flex;
+          align-items: center;
+          gap: 0.5em;
+          margin-top: 1em;
+        }
+
+        .searchbox {
+          flex: 1;
+          padding: 0.5em;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 1em;
+          min-height: 1.5em;
+        }
+
+        .searchbox:focus {
+          border-color: #007acc;
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.3);
+        }
+
+        button {
+          padding: 0.5em 1em;
+          background-color: #007acc;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: #005fa3;
+        }
+
+        /* Hide visually but keep for screen readers */
+        .visually-hidden {
+          position: absolute;
+          left: -9999px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Некоторые из этих ролей имеют эквивалентные семантические элементы. Если таковые имеются, следует отдавать приоритет семантическому элементу, а не роли. 
+    Например, лучше использовать HTML-элемент <code>button</code>, чем добавлять роль <code>button</code> к элементу <code>div</code>.
+  </p>
+
+  <p>
+    Роли-ориентиры классифицируют и обозначают основные разделы веб-страницы. Программы чтения с экрана используют их для удобной навигации по важным разделам страницы. 
+    Их следует использовать экономно, чтобы сохранить общую структуру простой и понятной. 
+    Примеры ролей-ориентиров: баннер(<code>banner</code>), дополнительный(<code>complementary</code>), информация о содержании(<code>contentinfo</code>), 
+    форма(<code>form</code>), основной(<code>main</code>), навигация(<code>navigation</code>), область(<code>region</code>) и поиск(<code>search</code>). 
+    Каждая из этих ролей имеет соответствующий HTML-эквивалент, например, <code>header</code>(заголовок), <code>footer</code>(нижний колонтитул), <code>aside</code>(отступ), 
+    <code>form</code>(форма), <code>main</code>(основной), <code>nav</code>(навигация), <code>section</code>(раздел) и <code>search</code>(поиск). 
+    Если вы используете соответствующие HTML-элементы для определения разделов вашей страницы, то нет необходимости явно добавлять атрибут <code>role</code> к этим элементам.
+  </p>
+
+  <p>
+    Вот пример баннера:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;div role="banner" class="site-banner"&gt;
+          &lt;h1&gt;Доступный веб-дизайн&lt;/h1&gt;
+          &lt;nav&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Главная&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Статьи&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;О нас&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href="#"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/nav&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .site-banner {
+          background-color: #007acc;
+          color: #fff;
+          padding: 1em 1.5em;
+          border-radius: 4px;
+        }
+
+        .site-banner h1 {
+          margin: 0 0 0.5em;
+          font-size: 1.5em;
+        }
+
+        .site-banner nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          gap: 1em;
+        }
+
+        .site-banner nav a {
+          color: #fff;
+          text-decoration: none;
+          font-weight: 500;
+        }
+
+        .site-banner nav a:hover {
+          text-decoration: underline;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Роли динамически изменяющихся областей определяют элементы с контентом, который будет меняться динамически. 
+    Таким образом, программы чтения с экрана и другие вспомогательные технологии могут сообщать об изменениях пользователям с нарушениями зрения. 
+    К таким ролям относятся: <code>alert</code>(оповещение), <code>log</code>(журнал), <code>marquee</code>(бегущая строка), 
+    <code>status</code>(статус) и <code>timer</code>(таймер).
+  </p>
+
+  <p>
+    Вот пример статуса:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;div class="status-demo"&gt;
+          &lt;button id="update-status-btn"&gt;Проверить статус&lt;/button&gt;
+          &lt;div id="status-msg" role="status" class="status-message"&gt;
+            Обновлений пока нет.
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;script src="index.js"&gt;&lt;/script&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .status-demo {
+          margin-top: 1em;
+        }
+
+        button {
+          padding: 0.5em 1em;
+          background-color: #007acc;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: #005fa3;
+        }
+
+        .status-message {
+          margin-top: 0.75em;
+          padding: 0.75em;
+          background-color: #e8f4ff;
+          border: 1px solid #b3d8ff;
+          border-radius: 4px;
+          font-weight: 500;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="js chapter">
+    <legend>Файл index.js</legend>
+    <pre>
+      <code>
+        const button = document.getElementById("update-status-btn");
+        const statusMessage = document.getElementById("status-msg");
+
+        button.addEventListener("click", () => {
+          statusMessage.textContent = "Ваша загрузка успешно завершена.";
+        });
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Роли окон определяют дочерние окна, такие как всплывающие модальные диалоги. 
+    К таким ролям относятся <code>alertdialog</code> и <code>dialog</code>. 
+    Обратите внимание, что в настоящее время считается лучшей практикой использовать элемент HTML <code>dialog</code> и связанные с ним 
+    методы JavaScript вместо создания диалога вручную.
+  </p>
+
+  <p>
+    Вот пример использования роли диалога для пользовательского диалога:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;button id="open-dialog"&gt;Открыть диалог&lt;/button&gt;
+
+        &lt;div id="custom-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" class="dialog"&gt;
+          &lt;div class="dialog-content"&gt;
+            &lt;h3 id="dialog-title"&gt;Подтвердить действие&lt;/h3&gt;
+            &lt;p&gt;Вы уверены, что хотите удалить этот файл?&lt;/p&gt;
+            &lt;div class="dialog-actions"&gt;
+              &lt;button id="confirm-btn"&gt;Да&lt;/button&gt;
+              &lt;button id="close-dialog"&gt;Отмена&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;script src="index.js"&gt;&lt;/script&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 2em;
+        }
+
+        button {
+          padding: 0.5em 1em;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          background-color: #007acc;
+          color: white;
+          font-size: 1em;
+        }
+
+        button:hover {
+          background-color: #005fa3;
+        }
+
+        .dialog {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); 
+          justify-content: center; 
+          align-items: center;   
+          z-index: 1000;
+        }
+
+        .dialog-content {
+          background-color: white;
+          padding: 1.5em;
+          border-radius: 8px;
+          width: 90%;
+          max-width: 400px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .dialog-actions {
+          display: flex;
+          justify-content: flex-end;
+          gap: 0.5em;
+          margin-top: 1em;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="js chapter">
+    <legend>Файл index.js</legend>
+    <pre>
+      <code>
+        const dialog = document.getElementById("custom-dialog");
+        const openBtn = document.getElementById("open-dialog");
+        const closeBtn = document.getElementById("close-dialog");
+        const confirmBtn = document.getElementById("confirm-btn");
+
+        openBtn.addEventListener("click", () => {
+          dialog.style.display = "flex";
+        });
+
+        closeBtn.addEventListener("click", () => {
+          dialog.style.display = "none";
+        });
+
+        confirmBtn.addEventListener("click", () => {
+          alert("Файл удален.");
+          dialog.style.display = "none";
+        });
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    И наконец, у нас есть абстрактные роли. Эти роли помогают организовать документ. 
+    Они предназначены только для внутреннего использования браузером, а не разработчиками, поэтому вы должны знать об их существовании, 
+    но не должны использовать их на своих веб-сайтах или веб-приложениях.
+  </p>
+
+  <p>
+    С помощью ролей ARIA вы можете создавать доступные и инклюзивные веб-сайты и веб-приложения. 
+    Они предоставляют семантическую информацию о назначении и функциях элементов HTML.
+  </p>
+
+  <p>
+    Программы чтения с экрана и другие вспомогательные технологии используют эту информацию, чтобы помочь пользователям понять содержимое вашей страницы и 
+    сформировать ожидания относительно того, как ею пользоваться, что помогает обеспечить всем пользователям отличный пользовательский опыт.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>В чём заключается основная цель ролей в ARIA?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Определить визуальное оформление элементов.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Для повышения производительности веб-сайта.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Предоставлять семантическую информацию о назначении элементов.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Для повышения совместимости с браузерами.</label>
+    </div>
+
+    <div>
+      <p>Какая категория ролей ARIA используется для определения назначения и поведения дочерних окон, таких как всплывающие модальные диалоговые окна?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Роли виджетов(Widget roles)</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Роли в структуре документа(Document structure roles)</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Роли-ориентиры(Landmark roles)</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Роли окон(Window roles)</label>
+    </div>
+
+    <div>
+      <p>Какая категория ролей ARIA используется для обозначения динамического контента, о котором необходимо сообщать пользователям?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Роли виджетов(Widget roles)</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Роли в структуре документа(Document structure roles)</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Роли-ориентиры(Landmark roles)</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Роли динамически изменяющихся областей(Live region roles)</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
