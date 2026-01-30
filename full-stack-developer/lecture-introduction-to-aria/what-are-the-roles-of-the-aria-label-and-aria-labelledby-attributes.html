@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Каковы функции атрибутов aria-label и aria-labeledby?</title>
+</head>
+<body>
+  <h1>Каковы функции атрибутов aria-label и aria-labeledby?</h1>
+
+  <p>
+    Важно обеспечить беспрепятственный доступ к веб-сайтам для всех пользователей, включая людей с ограниченными возможностями.
+  </p>
+
+  <p>
+    Для пользователей программ чтения с экрана атрибуты <code>aria-label</code> и <code>aria-labelledby</code> предоставляют важную информацию об элементах страницы, 
+    которые могут быть нечеткими или невидимыми.
+  </p>
+
+  <p>
+    Давайте рассмотрим, что представляют собой атрибуты <code>aria-label</code> и <code>aria-labelledby</code> и какую роль они играют 
+    в обеспечении доступности веб-сайтов для людей с нарушениями зрения и связанными с ними ограничениями.
+  </p>
+
+  <p>
+    Вы заметите, что атрибуты <code>aria-label</code> и <code>aria-labelledby</code> имеют префикс aria. Что это значит? 
+    ARIA расшифровывается как Accessible Rich Internet Applications (доступные многофункциональные интернет-приложения). 
+    Это набор атрибутов с префиксом <code>aria-</code>, который позволяет разработчикам сообщать вспомогательным технологиям о назначении элементов. 
+    Атрибут <code>aria-label</code> — это невидимая метка для интерактивных элементов. Он добавляет текстовую метку к элементу, которую могут прочитать программы чтения с экрана.
+  </p>
+
+  <p>
+    <code>aria-label</code> особенно полезен для элементов, не содержащих видимого текста, но которые тем не менее нуждаются в описании для программ чтения с экрана. 
+    Например, кнопки, состоящие только из значков, часто нуждаются в <code>aria-label</code> для передачи своего назначения.
+  </p>
+
+  <p>
+    Вот пример:
+  </p>
+
+  <pre>
+    <code>
+      &lt;button aria-label="Search"&gt;
+        &lt;i class="fa-solid fa-magnifying-glass"&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом случае программа чтения с экрана может объявить эту кнопку как <code>Search, button</code>(Поиск, кнопка), даже если кнопка содержит только значок. 
+    Атрибут <code>aria-label</code> указывает программам чтения с экрана, какой текст использовать вместо значка.
+  </p>
+
+  <p>
+    Если бы кнопка содержала текст «Поиск» вместо значка, то атрибут <code>aria-label</code> не понадобился бы, поскольку текст сам по себе служил бы меткой для кнопки.
+  </p>
+
+  <p>
+    Для элементов ввода атрибут <code>aria-label</code> напрямую предоставляет метку, если с элементом ввода не связана видимая метка.
+  </p>
+
+  <p>
+    Атрибут <code>aria-labelledby</code> делает то же самое, что и атрибут <code>aria-label</code>, но вместо того, 
+    чтобы определять текст непосредственно в атрибуте, используется ссылка на текст, который уже существует на странице. 
+    Существующий текст должен иметь атрибут <code>id</code>, который будет использоваться в качестве значения ссылки в атрибуте <code>aria-labelledby</code>.
+  </p>
+
+  <p>
+    Вот пример:
+  </p>
+
+  <pre>
+    <code>
+      &lt;input type="text" aria-labelledby="search-btn"&gt;
+      &lt;button type="button" id="search-btn"&gt;Поиск&lt;/button&gt;
+    </code>
+  </pre>
+
+  <p>
+    В данном случае текст кнопки используется в качестве метки для поля поиска. Программы чтения с экрана озвучат поле ввода примерно так: <code>Поиск, редактировать</code>. 
+    Если позже вы решите изменить текст кнопки на <code>Найти</code>, метка поля ввода автоматически обновится до нового текста, поскольку она ссылается на текст кнопки. 
+    Также возможно объединение нескольких значений <codfe>id</codfe> в одно значение атрибута <code>aria-labelledby</code>. Вот как это работает:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div&gt;
+        &lt;span id="volume-label"&gt;Громкость&lt;/span&gt;
+        &lt;span id="volume-details"&gt;Отрегулируйте уровень громкости&lt;/span&gt;
+        &lt;input
+          type="range"
+          min="0"
+          max="100"
+          value="30"
+          aria-labelledby="volume-label volume-details"&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    Для ползунка программа чтения с экрана будет отслеживать содержимое элементов <code>volume-label</code> и <code>volume-details</code>
+     и объявлять <code>Громкость. Отрегулируйте уровень громкости.</code>.
+  </p>
+
+  <p>
+    Вы уже видели, что атрибуты <code>aria-label</code> и <code>aria-labelledby</code> помогают программам чтения с экрана понимать, что делают элементы. 
+    Так какой же из них следует использовать? Поскольку они оба предоставляют одинаковую функциональность, можно использовать любой из них, 
+    но у <code>aria-labelledby</code> могут быть некоторые преимущества перед <code>aria-label</code>:
+  </p>
+
+  <ul>
+    <li>Если кто-то использует сервис перевода для перевода контента на вашей странице, текст в атрибуте <code>aria-label</code> может быть переведен не всегда.</li>
+    <li>
+      Использование атрибута <code>aria-labelledby</code> также может помочь предотвратить несоответствие между видимым и невидимым текстом метки для пользователей 
+      программ чтения с экрана, поскольку обновление видимого текста автоматически обновит невидимую метку.
+    </li>
+    <li><code>aria-labelledby</code> значительно упрощает программное создание сложных невидимых меток, состоящих из нескольких источников текста.</li>
+  </ul>
+
+  <p>
+    И последнее замечание: не используйте одновременно атрибуты <code>aria-label</code> и <code>aria-labelledby</code> для одного элемента. 
+    В этом случае невидимая метка для программ чтения с экрана всегда будет определяться атрибутом <code>aria-labelledby</code>, 
+    а атрибут <code>aria-label</code> будет полностью игнорироваться.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Что означает аббревиатура ARIA?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Доступные многофункциональные интернет-приложения.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Расширенная интеграция ресурсов и доступность.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Автоматизированный расширенный доступ в Интернет.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Доступные, адаптивные и интерактивные приложения.</label>
+    </div>
+
+    <div>
+      <p>Что делают атрибуты <code>aria-label</code> и <code>aria-labeledby</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Они изменяют визуальный облик элементов.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Они предоставляют метки для элементов, чтобы повысить доступность для программ чтения с экрана.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Они изменяют функциональность полей ввода формы.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Они добавляют анимационные эффекты к элементам.</label>
+    </div>
+
+    <div>
+      <p>В каких случаях следует использовать aria-labelledby вместо aria-label?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Когда необходимо отобразить всплывающую подсказку для элемента.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Когда вы хотите изменить цвет элемента.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Когда необходимо скрыть элемент от программ чтения с экрана.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Когда на странице уже есть видимый текст, который можно использовать в качестве метки.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
