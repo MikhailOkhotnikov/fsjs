@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое атрибут aria-describedby и как он работает?</title>
+</head>
+<body>
+  <h1>Что такое атрибут aria-describedby и как он работает?</h1>
+
+  <p>
+    Атрибут <code>aria-describedby</code> используется для предоставления дополнительной информации об элементе пользователям программ чтения с экрана 
+    путем ссылки на существующий контент на странице. Он создает программную связь между элементом и контентом (технически называемую доступным описанием), 
+    которую программы чтения с экрана могут использовать для информирования пользователей о дополнительной информации при взаимодействии с элементом.
+  </p>
+
+  <p>
+    Наиболее распространенное применение атрибута <code>aria-describedby</code> — это связывание инструкций и сообщений об ошибках с полями ввода формы. 
+    Из-за различных способов навигации по странице, используемых пользователями программ чтения с экрана, они могут пропустить эти сообщения при переходе между полями ввода. 
+    Использование <code>aria-describedby</code> помогает гарантировать, что они их услышат.
+  </p>
+
+  <p>
+    Давайте рассмотрим несколько примеров, чтобы понять, как это работает. В первом примере у нас есть элемент <code>form</code>, который принимает пароль.
+  </p>
+
+  <p>
+    Включите интерактивный редактор и введите несколько символов в поле ввода пароля. Вы увидите, что пароль скрыт в окне предварительного просмотра. 
+    Также вы заметите, что текст справки по паролю остается красным, пока вы не введете 8 или более символов в поле ввода.
+  </p>
+
+  <p>
+    <b>ПРИМЕЧАНИЕ:</b> В этом интерактивном примере для динамического обновления цвета текста <code>password-help</code> используются CSS и JavaScript. 
+    Не беспокойтесь о понимании кода JavaScript, поскольку вы изучите его в последующих модулях.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;form&gt;
+          &lt;label for="password"&gt;Пароль:&lt;/label&gt;
+          &lt;input type="password" id="password" aria-describedby="password-help" /&gt;
+          &lt;p id="password-help"&gt;Ваш пароль должен состоять как минимум из 8 символов.&lt;/p&gt;
+        &lt;/form&gt;
+
+        &lt;script src="index.js"&gt;&lt;/script&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        #password-help {
+          color: red;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="js chapter">
+    <legend>Файл index.js</legend>
+    <pre>
+      <code>
+        const passwordEl = document.getElementById("password");
+        const passwordHelpText = document.getElementById("password-help");
+
+        passwordEl.addEventListener("input", (e) => { 
+          const userInput = e.target.value;
+          passwordHelpText.style.color = userInput.length >= 8 ? "green" : "red";
+        });
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Мы используем элемент <code>label</code> для текста <code>Пароль:</code> и связываем его с <code>input</code> пароля.
+  </p>
+
+  <p>
+    У нас также есть элемент абзаца, описывающий требования к паролю. 
+    Мы используем атрибут <code>aria-describedby</code>, чтобы связать поле ввода пароля с требованиями к паролю в элементе абзаца. 
+    Когда пользователь программы чтения с экрана взаимодействует с этим полем ввода, его программа чтения с экрана озвучит имя поля ввода (<code>Пароль:</code>), 
+    а затем может также озвучить требования к паролю. 
+    Однако это не является абсолютной гарантией, поскольку некоторые программы чтения с экрана могут не озвучивать дополнительное содержимое автоматически или 
+    озвучивать его только в определенных обстоятельствах. Это не редкость. Каждая программа чтения с экрана работает и обрабатывает атрибуты ARIA по-своему. 
+    Это не отменяет использования <code>aria-describedby</code>, поскольку это принесет пользу пользователям программ чтения с экрана в целом.
+  </p>
+
+  <p>
+    Ещё один удачный пример использования атрибута <code>aria-describedby</code> — это кнопка удаления. 
+    Вот пример <code>button</code> удаления, за которой следует сообщение, описывающее, что произойдёт при нажатии на кнопку:
+  </p>
+  
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;button aria-describedby="delete-message"&gt;Удалить&lt;/button&gt;
+
+        &lt;p id="delete-message"&gt;Внимание! Все удаления необратимы.&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Как и в предыдущем примере, мы связываем кнопку удаления с сообщением, используя атрибут <code>aria-describedby</code>. 
+    Значение <code>id</code> и значение атрибута <code>aria-describedby</code> должны совпадать.
+  </p>
+
+  <p>
+    Атрибут <code>aria-describedby</code> — это мощный атрибут, который можно использовать для обеспечения предоставления дополнительной информации 
+    об элементе пользователям программ чтения с экрана при взаимодействии с ним. Чаще всего он используется для связывания инструкций и сообщений 
+    об ошибках с полями ввода формы, чтобы уменьшить вероятность того, что пользователи программ чтения с экрана пропустят эти сообщения при навигации по форме.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Каково назначение атрибута <code>aria-describedby</code> в HTML?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Для указания уникального идентификатора элемента.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Предоставить дополнительную информацию об элементе вспомогательным технологиям.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Для определения языка HTML-документа.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Для управления видимостью HTML-элемента.</label>
+    </div>
+
+    <div>
+      <p>Как атрибут <code>aria-describedby</code> в приведенных примерах улучшает пользовательский опыт при работе с полями форм?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Это изменяет внешний вид полей формы.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Она связывает дополнительный описательный текст с полями формы, чтобы предоставить больше контекста или инструкций.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Он проверяет значения, введенные в поля формы.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Форма автоматически заполняется значениями по умолчанию.</label>
+    </div>
+
+    <div>
+      <p>Какой из следующих способов является правильным для использования атрибута<code> aria-describedby</code> внутри формы?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">
+        <pre>
+          <code>
+            &lt;form&gt;
+              &lt;label for="password"&gt;Пароль:&lt;/label&gt;
+              &lt;input type="password" id="password" aria-describedby="password-help" /&gt;
+              &lt;p id="password-help"&gt;Ваш пароль должен состоять как минимум из 8 символов.&lt;/p&gt;
+            &lt;/form&gt;
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">
+        <pre>
+          <code>
+            &lt;form&gt;
+              &lt;label for="password"&gt;Пароль:&lt;/label&gt;
+              &lt;input type="password" id="password" aria-describedby="password" /&gt;
+              &lt;p id="password-help"&gt;Ваш пароль должен состоять как минимум из 8 символов.&lt;/p&gt;
+            &lt;/form&gt;
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">
+        <pre>
+          <code>
+            &lt;form&gt;
+              &lt;label for="password"&gt;Пароль:&lt;/label&gt;
+              &lt;input type="password" id="password" aria-describedby="password-help" /&gt;
+              &lt;p&gt;Ваш пароль должен состоять как минимум из 8 символов.&lt;/p&gt;
+            &lt;/form&gt;
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">
+        <pre>
+          <code>
+            &lt;form&gt;
+              &lt;label for="password"&gt;Пароль:&lt;/label&gt;
+              &lt;input 
+                type="password" 
+                id="password" 
+                aria-label="Ваш пароль должен состоять как минимум из 8 символов." 
+              /&gt;              
+            &lt;/form&gt;
+          </code>
+        </pre>
+      </label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
