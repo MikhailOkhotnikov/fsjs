@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 7</title>
+</head>
+<body>
+  <h1>Шаг 7</h1>
+
+  <p>
+    Ваш доступный аудиоконтроллер почти готов, но осталось добавить еще кое-что.
+  </p>
+
+  <p>
+    Добавьте элемент <code>button</code> с атрибутом <code>type</code>, установленным на <code>button</code>, и текстом <code>Беззвучный</code> под элементом <code>div</code>.
+  </p>
+  
+  <p>
+    И с этим изменением вы завершите этот мастер-класс!
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;Доступные элементы управления&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Управление звуком&lt;/h1&gt;
+            &lt;button type="button"&gt;Воспроизвести&lt;/button&gt;
+             &lt;div&gt;
+              &lt;span id="volume-label"&gt;Громкость&lt;/span&gt;
+              &lt;span id="volume-description"&gt;Отрегулируйте уровень звука&lt;/span&gt;
+              &lt;input type="range" min="0" max="100" value="50" aria-labelledby="volume-label volume-description"/&gt;              
+             &lt;/div&gt;
+              
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-6.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-8.html">Следующий</a>
+
+</body>
+</html>
