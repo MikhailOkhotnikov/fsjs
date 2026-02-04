@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 4</title>
+</head>
+<body>
+  <h1>Шаг 4</h1>
+
+  <p>
+    Теперь пришло время добавить еще один элемент <code>span</code>.
+  </p>
+
+  <p>
+    Этот элемент <code>span</code> должен иметь атрибут <code>id</code> со значением <code>volume-description</code>. 
+    Кроме того, текст для этого элемента <code>span</code> должен быть следующим: <code>Отрегулируйте уровень звука</code>.
+  </p>
+
+  <p>
+    Аналогично предыдущему элементу <code>span</code>, идентификатор этого элемента <code>span</code> будет впоследствии использоваться атрибутами ARIA, 
+    чтобы вспомогательные технологии могли идентифицировать этот текст как описание регулятора громкости.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;Доступные элементы управления&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;Управление звуком&lt;/h1&gt;
+            &lt;button type="button"&gt;Воспроизвести&lt;/button&gt;
+             &lt;div&gt;
+               &lt;span id="volume-label"&gt;Громкость&lt;/span&gt;
+
+             &lt;/div&gt;  
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-3.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-5.html">Следующий</a>
+
+</body>
+</html>
