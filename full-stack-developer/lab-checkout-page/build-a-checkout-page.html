@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Создать страницу оформления заказа</title>
+</head>
+<body>
+  <h1>Создать страницу оформления заказа</h1>
+
+  <p>
+    Создайте приложение, функционально похожее на <a href="final-a-checkout-page.html">этот пример проекта</a>. Старайтесь не копировать пример проекта, придайте ему свой собственный стиль.
+  </p>
+
+  <p>
+    <b>Цель:</b> Выполнить приведенные ниже пользовательские истории и добиться успешного прохождения всех тестов для завершения лабораторной работы.
+  </p>
+
+  <p>Истории пользователей:</p>
+
+  <ol>
+    <li>Вам нужен элемент <code>h1</code> с текстом <code>Оформить заказ</code>.</li>
+    <li>Сразу после элемента <code>h1</code> должны располагаться два элемента <code>section</code>.</li>
+    <li>В первом разделе должен быть элемент <code>h2</code> с текстом <code>Ваша корзина</code>.</li>
+    <li>
+      В первом разделе должно быть изображение элемента с соответствующим альтернативным текстом. 
+      При желании вы можете использовать это изображение: <code>https://cdn.freecodecamp.org/curriculum/labs/cube.jpg</code>
+    </li>
+    <li>Во втором разделе должен быть элемент <code>h2</code> с текстом <code>Информация об оплате</code>.</li>
+    <li>Во втором разделе должен быть элемент <code>form</code>.</li>
+    <li>
+      В вашей форме должен быть элемент ввода с <code>id</code> и <code>name</code> равными <code>card-name</code>, 
+      а также <code>type</code> равным <code>text</code> и связанная с ним метка(<code>label</code>).
+    </li>
+    <li>
+      В вашей форме должен быть элемент ввода с <code>id</code> и <code>name</code> равными <code>card-number</code>, 
+      а также <code>type</code> равным <code>text</code> и связанная с ним метка(<code>label</code>).
+    </li>
+    <li>У вас должно быть как минимум два элемента <code>input</code> с атрибутом <code>required</code>.</li>
+    <li>
+      Для каждого обязательного поля ввода следует разместить внутри элемента <code>label</code> элемент <code>span</code> с текстом <code>*</code> 
+      и атрибутом <code>aria-hidden</code>, установленным в <code>true</code>, чтобы обязательное поле было визуально обозначено.
+    </li>
+    <li>
+      После поля ввода номера карты должен быть элемент <code>p</code> с текстом справки, поясняющим необходимый формат номера карты. 
+      Этот элемент должен иметь идентификатор <code>card-number-help</code> и ссылаться на поле ввода номера карты с помощью атрибута <code>aria-describedby</code>.
+    </li>
+  </ol>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+
+        &lt;head&gt;
+            &lt;meta charset="UTF-8" /&gt;
+            &lt;title&gt;Страница оформления заказа&lt;/title&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Тесты</h2>
+
+  <ol>
+    <li>Вам нужен элемент <code>h1</code> с текстом <code>Оформить заказ</code>.</li>
+    <li>На вашей странице должен быть только один элемент <code>h1</code>.</li>
+    <li>После элемента <code>h1</code> должно быть как минимум два элемента <code>section</code>.</li>
+    <li>В первом разделе должен быть элемент <code>h2</code> с текстом <code>Ваша корзина</code>.</li>
+    <li>В первом разделе должно быть как минимум одно изображение с альтернативным текстом.</li>
+    <li>Во втором разделе должен быть элемент <code>h2</code> с текстом <code>Информация об оплате</code>.</li>
+    <li>Внутри второго элемента <code>section</code> должен находиться элемент <code>form</code>.</li>
+    <li>В вашей форме должен быть элемент <code>input</code> с <code>id</code> и <code>name</code> равными <code>card-name</code>.</li>
+    <li>В поле ввода названия карточки должен быть указан <code>type</code> равный <code>text</code>.</li>
+    <li>В вашей форме должен быть элемент <code>input</code> с <code>id</code> и <code>name</code> равными <code>card-number</code>.</li>
+    <li>В поле ввода номера карты должен быть указан <code>type</code> равный <code>text</code>.</li>
+    <li>Все элементы <code>input</code>, кроме элементов c <code>type</code> равным <code>submit</code>, должны быть связаны с элементом <code>label</code>.</li>
+    <li>У вас должно быть как минимум два элемента <code>input</code> с атрибутом <code>required</code>.</li>
+    <li>Для каждого обязательного поля ввода следует добавить элемент <code>span</code> с текстом <code>*</code> внутри элемента <code>label</code>.</li>
+    <li>Для элементов <code>span</code> следует установить свойство <code>aria-hidden</code> в значение <code>true</code>.</li>
+    <li>Сразу после поля ввода номера карты должен располагаться элемент <code>p</code> с <code>id</code> равным <code>card-number-help</code>.</li>
+    <li>Текст справки по номеру карты не должен быть пустым.</li>
+    <li>Для поля ввода номера карты необходимо установить атрибут <code>aria-describedby</code> в значение <code>card-number-help</code>.</li>
+  </ol>
+
+  <p><a href="final-a-checkout-page.html">Проверить результат</a></p>
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
