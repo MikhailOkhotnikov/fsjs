@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Создание мультимедийного проигрывателя</title>
+</head>
+<body>
+  <h1>Создание мультимедийного проигрывателя</h1>
+
+  <p>
+    Создайте приложение, функционально похожее на <a href="final-multimedia-player.html">этот пример проекта</a>. Старайтесь не копировать проект целиком, придайте ему свой собственный стиль.
+  </p>
+
+  <p>
+    В предыдущих уроках вы познакомились с работой с <code>аудио</code> и <code>видео</code> элементов. 
+    В этой лабораторной работе вы создадите мультимедийный плеер, который будет отображать аудиодорожку и видео с текстовым описанием.
+  </p>
+
+  <p>
+    Для элемента <code>audio</code> вам потребуется указать элемент <code>source</code>, который используется для определения используемого медиафайла.
+  </p>
+
+  <p>
+    Вот пример:
+  </p>
+
+  <pre>
+    <code>
+      &lt;audio controls aria-label="описательный ярлык находится здесь"&gt;
+        &lt;source src="ссылка на аудио находится здесь" type="audio/mpeg"&gt;
+      &lt;/audio&gt;
+    </code>
+  </pre>
+
+  <p>
+    Элемент <code>source</code> также можно использовать в элементе <code>video</code> следующим образом:
+  </p>
+
+  <pre>
+    <code>
+      &lt;video controls width="600" aria-label="описательный ярлык находится здесь"&gt;
+        &lt;source src="ссылка на mp4 находится здесь" type="video/mp4"&gt;
+        &lt;!-- Оставшийся код находится здесь --&gt;  
+      &lt;/video&gt;
+    </code>
+  </pre>
+
+  <p>
+    <strong>Цель:</strong> Выполнить приведенные ниже пользовательские истории и добиться успешного прохождения всех тестов для завершения лабораторной работы.
+  </p>
+
+  <p>Истории пользователей:</p>
+
+  <ol>
+    <li>Для основного заголовка страницы следует использовать элемент <code>h1</code>.</li>
+    <li>Вам следует включить три элемента <code>section</code>.</li>
+    <li>Внутри первого элемента <code>section</code> должен находиться элемент <code>h2</code>, содержащий название воспроизводимой песни.</li>
+    <li>Под элементом <code>h2</code> должен располагаться элемент <code>audio</code> с атрибутами <code>controls</code> и <code>aria-label</code>.</li>
+    <li>
+      Внутри элемента <code>audio</code> должен быть элемент <code>source</code> с атрибутом <code>src</code>, указывающим на аудиофайл, и атрибутом <code>type</code>. 
+      Вы можете использовать этот URL-адрес аудиофайла, если хотите: <code>https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3</code>
+    </li>
+    <li>Внутри второго элемента <code>section</code> должен находиться элемент <code>h2</code>, содержащий заголовок воспроизводимого видео.</li>
+    <li>Под элементом <code>h2</code> должен располагаться элемент <code>video</code> с атрибутами <code>controls</code>, <code>width</code> и <code>aria-label</code>.</li>
+    <li>
+      Внутри элемента <code>video</code> должен находиться элемент <code>source</code> с атрибутом <code>src</code>, указывающим на видеофайл, и атрибутом <code>type</code>. 
+      Вы можете использовать следующую ссылку на видео: <code>https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4</code>
+    </li>
+    <li>Ниже элемента <code>source</code> должен располагаться элемент <code>track</code> с атрибутом <code>src</code>, указывающим на файл субтитров, 
+      а также атрибутами <code>kind</code>, <code>srclang</code> и <code>label</code>. 
+      При желании вы можете использовать следующий URL-адрес файла субтитров: <code>https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.vtt</code>
+    </li>
+    <li>Внутри третьего элемента <code>section</code> должен быть элемент <code>h2</code> для заголовка раздела, например, <code>Транскрипт</code>.</li>
+    <li>Под элементом <code>h2</code> должен располагаться элемент <code>p</code> с текстом видео.</li>
+  </ol>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+          &lt;title&gt;Мультимедиа плеер&lt;/title&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Тесты</h2>
+
+  <ol>
+    <li>Вам нужен элемент <code>h1</code>.</li>
+    <li>В заголовке <code>h1</code> должен быть текст, представляющий собой основной заголовок страницы.</li>
+    <li>Вам следует включить три элемента <code>section</code>.</li>
+    <li>Первый элемент <code>section</code> должен содержать элемент <code>h2</code>.</li>
+    <li>В заголовке <code>h2</code> должен отображаться текст, представляющий название воспроизводимой песни.</li>
+    <li>Первый элемент <code>section</code> должен содержать элемент <code>audio</code>.</li>
+    <li>Ваш элемент <code>audio</code> должен иметь атрибут <code>controls</code>.</li>
+    <li>Ваш элемент <code>audio</code> должен иметь атрибут <code>aria-label</code> с текстом, описывающим аудио.</li>
+    <li>Ваш элемент <code>audio</code> должен содержать элемент <code>source</code>.</li>
+    <li>Элемент <code>source</code> должен иметь атрибут <code>src</code>, указывающий на аудиофайл.</li>
+    <li>Элемент <code>source</code> должен иметь атрибут <code>type</code> со значением, указывающим тип аудиофайла.</li>
+    <li>Второй <code>section</code> должен содержать элемент <code>h2</code>.</li>
+    <li>В заголовке <code>h2</code> должен отображаться текст, представляющий название воспроизводимого видео.</li>
+    <li>Второй <code>section</code> должен содержать элемент <code>video</code>.</li>
+    <li>Ваш элемент <code>video</code> должен иметь атрибут <code>controls</code>.</li>
+    <li>Ваш элемент <code>video</code> должен иметь атрибут <code>width</code> со значением, указывающим ширину видео.</li>
+    <li>Ваш элемент <code>video</code> должен содержать элемент <code>source</code>.</li>
+    <li>Элемент <code>source</code> должен иметь атрибут <code>src</code>, указывающий на видеофайл.</li>
+    <li>Элемент <code>source</code> должен иметь атрибут <code>type</code> со значением, указывающим тип видео.</li>
+    <li>Ваш элемент <code>video</code> должен содержать элемент <code>track</code>.</li>
+    <li>Элемент <code>track</code> должен иметь атрибут <code>src</code>, указывающий на файл субтитров.</li>
+    <li>Элемент <code>track</code> должен иметь атрибут <code>kind</code> с текстом, описывающим тип файла.</li>
+    <li>Элемент <code>track</code> должен иметь атрибут <code>srclang</code> с текстом, описывающим язык субтитров.</li>
+    <li>Элемент <code>track</code> должен иметь атрибут <code>label</code> с текстом, описывающим язык субтитров.</li>
+    <li>В третьем <code>section</code> должен содержаться элемент <code>h2</code>.</li>
+    <li>В заголовке <code>h2</code> должен быть текст, представляющий собой заголовок раздела.</li>
+    <li>В третьем <code>section</code> должен содержаться элемент <code>p</code>, обозначающий текст транскрипта.</li>
+  </ol>
+
+  <p><a href="final-multimedia-player.html">Проверить результат</a></p>
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
