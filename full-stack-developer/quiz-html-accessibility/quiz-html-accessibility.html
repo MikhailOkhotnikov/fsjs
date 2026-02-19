@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Тест Доступность HTML</title>
+</head>
+<body>
+  <h1>Тест Доступность HTML</h1>
+
+  <p>
+    Для прохождения теста необходимо правильно ответить как минимум на 18 из 20 вопросов ниже.
+  </p>
+
+  <form action="">
+    <ol>
+
+      <li>Что такое доступность?</li>
+        <input type="radio" id="question1-1" name="question1" value="Option1" />
+        <label for="question1-1">Доступность — это набор стандартизированных методов, повышающих скорость и производительность веб-приложений.</label>
+        <br>
+        <input type="radio" id="question1-2" name="question1" value="Option2" />
+        <label for="question1-2">Доступность — это набор стандартизированных методов, гарантирующих 100% покрытие кода тестами.</label>
+        <br>
+        <input type="radio" id="question1-3" name="question1" value="Option3" />
+        <label for="question1-3">Доступность — это набор стандартизированных методов, обеспечивающих возможность использования веб-приложений всеми пользователями, включая людей с ограниченными возможностями.</label>
+        <br>
+        <input type="radio" id="question1-4" name="question1" value="Option4" />
+        <label for="question1-4">Доступность — это набор стандартизированных методов, гарантирующих, что ваш код защищен от всех угроз безопасности.</label>
+
+      <li>Какой из следующих примеров хорошо иллюстрирует правильную структуру заголовков?</li>
+        <input type="radio" id="question2-1" name="question2" value="Option1" />
+        <label for="question2-1">
+          <pre>
+            <code>
+              &lt;h1&gt;Заголовок 1&lt;/h1&gt;
+              &lt;h2&gt;Заголовок 2&lt;/h2&gt;
+              &lt;h3&gt;Заголовок 3&lt;/h3&gt;
+              &lt;h4&gt;Заголовок 4&lt;/h4&gt;
+              &lt;h5&gt;Заголовок 5&lt;/h5&gt;
+              &lt;h6&gt;Заголовок 6&lt;/h6&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question2-2" name="question2" value="Option2" />
+        <label for="question2-2">
+          <pre>
+            <code>              
+              &lt;h3&gt;Заголовок 3&lt;/h3&gt;
+              &lt;h3&gt;Заголовок 3&lt;/h3&gt;
+              &lt;h3&gt;Заголовок 3&lt;/h3&gt;
+              &lt;h1&gt;Заголовок 1&lt;/h1&gt;
+              &lt;h2&gt;Заголовок 2&lt;/h2&gt;
+              &lt;h4&gt;Заголовок 4&lt;/h4&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question2-3" name="question2" value="Option3" />
+        <label for="question2-3">
+          <pre>
+            <code>              
+              &lt;h6&gt;Заголовок 6&lt;/h6&gt;
+              &lt;h5&gt;Заголовок 5&lt;/h5&gt;
+              &lt;h4&gt;Заголовок 4&lt;/h4&gt;
+              &lt;h3&gt;Заголовок 3&lt;/h3&gt;
+              &lt;h2&gt;Заголовок 2&lt;/h2&gt;
+              &lt;h1&gt;Заголовок 1&lt;/h1&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question2-4" name="question2" value="Option4" />
+        <label for="question2-4">
+          <pre>
+            <code>
+              &lt;h6&gt;Заголовок 6&lt;/h6&gt;
+              &lt;h1&gt;Заголовок 1&lt;/h1&gt;
+              &lt;h1&gt;Заголовок 1&lt;/h1&gt;
+              &lt;h5&gt;Заголовок 5&lt;/h5&gt;
+              &lt;h2&gt;Заголовок 2&lt;/h2&gt;
+              &lt;h2&gt;Заголовок 2&lt;/h2&gt;              
+            </code>
+          </pre>
+        </label>
+
+      <li>Каковы шесть основных категорий ролей в ARIA?</li>
+        <input type="radio" id="question3-1" name="question3" value="Option1" />
+        <label for="question3-1">Структура документа, Виджеты, Ориентиры, Динамически изменяющиеся области, Окна, Абстрактные роли</label>
+        <br>
+        <input type="radio" id="question3-2" name="question3" value="Option2" />
+        <label for="question3-2">Структура документа, Ориентиры, окно, явное отображение, фиджет и нижний колонтитул.</label>
+        <br>
+        <input type="radio" id="question3-3" name="question3" value="Option3" />
+        <label for="question3-3">Ориентиры, Дом, Динамически изменяющиеся области, Приложение, Окна и Расширения.</label>
+        <br>
+        <input type="radio" id="question3-4" name="question3" value="Option4" />
+        <label for="question3-4">Окно, диалоговое окно оповещения, статья, ячейка, баннер и кнопка.</label>
+
+      <li>Как правильно добавить атрибут <code>alt</code> к элементу <code>img</code>?</li>
+        <input type="radio" id="question4-1" name="question4" value="Option1" />
+        <label for="question4-1"><code>alt="кошка бежит"&lt;img src="cat.jpg"&gt;</code></label>
+        <br>
+        <input type="radio" id="question4-2" name="question4" value="Option2" />
+        <label for="question4-2"><code>alt=""&lt;img src="cat.jpg"&gt;</code></label>
+        <br>
+        <input type="radio" id="question4-3" name="question4" value="Option3" />
+        <label for="question4-3"><code>&lt;img src="cat.jpg"&gt; alt="кошка бежит"</code></label>
+        <br>
+        <input type="radio" id="question4-4" name="question4" value="Option4" />
+        <label for="question4-4"><code>&lt;img src="cat.jpg" alt="кошка бежит"&gt;</code></label>
+
+      <li>Что означает аббревиатура WAI-ARIA?</li>
+        <input type="radio" id="question5-1" name="question5" value="Option1" />
+        <label for="question5-1">Инициатива веб-якорей — приложения с расширенным использованием якорей в интернете.</label>
+        <br>
+        <input type="radio" id="question5-2" name="question5" value="Option2" />
+        <label for="question5-2">Начальный уровень веб-доступности — Доступные интернет-приложения.</label>
+        <br>
+        <input type="radio" id="question5-3" name="question5" value="Option3" />
+        <label for="question5-3">Инициатива по обеспечению доступности веб-сайтов — Доступные многофункциональные интернет-приложения.</label>
+        <br>
+        <input type="radio" id="question5-4" name="question5" value="Option4" />
+        <label for="question5-4">Инициатива по обеспечению доступности веб-сайтов — Доступные интернет-приложения на Rust.</label>
+
+      <li>Какова роль атрибута <code>aria-hidden</code>?</li>
+        <input type="radio" id="question6-1" name="question6" value="Option1" />
+        <label for="question6-1">Этот атрибут используется для скрытия элемента только для пользователей клавиатуры.</label>
+        <br>
+        <input type="radio" id="question6-2" name="question6" value="Option2" />
+        <label for="question6-2">Этот атрибут используется для скрытия элементов только для пользователей с нарушениями зрения.</label>
+        <br>
+        <input type="radio" id="question6-3" name="question6" value="Option3" />
+        <label for="question6-3">Этот атрибут используется для скрытия элемента от вспомогательных технологий.</label>
+        <br>
+        <input type="radio" id="question6-4" name="question6" value="Option4" />
+        <label for="question6-4">Этот атрибут используется для скрытия и добавления текста-метки для элемента.</label>
+
+      <li>Какой атрибут делает элементы фокусируемыми и определяет относительный порядок навигации по ним с помощью клавиатуры?</li>
+        <input type="radio" id="question7-1" name="question7" value="Option1" />
+        <label for="question7-1"><code>indextab</code></label>
+        <br>
+        <input type="radio" id="question7-2" name="question7" value="Option2" />
+        <label for="question7-2"><code>tabbingindex</code></label>
+        <br>
+        <input type="radio" id="question7-3" name="question7" value="Option3" />
+        <label for="question7-3"><code>keyboardindex</code></label>
+        <br>
+        <input type="radio" id="question7-4" name="question7" value="Option4" />
+        <label for="question7-4"><code>tabindex</code></label>
+
+      <li>Почему рекомендуется включать элемент <code>caption</code> в HTML-таблицу?</li>
+        <input type="radio" id="question8-1" name="question8" value="Option1" />
+        <label for="question8-1">Это помогает улучшить отзывчивость таблицы на мобильных устройствах.</label>
+        <br>
+        <input type="radio" id="question8-2" name="question8" value="Option2" />
+        <label for="question8-2">Это улучшает внешний вид стола, добавляя декоративный заголовок.</label>
+        <br>
+        <input type="radio" id="question8-3" name="question8" value="Option3" />
+        <label for="question8-3">Это позволяет пользователям легко сортировать и фильтровать данные в таблице.</label>
+        <br>
+        <input type="radio" id="question8-4" name="question8" value="Option4" />
+        <label for="question8-4">Это помогает пользователям быстро понять назначение и содержание таблицы.</label>
+
+      <li>В чём разница между атрибутами <code>aria-label</code> и <code>aria-labelledby</code>?</li>
+        <input type="radio" id="question9-1" name="question9" value="Option1" />
+        <label for="question9-1">Атрибут <code>aria-label</code> используется для присвоения цвета метке, а атрибут <code>aria-labelledby</code> — для задания высоты метки.</label>
+        <br>
+        <input type="radio" id="question9-2" name="question9" value="Option2" />
+        <label for="question9-2">Атрибут <code>aria-labelledby</code> позволяет задать элементу доступное имя, ссылаясь на существующий элемент на странице, а атрибут <code>aria-label</code> позволяет определить имя непосредственно в самом атрибуте.</label>
+        <br>
+        <input type="radio" id="question9-3" name="question9" value="Option3" />
+        <label for="question9-3">Атрибуты <code>aria-label</code> и <code>aria-labelledby</code> служат одной и той же цели.</label>
+        <br>
+        <input type="radio" id="question9-4" name="question9" value="Option4" />
+        <label for="question9-4">Атрибуты <code>aria-label</code> и <code>aria-labelledby</code> не позволяют задать метки.</label>
+
+      <li>Какой из следующих атрибутов предоставляет пользователям программ чтения с экрана дополнительную информацию об элементе, ссылаясь на существующий контент на странице?</li>
+        <input type="radio" id="question10-1" name="question10" value="Option1" />
+        <label for="question10-1"><code>aria-sets</code></label>
+        <br>
+        <input type="radio" id="question10-2" name="question10" value="Option2" />
+        <label for="question10-2"><code>aria-described</code></label>
+        <br>
+        <input type="radio" id="question10-3" name="question10" value="Option3" />
+        <label for="question10-3"><code>aria-set</code></label>
+        <br>
+        <input type="radio" id="question10-4" name="question10" value="Option4" />
+        <label for="question10-4"><code>aria-describedby</code></label>
+
+      <li>Какой из следующих атрибутов используется для определения сочетания клавиш для элемента?</li>
+        <input type="radio" id="question11-1" name="question11" value="Option1" />
+        <label for="question11-1"><code>tabindexkey</code></label>
+        <br>
+        <input type="radio" id="question11-2" name="question11" value="Option2" />
+        <label for="question11-2"><code>provideaccesskey</code></label>
+        <br>
+        <input type="radio" id="question11-3" name="question11" value="Option3" />
+        <label for="question11-3"><code>accesskey</code></label>
+        <br>
+        <input type="radio" id="question11-4" name="question11" value="Option4" />
+        <label for="question11-4"><code>accessingkey</code></label>
+
+      <li>Какой из следующих примеров является правильным способом сопоставления метки с элементом ввода?</li>
+        <input type="radio" id="question12-1" name="question12" value="Option1" />
+        <label for="question12-1">
+          <pre>
+            <code>
+              &lt;form&gt;
+                &lt;label accessible="name"&gt;Ваше имя&lt;/label&gt;
+                &lt;input type="text" id="name" /&gt;
+              &lt;/form&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question12-2" name="question12" value="Option2" />
+        <label for="question12-2">
+          <pre>
+            <code>
+              &lt;form&gt;
+                &lt;label for="name"&gt;Ваше имя&lt;/label&gt;
+                &lt;input type="text" id="name" /&gt;
+              &lt;/form&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question12-3" name="question12" value="Option3" />
+        <label for="question12-3">
+          <pre>
+            <code>
+              &lt;form&gt;
+                &lt;label for="name"&gt;Ваше имя&lt;/label&gt;
+                &lt;input type="text" id="first-name" /&gt;
+              &lt;/form&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question12-4" name="question12" value="Option4" />
+        <label for="question12-4">
+          <pre>
+            <code>
+              &lt;form&gt;
+                &lt;label associate="name"&gt;Ваше имя&lt;/label&gt;
+                &lt;input type="text" id="name" /&gt;
+              &lt;/form&gt;
+            </code>
+          </pre>
+        </label>
+
+      <li>Как увеличительное стекло помогает слабовидящим пользователям ориентироваться на веб-страницах?</li>
+        <input type="radio" id="question13-1" name="question13" value="Option1" />
+        <label for="question13-1">Экранная лупа помогает слабовидящим пользователям ориентироваться на веб-страницах, позволяя им увеличивать и уменьшать масштаб.</label>
+        <br>
+        <input type="radio" id="question13-2" name="question13" value="Option2" />
+        <label for="question13-2">Экранная лупа увеличивает изображения только в два раза, чтобы их было лучше видно пользователям с нарушениями зрения.</label>
+        <br>
+        <input type="radio" id="question13-3" name="question13" value="Option3" />
+        <label for="question13-3">Экранная лупа преобразует текст в шрифт Брайля для тактильного чтения.</label>
+        <br>
+        <input type="radio" id="question13-4" name="question13" value="Option4" />
+        <label for="question13-4">Экранная лупа автоматически регулирует контрастность цветов веб-страниц.</label>
+
+      <li>Какой из следующих вариантов является правильным использованием атрибута <code>aria-describedby</code> для предоставления дополнительной информации о действии кнопки?</li>
+        <input type="radio" id="question14-1" name="question14" value="Option1" />
+        <label for="question14-1">
+          <pre>
+            <code>
+              &lt;button id="delete-message" aria-describedby="delete-message"&gt;Удалить&lt;/button&gt;
+              &lt;p aria-describedby="delete-message" id="delete-message"&gt;Внимание! Все удаления необратимы.&lt;/p&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question14-2" name="question14" value="Option2" />
+        <label for="question14-2">
+          <pre>
+            <code>
+              &lt;button id="delete-message"&gt;Удалить&lt;/button&gt;
+              &lt;p aria-describedby="delete-message"&gt;Внимание! Все удаления необратимы.&lt;/p&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question14-3" name="question14" value="Option3" />
+        <label for="question14-3">
+          <pre>
+            <code>
+              &lt;button id="delete-btn" aria-describedby="delete-btn"&gt;Удалить&lt;/button&gt;
+              &lt;p aria-describedby="delete-message" id="delete-message"&gt;Внимание! Все удаления необратимы.&lt;/p&gt;
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question14-4" name="question14" value="Option4" />
+        <label for="question14-4">
+          <pre>
+            <code>
+              &lt;button aria-describedby="delete-message"&gt;Удалить&lt;/button&gt;
+              &lt;p id="delete-message"&gt;Внимание! Все удаления необратимы.&lt;/p&gt;
+            </code>
+          </pre>
+        </label>
+
+      <li>В чём разница между WCAG и WAI-ARIA?</li>
+        <input type="radio" id="question15-1" name="question15" value="Option1" />
+        <label for="question15-1">Стандарт WAI-ARIA предоставляет общие рекомендации по обеспечению доступности только для мобильных устройств, в то время как WCAG предлагает конкретные правила для обеспечения доступности динамического и интерактивного контента для пользователей вспомогательных технологий.</label>
+        <br>
+        <input type="radio" id="question15-2" name="question15" value="Option2" />
+        <label for="question15-2">WAI-ARIA предоставляет общие рекомендации по доступности веб-сайтов, а WCAG предлагает конкретные правила для обеспечения доступности динамического и интерактивного контента для пользователей вспомогательных технологий.</label>
+        <br>
+        <input type="radio" id="question15-3" name="question15" value="Option3" />
+        <label for="question15-3">WCAG предоставляет общие рекомендации по обеспечению доступности только для мобильных устройств, а WAI-ARIA предлагает конкретные правила для обеспечения доступности динамического и интерактивного контента для пользователей вспомогательных технологий.</label>
+        <br>
+        <input type="radio" id="question15-4" name="question15" value="Option4" />
+        <label for="question15-4">WCAG предоставляет общие рекомендации по доступности веб-сайтов, а WAI-ARIA предлагает конкретные правила для обеспечения доступности динамического и интерактивного контента для пользователей вспомогательных технологий.</label>
+
+      <li>Какой из следующих вариантов является наиболее распространенным примером использования атрибута <code>aria-hidden</code>?</li>
+        <input type="radio" id="question16-1" name="question16" value="Option1" />
+        <label for="question16-1">Иконки и изображения, имеющие исключительно декоративное назначение.</label>
+        <br>
+        <input type="radio" id="question16-2" name="question16" value="Option2" />
+        <label for="question16-2">Ссылки и изображения, имеющие исключительно декоративный характер.</label>
+        <br>
+        <input type="radio" id="question16-3" name="question16" value="Option3" />
+        <label for="question16-3">Формы и таблицы, не содержащие важной информации.</label>
+        <br>
+        <input type="radio" id="question16-4" name="question16" value="Option4" />
+        <label for="question16-4">Абзацы и заголовки, не содержащие важной информации.</label>
+
+      <li>Каково назначение атрибута <code>role</code>?</li>
+        <input type="radio" id="question17-1" name="question17" value="Option1" />
+        <label for="question17-1">Определяет внешний вид HTML-элементов, позволяя вспомогательным технологиям лучше понимать, как следует интерпретировать элемент и взаимодействовать с ним.</label>
+        <br>
+        <input type="radio" id="question17-2" name="question17" value="Option2" />
+        <label for="question17-2">Добавляйте метки к элементам форм, чтобы вспомогательные технологии лучше понимали, как следует интерпретировать элемент и взаимодействовать с ним.</label>
+        <br>
+        <input type="radio" id="question17-3" name="question17" value="Option3" />
+        <label for="question17-3">Указывает тип и назначение элемента, позволяя вспомогательным технологиям лучше понимать, как следует интерпретировать элемент и взаимодействовать с ним.</label>
+        <br>
+        <input type="radio" id="question17-4" name="question17" value="Option4" />
+        <label for="question17-4">Стилизация элементов с помощью CSS-анимации позволяет вспомогательным технологиям лучше понимать, как следует интерпретировать элемент и взаимодействовать с ним.</label>
+
+      <li>Почему важно использовать описательный текст для ссылок?</li>
+        <input type="radio" id="question18-1" name="question18" value="Option1" />
+        <label for="question18-1">Чтобы все, включая пользователей вспомогательных технологий, понимали назначение этой ссылки.</label>
+        <br>
+        <input type="radio" id="question18-2" name="question18" value="Option2" />
+        <label for="question18-2">Чтобы текст ссылки визуально выделялся на фоне остального содержимого страницы.</label>
+        <br>
+        <input type="radio" id="question18-3" name="question18" value="Option3" />
+        <label for="question18-3">Чтобы поисковые системы всегда указывали ваш сайт в качестве первого результата в списке.</label>
+        <br>
+        <input type="radio" id="question18-4" name="question18" value="Option4" />
+        <label for="question18-4">Чтобы ссылка загружалась быстрее при нажатии.</label>
+
+      <li>Какой из следующих вариантов является лучшей практикой для обеспечения доступности аудио и видео контента?</li>
+        <input type="radio" id="question19-1" name="question19" value="Option1" />
+        <label for="question19-1">Добавление субтитров и расшифровок к аудио- и видеоконтенту для обеспечения его доступности для людей с нарушениями слуха.</label>
+        <br>
+        <input type="radio" id="question19-2" name="question19" value="Option2" />
+        <label for="question19-2">Ограничение продолжительности аудио- и видеоконтента для обеспечения его доступности для людей с нарушениями слуха.</label>
+        <br>
+        <input type="radio" id="question19-3" name="question19" value="Option3" />
+        <label for="question19-3">Предоставление высококачественной графики в дополнение к аудио- и видеоконтенту, чтобы сделать его доступным для людей с нарушениями зрения.</label>
+        <br>
+        <input type="radio" id="question19-4" name="question19" value="Option4" />
+        <label for="question19-4">Использование ярких цветов и крупного шрифта делает контент более привлекательным и доступным для людей с нарушениями зрения.</label>
+
+      <li>Каковы четыре принципа, лежащие в основе Руководства по обеспечению доступности веб-контента?</li>
+        <input type="radio" id="question20-1" name="question20" value="Option1" />
+        <label for="question20-1">Persistent, Operable, Understandable, and Robust.</label>
+        <br>
+        <input type="radio" id="question20-2" name="question20" value="Option2" />
+        <label for="question20-2">Perceivable, Operable, Understandable, and Robust.</label>
+        <br>
+        <input type="radio" id="question20-3" name="question20" value="Option3" />
+        <label for="question20-3">Perceivable, Operable, Units, and Robust.</label>
+        <br>
+        <input type="radio" id="question20-4" name="question20" value="Option4" />
+        <label for="question20-4">Perceivable, Operations, Understandable, and Robust.</label>
+
+    </ol>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
