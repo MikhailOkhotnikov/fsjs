@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 8</title>
+</head>
+<body>
+  <h1>Шаг 8</h1>
+
+  <p>
+    Возможно, вы заметили, что не добавили ссылку на само видео. Вы сделаете это на следующем этапе. 
+    Что касается типов видеофайлов, браузеры поддерживают разные форматы. 
+    Для этого вы можете использовать элементы <code>source</code> внутри элемента <code>video</code>, и браузер выберет первый совместимый <code>source</code>.
+  </p>
+
+  <p>
+    Вот пример исходного элемента:
+  </p>
+
+  <pre>
+    <code>
+      &lt;video controls width="250"&gt;
+        &lt;source src="url-адрес src находится здесь" type="тип видео находится здесь" /&gt;
+      &lt;/video&gt;
+    </code>
+  </pre>
+
+  <p>
+    Элемент <code>source</code> является пустым элементом, поэтому у него нет закрывающего тега.
+  </p>
+
+  <p>
+    Добавьте элемент <code>source</code> внутрь элемента <code>video</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+          &lt;meta charset="UTF-8"&gt;
+          &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+          &lt;title&gt;Работаем с элементом HTML-видео&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;h1&gt;Работаем с элементом HTML-видео&lt;/h1&gt;          
+          &lt;video 
+            width="640" 
+            loop 
+            controls
+            muted
+            poster="https://cdn.freecodecamp.org/curriculum/labs/past-event2.jpg"
+          &gt;
+
+          &lt;/video&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-7.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-9.html">Следующий</a>
+
+</body>
+</html>
