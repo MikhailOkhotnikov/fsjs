@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Каковы лучшие практики организации файлов/папок в веб-приложениях?</title>
+</head>
+<body>
+  <h1>Каковы лучшие практики организации файлов/папок в веб-приложениях?</h1>
+
+  <p>
+    При разработке веб-приложений важно продумать организацию файлов и папок. Это поможет поддерживать код в упорядоченном виде и упростит его сопровождение.
+  </p>
+
+  <p>
+    Давайте рассмотрим пример структуры папок для проекта, использующего HTML и CSS:
+  </p>
+
+  <pre>
+    <code>
+      .
+      ├── /assets
+      │   ├── /images
+      │   │   ├── logo.png
+      │   │   ├── banner.jpg
+      │   │   └── icons.svg
+      │   ├── /fonts
+      │   │   ├── custom-font.woff
+      │   │   └── custom-font.woff2
+      ├── /css
+      │   ├── main.css
+      │   ├── about.css
+      │   └── contact.css
+      ├── index.html
+      ├── about.html
+      ├── contact.html
+      └── README.md
+    </code>
+  </pre>
+
+  <p>
+    В верхней части примера находится одна точка, обозначающая корневой каталог.
+  </p>
+
+  <p>
+    Корневой каталог — это каталог верхнего уровня в файловой системе, служащий отправной точкой для всех путей к файлам и содержащий все остальные каталоги и файлы. 
+    Каталог — это другое название папки.
+  </p>
+
+  <p>
+    Внутри корневого каталога первым отображается каталог <code>assets</code>. Термин <code>assets</code> (<em>ресурсы</em>) обозначает любые файлы, используемые в проекте, 
+    такие как изображения, шрифты или другие ресурсы.
+  </p>
+
+  <p>
+    В этом примере внутри каталога assets находятся две папки: images и fonts.
+  </p>
+
+  <p>
+    Следующая папка — это каталог <code>css</code>. Иногда её также называют директорией таблиц стилей. Здесь вы будете хранить все свои CSS-файлы.
+  </p>
+
+  <p>
+    В каталоге <code>css</code> находятся HTML-файлы. 
+    Файл <code>index.html</code> представляет собой главную страницу, а файлы <code>about.html</code> и <code>contact.html</code> — страницы «О нас» и «Контакты» соответственно.
+  </p>
+
+  <p>
+    Наконец, есть файл <code>README.md</code>. Файлы README обычно используются для предоставления полезной информации о проекте, 
+    например, о том, что он делает, как его использовать и любые другие важные детали.
+  </p>
+
+  <p>
+    Расширение <code>.md</code> означает Markdown, это легковесный язык разметки, часто используемый для написания документации.
+  </p>
+
+  <p>
+    Разделение проекта на файлы assets, CSS и HTML упрощает поиск нужной информации. Это также облегчает другим разработчикам внесение своего вклада в ваш проект.
+  </p>
+
+  <p>
+    Важно отметить, что это лишь один из примеров организации файлов и папок. Существует множество различных способов структурирования проекта.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Для чего используется каталог assets в веб-приложении?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Он используется для хранения файлов журналов сервера, которые ведутся для мониторинга производительности веб-приложения.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Он используется для хранения файлов, таких как изображения, шрифты и другие ресурсы.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Он используется для хранения скриптов и инструментов для тестирования веб-приложения.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Он используется для хранения сторонних библиотек и фреймворков.</label>
+    </div>
+
+    <div>
+      <p>Для чего обычно используется файл <code>README.md</code> в проекте?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Он используется для хранения личной информации и данных, собранных от пользователей.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Он используется для определения структуры и схемы базы данных проекта.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Он используется для предоставления полезной информации о проекте.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Он используется для отслеживания и документирования проблем и ошибок, обнаруженных в проекте.</label>
+    </div>
+
+    <div>
+      <p>Что представляет собой корневой каталог в файловой системе?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Это папка по умолчанию, куда сохраняются загруженные файлы.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Он хранит кэшированные файлы и данные для ускорения работы системы.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Он содержит журналы и диагностическую информацию о производительности системы.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Это отправная точка для всех путей к файлам, содержащая все остальные каталоги и файлы внутри себя.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
