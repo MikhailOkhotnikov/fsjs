@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое CSS и какова его роль в веб-разработке?</title>
+</head>
+<body>
+  <h1>Что такое CSS и какова его роль в веб-разработке?</h1>
+
+  <p>
+    CSS(Cascading Style Sheets), что расшифровывается как «каскадные таблицы стилей», является важнейшим компонентом современной веб-разработки. 
+    Это язык разметки, используемый для применения стилей к HTML. Проще говоря, если HTML — это структура веб-страницы, то CSS — это то, что делает её красивой.
+  </p>
+
+  <p>
+    Вот пример оформления панели навигации.
+  </p>
+
+  <p>
+    <b>ПРИМЕЧАНИЕ:</b> Пока не стоит пытаться понять код CSS. Вы узнаете, как всё это работает, на будущих уроках и мастер-классах. 
+    Это лишь для того, чтобы дать вам представление о том, что можно сделать с помощью небольшого количества CSS.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css" /&gt;
+
+        &lt;nav class="navbar"&gt;
+            &lt;ul class="nav-links"&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Главная&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;О нас&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Услуги&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Segoe UI', sans-serif;
+          background-color: #f4f4f4;
+        }
+
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #333;
+          padding: 1rem 2rem;
+          color: white;
+        }
+
+        .navbar .logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 1.5rem;
+        }
+
+        .nav-links a {
+          color: white;
+          text-decoration: none;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+          color: #ff9800;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Основная роль CSS заключается в разделении содержимого веб-страницы от её визуального представления. 
+    Такое разделение позволяет веб-разработчикам создавать более гибкие и поддерживаемые веб-сайты.
+  </p>
+
+  <p>
+    С помощью CSS вы можете управлять расположением элементов, цветами, шрифтами и общим визуальным оформлением веб-страниц, не изменяя структуру HTML.
+  </p>
+
+  <p>
+    Рассмотрим простую аналогию. Если представить веб-сайт как дом, то HTML — это фундамент и каркас, 
+    а CSS — краска, обои и украшения, которые делают дом визуально привлекательным и уникальным.
+  </p>
+
+  <p>
+    CSS работает путем выбора HTML-элементов и применения к ним стилей.
+  </p>
+
+  <p>
+    Здесь представлен пример, демонстрирующий нестилизованный и стилизованный элементы <code>button</code>. 
+    Для взаимодействия с этим примером необходимо включить интерактивный редактор.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css" /&gt;
+
+        &lt;button class="regular-btn"&gt;Кнопка без стиля&lt;/button&gt;
+        &lt;button class="round-btn"&gt;Закруглённая кнопка&lt;/button&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .round-btn {
+          font-size: 1rem;
+          font-family: 'Segoe UI', sans-serif;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+          background-color: #2ecc71;
+          color: white;
+          border-radius: 50px;
+          padding: 0.6rem 1.6rem;
+        }
+
+        .round-btn:hover {
+          background-color: #27ae60;
+          transform: translateY(-2px);
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Эти стили могут включать такие свойства, как цвет, размер шрифта и многое другое. 
+    Изменяя эти свойства, вы можете кардинально изменить внешний вид веб-страницы, не меняя её содержимого.
+  </p>
+
+  <p>
+    Одним из самых мощных преимуществ CSS является его способность создавать адаптивный дизайн.
+  </p>
+
+  <p>
+    Это означает, что с помощью CSS вы можете сделать так, чтобы ваш веб-сайт отлично выглядел на любом устройстве, будь то настольный компьютер, планшет или смартфон.
+  </p>
+
+  <p>
+    CSS позволяет настраивать макеты, размеры шрифтов и другие визуальные элементы в зависимости от размера экрана устройства, на котором просматривается веб-сайт.
+  </p>
+
+  <p>
+    Попробуйте включить интерактивный редактор и отрегулировать размер окна предварительного просмотра, чтобы увидеть, как макет адаптируется к размеру экрана.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css" /&gt;
+
+        &lt;header class="header"&gt;
+            &lt;h1&gt;Добро пожаловать на мой адаптивный сайт!&lt;/h1&gt;
+            &lt;p&gt;Этот макет адаптируется к размеру вашего экрана!&lt;/p&gt;
+        &lt;/header&gt;
+
+        &lt;main class="content"&gt;
+            &lt;section class="box"&gt;Блок 1&lt;/section&gt;
+            &lt;section class="box"&gt;Блок 2&lt;/section&gt;
+            &lt;section class="box"&gt;Блок 3&lt;/section&gt;
+        &lt;/main&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          margin: 0;
+          font-family: 'Segoe UI', sans-serif;
+          background-color: #f9f9f9;
+          color: #333;
+        }
+
+        .header {
+          background-color: #4CAF50;
+          color: white;
+          padding: 2rem;
+          text-align: center;
+        }
+
+        .content {
+          display: flex;
+          gap: 1rem;
+          padding: 1rem;
+          justify-content: center;
+        }
+
+        .box {
+          flex: 1;
+          min-width: 200px;
+          background-color: #ddd;
+          padding: 2rem;
+          text-align: center;
+          font-size: 1.2rem;
+          border-radius: 8px;
+          transition: background-color 0.3s;
+        }
+
+        .box:hover {
+          background-color: #ccc;
+        }
+
+        /* Адаптивный дизайн: для планшетов и более старых моделей (≤ 768px) */
+        @media (max-width: 768px) {
+          .content {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .box {
+            width: 90%;
+            font-size: 1.1rem;
+          }
+        }
+
+        /* Адаптивный дизайн: для смартфонов (≤ 480px) */
+        @media (max-width: 480px) {
+          .header {
+            padding: 1.5rem 1rem;
+          }
+
+          .header h1 {
+            font-size: 1.5rem;
+          }
+
+          .header p {
+            font-size: 1rem;
+          }
+
+          .box {
+            font-size: 1rem;
+            padding: 1.5rem;
+          }
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Еще одна важная особенность CSS — его каскадный характер, отсюда и слово «каскадный» в его названии.
+  </p>
+
+  <p>
+    Это означает, что стили могут наследоваться и переопределяться, что позволяет создавать иерархическую структуру оформления. 
+    Подробнее о том, как это работает, вы узнаете в будущих уроках.
+  </p>
+
+  <p>
+    CSS также поддерживает использование внешних таблиц стилей.
+  </p>
+
+  <p>
+    Это означает, что вы можете хранить все свои правила оформления в отдельном файле, который затем можно связать с несколькими HTML-страницами.
+  </p>
+
+  <p>
+    Эта функция значительно повышает удобство сопровождения веб-сайтов, особенно крупных. 
+    Вместо того чтобы менять стили на каждой отдельной странице, вы можете внести изменения в один CSS-файл, которые повлияют на все связанные страницы.
+  </p>
+
+  <p>
+    В мире веб-разработки CSS играет жизненно важную роль в создании визуально привлекательных, адаптивных и удобных для пользователя веб-сайтов.
+  </p>
+
+  <p>
+    Это позволяет разработчикам преобразовывать простые HTML-документы в привлекательные веб-интерфейсы, 
+    которые привлекают внимание пользователей и улучшают их взаимодействие с веб-контентом.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какова основная цель CSS в веб-разработке?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Для структурирования содержимого веб-страниц.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Для обработки серверной логики.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Чтобы отделить оформление документа от его содержания.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Для управления операциями с базой данных.</label>
+    </div>
+
+    <div>
+      <p>Каким образом CSS способствует адаптивному веб-дизайну?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Путем обработки аутентификации пользователей.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Предоставляя возможность настраивать макет и стиль в зависимости от размера экрана устройства.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">За счёт улучшения времени отклика сервера.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Путем сжатия файлов изображений.</label>
+    </div>
+
+    <div>
+      <p>Что подразумевается под «каскадной» природой CSS?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Это относится к тому, как вода падает на фоне веб-сайта.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Это означает, что файлы CSS должны быть расположены в определённом порядке.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Это позволяет наследовать и переопределять стили иерархическим образом.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Это описывает, насколько быстро загружаются CSS-стили в браузере.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
