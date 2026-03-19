@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как работают ширина и высота?</title>
+</head>
+<body>
+  <h1>Как работают ширина и высота?</h1>
+
+  <p>
+    В CSS свойства <code>width</code>(ширина) и <code>height</code>(высота) используются для управления размерами элементов на веб-странице.
+  </p>
+
+  <p>
+    Эти свойства могут быть заданы в различных единицах измерения, таких как пиксели (<code>px</code>, pixels), проценты (<code>%</code>), 
+    единицы измерения области просмотра (<code>vw</code>, <code>vh</code> - viewport units) и другие.
+  </p>
+
+  <p>
+    Свойство <code>width</code> задаёт ширину элемента. Если ширина не указана, по умолчанию устанавливается значение <code>auto</code>. 
+    Это позволяет браузеру определять ширину элемента на основе его содержимого, родительского элемента и типа отображения. 
+    Для элемента <code>div</code> значение <code>width: auto</code> заставляет его расширяться, чтобы заполнить всю ширину родительского контейнера.
+  </p>
+
+  <p>
+    Свойство <code>height</code> задает высоту элемента. 
+    Аналогично, по умолчанию высота устанавливается как <code>auto</code>, что означает, что она будет подстраиваться под содержимое элемента.
+  </p>
+
+  <p>
+    Вот пример использования свойств <code>width</code> и <code>height</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;head&gt;
+        &lt;style&gt;
+          .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div class="box"&gt;&lt;/div&gt;
+      &lt;/body&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере у нас есть элемент <code>div</code> с классом <code>box</code>. 
+    Этот элемент будет занимать высоту и ширину 100 пикселей(<code>100px</code>), а цвет фона(<code>background-color</code>) будет небесно-голубым(<code>skyblue</code>).
+  </p>
+
+  <p>
+    Пиксели — это единица измерения фиксированного размера в CSS, обеспечивающая точный контроль над размерами.
+  </p>
+
+  <p>
+    Свойство <code>min-width</code> задаёт минимальную ширину элемента. Даже если содержимое внутри меньше, элемент не уменьшится ниже этого значения.
+  </p>
+
+  <p>
+    Свойство <code>min-height</code> задает минимальную высоту элемента. Он гарантирует, что элемент не станет ниже заданного значения.
+  </p>
+
+  <p>
+    Вот пример:
+  </p>
+
+  <pre>
+    <code>
+      &lt;head&gt;
+        &lt;style&gt;
+          .box {
+            width: 50px;
+            min-width: 100px;
+            height: 50px;
+            min-height: 100px;
+            background-color: lightcoral;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div class="box"&gt;&lt;/div&gt;
+      &lt;/body&gt;
+    </code>
+  </pre>
+
+  <p>
+    Приведенный выше пример демонстрирует, как работают <code>min-width</code> и <code>min-height</code>.
+  </p>
+
+  <p>
+    Несмотря на то, что <code>width</code> и <code>height</code> блока установлены на  <code>50px</code>, 
+    фактически его размеры составят <code>100px</code> на <code>100px</code>. 
+    Это происходит потому, что <code>min-width</code> и <code>min-height</code> установлены на <code>100px</code>, что больше указанных <code>width</code> и <code>height</code>.
+  </p>
+
+  <p>
+    Помните, что если <code>min-width</code> или <code>min-height</code> больше <code>width</code> или <code>height</code>, они переопределят меньшие значения. 
+    Это гарантирует, что элементы не станут слишком маленькими, что важно для поддержания согласованного и удобного дизайна.
+  </p>
+
+  <p>
+    Параметр <code>max-width</code> задает максимальную ширину, до которой может вырасти элемент, даже если места достаточно, чтобы он стал шире.
+  </p>
+
+  <p>
+    Параметр <code>max-height</code> задает максимальную высоту, до которой может вырасти элемент, независимо от размера содержимого.
+  </p>
+
+  <p>
+    Вот пример:
+  </p>
+
+  <pre>
+    <code>
+      &lt;head&gt;
+        &lt;style&gt;
+          .box {
+            width: 200px;
+            max-width: 150px;
+            height: 200px;
+            max-height: 150px;
+            background-color: lightgreen;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div class="box"&gt;&lt;/div&gt;
+      &lt;/body&gt;
+    </code>
+  </pre>
+
+  <p>
+    Приведенный выше пример демонстрирует, как параметры <code>max-width</code> и <code>max-height</code> переопределяют <code>width</code> и <code>height</code>. 
+    Даже если размер блока установлен <code>200px</code> на <code>200px</code>, фактически он будет иметь размеры <code>150px</code> на <code>150px</code>. 
+    Это происходит потому, что параметры <code>max-width</code> и <code>max-height</code> установлены на <code>150px</code>, что меньше.
+  </p>
+
+  <p>
+    Помните, что если значения <code>max-width</code> или <code>max-height</code> меньше значений <code>width</code> или <code>height</code>, то они имеют приоритет. 
+    Это важно для контроля максимального размера элементов в ваших макетах.
+  </p>
+
+  <p>
+    В CSS приоритет отдается параметрам <code>min-width</code> и <code>min-height</code>, а не <code>width</code> и <code>height</code>. 
+    Параметр <code>max-width</code> и <code>max-height</code> ограничивает размеры, если их значения превышают установленные пределы.
+  </p>
+
+  <p>
+    Например, если вы зададите <code>width</code> на <code>600px</code> и <code>max-width</code> на <code>500px</code>, ширина элемента будет ограничена <code>500px</code>. 
+    Параметр <code>max-width</code> переопределяет более широкое значение, удерживая элемент в пределах указанного максимального размера.
+  </p>
+
+  <p>
+    Это гарантирует, что элементы будут оставаться в пределах желаемых диапазонов размеров, независимо от стандартных значений ширины и высоты.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Что произойдет, если установить для элемента <code>div</code> значения <code>width: 600px;</code> и <code>max-width: 500px;</code>?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Ширина элемента составит 600 пикселей.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Ширина элемента составит 500 пикселей.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Ширина элемента составит 550 пикселей.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Ширина элемента составит 100 пикселей.</label>
+    </div>
+
+    <div>
+      <p>Если установить для элемента <code>min-height: 200px</code> и <code>height: 150px</code>, какой будет высота этого элемента?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>150px</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>100px</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>200px</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>250px</code></label>
+    </div>
+
+    <div>
+      <p>Какая из следующих единиц измерения НЕ является допустимой для использования со свойством ширины?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>hv</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>px</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>%</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>vw</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
