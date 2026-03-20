@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Какие существуют типы комбинаторов CSS?</title>
+</head>
+<body>
+  <h1>Какие существуют типы комбинаторов CSS?</h1>
+
+  <p>
+    CSS-комбинаторы используются для определения взаимосвязи между селекторами в CSS. 
+    Они помогают выбирать элементы на основе их взаимосвязи с другими элементами, что позволяет более точно и эффективно стилизовать их.
+  </p>
+
+  <p>
+    Мы обсудим некоторые основные комбинаторы CSS и варианты их использования, начиная с <strong>комбинатора потомков(descendant combinator)</strong>.
+  </p>
+
+  <p>
+    Комбинатор потомков используется для выбора элементов, соответствующих второму селектору, если они вложены в родительский элемент, соответствующий первому селектору. 
+    Родительским элементом может быть родительский элемент или родительский элемент родительского элемента.
+  </p>
+
+  <p>
+    Чтобы лучше понять, как это работает, давайте рассмотрим пример.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;figure&gt;
+          &lt;img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Спящий кот"&gt;
+          &lt;figcaption&gt;Спящий кот с границей&lt;/figcaption&gt;
+        &lt;/figure&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        figure img {
+          border: 4px solid red;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В приведенном выше примере мы используем <strong>комбинатор потомков</strong>, чтобы выбрать все элементы <code>img</code> внутри элементов <code>figure</code> и 
+    применить сплошную(<code>solid</code>) красную(<code>red</code>) рамку(<code>border</code>) со всех четырех сторон.
+  </p>
+
+  <p>
+    Обратите внимание, что между селекторами родительского и дочернего элементов стоит пробел.
+  </p>
+
+  <p>
+    В этом случае родительским элементом будет <code>figure</code>, а дочерним — <code>img</code>.
+  </p>
+
+  <p>
+    Если внутри элемента <code>figure</code> находится несколько изображений, 
+    то использование комбинатора потомков позволит создать сплошную черную рамку вокруг каждого из этих изображений.
+  </p>
+
+  <p>
+    Другой тип комбинатора — это <strong>дочерний комбинатор (child combinator)</strong>.
+  </p>
+
+  <p>
+    В CSS комбинатор дочерних элементов (<code>></code>) используется для выбора элементов, являющихся непосредственными потомками указанного родительского элемента.
+  </p>
+
+  <p>
+    Этот комбинатор применяется только к элементам с определенным родительским элементом, что делает ваши правила CSS более точными и 
+    предотвращает непреднамеренное оформление элементов, находящихся глубже вложенных друг в друга.
+  </p>
+
+  <p>
+    Давайте рассмотрим следующий пример HTML:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div class="container"&gt;
+        &lt;p&gt;Первый&lt;/p&gt;
+        &lt;div&gt;
+          &lt;p&gt;Второй&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+          &lt;p&gt;Третий&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    В приведенной выше HTML-структуре класс <code>container</code> применяется к элементу <code>div</code>.
+  </p>
+
+  <p>
+    Внутри этого контейнера находится дочерний элемент <code>p</code> (<code>Первый</code>), за которым следуют два дополнительных элемента <code>div</code>, 
+    каждый из которых содержит элемент <code>p</code> (<code>Второй</code> и <code>Третий</code>).
+  </p>
+
+  <p>
+    Первый элемент <code>p</code> является прямым потомком элемента <code>.container</code>, в то время как два других элемента <code>p</code> 
+    вложены в другие элементы <code>div</code>, являясь их более глубокими потомками.
+  </p>
+
+  <p>
+    Чтобы применить стили только к непосредственному дочернему элементу класса <code>container</code>, можно использовать комбинатор дочерних элементов следующим образом:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;div class="container"&gt;
+          &lt;p&gt;Первый&lt;/p&gt;
+          &lt;div&gt;
+            &lt;p&gt;Второй&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div&gt;
+            &lt;p&gt;Третий&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .container > p {
+          color: blue;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В приведенном выше примере мы воздействуем только на непосредственный дочерний элемент класса <code>container</code>. 
+    Это придаст дочернему элементу синий(<code>blue</code>) цвет текста.
+  </p>
+
+  <p>
+    Поскольку два других элемента абзаца(<code>p</code>) вложены в элементы <code>div</code>, они не считаются прямыми дочерними элементами класса <code>container</code>
+     и не получат синий цвет текста.
+  </p>
+
+  <p>
+    Еще одним распространенным комбинатором является <strong>комбинатор ближайших соседей(next-sibling combinator)</strong>.
+  </p>
+
+  <p>
+    Комбинатор ближайших соседей (<code>+</code>) в CSS выбирает элемент, непосредственно следующий за указанным соседним элементом. 
+    Этот комбинатор полезен, когда вы хотите применить стили к элементу, который непосредственно следует за другим элементом, 
+    что позволяет целенаправленно стилизовать элемент в зависимости от его положения относительно соседних элементов.
+  </p>
+
+  <p>
+    Давайте рассмотрим следующий пример HTML:
+  </p>
+
+  <pre>
+    <code>
+      &lt;figure&gt;
+        &lt;img
+          src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+          alt="Милый рыжий кот лежит на спине."
+        /&gt;
+        &lt;figcaption&gt;Милый рыжий кот лежит на спине.&lt;/figcaption&gt;
+      &lt;/figure&gt;
+    </code>
+  </pre>
+
+  <p>
+    Здесь у нас есть элемент <code>figure</code>, содержащий элемент <code>img</code>, за которым следует элемент <code>figcaption</code>. 
+    Элемент <code>figcaption</code> является непосредственным соседом элемента <code>img</code>.
+  </p>
+
+  <p>
+    Если вы хотите добавить черную рамку вокруг элемента <code>figcaption</code>, вы можете использовать комбинатор ближайших соседей следующим образом:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;figure&gt;
+          &lt;img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+            alt="Милый рыжий кот лежит на спине."
+          /&gt;
+          &lt;figcaption&gt;Милый рыжий кот лежит на спине.&lt;/figcaption&gt;
+        &lt;/figure&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        img + figcaption {
+          border: 4px solid black;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере комбинатор ближайших соседей (<code>+</code>) выбирает элемент <code>figcaption</code>, который непосредственно следует за элементом <code>img</code>. 
+    Применённое правило CSS добавляет сплошную чёрную рамку толщиной 4 пикселя(<code>4px solid black border</code>) вокруг элемента <code>figcaption</code>.
+  </p>
+
+  <p>
+    Еще одним распространенным комбинатором является <strong>комбинатор последующих одноуровневых элементов(subsequent-sibling combinator)</strong>.
+  </p>
+
+  <p>
+    В CSS комбинатор последующих одноуровневых элементов (<code>~</code>) выбирает все соседние элементы указанного элемента, которые следуют за ним.
+  </p>
+
+  <p>
+    В отличие от комбинатора ближайших соседей, который нацелен только на непосредственно следующий за ним элемент, 
+    комбинатор последующих одноуровневых элементов (<code>~</code>) нацелен на любые элементы, 
+    следующие за указанным элементом, что обеспечивает большую гибкость в стилизации.
+  </p>
+
+  <p>
+    Давайте рассмотрим следующий пример HTML:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div class="container"&gt;
+        &lt;h2&gt;Подзаголовок&lt;/h2&gt;
+        &lt;p&gt;Первый абзац.&lt;/p&gt;
+        &lt;p&gt;Второй абзац.&lt;/p&gt;
+        &lt;p&gt;Третий абзац.&lt;/p&gt;
+        &lt;p&gt;Еще один абзац.&lt;/p&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этой HTML-структуре у нас есть элемент <code>h2</code>, за которым следуют четыре элемента абзаца. 
+    Элементы абзаца являются соседними элементами по отношению к элементу <code>h2</code>.
+  </p>
+
+  <p>
+    Если вы хотите стилизовать все элементы абзаца, следующие за элементом <code>h2</code>, 
+    то можете использовать комбинатор последующих одноуровневых элементов следующим образом:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;div class="container"&gt;
+          &lt;h2&gt;Подзаголовок&lt;/h2&gt;
+          &lt;p&gt;Первый абзац.&lt;/p&gt;
+          &lt;p&gt;Второй абзац.&lt;/p&gt;
+          &lt;p&gt;Третий абзац.&lt;/p&gt;
+          &lt;p&gt;Еще один абзац.&lt;/p&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h2 ~ p {
+          color: green;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере все элементы абзаца, следующие за элементом <code>h2</code>, будут иметь зеленый цвет текста.
+  </p>
+
+  <p>
+    Комбинатор последующих одноуровневых элементов (<code>~</code>) нацелен на все соседние абзацы, которые появляются после элемента <code>h2</code>, 
+    независимо от того, являются ли они непосредственными соседями.
+  </p>
+
+  <p>
+    В заключение отметим, что понимание и использование различных комбинаторов CSS позволяет применять точные стили к элементам HTML, 
+    повышая контроль и гибкость вашего дизайна.
+  </p>
+
+  <p>
+    Овладев этими селекторами, вы сможете создавать более сложные и целенаправленные правила стилизации, 
+    которые улучшат как внешний вид, так и функциональность ваших веб-страниц.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какое правило CSS будет стилизовать все элементы <code>span</code>, находящиеся внутри элементов <code>div</code>, независимо от глубины их вложенности?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">
+        <pre>
+          <code>
+            div > span {
+              color: red;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">
+        <pre>
+          <code>
+            div + span {
+              color: red;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">
+        <pre>
+          <code>
+            div ~ span {
+              color: red;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">
+        <pre>
+          <code>
+            div span {
+              color: red;
+            }
+          </code>
+        </pre>
+      </label>
+    </div>
+
+    <div>
+      <p>Какое правило CSS будет стилизовать только дочерние элементы <code>li</code> элементов <code>ul</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">
+        <pre>
+          <code>
+            ul > li {
+              font-weight: bold;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">
+        <pre>
+          <code>
+            ul li {
+              font-weight: bold;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">
+        <pre>
+          <code>
+            ul + li {
+              font-weight: bold;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">
+        <pre>
+          <code>
+            ul ~ li {
+              font-weight: bold;
+            }
+          </code>
+        </pre>
+      </label>
+    </div>
+
+    <div>
+      <p>Какое правило CSS будет стилизовать первый элемент <code>p</code>, следующий непосредственно за любым элементом <code>h1</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">
+        <pre>
+          <code>
+            h1 > p {
+              margin-top: 0;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">
+        <pre>
+          <code>
+            h1 + p {
+              margin-top: 0;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">
+        <pre>
+          <code>
+            h1 ~ p {
+              margin-top: 0;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">
+        <pre>
+          <code>
+            h1 p {
+              margin-top: 0;
+            }
+          </code>
+        </pre>
+      </label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
