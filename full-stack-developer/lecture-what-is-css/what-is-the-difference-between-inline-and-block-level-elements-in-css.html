@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>В чём разница между строчными и блочными элементами в CSS?</title>
+</head>
+<body>
+  <h1>В чём разница между строчными и блочными элементами в CSS?</h1>
+
+  <p>
+    В HTML и CSS элементы классифицируются как строчные(<strong>inline elements</strong>) или блочные(<strong>block-level elements</strong>), 
+    и эта классификация определяет их поведение в макете документа.
+  </p>
+
+  <p>
+    Понимание этой разницы имеет решающее значение для управления тем, как ваш контент отображается на веб-странице.
+  </p>
+
+  <p>
+    Блочные элементы — это элементы, которые по умолчанию занимают всю доступную им ширину, растягиваясь на всю ширину своего контейнера.
+  </p>
+
+  <p>
+    Эти элементы всегда начинаются с новой строки и сдвигают остальное содержимое на следующую строку, создавая «блок» контента.
+  </p>
+
+  <p>
+    Для блочных элементов по умолчанию применяется свойство CSS <code>display: block;</code>. 
+    Это свойство гарантирует, что элемент растянется на всю ширину контейнера и отобразится на новой строке.
+  </p>
+
+  <p>
+    К числу распространенных блочных элементов относятся элементы <code>div</code>, абзацы(paragraphs), заголовки(headings), упорядоченные списки(ordered lists),
+    неупорядоченные списки(unordered lists) и элементы разделов(section).
+  </p>
+
+  <p>
+    Вот пример кода блочного элемента:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p style="border: 2px solid red;"&gt;
+        Первый абзац
+      &lt;/p&gt;
+      &lt;p&gt;Второй абзац&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере у нас есть два элемента абзаца, причем первый из них имеет красную рамку.
+  </p>
+
+  <p>
+    Два элемента абзаца не находятся на одной строке, поскольку по умолчанию являются блочными элементами.
+  </p>
+
+  <p>
+    Таким образом, оба элемента абзаца займут всю ширину своего контейнера, которым в данном случае является элемент <code>body</code>.
+  </p>
+
+  <p>
+    Блочные элементы идеально подходят, когда вы хотите, чтобы контент располагался вертикально, например, абзацы, разделы или большие блоки контента. 
+    Они обычно используются для определения макета и структуры веб-страницы.
+  </p>
+
+  <p>
+    В отличие от блочных элементов, строчные элементы занимают ровно столько ширины, сколько им необходимо, и не начинаются с новой строки. 
+    Эти элементы располагаются внутри контента, позволяя тексту и другим строчным элементам появляться рядом с ними.
+  </p>
+
+  <p>
+    Для строчных элементов по умолчанию применяется свойство CSS <code>display: inline;</code>. 
+    Это свойство гарантирует, что элемент останется в пределах потока содержимого и не будет переноситься на новую строку.
+  </p>
+
+  <p>
+    К распространенным строчным элементам относятся <code>span</code>, <code>anchor</code> и <code>img</code>.
+  </p>
+
+  <p>
+    Вот пример для лучшего понимания строчных элементов:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;Это слово внутри абзаца
+        &lt;span style="color: red; border: 2px solid green;"&gt;красное&lt;/span&gt;.
+      &lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере у нас есть элемент <code>span</code>, вложенный в элемент <code>p</code>. 
+    Элемент <code>span</code> имеет красный(<code>red</code>) цвет текста с зеленой(<code>green</code>) рамкой вокруг него, чтобы вы могли лучше видеть выделенное слово.
+  </p>
+
+  <p>
+    Как видите, элемент <code>span</code> занимает ровно столько места, сколько занимает слово <code>красное</code>, и не переносит следующее содержимое на новую строку.
+  </p>
+
+  <p>
+    Встроенные элементы лучше всего использовать для оформления небольших фрагментов текста или контента внутри строки, 
+    например, для выделения слова, создания гиперссылок или применения определенных стилей к частям абзаца.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Каково поведение блочных элементов по умолчанию в CSS?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Они занимают столько ширины, сколько необходимо, и остаются в рамках потока контента.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Они занимают всю ширину своего контейнера и начинаются с новой строки.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Они используются только для изображений и ссылок.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Они всегда выровнены по центру страницы.</label>
+    </div>
+
+    <div>
+      <p>Какой из следующих примеров является примером строчного элемента?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>div</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>p</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>span</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>section</code></label>
+    </div>
+
+    <div>
+      <p>Как изменить поведение блочного элемента, чтобы он вел себя как строчный элемент?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Применить <code>display: inline-block;</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Применить <code>display: flex;</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Применить <code>display: inline;</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Применить <code>display: none;</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
