@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как работает элемент Inline-Block и чем он отличается от элементов Inline и Block?</title>
+</head>
+<body>
+  <h1>Как работает элемент Inline-Block и чем он отличается от элементов Inline и Block?</h1>
+
+  <p>
+    При работе с CSS часто встречаются три различных типа поведения элементов при отображении: <code>inline</code>, <code>block</code> и <code>inline-block</code>.
+  </p>
+
+  <p>
+    Каждое из этих свойств влияет на позиционирование элементов и на то, как они взаимодействуют с другими элементами на странице.
+  </p>
+
+  <p>
+    В этом уроке мы сосредоточимся на том, как работает свойство <code>inline-block</code>(строчно-блочный) и чем оно отличается от свойств строчных и блочных элементов.
+  </p>
+
+  <p>
+    Блочные элементы ведут себя как большие контейнеры или «блоки», занимающие всю ширину родительского контейнера. 
+    Они всегда начинаются с новой строки, и их высота и ширина могут быть отрегулированы.
+  </p>
+
+  <p>
+    Встроенные(строчные) элементы занимают ровно столько места, сколько необходимо. Они органично вписываются в окружающий контент и не переходят на новую строку.
+  </p>
+
+  <p>
+    Свойство <code>inline-block</code> представляет собой гибрид этих двух типов поведения. 
+    Подобно строчным элементам, элементы <code>inline-block</code> остаются в текстовом потоке, не начинаясь с новой строки.
+  </p>
+
+  <p>
+    Однако, в отличие от строчных элементов, ширину и высоту строчного блочного элемента можно регулировать так же, как и у блочных элементов.
+  </p>
+
+  <p>
+    Вкратце, ключевое различие между <code>inline</code> и <code>inline-block</code> элементами заключается в том, что <code>inline</code> элементы не позволяют 
+    контролировать их размер, тогда как <code>inline-block</code> элементы позволяют полностью контролировать размеры, оставаясь при этом на одной линии с остальным содержимым.
+  </p>
+
+  <p>
+    Давайте рассмотрим пример.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link href="styles.css" rel="stylesheet"&gt;
+
+        &lt;div class="container"&gt;
+          &lt;span class="inline-block-element element1"&gt;Inline-Block&lt;/span&gt;
+          &lt;span class="inline-block-element element2"&gt;Inline-Block&lt;/span&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .inline-block-element {
+          display: inline-block;
+          width: 150px;
+          height: 100px;
+        }
+
+        .element1 {
+          background-color: lightblue;
+        }
+
+        .element2 {
+          background-color: lightgreen;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В приведенном выше примере у нас есть <code>div</code> с классом <code>container</code>. 
+    Внутри этого <code>div</code> находятся два элемента <code>span</code>.
+  </p>
+
+  <p>
+    Каждому элементу <code>span</code> задано свойство <code>display:inline-block</code>, а также ширина и высота.
+  </p>
+
+  <p>
+    Элементы <code>inline-block</code> будут отображаться рядом друг с другом, поскольку они ведут себя как строчные элементы, 
+    но при этом имеют заданную ширину и высоту, что придает им блочные свойства.
+  </p>
+
+  <p>
+    Но если удалить свойство <code>display: inline-block</code>, ни <code>height</code>, ни <code>width</code> не будут применены, даже если вы четко их задали.
+  </p>
+
+  <p>
+    Вот исправленный CSS-код:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link href="styles.css" rel="stylesheet"&gt;
+
+        &lt;div class="container"&gt;
+          &lt;span class="inline-block-element element1"&gt;Span element&lt;/span&gt;
+          &lt;span class="inline-block-element element2"&gt;Span element&lt;/span&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .inline-block-element {
+          width: 150px;
+          height: 100px;
+        }
+
+        .element1 {
+          background-color: lightblue;
+        }
+
+        .element2 {
+          background-color: lightgreen;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом коде мы удалили свойство <code>display: inline-block;</code>, но оставили все остальное без изменений. 
+    Здесь элементы <code>span</code> возвращаются к своему поведению по умолчанию, становясь строчными элементами.
+  </p>
+
+  <p>
+    В результате указанные ширина и высота игнорируются, и элементы занимают только то пространство, которое необходимо для их содержимого.
+  </p>
+
+  <p>
+    Понимание принципа работы <code>inline-block</code> полезно, поскольку их можно использовать для создания макетов, 
+    требующих как выравнивания, так и контроля размеров в рамках непрерывного текстового потока.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>В чём заключается ключевая характеристика элемента <code>inline-block</code>, отличающая его от обычного строчного элемента?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Элементы <code>inline-block</code> не могут быть вложены внутрь элементов типа <code>block</code>.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Элементы <code>inline-block</code> автоматически занимают всю ширину своего контейнера.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">В отличие от строчных элементов, элементы <code>inline-block</code> позволяют задавать высоту и ширину.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Элементы <code>inline-block</code> всегда переносят курсор на новую строку.</label>
+    </div>
+
+    <div>
+      <p>В каком сценарии лучше использовать <code>inline-block</code> элементы вместо строчных или блочных элементов?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Когда вам нужно, чтобы элемент занимал всю ширину родительского контейнера.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Когда вам нужно, чтобы элемент оставался на одной линии, но при этом необходимо изменить его размер.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Когда вам нужно, чтобы элемент всегда начинался с новой строки.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Когда вы не хотите, чтобы элемент зависел от отступов и полей.</label>
+    </div>
+
+    <div>
+      <p>В какой ситуации элемент с <code>display: inline-block;</code> будет вести себя иначе, чем элемент с <code>display: block;</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Когда вам нужно, чтобы элемент занимал всю ширину контейнера.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Когда вам нужно, чтобы элемент располагался рядом с текстом и другими строчными элементами.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Когда необходимо, чтобы элемент автоматически начинался с новой строки.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Когда вы не хотите, чтобы элемент имел какие-либо свойства высоты или ширины.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
