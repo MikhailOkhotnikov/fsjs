@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое margin и padding, и как они работают?</title>
+</head>
+<body>
+  <h1>Что такое margin и padding, и как они работают?</h1>
+
+  <p>
+    Внешний отступ (<code>margin</code>) и внутренний отступ (<code>padding</code>) — это важные свойства CSS для создания хорошо структурированных, 
+    читаемых и визуально привлекательных веб-страниц.
+  </p>
+  
+  <p>
+    Внешний отступ (<code>margin</code>) контролирует пространство за пределами элемента, помогая отделить его от других элементов и определить структуру макета, 
+    а внутренний отступ (<code>padding</code>) контролирует пространство внутри элемента, улучшая читаемость контента и эстетическую привлекательность.
+  </p>
+
+  <p>
+    Чтобы лучше понять разницу между <code>margin</code> и <code>padding</code>, давайте рассмотрим несколько примеров.
+  </p>
+
+  <p>
+    Вот пример HTML-кода, отображающего три элемента абзаца на странице:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p&gt;Первый абзац&lt;/p&gt;
+      &lt;p&gt;Второй абзац&lt;/p&gt;
+      &lt;p&gt;Третий абзац&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Чтобы задать отступ сверху для каждого элемента абзаца, можно использовать свойство <code>margin-top</code> следующим образом:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p&gt;Первый абзац&lt;/p&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;p&gt;Третий абзац&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          margin-top: 20px;
+          border: 2px solid black;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере мы применяем отступ в 20 пикселей только к верхней части каждого элемента абзаца.
+  </p>
+
+  <p>
+    Кроме того, со всех четырех сторон имеется сплошная черная рамка, чтобы поля были лучше видны.
+  </p>
+
+  <p>
+    Существует четыре различных свойства для внешних отступов: <code>margin-top</code>(сверху), <code>margin-right</code>(справа), 
+    <code>margin-bottom</code>(снизу) и <code>margin-left</code>(слева).
+  </p>
+
+  <p>
+    Вот пример использования всех четырех свойств:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;span&gt;Первый абзац&lt;/span&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;span&gt;Третий абзац&lt;/span&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          margin-top: 10px;
+          margin-right: 20px;
+          margin-bottom: 30px;
+          margin-left: 40px;
+          border: 2px solid black;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере мы задаем значения внешних отступов со всех четырех сторон элемента абзаца. Также добавлена ​​сплошная черная рамка, чтобы вы могли лучше видеть поля.
+  </p>
+
+  <p>
+    Ещё один способ использования свойства <code>margin</code> — сокращённая запись. Вы можете указать одно, два, три или четыре значения одновременно. 
+    Давайте рассмотрим эти варианты вместе.
+  </p>
+
+  <p>
+    При использовании единственного значения в сокращенной записи <code>margin</code>, это же значение будет применено ко всем четырем сторонам целевого элемента.
+  </p>
+
+  <p>
+    Вот пример использования одного значения в сокращенной записи полей:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;span&gt;Первый абзац&lt;/span&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;span&gt;Третий абзац&lt;/span&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          margin: 10px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере кода будет применен <code>margin</code> в <code>10px</code> ко всем четырем сторонам элемента абзаца.
+  </p>
+
+  <p>
+    При использовании двух значений первое значение применяется к верхней(<code>top</code>) и нижней(<code>bottom</code>) сторонам элемента, 
+    а второе — к левой(<code>left</code>) и правой(<code>right</code>) сторонам.
+  </p>
+
+  <p>
+    Вот пример использования двух значений для сокращенной записи <code>margin</code>:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;span&gt;Первый абзац&lt;/span&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;span&gt;Третий абзац&lt;/span&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          margin: 10px 20px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Таким образом, верхний и нижний внешний отступ элемента абзаца устанавливаются на <code>10px</code>, а левый и правый внешний отступ — на <code>20px</code>.
+  </p>
+
+  <p>
+    Если указаны три значения, первое значение применяется к верхнему(<code>top</code>) внешнему отступу, 
+    второе — к левому(<code>left</code>) и правому(<code>right</code>) внешнему отступу, а третье — к нижнему(<code>bottom</code>) внешнему отступу.
+  </p>
+
+  <p>
+    Вот пример для лучшего понимания:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;span&gt;Первый абзац&lt;/span&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;span&gt;Третий абзац&lt;/span&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          margin: 10px 20px 30px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Это устанавливает внешний отступ в <code>10px</code> сверху, <code>20px</code> слева и справа, и <code>30px</code> снизу.
+  </p>
+
+  <p>
+    Использование четырех значений дает вам больше контроля, поскольку вы можете независимо задать значение внешнего отступа для каждой стороны целевого элемента.
+  </p>
+
+  <p>
+    Первое значение нацелено на верхнюю точку(<code>top</code>), второе — на правую(<code>right</code>), 
+    третье — на нижнюю(<code>bottom</code>), а четвёртое — на левую(<code>left</code>).
+  </p>
+
+  <p>
+    Вот пример использования сокращенной записи <code>margin</code> с четырьмя значениями:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;span&gt;Первый абзац&lt;/span&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;span&gt;Третий абзац&lt;/span&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          margin: 10px 20px 30px 40px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Это устанавливает внешние отступы в 10 пикселей сверху, 20 пикселей справа, 30 пикселей снизу и 40 пикселей слева.
+  </p>
+
+  <p>
+    Свойство внутренний отступ(<code>padding</code>) используется для добавления пространства внутри элемента, между содержимым и его границей.
+  </p>
+
+  <p>
+    Подобно свойству <code>margin</code>, четыре свойства <code>padding</code> — это 
+    <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code> и <code>padding-left</code>.
+  </p>
+
+  <p>
+    Вот пример того, как задать внутренние отступы(<code>padding</code>) для элемента абзаца:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;span&gt;Первый абзац&lt;/span&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;span&gt;Третий абзац&lt;/span&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          padding-top: 10px;
+          padding-right: 20px;
+          padding-bottom: 30px;
+          padding-left: 40px;
+          border: 2px solid black;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Это устанавливает внутренние отступы: 10 пикселей сверху, 20 пикселей справа, 30 пикселей снизу и 40 пикселей слева.
+  </p>
+
+  <p>
+    Как видите, <code>padding</code> применяются к содержимому, находящемуся внутри границы, в отличие от <code>margin</code>, 
+    которые применяются к содержимому снаружи границы.
+  </p>
+
+  <p>
+    Как и в случае со свойством <code>margin</code>, вы также можете использовать сокращенную запись для свойства <code>padding</code>.
+  </p>
+
+  <p>
+    В качестве сокращенного свойства <code>padding</code> можно указать одно, два, три или четыре значения.
+  </p>
+
+  <p>
+    Вот пример использования сокращенной записи <code>padding</code> для элемента абзаца, о котором говорилось ранее:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;span&gt;Первый абзац&lt;/span&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;span&gt;Третий абзац&lt;/span&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          padding: 10px 20px 30px 40px;
+          border: 2px solid black;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В приведенном примере, используя сокращенную запись, код установит внутренние отступы (<code>padding</code>) равными 10 пикселям сверху,
+    20 пикселям справа, 30 пикселям снизу и 40 пикселям слева от элемента абзаца.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какое свойство CSS вы бы использовали, чтобы создать пространство между границей элемента и соседними элементами?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>padding</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>border</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>margin</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>width</code></label>
+    </div>
+
+    <div>
+      <p>Какое свойство CSS вы бы использовали для создания пространства между содержимым элемента и его границей?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>padding</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>margin</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>border</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>height</code></label>
+    </div>
+
+    <div>
+      <p>Каков правильный порядок значений при использовании сокращенного свойства для <code>margin</code> или <code>padding</code> с четырьмя значениями?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>right</code>, <code>bottom</code>, <code>left</code>, <code>top</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
