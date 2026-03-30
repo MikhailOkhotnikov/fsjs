@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 12</title>
+</head>
+<body>
+  <h1>Шаг 12</h1>
+
+  <p>
+    Теперь необходимо связать файл <code>styles.css</code>, чтобы стили применялись снова. 
+    Внутри элемента <code>head</code> добавьте элемент <code>link</code>. 
+    Присвойте ему атрибут <code>rel</code> со значением <code>stylesheet</code> и атрибут <code>href</code> со значением <code>styles.css</code>.
+  </p>
+
+  <p>
+    <b>Примечание:</b> элемент <code>link</code> является пустым элементом, то есть у него нет закрывающего тега. 
+    Пустые элементы следует обозначать как <code>&lt;link&gt;</code>, а не <code>&lt;link&gt;&lt;/link&gt;</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8" /&gt;
+            &lt;title&gt;Меню кафе&lt;/title&gt;
+
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;main&gt;
+              &lt;h1&gt;КАФЕ НА КОЛЕСАХ&lt;/h1&gt;
+              &lt;p&gt;Основано в 2020 г.&lt;/p&gt;
+              &lt;section&gt;
+                &lt;h2&gt;Кофе&lt;/h2&gt;
+              &lt;/section&gt;
+            &lt;/main&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        h1, h2, p {
+          text-align: center;
+        }  
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-11.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-13.html">Следующий</a>
+
+</body>
+</html>
