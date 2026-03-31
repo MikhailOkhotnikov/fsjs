@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 17</title>
+</head>
+<body>
+  <h1>Шаг 17</h1>
+
+  <p>
+    Теперь задача состоит в том, чтобы <code>div</code> не занимал всю ширину страницы. 
+    Свойство <code>width</code> в CSS идеально подходит для этого.
+  </p>
+
+  <p>
+    С помощью селектора <code>id</code> можно выбрать конкретный элемент, имеющий атрибут <code>id</code>.
+  </p>
+
+  <p>
+    В предыдущих уроках вы научились работать с селектором <code>id</code> следующим образом:
+  </p>
+
+  <details>
+    <summary>Пример кода</summary>
+    <pre>
+      <code>
+        #cat {
+          width: 250px;
+        }
+      </code>
+    </pre>
+  </details>
+
+  <p>
+    Используйте селектор <code>#menu</code>, чтобы задать ширину элемента в 300 пикселей(<code>300px</code>).
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8" /&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;title&gt;Меню кафе&lt;/title&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div id="menu"&gt;
+              &lt;main&gt;
+                &lt;h1&gt;КАФЕ НА КОЛЕСАХ&lt;/h1&gt;
+                &lt;p&gt;Основано в 2020 г.&lt;/p&gt;
+                &lt;section&gt;
+                  &lt;h2&gt;Кофе&lt;/h2&gt;
+                &lt;/section&gt;
+              &lt;/main&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          background-color: burlywood;
+        }
+        h1, h2, p {
+          text-align: center;
+        }        
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-16.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-18.html">Следующий</a>
+
+</body>
+</html>
