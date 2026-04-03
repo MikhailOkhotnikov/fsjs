@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 32</title>
+</head>
+<body>
+  <h1>Шаг 32</h1>
+
+  <p>
+    Это примерно то, чего вы хотите, но было бы неплохо, если бы вкус и цена совпадали по горизотнали. 
+    Элементы <code>p</code> являются <em>блочными элементами(block-level elements</em>), поэтому они занимают всю ширину своего родительского элемента.
+  </p>
+
+  <p>
+    Чтобы расположить их на одной строке, необходимо применить к элементам <code>p</code> некоторые стили, 
+    чтобы они вели себя больше как <em>строчные элементы(inline elements)</em>.
+  </p>
+
+  <p>
+    Для этого начните с добавления атрибута <code>class</code> со значением <code>item</code> к первому элементу <code>article</code> под заголовком <code>Кофе</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8" /&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;title&gt;Меню кафе&lt;/title&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div class="menu"&gt;
+              &lt;main&gt;
+                &lt;h1&gt;КАФЕ НА КОЛЕСАХ&lt;/h1&gt;
+                &lt;p&gt;Основано в 2020 г.&lt;/p&gt;
+                &lt;section&gt;
+                  &lt;h2&gt;Кофе&lt;/h2&gt;
+                  &lt;article&gt;
+                    &lt;p class="flavor"&gt;Французская ваниль&lt;/p&gt;
+                    &lt;p class="price"&gt;130&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article&gt;
+                    &lt;p&gt;Карамельный маккиато&lt;/p&gt;
+                    &lt;p&gt;150&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article&gt;
+                    &lt;p&gt;Тыквенный пряный&lt;/p&gt;
+                    &lt;p&gt;135&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article&gt;
+                    &lt;p&gt;Фундуковый&lt;/p&gt;
+                    &lt;p&gt;140&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article&gt;
+                    &lt;p&gt;Мокко&lt;/p&gt;
+                    &lt;p&gt;145&lt;/p&gt;
+                  &lt;/article&gt;
+                &lt;/section&gt;
+              &lt;/main&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+        }
+        h1, h2, p {
+          text-align: center;
+        }
+        .menu {
+          width: 80%;
+          background-color: burlywood;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .flavor {
+          text-align: left;
+        }
+        .price {
+          text-align: right;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-31.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-33.html">Следующий</a>
+
+</body>
+</html>
