@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 41</title>
+</head>
+<body>
+  <h1>Шаг 41</h1>
+
+  <p>
+    Если уменьшить ширину предварительного просмотра страницы, вы заметите, что в какой-то момент часть текста слева начнет переноситься на следующую строку. 
+    Это происходит потому, что ширина элементов <code>p</code> слева может занимать только 50% пространства.
+  </p>
+
+  <p>
+    Поскольку цены справа содержат значительно меньше символов, обновите ширину класса <code>flavor</code> до <code>75%</code>, 
+    а ширину класса <code>price</code> — до <code>25%</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8" /&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;title&gt;Меню кафе&lt;/title&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div class="menu"&gt;
+              &lt;main&gt;
+                &lt;h1&gt;КАФЕ НА КОЛЕСАХ&lt;/h1&gt;
+                &lt;p&gt;Основано в 2020 г.&lt;/p&gt;
+                &lt;section&gt;
+                  &lt;h2&gt;Кофе&lt;/h2&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Французская ваниль&lt;/p&gt;&lt;p class="price"&gt;130&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Карамельный маккиато&lt;/p&gt;&lt;p class="price"&gt;150&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Тыквенный пряный&lt;/p&gt;&lt;p class="price"&gt;135&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Фундуковый&lt;/p&gt;&lt;p class="price"&gt;140&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Мокко&lt;/p&gt;&lt;p class="price"&gt;145&lt;/p&gt;
+                  &lt;/article&gt;
+                &lt;/section&gt;
+              &lt;/main&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+        }
+
+        h1, h2, p {
+          text-align: center;
+        }
+
+        .menu {
+          width: 80%;
+          background-color: burlywood;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .item p {
+          display: inline-block;
+        }
+
+        .flavor {
+          text-align: left;
+          width: 50%;
+        }
+
+        .price {
+          text-align: right;
+          width: 50%;          
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-40.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-42.html">Следующий</a>
+
+</body>
+</html>
