@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Шаг 58</title>
+</head>
+<body>
+  <h1>Шаг 58</h1>
+
+  <p>
+    Типографические параметры элементов заголовков (например, <code>h1</code>, <code>h2</code>) задаются значениями по умолчанию в браузерах пользователей.
+  </p>
+
+  <p>
+    Добавьте два новых селектора типа (<code>h1</code> и <code>h2</code>). 
+    Используйте свойство <code>font-size</code> для обоих, но задайте значение <code>40px</code> для <code>h1</code> и <code>30px</code> для <code>h2</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+          &lt;head&gt;
+            &lt;meta charset="utf-8" /&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+            &lt;title&gt;Меню кафе&lt;/title&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;div class="menu"&gt;
+              &lt;main&gt;
+                &lt;h1&gt;КАФЕ НА КОЛЕСАХ&lt;/h1&gt;
+                &lt;p class="established"&gt;Основано в 2020 г.&lt;/p&gt;
+                &lt;section&gt;
+                  &lt;h2&gt;Кофе&lt;/h2&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Французская ваниль&lt;/p&gt;&lt;p class="price"&gt;130&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Карамельный маккиато&lt;/p&gt;&lt;p class="price"&gt;150&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Тыквенный пряный&lt;/p&gt;&lt;p class="price"&gt;135&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Фундуковый&lt;/p&gt;&lt;p class="price"&gt;140&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="flavor"&gt;Мокко&lt;/p&gt;&lt;p class="price"&gt;145&lt;/p&gt;
+                  &lt;/article&gt;
+                &lt;/section&gt;
+                &lt;section&gt;
+                  &lt;h2&gt;Десерты&lt;/h2&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="dessert"&gt;Пончик&lt;/p&gt;&lt;p class="price"&gt;150&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="dessert"&gt;Вишнёвый пирог&lt;/p&gt;&lt;p class="price"&gt;275&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="dessert"&gt;Чизкейк&lt;/p&gt;&lt;p class="price"&gt;300&lt;/p&gt;
+                  &lt;/article&gt;
+                  &lt;article class="item"&gt;
+                    &lt;p class="dessert"&gt;Булочка с корицей&lt;/p&gt;&lt;p class="price"&gt;250&lt;/p&gt;
+                  &lt;/article&gt;
+                &lt;/section&gt;
+              &lt;/main&gt;
+            &lt;/div&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+          font-family: sans-serif;
+        }
+
+
+
+        .established {
+          font-style: italic;
+        }
+
+        h1, h2, p {
+          text-align: center;
+        }
+
+        .menu {
+          width: 80%;
+          background-color: burlywood;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 20px;      
+          max-width: 500px;   
+        }
+
+        h1, h2 {
+          font-family: Impact, serif;
+        }
+
+        .item p {
+          display: inline-block;
+        }
+
+        .flavor, .dessert {
+          text-align: left;
+          width: 75%;
+        }
+
+        .price {
+          text-align: right;
+          width: 25%;          
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <a href="step-57.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-59.html">Следующий</a>
+
+</body>
+</html>
