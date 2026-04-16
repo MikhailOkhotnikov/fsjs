@@ -4,25 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../styles.css">
-  <title>Шаг 78</title>
+  <title>Шаг 79</title>
 </head>
 <body>
-  <h1>Шаг 78</h1>
+  <h1>Шаг 79</h1>
 
   <p>
-    Свойства ссылки изменяются после её посещения с помощью <em>псевдоселектора(pseudo-selector)</em>, который выглядит следующим образом:
+    Свойства ссылки изменяются при наведении курсора мыши с помощью <em>псевдоселектора(pseudo-selector)</em>, 
+    который выглядит следующим образом:
   </p>
 
   <pre>
     <code>
-      a:visited {
+      a:hover {
         propertyName: propertyValue;
       }
     </code>
   </pre>
 
   <p>
-    Измените цвет ссылки <code>Посетите наш сайт</code> на <code>grey</code>, когда пользователь перейдет по этой ссылке.
+    Измените цвет ссылки <code>Посетите наш сайт</code> на <code>brown</code>, когда пользователь наводит на него курсор.
   </p>
 
   <fieldset class="html chapter">
@@ -175,13 +176,17 @@
           color: black;
         }
 
+        a:visited {
+          color: grey;
+        }
 
+        
 
       </code>
     </pre>
   </fieldset>
 
-  <a href="step-77.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-79.html">Следующий</a>
+  <a href="step-78.html">Предыдущий</a> <a href="../index.html">На главную</a> <a href="step-80.html">Следующий</a>
 
 </body>
 </html>
