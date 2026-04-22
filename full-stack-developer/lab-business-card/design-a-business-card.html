@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Создайте дизайн визитной карточки</title>
+</head>
+<body>
+  <h1>Создайте дизайн визитной карточки</h1>
+
+  <p>
+    Создайте приложение, функционально похожее на <a href="final-a-business-card.html">этот пример проекта</a>. 
+    Старайтесь не копировать пример проекта, придайте ему свой собственный стиль.
+  </p>
+
+  <p>
+    <b>Цель:</b> Выполнить приведенные ниже пользовательские истории и добиться успешного прохождения всех тестов для завершения лабораторной работы.
+  </p>
+
+  <p>Истории пользователей:</p>
+
+  <ol>
+    <li>
+      Вам потребуется <code>div</code> с атрибутом <code>class</code>, имеющим значение <code>business-card</code>, который будет содержать все остальные элементы.
+    </li>
+    <li>
+      Внутри элемента <code>.business-card</code> должен находиться элемент <code>img</code> с атрибутом <code>class</code>, 
+      значение которого равно <code>profile-image</code>. 
+      При желании вы можете установить в качестве источника изображения <code>https://cdn.freecodecamp.org/curriculum/labs/flower.jpg</code>. 
+      Также должен быть атрибут <code>alt</code> с содержательным описанием.
+    </li>
+    <li>
+      Внутри элемента <code>.business-card</code>, после элемента <code>img</code>, должны находиться три элемента <code>p</code> с атрибутом <code>class</code>, 
+      имеющим, соответственно, значения <code>full-name</code>, <code>designation</code> и <code>company</code>.
+    </li>
+    <li>
+      Первый элемент <code>p</code> должен содержать ваше имя.
+    </li>
+    <li>
+      Второй элемент <code>p</code> должен содержать вашу должность.
+    </li>
+    <li>
+      Третий элемент <code>p</code> должен содержать название вашей компании.
+    </li>
+    <li>
+      Под третьим элементом <code>p</code> должен располагаться элемент <code>hr</code>.
+    </li>
+    <li>
+      После элемента <code>hr</code> должны быть два элемента <code>p</code>. В первом элементе <code>p</code> должен быть текст, содержащий адрес электронной почты. 
+      Во втором элементе <code>p</code> должен быть текст, содержащий номер телефона.
+    </li>
+    <li>
+      После двух элементов <code>p</code> должен быть элемент <code>a</code> с классом <code>portfolio-link</code>, 
+      текстом <code>Портфолио</code>, который должен вести на действительный URL-адрес.
+    </li>
+    <li>
+      После элемента <code>a</code>, содержащего ссылку на портфолио, должен быть элемент <code>hr</code>.
+    </li>
+    <li>
+      Вам потребуется еще один элемент <code>div</code> с атрибутом <code>class</code>, имеющим значение <code>social-media</code>. 
+      Внутри этого элемента должен находиться элемент <code>h2</code> с текстом <code>Свяжитесь со мной</code>.
+    </li>
+    <li>
+      Внутри элементов <code>.social-media</code> должны находиться три элемента <code>a</code>. 
+      Элементы <code>a</code> должны содержать текст <code>Twitter</code>, <code>LinkedIn</code> и <code>GitHub</code> соответственно, со ссылками на действительные веб-сайты.
+    </li>
+    <li>
+      Для подключения таблицы стилей <code>styles.css</code> используйте тег <code>link</code> в разделе <code>head</code> HTML-файла.
+    </li>
+    <li>
+      Фон страницы должен быть розово-коричневого цвета(<code>rosybrown</code>). 
+      В качестве основного шрифта следует использовать <code>Arial</code>, в качестве запасного — <code>sans-serif</code>.
+    </li>
+    <li>
+      Селектор <code>.business-card</code> должен иметь свойства, позволяющие задать ширину элемента <code>300px</code> и цвет фона по вашему выбору. 
+      Также необходимо установить внутренние отступы <code>20px</code> со всех сторон и верхний внешний отступ <code>100px</code>. 
+      Текст должен быть выровнен по центру, а размер шрифта — <code>16px</code>. Левый и правый внешние отступы должны быть установлены в значение <code>auto</code>.
+    </li>
+    <li>
+      Селектор <code>.profile-image</code> должен иметь свойство <code>max-width</code> со значением <code>100%</code>.
+    </li>
+    <li>
+      Все элементы <code>p</code> должны иметь верхний и нижний внешние отступы в <code>5px</code>.
+    </li>
+    <li>
+      Все ссылки на странице не должны быть подчеркнуты.
+    </li>
+  </ol>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;title&gt;Визитная карточка&lt;/title&gt;
+        &lt;/head&gt;
+
+        &lt;body&gt;
+
+        &lt;/body&gt;
+
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Тесты</h2>
+
+  <ol>
+    <li>
+      У вас должен быть один основной <code>div</code> с атрибутом <code>class</code>, значение которого равно <code>business-card</code>.
+    </li>
+    <li>
+      Внутри элемента <code>.business-card</code> должен находиться элемент <code>img</code> с атрибутом <code>class</code>, значение которого равно <code>profile-image</code>.
+    </li>
+    <li>
+      В качестве источника изображения следует указать допустимое изображение.
+    </li>
+    <li>
+      Атрибуту <code>alt</code> изображения следует присвоить содержательное описание.
+    </li>
+    <li>
+      Внутри элемента <code>.business-card</code>, после элемента <code>img</code>, 
+      должен находиться элемент <code>p</code> с атрибутом <code>class</code>, значение которого равно <code>full-name</code>.
+    </li>
+    <li>
+      После элемента <code>.full-name</code> должен следовать элемент <code>p</code> с атрибутом <code>class</code>, значение которого равно <code>designation</code>.
+    </li>
+    <li>
+      После элемента <code>.designation</code> должен следовать элемент <code>p</code> с атрибутом <code>class</code>, значение которого равно <code>company</code>.
+    </li>
+    <li>
+      Первый элемент <code>p</code>, тот, который имеет класс <code>full-name</code>, должен содержать ваше имя.
+    </li>
+    <li>
+      Второй элемент <code>p</code>, тот, у которого атрибут <code>class</code> имеет значение <code>designation</code>, должен содержать вашу должность.
+    </li>
+    <li>
+      Третий элемент <code>p</code>, тот, который имеет атрибут <code>class</code> со значением <code>company</code>, должен содержать название вашей компании.
+    </li>
+    <li>
+      После третьего элемента <code>p</code>, имеющего атрибут <code>class</code> со значением <code>company</code>, должен следовать элемент <code>hr</code>.
+    </li>
+    <li>
+      После первого элемента <code>hr</code> должен быть элемент <code>p</code> с текстом, содержащим адрес электронной почты.
+    </li>
+    <li>
+      После элемента <code>p</code> с адресом электронной почты должен быть еще один элемент <code>p</code> с текстом, содержащим номер телефона.
+    </li>
+    <li>
+      После элемента <code>p</code>, содержащего номер телефона, должен следовать элемент <code>a</code> с классом <code>portfolio-link</code>.
+    </li>
+    <li>
+      Элемент <code>.portfolio-link</code> должен содержать текст <code>Портфолио</code>.
+    </li>
+    <li>
+      Элемент <code>.portfolio-link</code> должен иметь действительный атрибут <code>href</code>.
+    </li>
+    <li>
+      После элемента, содержащего ваше портфолио, должен быть еще один элемент <code>hr</code> в качестве разделителя.
+    </li>
+    <li>
+      После второго элемента <code>hr</code> должен следовать элемент <code>div</code> с атрибутом <code>class</code>, значение которого равно <code>social-media</code>.
+    </li>
+    <li>
+      Внутри элемента <code>.social-media</code> должен находиться элемент <code>h2</code> с текстом <code>Свяжитесь со мной</code>.
+    </li>
+    <li>
+      Внутри элемента <code>.social-media</code> должно быть три элемента <code>a</code>.
+    </li>
+    <li>
+      Первый элемент <code>a</code> должен содержать текст <code>Twitter</code>.
+    </li>
+    <li>
+      Ссылка <code>href</code> первого элемента <code>a</code> должна быть действительной.
+    </li>
+    <li>
+      Второй элемент <code>a</code> должен содержать текст <code>LinkedIn</code>.
+    </li>
+    <li>
+      Ссылка <code>href</code> второго элемента <code>a</code> должна быть действительной.
+    </li>
+    <li>
+      В третьем элементе <code>a</code> должен быть текст <code>GitHub</code>.
+    </li>
+    <li>
+      Ссылка <code>href</code> третьего элемента <code>a</code> должна быть действительной.
+    </li>
+    <li>
+      Ваш элемент <code>link</code> должен находиться внутри элемента <code>head</code>.
+    </li>
+    <li>
+      Элемент <code>link</code> должен иметь атрибут <code>rel</code> со значением <code>stylesheet</code>
+    </li>
+    <li>
+      Элемент <code>link</code> должен иметь атрибут <code>href</code> со значением <code>styles.css</code>.
+    </li>
+    <li>
+      В селекторе <code>body</code> следует установить цвет фона(<code>background-color</code>) страницы на <code>rosybrown</code>.
+    </li>
+    <li>
+      В элементе <code>body</code> следует установить шрифт(<code>font-family</code>) страницы <code>Arial</code>, а в качестве запасного варианта использовать шрифт <code>sans-serif</code>.
+    </li>
+    <li>
+      В селекторе <code>.business-card</code> должно быть свойство <code>width</code> со значением <code>300px</code>
+    </li>
+    <li>
+      В селекторе <code>.business-card</code> должно быть свойство <code>background-color</code> с допустимым значением цвета.
+    </li>
+    <li>
+      Селектор <code>.business-card</code> должен иметь свойство <code>padding</code> со значением <code>20px</code>.
+    </li>
+    <li>
+      У вашего селектора <code>.business-card</code> должен быть <code>margin-top</code> со значением <code>100px</code>.
+    </li>
+    <li>
+      Текст внутри элемента <code>.business-card</code> должен быть выровнен по центру(<code>text-align: center</code>).
+    </li>
+    <li>
+      Размер шрифта(<code>font-size</code>) текста внутри элемента <code>.business-card</code> должен составлять <code>16px</code>.
+    </li>
+    <li>
+      Свойства <code>margin-left</code> и <code>margin-right</code> элемента <code>.business-card</code> должны быть установлены в значение <code>auto</code>.
+    </li>
+    <li>
+      В селекторе <code>.profile-image</code> должно быть свойство <code>max-width</code> со значением <code>100%</code>.
+    </li>
+    <li>
+      Элементы <code>p</code> должны иметь <code>margin-top</code> и <code>margin-bottom</code> по <code>5px</code>.
+    </li>
+    <li>
+      Ссылки на странице не должны быть подчеркнуты(<code>text-decoration: none</code>).
+    </li>
+  </ol>
+
+  <p><a href="final-a-business-card.html">Проверить результат</a></p>
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
