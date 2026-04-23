@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое специфичность CSS, и какова специфичность для встроенных, внутренних и внешних CSS-стилей?</title>
+</head>
+<body>
+  <h1>Что такое специфичность CSS, и какова специфичность для встроенных, внутренних и внешних CSS-стилей?</h1>
+
+  <p>
+    Специфичность CSS — это фундаментальное понятие, определяющее, какие стили применяются к элементу, когда могут применяться несколько правил.
+  </p>
+
+  <p>
+    Понимание специфики помогает разработчикам разрешать конфликты между различными правилами CSS и гарантирует последовательное применение желаемых стилей.
+  </p>
+
+  <p>
+    Специфичность CSS рассчитывается на основе типа используемых селекторов.
+  </p>
+
+  <p>
+    Наибольшую специфичность обеспечивают встроенные стили, которые применяются непосредственно к элементу через атрибут <code>style</code>.
+  </p>
+
+  <p>
+    В этом примере первый абзац будет красным, а остальные элементы <code>p</code> — синими. 
+    Это связано с тем, что встроенные стили обладают большей специфичностью, чем селекторы типов, такие как селектор <code>p</code>, показанный в файле <code>styles.css</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p style="color: red;"&gt;Красный абзац&lt;/p&gt;
+        &lt;p&gt;Другой абзац&lt;/p&gt;
+        &lt;p&gt;Еще один абзац&lt;/p&gt;
+        &lt;p&gt;И еще один абзац&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          color: blue;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Таким образом, селекторы <code>id</code> обладают высокой степенью специфичности.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p id="para""&gt;Красный абзац&lt;/p&gt;
+        &lt;p&gt;Другой абзац&lt;/p&gt;
+        &lt;p&gt;Еще один абзац&lt;/p&gt;
+        &lt;p&gt;И еще один абзац&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        #para {
+          color: red; 
+        }
+
+        p {
+          color: blue;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Далее в дело вступают селекторы классов, селекторы атрибутов и псевдоклассы.
+  </p>
+
+  <p>
+    Примерами могут служить селекторы классов, такие как <code>.container</code> и <code>.button</code>, 
+    селекторы атрибутов, например <code>[type="text"]</code>, и псевдоклассы, такие как <code>:hover</code>. 
+    Они обладают умеренной степенью специфичности.
+  </p>
+
+  <p>
+    <b>Примечание:</b> Подробнее о псевдоклассах вы узнаете на следующих уроках.
+  </p>
+
+  <p>
+    В этом примере первый абзац будет красным, поскольку селектор <code>id</code> имеет более высокую специфичность, чем селекторы классов и типов. 
+    Элементы <code>.example-para</code> будут иметь зеленый цвет, а остальные элементы абзаца — синий.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p id="para""&gt;Красный абзац&lt;/p&gt;
+        &lt;p class="example-para&gt;Другой абзац&lt;/p&gt;
+        &lt;p class="example-para&gt;Еще один абзац&lt;/p&gt;
+        &lt;p&gt;И еще один абзац&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        #para {
+          color: red; 
+        }
+
+        .example-para {
+          color: green;
+        }
+
+        p {
+          color: blue;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Селекторы типов, такие как <code>div</code> и <code>h1</code>, и псевдоэлементы, такие как <code>::before</code> и <code>::after</code>, 
+    обладают меньшей специфичностью по сравнению с предыдущими группами.
+  </p>
+
+  <p>
+    <b>Примечание:</b> Подробнее о псевдоэлементах вы узнаете в будущих уроках. index.html styles.css 12345
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p id="para""&gt;Красный абзац&lt;/p&gt;
+        &lt;p&gt;Другой абзац&lt;/p&gt;
+        &lt;p&gt;И еще один абзац&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        #para {
+          color: red; 
+        }
+
+        p {
+          color: blue;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Наконец, универсальный селектор, обозначенный звездочкой <code>*</code>, обладает самой низкой специфичностью из всех.
+  </p>
+
+  <p>
+    Вот пример установки красного цвета для всех элементов с помощью селектора <code>*</code>. 
+    Однако вы не увидите ни одного красного элемента, поскольку существуют селекторы ID и типа, 
+    которые переопределяют эти стили, что подчеркивает низкую специфичность селектора <code>*</code>.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p id="para""&gt;Красный абзац&lt;/p&gt;
+        &lt;p&gt;Другой абзац&lt;/p&gt;
+        &lt;p&gt;И еще один абзац&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        * {
+          color: red;
+        }
+
+        #para {
+          color: green; 
+        }
+
+        p {
+          color: blue;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Значения специфичности рассчитываются как четырехкомпонентная величина <code>(a, b, c, d)</code>:
+  </p>
+
+  <ul>
+    <li><code>а</code>: Встроенные стили (<code>1</code> или <code>0</code>).</li>
+    <li><code>b</code>: Количество селекторов идентификаторов.</li>
+    <li><code>c</code>: Количество селекторов классов, селекторов атрибутов и псевдоклассов.</li>
+    <li><code>d</code>: Количество селекторов типов, псевдоэлементов и универсальных селекторов.</li>
+  </ul>
+
+  <p>
+    Каждая составляющая значения специфичности имеет разный вес:
+  </p>
+
+  <ul>
+    <li>
+      <b>Встроенные стили, или Inline styles</b> (<code>a</code>) имеют наибольший вес, внося значение <code>1</code> в первую часть значения специфичности.
+    </li>
+    <li>
+      <b>Селекторы идентификаторов, или ID selectors</b> (<code>b</code>) имеют следующий по величине вес, 
+      при этом каждый идентификатор вносит <code>1</code> во вторую часть значения специфичности.
+    </li>
+    <li>
+      <b>Селекторы классов, селекторы атрибутов и псевдоклассы, или Class selectors, attribute selectors, and pseudo-classes</b> (<code>c</code>) имеют умеренный вес, 
+      при этом каждый из них вносит <code>1</code> в третью часть значения специфичности.
+    </li>
+    <li>
+      <b>Селекторы типов и псевдоэлементы, или Type selectors and pseudo-elements</b> (<code>d</code>) имеют наименьший вес, 
+      при этом каждый из них вносит <code>1</code> в четвертую часть значения специфичности.
+    </li>
+    <li>
+      <b>Универсальный селектор, или Universal selector</b> (<code>*</code>): Универсальный селектор не влияет на расчет специфичности и не изменяет ее <code>0</code>. 
+      Его включение в селектор не меняет значение специфичности.
+    </li>
+  </ul>
+
+  <p>
+    <b>Встроенные CSS-стили(Inline CSS)</b> обладают наибольшей специфичностью, поскольку применяются непосредственно к элементу. 
+    Они переопределяют любые внутренние или внешние CSS-стили. Значение специфичности для встроенных стилей равно (1, 0, 0, 0).
+  </p>
+
+  <p>
+    Вот ещё один пример встроенного стиля:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p style="color: red;"&gt;Этот текст красный.&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    <b>Внутренние CSS-стили(Internal CSS)</b> определяются внутри элемента <code>style</code> в разделе <code>head</code> HTML-документа. Они имеют меньшую специфичность, чем встроенные стили. 
+    И внутренние, и внешние CSS-стили имеют одинаковый уровень специфичности — специфичность определяется используемыми селекторами, а не местом определения CSS. 
+    Если два правила имеют одинаковую специфичность, то побеждает то, которое находится позже в документе. 
+    Таким образом, если после внутреннего блока стилей подключен внешний файл стилей, приоритет имеют внешние правила. 
+    Если же он подключен раньше, то побеждают внутренние правила.
+  </p>
+
+  <p>
+    Значение специфичности для внутренних стилей определяется используемыми селекторами. 
+    Например, селектор ID во внутренних CSS имеет значение специфичности (0, 1, 0, 0).
+  </p>
+
+  <pre>
+    <code>
+      &lt;head&gt;
+        &lt;style&gt;
+          #text {
+            color: blue;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;div id="text"&gt;Этот текст синего цвета.&lt;/div&gt;
+      &lt;/body&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере текст будет синим, если не будет применен встроенный стиль или более специфический селектор.
+  </p>
+
+  <p>
+    <b>Внешние CSS-стили(External CSS)</b> подключаются через элемент <code>link</code> в разделе <code>head</code> и пишутся в отдельных файлах <code>.css</code>. 
+    Как и внутренние CSS-стили, специфичность внешних стилей определяется используемыми селекторами. 
+    Внешние CSS-стили обеспечивают наилучшую поддержку для крупных проектов.
+  </p>
+
+  <p>
+    Значение специфичности для внешних стилей также определяется используемыми селекторами. 
+    Например, селектор класса во внешнем CSS имеет значение специфичности (0, 0, 1, 0).
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;head&gt;
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+          &lt;div class="text"&gt;Цвет этого текста задаётся во внешнем CSS-файле.&lt;/div&gt;
+        &lt;/body&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .text {
+          color: purple;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере цвет текста определяется в файле <code>styles.css</code> и будет применяться, 
+    если не будет переопределен более конкретным селектором или встроенным стилем.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Чей показатель CSS специфичности выше?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Селектор классов.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Встроенный стиль.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Селектор идентификаторов.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Селектор типов.</label>
+    </div>
+
+    <div>
+      <p>В иерархии специфичности CSS, какой параметр имеет самый низкий приоритет?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Селекторы классов.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Встроенные стили.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Универсальные селекторы.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Селекторы идентификаторов.</label>
+    </div>
+
+    <div>
+      <p>Каким цветом будет текст в следующем примере?</p>
+      <pre>
+        <code>
+          &lt;head&gt;
+            &lt;style&gt;
+              p {
+                color: red;
+              }
+            &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;p style="color: blue;"&gt;Этот текст&lt;/p&gt;
+          &lt;/body&gt;
+        </code>
+      </pre>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>blue</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>red</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>yellow</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>green</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
