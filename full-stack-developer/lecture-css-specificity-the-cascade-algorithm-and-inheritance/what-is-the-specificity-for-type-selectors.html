@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>В чём заключается специфичность селекторов типов?</title>
+</head>
+<body>
+  <h1>В чём заключается специфичность селекторов типов?</h1>
+
+  <p>
+    Селекторы типов, также известные как селекторы элементов, выбирают элементы на основе их имени тега.
+  </p>
+
+  <p>
+    Эти селекторы являются основополагающими в CSS и позволяют применять стили ко всем экземплярам определенного HTML-элемента.
+  </p>
+
+  <p>
+    Селекторы типов просты в использовании и записываются просто как имя тега элемента, который вы хотите стилизовать.
+  </p>
+
+  <p>
+    Вот пример селектора типа, который применяется ко всем элементам абзаца на странице:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p&gt;Первый абзац&lt;/p&gt;
+        &lt;p&gt;Второй абзац&lt;/p&gt;
+        &lt;p&gt;Третий абзац&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          color: blue;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере цвет текста всех элементов <code>p</code> будет установлен на синий (<code>blue</code>).
+  </p>
+
+  <p>
+    Селекторы типов имеют относительно низкую специфичность по сравнению с другими селекторами. 
+    Значение специфичности для селектора типа равно <code>(0, 0, 0, 1)</code>.
+  </p>
+
+  <p>
+    Это означает, что селекторы типов будут переопределены селекторами классов, селекторами идентификаторов и встроенными стилями, 
+    но стили по-прежнему могут применяться, если отсутствуют правила более высокой специфичности.
+  </p>
+
+  <p>
+    Рассмотрим пример, в котором селекторы классов будут переопределять стили селектора типа.
+  </p>
+
+  <p>
+    Вот пример с двумя элементами абзаца:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p class="para"&gt;Я — абзац&lt;/p&gt;
+      &lt;p class="para"&gt;Вот ещё один абзац.&lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    Оба элемента абзаца имеют класс с именем <code>para</code>.
+  </p>
+
+  <p>
+    Внутри CSS-файла селектор типа нацелен на абзацы(<code>p</code>), а селектор класса — на элементы с классом <code>para</code>.
+  </p>
+  
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p class="para"&gt;Я — абзац&lt;/p&gt;
+        &lt;p class="para"&gt;Вот ещё один абзац.&lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        p {
+          color: blue;
+        }
+
+        .para {
+          color: red;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Все абзацы на странице с классом <code>para</code> будут иметь красный (<code>red</code>) цвет текста вместо синего(<code>blue</code>), 
+    поскольку селекторы классов обладают большей специфичностью, чем селекторы типов.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Каково значение специфичности селектора типа (например, <code>div</code>)?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">(1, 0, 0, 0)</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">(0, 1, 0, 0)</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">(0, 0, 1, 0)</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">(0, 0, 0, 1)</label>
+    </div>
+
+    <div>
+      <p>Какой из следующих вариантов обладает меньшей специфичностью, чем селектор типа?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Селектор классов.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Селектор идентификаторов.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Встроенный стиль.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Универсальный селектор.</label>
+    </div>
+
+    <div>
+      <p>Учитывая следующий CSS-код, какой цвет будет у текста?</p>
+      <pre>
+        <code>
+          &lt;head&gt;
+            &lt;style&gt;
+              * {
+                color: blue;
+              }
+              p {
+                color: red;
+              }
+            &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;p&gt;Этот текст&lt;/p&gt;
+          &lt;/body&gt;
+        </code>
+      </pre>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>blue</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>red</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>green</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>purple</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
