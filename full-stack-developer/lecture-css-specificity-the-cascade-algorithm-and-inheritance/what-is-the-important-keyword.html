@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Какое ключевое слово является важным, и каковы лучшие практики его использования?</title>
+</head>
+<body>
+  <h1>Какое ключевое слово является важным, и каковы лучшие практики его использования?</h1>
+
+  <p>
+    Ключевое слово <code>!important</code> в CSS используется для присвоения правилу стиля наивысшего приоритета, 
+    позволяя ему переопределять любые другие объявления для свойства.
+  </p>
+
+  <p>
+    При использовании этого параметра браузер обязан применить указанный стиль независимо от специфики других селекторов.
+  </p>
+
+  <p>
+    Допустим, у вас есть HTML-элемент абзаца со встроенными стилями, например, такой:
+  </p>
+
+  <pre>
+    <code>
+      &lt;p class="para" style="background-color: lightblue; color: black;"&gt;
+        Это абзац.
+      &lt;/p&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере элементу <code>p</code> задан светло-голубой (<code>lightblue</code>) цвет фона и черный (<code>black</code>) цвет текста.
+  </p>
+
+  <p>
+    В CSS-файле к элементу абзаца применяются следующие стили:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p class="para" style="background-color: lightblue; color: black;"&gt;
+        Это абзац.
+        &lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .para {
+          background-color: black;
+          color: white;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Поскольку встроенные стили имеют более высокий приоритет, чем селекторы класса, идентификатора и типа, 
+    черный цвет фона и белый цвет текста не будут применяться к этому элементу абзаца.
+  </p>
+
+  <p>
+    Чтобы переопределить эти встроенные стили, вы можете использовать ключевое слово <code>!important</code> следующим образом:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;p class="para" style="background-color: lightblue; color: black;"&gt;
+        Это абзац.
+        &lt;/p&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .para {
+          background-color: black !important;
+          color: white !important;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Ключевое слово <code>!important</code> используется после значения CSS и перед точкой с запятой.
+  </p>
+
+  <p>
+    Теперь к элементу абзаца будут применены черно-белые цвета, поскольку встроенные стили переопределяются с помощью ключевого слова <code>!important</code>.
+  </p>
+
+  <p>
+    Ключевое слово <code>!important</code> в CSS используется для присвоения правилу стиля наивысшего приоритета, 
+    фактически переопределяя другие объявления, включая те, которые имеют более высокую специфичность, и встроенные стили.
+  </p>
+
+  <p>
+    Однако ключевое слово <code>!important</code> не меняет специфичность самого CSS-селектора. 
+    Оно просто гарантирует применение правила с <code>!important</code>, даже если существуют другие конфликтующие правила с более высокой специфичностью.
+  </p>
+
+  <p>
+    Ещё один подходящий вариант использования ключевого слова <code>!important</code> — это переопределение стилей из сторонних библиотек или фреймворков, 
+    когда у вас нет контроля над исходными CSS-стилями.
+  </p>
+
+  <p>
+    Однако чрезмерное использование ключевого слова <code>!important</code> может привести к трудностям при поддержке и отладке CSS, 
+    поскольку оно нарушает естественную каскадность стилей и может привести к непредвиденным последствиям.
+  </p>
+
+  <p>
+    Поэтому ключевое слово <code>!important</code> следует использовать с осторожностью.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Что делает ключевое слово <code>!important</code> в CSS?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Повышает специфичность селектора.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Позволяет применять стиль независимо от специфики других правил.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Снижает значение специфичности селектора.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Переопределяет только встроенные стили.</label>
+    </div>
+
+    <div>
+      <p>Когда следует использовать ключевое слово <code>!important</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">В качестве основного метода оформления элементов.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Для переопределения стилей сторонних разработчиков или в качестве временного решения.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">В каждом правиле CSS для обеспечения единообразия.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Для повышения специфичности.</label>
+    </div>
+
+    <div>
+      <p>Учитывая следующий CSS-код, какой цвет будет у текста?</p>
+      <pre>
+        <code>
+          &lt;head&gt;
+            &lt;style&gt;
+              p {
+                color: blue;
+              }
+              .highlight {
+                color: green !important;
+              }
+              #unique {
+                color: purple;
+              }
+            &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;p id="unique" class="highlight"&gt;Этот текст&lt;/p&gt;
+          &lt;/body&gt;
+        </code>
+      </pre>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>blue</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>green</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>purple</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>red</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
