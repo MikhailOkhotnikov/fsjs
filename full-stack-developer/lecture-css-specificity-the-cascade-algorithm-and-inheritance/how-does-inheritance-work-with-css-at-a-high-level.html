@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как работает наследование в CSS на высоком уровне?</title>
+</head>
+<body>
+  <h1>Как работает наследование в CSS на высоком уровне?</h1>
+
+  <p>
+    Наследование (inheritance) — это ключевое понятие в CSS, определяющее, как стили передаются от родительских элементов к дочерним.
+  </p>
+
+  <p>
+    Как и в реальном мире, где дети часто наследуют черты от родителей, в CSS определенные свойства могут передаваться дочерними элементами от родительских элементов.
+  </p>
+
+  <p>
+    Это позволяет более эффективно применять единообразные стили ко всему документу.
+  </p>
+
+  <p>
+    В CSS не все свойства наследуются по умолчанию. Например, наследуются такие свойства, как <code>color</code>, <code>font-family</code> и <code>line-height</code>. 
+    Это означает, что если вы зададите цвет текста для родительского элемента, все его дочерние элементы унаследуют этот цвет, если вы специально его не переопределите.
+  </p>
+
+  <p>
+    Например, рассмотрим следующий пример, где цвет родительского элемента <code>div</code> задается с помощью встроенного стиля, 
+    а дочерний элемент <code>p</code> наследует этот цвет:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div style="color: blue;"&gt;
+        Это родительский элемент.
+        &lt;p&gt;Это дочерний элемент, наследующий цвет.&lt;/p&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом случае и родительский <code>div</code>, и дочерний <code>p</code> будут отображать свой текст синим (<code>blue</code>) цветом, поскольку цвет наследуется.
+  </p>
+
+  <p>
+    С другой стороны, такие свойства, как <code>margin</code>, <code>padding</code>, <code>border</code> и <code>background</code>, по умолчанию не наследуются. 
+    Если вы хотите, чтобы дочерний элемент наследовал эти стили, вам необходимо явно задать их либо непосредственно для дочернего элемента, 
+    либо с помощью ключевого слова <code>inherit</code>.
+  </p>
+
+  <p>
+    Ключевое слово <code>inherit</code> можно использовать для принудительного наследования свойства от родительского элемента, даже если это свойство обычно не наследуется.
+  </p>
+
+  <p>
+    Например, если вы хотите, чтобы определенный дочерний элемент имел тот же внутренний отступ(<code>padding</code>), что и его родительский элемент, 
+    вы можете установить свойство <code>padding: inherit</code> для дочернего элемента:
+  </p>
+
+  <pre>
+    <code>
+      &lt;div style="padding: 20px;"&gt;
+        Это родительский элемент с внутренними отступами.
+        &lt;p style="padding: inherit;"&gt;Это дочерний элемент, наследующий внутренние отступы.&lt;/p&gt;
+      &lt;/div&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом случае дочерний элемент <code>p</code> унаследует отступ в <code>20px</code> от родительского элемента <code>div</code>.
+  </p>
+
+  <p>
+    Наследование особенно полезно для поддержания согласованности и уменьшения избыточности в ваших таблицах стилей.
+  </p>
+
+  <p>
+    Вместо того чтобы писать одно и то же правило стиля для нескольких элементов, вы можете определить его один раз для родительского элемента, 
+    и дочерние элементы унаследуют его. Это может сделать ваш CSS более лаконичным и простым в управлении.
+  </p>
+
+  <p>
+    Однако важно помнить, что наследование работает только в одном направлении — от родителя к потомку. 
+    Если вы переопределите стиль дочернего элемента, это не повлияет на родительский элемент.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какое из следующих свойств CSS обычно наследуется по умолчанию?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>padding</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>border</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>color</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>background</code></label>
+    </div>
+
+    <div>
+      <p>Какое ключевое слово можно использовать, чтобы заставить дочерний элемент наследовать свойство от родительского элемента?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>default</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>inherit</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>initial</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>none</code></label>
+    </div>
+
+    <div>
+      <p>Учитывая следующий CSS-код, какой цвет будет у текста элемента <code>span</code> внутри элемента <code>p</code>?</p>
+      <pre>
+        <code>
+          &lt;head&gt;
+            &lt;style&gt;
+              p {
+                color: blue;
+              }
+            &lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;p&gt;Это &lt;span&gt;тест&lt;/span&gt;.&lt;/p&gt;
+          &lt;/body&gt;
+        </code>
+      </pre>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Специфичность селекторов.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Сходство области применения правил.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Используется ли ключевое слово <code>!important</code>.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Свойство <code>color</code> правила CSS.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
