@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Тест по основам CSS</title>
+</head>
+<body>
+  <h1>Тест по основам CSS</h1>
+
+  <p>
+    Чтобы пройти тест, вам необходимо правильно ответить как минимум на 18 из 20 вопросов ниже.
+  </p>
+
+  <form action="">
+    <ol>
+      <li>Из каких основных частей состоит правило CSS?</li>
+        <input type="radio" id="question1-1" name="question1" value="Option1" />
+        <label for="question1-1">Элементы и атрибуты</label>
+        <br>
+        <input type="radio" id="question1-2" name="question1" value="Option2" />
+        <label for="question1-2">Скрипты и значения</label>
+        <br>
+        <input type="radio" id="question1-3" name="question1" value="Option3" />
+        <label for="question1-3">Стиль и таблицы</label>
+        <br>
+        <input type="radio" id="question1-4" name="question1" value="Option4" />
+        <label for="question1-4">Селекторы и блоки объявлений</label>
+      <li>Какой из следующих вариантов синтаксиса является правильным для правила CSS?</li>
+        <input type="radio" id="question2-1" name="question2" value="Option1" />
+        <label for="question2-1">
+          <pre>
+            <code>
+              body {
+                font-family; Arial:
+              }
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question2-2" name="question2" value="Option2" />
+        <label for="question2-2">
+          <pre>
+            <code>
+              font-family {
+                body: Arial;
+              }
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question2-3" name="question2" value="Option3" />
+        <label for="question2-3">
+          <pre>
+            <code>
+              body [
+                font-family: Arial;
+              ]
+            </code>
+          </pre>
+        </label>
+        <br>
+        <input type="radio" id="question2-4" name="question2" value="Option4" />
+        <label for="question2-4">
+          <pre>
+            <code>
+              body {
+                font-family: Arial;
+              }
+            </code>
+          </pre>
+        </label>
+      <li>Что такое стили оформления браузера по умолчанию?</li>
+        <input type="radio" id="question3-1" name="question3" value="Option1" />
+        <label for="question3-1">Это цветовые схемы для различных браузеров.</label>
+        <br>
+        <input type="radio" id="question3-2" name="question3" value="Option2" />
+        <label for="question3-2">Правила CSS, которые браузеры применяют автоматически.</label>
+        <br>
+        <input type="radio" id="question3-3" name="question3" value="Option3" />
+        <label for="question3-3">Это обязательные стили, которые необходимо использовать для определенных HTML-элементов.</label>
+        <br>
+        <input type="radio" id="question3-4" name="question3" value="Option4" />
+        <label for="question3-4">HTML-элементы, обладающие одинаковыми свойствами стиля независимо от браузера.</label>
+      <li>Какое значение по умолчанию у свойства <code>width</code>?</li>
+        <input type="radio" id="question4-1" name="question4" value="Option1" />
+        <label for="question4-1"><code>100%</code></label>
+        <br>
+        <input type="radio" id="question4-2" name="question4" value="Option2" />
+        <label for="question4-2"><code>auto</code></label>
+        <br>
+        <input type="radio" id="question4-3" name="question4" value="Option3" />
+        <label for="question4-3"><code>none</code></label>
+        <br>
+        <input type="radio" id="question4-4" name="question4" value="Option4" />
+        <label for="question4-4"><code>0</code></label>
+      <li>Что определяет свойство <code>min-height</code>?</li>
+        <input type="radio" id="question5-1" name="question5" value="Option1" />
+        <label for="question5-1">Минимальная высота элемента.</label>
+        <br>
+        <input type="radio" id="question5-2" name="question5" value="Option2" />
+        <label for="question5-2">Максимальная высота элемента.</label>
+        <br>
+        <input type="radio" id="question5-3" name="question5" value="Option3" />
+        <label for="question5-3">Начальная высота элемента.</label>
+        <br>
+        <input type="radio" id="question5-4" name="question5" value="Option4" />
+        <label for="question5-4">Высота элемента.</label>
+      <li>Какое из следующих утверждений ВЕРНО относительно универсального селектора <code>*</code>?</li>
+        <input type="radio" id="question6-1" name="question6" value="Option1" />
+        <label for="question6-1">Он не может сбрасывать стили в разных браузерах.</label>
+        <br>
+        <input type="radio" id="question6-2" name="question6" value="Option2" />
+        <label for="question6-2">У него самая высокая специфичность, поскольку он может стилизовать все элементы на странице.</label>
+        <br>
+        <input type="radio" id="question6-3" name="question6" value="Option3" />
+        <label for="question6-3">Он увеличивает значение специфичности на 1.</label>
+        <br>
+        <input type="radio" id="question6-4" name="question6" value="Option4" />
+        <label for="question6-4">У него самое низкое значение специфичности среди всех селекторов.</label>
+      <li>Какой селектор правильно выбирает элементы <code>li</code> для упорядоченного списка?</li>
+        <input type="radio" id="question7-1" name="question7" value="Option1" />
+        <label for="question7-1"><code>li {}</code></label>
+        <br>
+        <input type="radio" id="question7-2" name="question7" value="Option2" />
+        <label for="question7-2"><code>ol li {}</code></label>
+        <br>
+        <input type="radio" id="question7-3" name="question7" value="Option3" />
+        <label for="question7-3"><code>ol + li {}</code></label>
+        <br>
+        <input type="radio" id="question7-4" name="question7" value="Option4" />
+        <label for="question7-4"><code>ul li {}</code></label>
+      <li>Какой селектор нацелен на элементы абзаца внутри элемента <code>div</code>?</li>
+        <input type="radio" id="question8-1" name="question8" value="Option1" />
+        <label for="question8-1"><code>div p {}</code></label>
+        <br>
+        <input type="radio" id="question8-2" name="question8" value="Option2" />
+        <label for="question8-2"><code>p, div {}</code></label>
+        <br>
+        <input type="radio" id="question8-3" name="question8" value="Option3" />
+        <label for="question8-3"><code>p div {}</code></label>
+        <br>
+        <input type="radio" id="question8-4" name="question8" value="Option4" />
+        <label for="question8-4"><code>div, p {}</code></label>
+      <li>Где применяется стиль свойства <code>margin</code>?</li>
+        <input type="radio" id="question9-1" name="question9" value="Option1" />
+        <label for="question9-1">На границе элемента.</label>
+        <br>
+        <input type="radio" id="question9-2" name="question9" value="Option2" />
+        <label for="question9-2">Между содержанием и границей.</label>
+        <br>
+        <input type="radio" id="question9-3" name="question9" value="Option3" />
+        <label for="question9-3">Пространство за пределами элемента.</label>
+        <br>
+        <input type="radio" id="question9-4" name="question9" value="Option4" />
+        <label for="question9-4">Внутреннее пространство элемента.</label>
+      <li>Где применяется стиль свойства <code>padding</code>?</li>
+        <input type="radio" id="question10-1" name="question10" value="Option1" />
+        <label for="question10-1">На границе элемента.</label>
+        <br>
+        <input type="radio" id="question10-2" name="question10" value="Option2" />
+        <label for="question10-2">Пространство внутри элемента.</label>
+        <br>
+        <input type="radio" id="question10-3" name="question10" value="Option3" />
+        <label for="question10-3">Между границей элементов и окружающими элементами.</label>
+        <br>
+        <input type="radio" id="question10-4" name="question10" value="Option4" />
+        <label for="question10-4">Пространство за пределами элемента.</label>
+      <li>Какое утверждение о блочных элементах является ЛОЖНЫМ?</li>
+        <input type="radio" id="question11-1" name="question11" value="Option1" />
+        <label for="question11-1">К распространенным блочным элементам относятся <code>div</code>, <code>p</code> и <code>section</code>.</label>
+        <br>
+        <input type="radio" id="question11-2" name="question11" value="Option2" />
+        <label for="question11-2">Блочные элементы начинаются с новой строки и занимают всю ширину своего контейнера.</label>
+        <br>
+        <input type="radio" id="question11-3" name="question11" value="Option3" />
+        <label for="question11-3">Они могут растягиваться, чтобы соответствовать ширине своего контейнера.</label>
+        <br>
+        <input type="radio" id="question11-4" name="question11" value="Option4" />
+        <label for="question11-4">Они не могут занять всю доступную ширину, так как им это запрещено.</label>
+      <li>Какое утверждение НЕВЕРНО при использовании значения <code>inline-block</code>?</li>
+        <input type="radio" id="question12-1" name="question12" value="Option1" />
+        <label for="question12-1">Элементы сохраняют линейность потока, но позволяют задавать ширину и высоту.</label>
+        <br>
+        <input type="radio" id="question12-2" name="question12" value="Option2" />
+        <label for="question12-2">Они не обладают свойствами, общими с строчными или блочными элементами.</label>
+        <br>
+        <input type="radio" id="question12-3" name="question12" value="Option3" />
+        <label for="question12-3">Они могут иметь свойства ширины и высоты.</label>
+        <br>
+        <input type="radio" id="question12-4" name="question12" value="Option4" />
+        <label for="question12-4">Элементы <code>inline-block</code> ведут себя так же, как и строчные элементы.</label>
+      <li>Что ВЕРНО относительно ключевого слова !important?</li>
+        <input type="radio" id="question13-1" name="question13" value="Option1" />
+        <label for="question13-1">Оно упрощает поддержку правил CSS.</label>
+        <br>
+        <input type="radio" id="question13-2" name="question13" value="Option2" />
+        <label for="question13-2">Оно проверяет правильность синтаксиса свойства CSS.</label>
+        <br>
+        <input type="radio" id="question13-3" name="question13" value="Option3" />
+        <label for="question13-3">Оно переопределяет специфичность других селекторов.</label>
+        <br>
+        <input type="radio" id="question13-4" name="question13" value="Option4" />
+        <label for="question13-4">Оно используется для комментирования важных свойств CSS.</label>
+      <li>Какой символ предшествует имени селектора класса?</li>
+        <input type="radio" id="question14-1" name="question14" value="Option1" />
+        <label for="question14-1"><code>$</code></label>
+        <br>
+        <input type="radio" id="question14-2" name="question14" value="Option2" />
+        <label for="question14-2"><code>.</code></label>
+        <br>
+        <input type="radio" id="question14-3" name="question14" value="Option3" />
+        <label for="question14-3"><code>*</code></label>
+        <br>
+        <input type="radio" id="question14-4" name="question14" value="Option4" />
+        <label for="question14-4"><code>#</code></label>
+      <li>Что НЕВЕРНО относительно строчных элементов?</li>
+        <input type="radio" id="question15-1" name="question15" value="Option1" />
+        <label for="question15-1">Они занимают ровно столько места, сколько им необходимо.</label>
+        <br>
+        <input type="radio" id="question15-2" name="question15" value="Option2" />
+        <label for="question15-2">Они не начинаются с новой строки.</label>
+        <br>
+        <input type="radio" id="question15-3" name="question15" value="Option3" />
+        <label for="question15-3">Они всегда начинаются с новой строки.</label>
+        <br>
+        <input type="radio" id="question15-4" name="question15" value="Option4" />
+        <label for="question15-4">К распространенным строчным элементам относятся <code>span</code> и <code>img</code>.</label>
+      <li>Где осуществляется доступ к внутренним CSS-стилям?</li>
+        <input type="radio" id="question16-1" name="question16" value="Option1" />
+        <label for="question16-1">Это стили, которые важны для проекта и не используются за его пределами.</label>
+        <br>
+        <input type="radio" id="question16-2" name="question16" value="Option2" />
+        <label for="question16-2">Они хранятся внутри элемента <code>body</code>, если нужно стилизовать только одну веб-страницу.</label>
+        <br>
+        <input type="radio" id="question16-3" name="question16" value="Option3" />
+        <label for="question16-3">Поскольку они составляют основу стиля проекта, они сохраняются в файле <code>styles.css</code>, чтобы другие веб-страницы могли получить к ним доступ.</label>
+        <br>
+        <input type="radio" id="question16-4" name="question16" value="Option4" />
+        <label for="question16-4">Они указываются в разделе <code>style</code> элемента <code>head</code>.</label>
+      <li>В каком порядке следует применять свойство <code>padding</code> при использовании сокращенного синтаксиса?</li>
+        <input type="radio" id="question17-1" name="question17" value="Option1" />
+        <label for="question17-1">top, right, bottom, left</label>
+        <br>
+        <input type="radio" id="question17-2" name="question17" value="Option2" />
+        <label for="question17-2">left, right, top, bottom</label>
+        <br>
+        <input type="radio" id="question17-3" name="question17" value="Option3" />
+        <label for="question17-3">top, bottom, left, right</label>
+        <br>
+        <input type="radio" id="question17-4" name="question17" value="Option4" />
+        <label for="question17-4">right, top, left, bottom</label>
+      <li>В каком порядке следует применять свойство <code>margin</code> при использовании сокращенного синтаксиса?</li>
+        <input type="radio" id="question18-1" name="question18" value="Option1" />
+        <label for="question18-1">right, top, left, bottom</label>
+        <br>
+        <input type="radio" id="question18-2" name="question18" value="Option2" />
+        <label for="question18-2">left, right, top, bottom</label>
+        <br>
+        <input type="radio" id="question18-3" name="question18" value="Option3" />
+        <label for="question18-3">top, right, bottom, left</label>
+        <br>
+        <input type="radio" id="question18-4" name="question18" value="Option4" />
+        <label for="question18-4">top, bottom, left, right</label>
+      <li>Для чего используются встроенные CSS-стили?</li>
+        <input type="radio" id="question19-1" name="question19" value="Option1" />
+        <label for="question19-1">Они используются для непосредственного оформления элемента, вместо применения внутренних или внешних CSS-стилей.</label>
+        <br>
+        <input type="radio" id="question19-2" name="question19" value="Option2" />
+        <label for="question19-2">Они используются для стилизации элементов только тогда, когда все они располагаются на одной строке в области просмотра браузера.</label>
+        <br>
+        <input type="radio" id="question19-3" name="question19" value="Option3" />
+        <label for="question19-3">Они используются только для оформления строчных элементов.</label>
+        <br>
+        <input type="radio" id="question19-4" name="question19" value="Option4" />
+        <label for="question19-4">Они используются для решения вопроса разделения ответственности.</label>
+      <li>Какой символ предшествует селектору идентификатора?</li>
+        <input type="radio" id="question20-1" name="question20" value="Option1" />
+        <label for="question20-1"><code>.</code></label>
+        <br>
+        <input type="radio" id="question20-2" name="question20" value="Option2" />
+        <label for="question20-2"><code>$</code></label>
+        <br>
+        <input type="radio" id="question20-3" name="question20" value="Option3" />
+        <label for="question20-3"><code>*</code></label>
+        <br>
+        <input type="radio" id="question20-4" name="question20" value="Option4" />
+        <label for="question20-4"><code>#</code></label>
+    </ol>
+    
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
