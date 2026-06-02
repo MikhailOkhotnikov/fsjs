@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как расположить элементы списка с помощью внешнего отступа или межстрочного интервала?</title>
+</head>
+<body>
+  <h1>Как расположить элементы списка с помощью внешнего отступа или межстрочного интервала?</h1>
+
+  <p>
+    Внешний отступ и межстрочный интервал необходимы для размещения элементов списка, чтобы улучшить читаемость и визуальную привлекательность.
+  </p>
+
+  <p>
+    Для начала давайте начнём расставлять элементы списка с помощью внешнего отступа!
+  </p>
+
+  <p>
+    Внешние отступы (<code>margin</code>) можно использовать для создания пространства между элементами списка, применяя свойства отступов к элементам <code>li</code>. 
+    Этот метод позволяет контролировать расстояние за пределами каждого элемента списка, эффективно увеличивая или уменьшая промежуток между ними.
+  </p>
+
+  <p>
+    Рассмотрим пример неупорядоченного списка (unordered list) с тремя пунктами.
+  </p>
+
+  <pre>
+    <code>
+      &lt;ul&gt;
+        &lt;li&gt;Пункт 1&lt;/li&gt;
+        &lt;li&gt;Пункт 2&lt;/li&gt;
+        &lt;li&gt;Пункт 3&lt;/li&gt;
+      &lt;/ul&gt;
+    </code>
+  </pre>
+
+  <p>
+    По умолчанию в HTML не используется большой интервал между элементами списка.
+  </p>
+
+  <p>
+    Чтобы добавить внешние отступы к нижней части каждого элемента списка, можно использовать свойство <code>margin-bottom</code> следующим образом:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;Пункт 1&lt;/li&gt;
+          &lt;li&gt;Пункт 2&lt;/li&gt;
+          &lt;li&gt;Пункт 3&lt;/li&gt;
+        &lt;/ul&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        li {
+          margin-bottom: 40px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере к нижней части каждого элемента списка внутри неупорядоченного списка будет добавлен отступ в <code>40px</code>.
+  </p>
+
+  <p>
+    Ещё один способ расположить элементы списка на некотором расстоянии друг от друга — использовать свойство <code>line-high</code>.
+  </p>
+
+  <p>
+    Свойство <code>line-height</code> регулирует вертикальное расстояние между строками текста в пределах одного элемента списка.
+  </p>
+
+  <p>
+    Хотя это в первую очередь влияет на расстояние между строками текста внутри каждого элемента, это также может косвенно влиять на 
+    общее расстояние между элементами списка, если элементы содержат только одну строку текста.
+  </p>
+
+  <p>
+    Если элементы списка содержат несколько строк текста, параметр <code>line-heading</code> повлияет на расстояние между этими строками, 
+    но он не изменяет напрямую расстояние между отдельными элементами списка.
+  </p>
+
+  <p>
+    Для управления расстоянием между отдельными элементами списка используются свойства <code>margin</code> или <code>padding</code>.
+  </p>
+
+  <p>
+    Используя тот же неупорядоченный список, что и ранее, вот пример применения межстрочного интервала (<code>line-height</code>) к элементам списка:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;ul&gt;
+          &lt;li&gt;Пункт 1&lt;/li&gt;
+          &lt;li&gt;Пункт 2&lt;/li&gt;
+          &lt;li&gt;Пункт 3&lt;/li&gt;
+        &lt;/ul&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        li {
+          line-height: 2; 
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере параметр <code>line-height: 2;</code> устанавливает высоту строки равной удвоенному размеру шрифта, 
+    создавая больше вертикального пространства внутри каждого элемента списка.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какое свойство CSS вы бы использовали для создания пространства между элементами списка путем регулировки отступа за пределами каждого элемента <code>li</code>?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>padding</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>line-height</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>margin</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>border</code></label>
+    </div>
+
+    <div>
+      <p>Какое влияние оказывает на элементы списка правило CSS <code>li { margin-bottom: 15px; }</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Добавляет 15 пикселей пространства внутри каждого элемента списка.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Добавляет 15 пикселей пространства между содержимым и границей каждого элемента списка.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Добавляет 15 пикселей свободного пространства под каждым элементом списка.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Добавляет 15 пикселей пространства над каждым элементом списка.</label>
+    </div>
+
+    <div>
+      <p>Что контролирует свойство <code>line-height</code> в CSS?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">Ширину содержимого.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">Пространство внутри границ элемента.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">Вертикальное расстояние между строками текста внутри элемента.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">Пространство за пределами границ элемента.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
