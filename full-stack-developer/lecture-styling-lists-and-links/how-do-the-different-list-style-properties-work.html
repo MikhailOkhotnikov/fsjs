@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как работают различные свойства списков?</title>
+</head>
+<body>
+  <h1>Как работают различные свойства списков?</h1>
+
+  <p>
+    В CSS свойство <code>list-style</code> используется для управления внешним видом списков на веб-странице.
+  </p>
+
+  <p>
+    Независимо от того, работаете ли вы с упорядоченными списками (ordered lists, <code>ol</code>) или неупорядоченными списками (unordered lists, <code>ul</code>), 
+    свойство <code>list-style</code> позволяет настроить способ отображения элементов списка.
+  </p>
+
+  <p>
+    Свойство <code>list-style</code> на самом деле является сокращенной записью для трех других свойств:
+  </p>
+
+  <ul>
+    <li><code>list-style-type</code></li>
+    <li><code>list-style-position</code></li>
+    <li><code>list-style-image</code></li>
+  </ul>
+
+  <p>
+    Каждый из них играет свою роль в определении внешнего вида списков.
+  </p>
+
+  <p>
+    Свойство <code>list-style-type</code> позволяет определить тип маркера или номера, используемого в списке.
+  </p>
+
+  <p>
+    Для неупорядоченных списков можно выбрать один из нескольких стилей маркировки, например, в виде дисков (discs), кругов (circles) или квадратов (squares).
+  </p>
+
+  <p>
+    Для упорядоченных списков можно использовать различные системы нумерации, такие как десятичные (decimal), 
+    римские цифры (Roman numerals) или даже буквенные обозначения (alphabetical characters).
+  </p>
+
+  <p>Вот пример использования <code>list-style-type</code>:</p>
+
+  <pre>
+    <code>
+      &lt;ul style="list-style-type: square;"&gt;
+        &lt;li&gt;Пункт 1&lt;/li&gt;
+        &lt;li&gt;Пункт 2&lt;/li&gt;
+        &lt;li&gt;Пункт 3&lt;/li&gt;
+      &lt;/ul&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере маркеры неупорядоченного списка заменены на квадраты.
+  </p>
+
+  <p>
+    Свойство <code>list-style-type</code> используется чаще всего из трёх, поскольку оно напрямую влияет на внешний вид маркированного или нумерованного списка.
+  </p>
+
+  <p>
+    Свойство <code>list-style-position</code> управляет положением маркера или номера относительно содержимого элемента списка. 
+    Можно использовать два значения: <code>inside</code> и <code>outside</code>.
+  </p>
+
+  <p>
+    При использовании значения <code>outside</code> маркер или номер отображаются за пределами текста, что является поведением по умолчанию.
+  </p>
+
+  <p>
+    А если вы используете значение <code>inside</code>, то маркер или номер отображаются внутри содержимого, 
+    что может привести к переносу текста и выравниванию его по маркеру или номеру.
+  </p>
+
+  <p>
+    Вот пример использования свойства <code>list-style-position</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;ul style="list-style-position: inside;"&gt;
+        &lt;li&gt;Пункт 1&lt;/li&gt;
+        &lt;li&gt;Пункт 2&lt;/li&gt;
+        &lt;li&gt;Пункт 3&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul style="list-style-position: outside;"&gt;
+        &lt;li&gt;Пункт 4&lt;/li&gt;
+        &lt;li&gt;Пункт 5&lt;/li&gt;
+        &lt;li&gt;Пункт 6&lt;/li&gt;
+      &lt;/ul&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере для двух разных тегов неупорядоченного списка указаны значения как внутри (<code>inside</code>), так и снаружи (<code>outside</code>).
+  </p>
+
+  <p>
+    Свойство <code>list-style-position</code> может быть полезно, когда вам нужно контролировать выравнивание содержимого списка, 
+    особенно в ситуациях, когда в одном элементе списка содержится несколько строк текста.
+  </p>
+
+  <p>
+    Свойство <code>list-style-image</code> позволяет использовать изображение в качестве маркера для элементов списка. 
+    Это может быть полезно для придания спискам уникального визуального стиля.
+  </p>
+
+  <p>
+    Вот пример использования <code>list-style-image</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;head&gt;
+        &lt;style&gt;
+          ul {
+            list-style-image: url('https://cdn.freecodecamp.org/platform/universal/freecodecamp-org-gravatar.jpeg');
+            list-style-position: inside;
+          }
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Пункт 1&lt;/li&gt;
+          &lt;li&gt;Пункт 2&lt;/li&gt;
+          &lt;li&gt;Пункт 3&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/body&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере маркированные списки заменены пользовательским логотипом freeCodeCamp, что добавляет списку индивидуальности.
+  </p>
+
+  <p>
+    При использовании свойства <code>list-style-image убедитесь</code>, что выбранное изображение небольшое и соответствует дизайну вашей веб-страницы. 
+    Если изображение слишком большое или сложное, это может затруднить чтение списка.
+  </p>
+
+  <p>
+    Вы можете объединить три свойства — <code>list-style-type</code>, <code>list-style-position</code> и 
+    <code>list-style-image</code> — в одно сокращенное свойство <code>list-style</code>.
+  </p>
+
+  <p>
+    Порядок значений в сокращенной записи не имеет значения, но все три можно указать одновременно.
+  </p>
+
+  <p>
+    Вот пример использования сокращенного свойства:
+  </p>
+
+  <pre>
+    <code>
+      &lt;ul style="list-style: square inside url('https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg');"&gt;
+        &lt;li&gt;Пункт 1&lt;/li&gt;
+        &lt;li&gt;Пункт 2&lt;/li&gt;
+        &lt;li&gt;Пункт 3&lt;/li&gt;
+      &lt;/ul&gt;
+    </code>
+  </pre>
+
+  <p>
+    В этом примере элементы списка используют квадратные маркеры, расположенные внутри содержимого, с пользовательским изображением в качестве маркера.
+  </p>
+
+  <p>
+    Однако, если изображение недоступно или не отображается, в качестве запасного варианта будут использоваться квадратные маркеры.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какое свойство <code>list-style</code> вы бы использовали, чтобы заменить маркеры в неупорядоченном списке на круги?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>list-style-image</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>list-style-position</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>list-style-type</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>list-style</code></label>
+    </div>
+
+    <div>
+      <p>Если вы хотите, чтобы маркеры списка располагались на одной линии с текстом, какое значение <code>list-style-position</code> следует использовать?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>outside</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>inside</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>center</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>left</code></label>
+    </div>
+
+    <div>
+      <p>Какое свойство позволяет заменить стандартный маркер списка на пользовательское изображение?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>list-style-type</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>list-style-position</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>list-style</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>list-style-image</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
