@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как оформить различные состояния ссылок?</title>
+</head>
+<body>
+  <h1>Как оформить различные состояния ссылок?</h1>
+
+  <p>
+    Ссылка может находиться в разных состояниях, включая <code>link</code>, <code>visited</code>, <code>hover</code>, <code>focus</code> и <code>active</code>. 
+    Эти состояния важны для того, чтобы помочь пользователям распознавать ссылки и предоставлять четкую обратную связь после взаимодействия, 
+    что улучшает как удобство использования, так и доступность.
+  </p>
+
+  <p>
+    Оформление различных состояний ссылок имеет решающее значение для удобства использования и доступности, 
+    поскольку оно предоставляет визуальные подсказки о текущем состоянии ссылки. 
+    Это помогает пользователям понять, какие ссылки они посетили, с какой ссылкой взаимодействуют и что произойдет при нажатии.
+  </p>
+
+  <p>
+    Для пользователей с нарушениями зрения или когнитивными расстройствами эти различные стили могут значительно упростить и сделать более интуитивно понятной навигацию.
+  </p>
+
+  <p>
+    Кроме того, четкое отображение состояний ссылок улучшает общее взаимодействие с пользователем, 
+    обеспечивая мгновенную обратную связь о действиях пользователя, уменьшая путаницу и улучшая навигацию по сайту.
+  </p>
+
+  <p>
+    Эти состояния можно стилизовать с помощью так называемых псевдоклассов (<code>pseudo-classes</code>) в CSS.
+  </p>
+
+  <p>
+    Псевдокласс — это ключевое слово, добавляемое к селектору, которое определяет особое состояние выбранного элемента.
+  </p>
+
+  <p>
+    Например, свойство <code>:hover</code> может изменить цвет кнопки при наведении на неё указателя мыши, 
+    а свойство <code>:visited</code> — цвет ссылки, которая уже была посещена.
+  </p>
+
+  <p>
+    Псевдоклассы позволяют стилизовать элементы в зависимости от их состояния или взаимодействия пользователя с ними, без необходимости дополнительной разметки в HTML-коде.
+  </p>
+
+  <p>
+    Синтаксис псевдокласса выглядит примерно так, где <code>A</code> — селектор, а <code>:B</code> — псевдокласс:
+  </p>
+
+  <pre>
+    <code>
+      A:B {
+        property: value;
+      }
+    </code>
+  </pre>
+
+  <p>
+    Чтобы лучше понять, как оформлять различные состояния ссылок, давайте рассмотрим несколько примеров.
+  </p>
+
+  <p>
+    Псевдокласс <code>:link</code> стилизует непосещенные ссылки, указывая на то, что они кликабельны.
+  </p>
+
+  <p>
+    Вот пример использования псевдокласса <code>:link</code> для обращения к элементу привязки:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;a href="/"&gt;Пример ссылки&lt;/a&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        /* Нормальное состояние (непросмотренная ссылка) */
+        a:link { 
+          color: red;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В приведенном выше примере стандартный синий цвет ссылки изменится на красный (<code>red</code>), пока она не будет посещена.
+  </p>
+
+  <p>
+    <code>:visited</code> стилизует ссылки, которые уже были посещены или которые были нажаты, помогая пользователям отслеживать, по каким ссылкам они переходили ранее. 
+    Вот пример использования псевдокласса <code>:visited</code>:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;a href="https://www.freecodecamp.org/learn/" target="_blank&gt;freeCodeCamp&lt;/a&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        /* Посещенная ссылка */
+        a:visited {
+          color: green;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Этот код окрасит ссылку в зеленый (<code>green</code>) цвет при нажатии.
+  </p>
+
+  <p>
+    <code>:hover</code> изменяет стиль ссылки при наведении на неё курсора, визуально указывая на интерактивность ссылки. 
+    Вот пример использования псевдокласса <code>:hover</code>:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;a href="/"&gt;Пример ссылки&lt;/a&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        /* Состояние при наведении курсора */
+        a:hover {
+          color: green;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Этот код окрасит ссылку в зеленый цвет при наведении на неё курсора мыши.
+  </p>
+
+  <p>
+    <code>:focus</code> добавляет стили вокруг ссылки, когда она находится в фокусе, например, при навигации с помощью клавиатуры или для повышения доступности.
+  </p>
+
+  <p>
+    Вот пример использования свойства <code>outline</code> для применения сплошной оранжевой обводки при фокусировке ссылки.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;a href="/"&gt;Пример ссылки&lt;/a&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        /* Состояние фокуса */
+        a:focus {
+          outline: 2px solid orange;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    <code>:active</code> изменяет стили ссылки во время клика, обеспечивая мгновенную обратную связь пользователю о том, что его действие регистрируется. 
+    Вот пример использования псевдокласса <code>:active</code>:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;a href="/"&gt;Пример ссылки&lt;/a&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        /* Активное состояние */
+        a:active {
+          color: pink;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    В этом примере кода ссылка мгновенно окрасится в розовый (<code>pink</code>) цвет при нажатии на неё.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какой псевдокласс CSS используется для оформления ссылок, которые ещё не были посещены?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>:visited</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>:link</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>:hover</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>:active</code></label>
+    </div>
+
+    <div>
+      <p>Какие визуальные изменения обычно происходят при наведении курсора в CSS?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Ссылка становится больше.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Цвет текста ссылки меняется.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Текст ссылки выделяется жирным шрифтом.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Текст ссылки выделен подчеркиванием.</label>
+    </div>
+
+    <div>
+      <p>Какой псевдокласс CSS вы бы использовали для добавления видимой обводки вокруг ссылки при переходе по ней с помощью клавиатуры?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>:link</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>:hover</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>:focus</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>:active</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
