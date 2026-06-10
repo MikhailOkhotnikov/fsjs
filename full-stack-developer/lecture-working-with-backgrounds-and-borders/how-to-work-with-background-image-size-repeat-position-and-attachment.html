@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Как работают размер, повтор, положение и прикрепление фонового изображения?</title>
+</head>
+<body>
+  <h1>Как работают размер, повтор, положение и прикрепление фонового изображения?</h1>
+
+  <p>
+    При работе с фоновыми изображениями в CSS у вас есть несколько свойств, позволяющих управлять отображением этих изображений.
+  </p>
+
+  <p>
+    Основные свойства, на которых мы сосредоточимся, — это <code>background-size</code>, <code>background-repeat</code>, 
+    <code>background-position</code> и <code>background-attachment</code>.
+  </p>
+
+  <p>
+    Давайте сначала рассмотрим свойство <code>background-image</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    Приведённый выше CSS-код устанавливает фоновое изображение кошки для элемента <code>body</code>.
+  </p>
+
+  <p>
+    Если вы хотите задать размер фонового изображения, вы можете использовать свойство <code>background-size</code>.
+  </p>
+
+  <p>
+    С помощью функции <code>contain</code> можно максимально увеличить масштаб изображения без обрезки или растягивания.
+  </p>
+
+  <p>
+    Вот пример с параметром <code>background-size: contain</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+          background-size: contain;
+          min-height: 100px;
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    Мы устанавливаем минимальную высоту (<code>min-height</code>) в <code>100px</code>, чтобы фоновое изображение было видно, 
+    а макет сохранял базовую высоту, гарантируя, что даже при минимальном количестве контента дизайн будет выглядеть сбалансированным и визуально привлекательным.
+  </p>
+
+  <p>
+    Если мы изменим свойство <code>background-size</code>, используя значение <code>cover</code>, 
+    то фоновое изображение будет масштабироваться, чтобы покрыть весь элемент <code>body</code>, сохраняя при этом его соотношение сторон.
+  </p>
+
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+          background-size: cover;
+          min-height: 100px;
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    В предыдущих примерах вы, вероятно, заметили, что фоновое изображение непрерывно повторялось.
+  </p>
+
+  <p>
+    По умолчанию фоновые изображения повторяются как по горизонтали, так и по вертикали, заполняя весь элемент. Однако вы можете настроить это поведение.
+  </p>
+
+  <p>
+    Вы можете использовать свойство <code>background-repeat</code> со значением <code>no-repeat</code>.
+  </p>
+
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          min-height: 100px;
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    Если установить параметр <code>background-size</code> в значение <code>contain</code> и 
+    параметр <code>background-repeat</code> в значение <code>no-repeat</code>, изображение больше не будет повторяться на экране.
+  </p>
+
+  <p>
+    Если вы хотите, чтобы фоновое изображение повторялось по горизонтали, 
+    вы можете использовать значение <code>repeat-x</code> для свойства <code>background-repeat</code>.
+  </p>
+
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+          background-size: contain;
+          background-repeat: repeat-x;
+          min-height: 100px;
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    Если вы хотите, чтобы фоновое изображение повторялось по вертикали, 
+    вы можете использовать значение <code>repeat-y</code> для свойства <code>background-repeat</code>.
+  </p>
+
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+          background-size: contain;
+          background-repeat: repeat-y;
+          min-height: 100px;
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    Для размещения фонового изображения на экране можно использовать свойство <code>background-position</code>.
+  </p>
+
+  <p>
+    Свойство <code>background-position</code> позволяет задать местоположение фонового изображения в элементе. 
+    Можно использовать ключевые слова, такие как <code>top</code>, <code>bottom</code>, <code>left</code>, 
+    <code>right</code> и <code>center</code>, или конкретные значения в пикселях или процентах.
+  </p>
+
+  <p>
+    Вот пример использования параметров <code>center</code> и <code>top</code> для свойства <code>background-position</code>:
+  </p>
+
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center top;
+          min-height: 100px;
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    Этот CSS-код размещает фоновое изображение по горизонтали в центре элемента и по вертикали в верхней части.
+  </p>
+
+  <p>
+    Наконец, параметр <code>background-attachment</code> определяет, будет ли фоновое изображение прокручиваться вместе с содержимым или 
+    оставаться неподвижным при прокрутке страницы.
+  </p>
+
+  <p>
+    Основные значения параметра — <code>scroll</code> (по умолчанию), при котором фоновое изображение прокручивается вместе с содержимым, 
+    и <code>fixed</code>, при котором фоновое изображение остается в одном и том же положении на экране.
+  </p>
+
+  <p>
+    Вот пример использования значения <code>fixed</code> свойства <code>background-attachment</code>:
+  </p>
+
+  
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+          background-position: center top;
+          background-attachment: fixed;
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    Этот CSS-код устанавливает фоновое изображение таким образом, чтобы оно оставалось неподвижным даже при прокрутке страницы.
+  </p>
+
+  <p>
+    Если вам нужно объединить несколько свойств в одну строку, вы можете сделать это, используя сокращенное свойство <code>background</code>.
+  </p>
+
+  <p>
+    Вот пример:
+  </p>
+
+  <pre>
+    <code>
+      &lt;style&gt;
+        body {
+          background: center top fixed
+            url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+        }
+      &lt;/style&gt;
+    </code>
+  </pre>
+
+  <p>
+    В приведенном выше примере параметры <code>background-image</code>, <code>background-position</code> и 
+    <code>background-attachment</code> объединены в одну строку.
+  </p>
+
+  <p>
+    Овладев этими свойствами, вы получите полный контроль над отображением фоновых изображений в ваших веб-дизайнах, 
+    что позволит создавать более привлекательные и функциональные макеты.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какое значение параметра <code>background-size</code> вы бы использовали, чтобы гарантировать, 
+        что всё фоновое изображение будет видно без обрезки, даже если оно не покрывает весь элемент?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>cover</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>contain</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>auto</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>100%</code></label>
+    </div>
+
+    <div>
+      <p>Если вы хотите, чтобы фоновое изображение повторялось по горизонтали, но не по вертикали, какое значение параметра <code>background-repeat</code> вы бы использовали?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1"><code>repeat</code></label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2"><code>no-repeat</code></label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3"><code>repeat-x</code></label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4"><code>repeat-y</code></label>
+    </div>
+
+    <div>
+      <p>Какое значение параметра <code>background-attachment</code> вы бы использовали, чтобы фоновое изображение оставалось на месте, когда пользователь прокручивает страницу?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>scroll</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>fixed</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>local</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>static</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
