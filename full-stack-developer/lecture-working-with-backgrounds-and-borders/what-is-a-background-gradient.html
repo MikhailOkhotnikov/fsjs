@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Что такое градиент фона и как он работает?</title>
+</head>
+<body>
+  <h1>Что такое градиент фона и как он работает?</h1>
+
+  <p>
+    В CSS градиент фона — это плавный переход между двумя или более цветами, который можно применить к фону элемента. 
+    Градиенты позволяют создавать визуально привлекательные фоны без использования изображений.
+  </p>
+
+  <p>
+    В CSS существует два основных типа градиентов: линейные и радиальные.
+  </p>
+
+  <p>
+    Линейный градиент (linear gradient) — это переход цветов вдоль прямой линии. Вы можете задать направление и используемые цвета.
+  </p>
+
+  <p>
+    Вот базовый синтаксис:
+  </p>
+
+  <pre>
+    <code>
+      background: linear-gradient(direction, color-stop1, color-stop2, ...);
+    </code>
+  </pre>
+
+  <p>
+    В этом примере мы используем свойство CSS <code>background</code> со значением <code>linear-gradient</code>.
+  </p>
+
+  <p>
+    Параметр direction определяет направление градиента. Это может быть угол (например, 45deg), 
+    ключевое слово (например, вправо (<code>to right</code>), вниз(<code>to bottom</code>)) или сторона/угол.
+  </p>
+
+  <p>
+    Параметр <code>color-stop</code> задает цвета и позиции, где происходят градиентные переходы.
+  </p>
+
+  <p>
+    Чтобы лучше понять принцип работы линейных градиентов, рассмотрим следующий пример:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;div class="linear-gradient"&gt;&lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .linear-gradient {
+          background: linear-gradient(to right, red, yellow);
+          height: 40vh;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Этот CSS-код создает линейный градиент, переходящий от красного (<code>red</code>) слева к желтому (<code>yellow</code>) справа (<code>right</code>). 
+    Градиент применяется к элементу высотой <code>40%</code> от высоты области просмотра (viewport height). 
+    Подробнее об единицах измерения <code>vh</code> вы узнаете в следующих уроках.
+  </p>
+
+  <p>
+    Направление <code>to right</code> означает, что градиент идет горизонтально слева направо.
+  </p>
+
+  <p>
+    Другой тип градиента — радиальный (<code>radial</code>) градиент.
+  </p>
+
+  <p>
+    Радиальный градиент (radial gradient) — это переход цветов, исходящих из начала координат (обычно из центра) и 
+    распространяющихся наружу по круговой или эллиптической траектории.
+  </p>
+
+  <p>
+    Вот базовый синтаксис:
+  </p>
+
+  <pre>
+    <code>
+      background: radial-gradient(shape size at position, color-stop1, color-stop2, ...)
+    </code>
+  </pre>
+
+  <p>
+    В синтаксисе параметр <code>shape</code> определяет форму градиента, которая может быть кругом (<code>circle</code>) или эллипсом (<code>ellipse</code>).
+  </p>
+
+  <p>
+    Размер (<code>size</code>) определяет размер конечной точки градиента, которая может быть ближайшей стороной (<code>closest-side</code>), 
+    ближайшим углом (<code>closest-corner</code>), самой дальней стороной (<code>farthest-side</code>) или самым дальним углом (<code>farthest-corner</code>).
+  </p>
+
+  <p>
+    <code>position</code> определяет положение центра градиента, которое может быть задано с помощью ключевых слов 
+    (например, <code>center</code>, <code>top left</code>, <code>bottom right</code>) или точных значений (например, <code>50% 50%, 10px 20px</code>).
+  </p>
+
+  <p>
+    Наконец, цветовые точки (color stops) представляют собой список цветов, через которые проходит градиент. 
+    Каждая цветовая точка может дополнительно включать значение позиции (в процентах или по длине), указывающее, где должен быть размещен цвет.
+  </p>
+
+  <p>
+    Примером может служить следующее:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;div class="radial-gradient"&gt;&lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .radial-gradient{
+          background: radial-gradient(circle closest-side at center, red, yellow 50%, green);
+          height: 60vh;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Этот CSS-код создает круговой радиальный градиент, центрированный на элементе. 
+    Он начинается с красного (<code>red</code>) цвета в центре, переходит в желтый (<code>yellow</code>) на <code>50%</code> радиуса и заканчивается зеленым (<code>green</code>).
+  </p>
+
+  <p>
+    Ключевое слово <code>closest-side</code> заставляет конечную форму градиента соответствовать ближайшей стороне элемента. 
+    Градиент применяется к элементу, высота которого составляет <code>60%</code> от высоты области просмотра.
+  </p>
+
+  <p>
+    Умение работать с градиентами CSS может значительно улучшить ваши дизайны, создавая визуально привлекательные фоны без необходимости использования изображений.
+  </p>
+
+  <p>
+    Благодаря таким опциям, как линейные градиенты для плавных переходов и радиальные градиенты для создания круговых эффектов, 
+    они обеспечивают как гибкость, так и креативность в веб-дизайне.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Что указывает ключевое слово <code>circle</code> в функции <code>radial-gradient()</code>?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Градиент будет иметь квадратную форму.</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Градиент будет распространяться по диагонали.</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Градиент будет иметь круглую форму.</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Градиент будет применен к тексту.</label>
+    </div>
+
+    <div>
+      <p>Что делает ключевое слово <code>farthest-corner</code> в параметре size функции <code>radial-gradient()</code>?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Это позволяет градиенту распространяться до ближайшего угла элемента.</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Это позволяет градиенту покрыть всю ширину элемента.</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Это позволяет градиенту распространяться до самого дальнего угла элемента.</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Это приводит к тому, что градиент отображается только внутри <code>padding</code> элемента.</label>
+    </div>
+
+    <div>
+      <p>Где находится центр градиента в функции <code>radial-gradient(circle at center, red, yellow 50%, green)</code>?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1">В правом верхнем углу элемента.</label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2">В левом нижнем углу элемента.</label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3">В центре элемента.</label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4">На внешнем краю элемента.</label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
