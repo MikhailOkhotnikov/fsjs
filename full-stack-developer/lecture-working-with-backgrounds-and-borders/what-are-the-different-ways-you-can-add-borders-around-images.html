@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Какие способы добавления рамок вокруг изображений существуют?</title>
+</head>
+<body>
+  <h1>Какие способы добавления рамок вокруг изображений существуют?</h1>
+
+  <p>
+    В CSS существует несколько способов добавления рамок вокруг изображений, каждый из которых предлагает различные варианты оформления и уровни контроля.
+  </p>
+
+  <p>
+    Давайте рассмотрим некоторые из наиболее распространенных и универсальных методов.
+  </p>
+
+  <p>
+    Самый простой способ добавить рамку к изображению — использовать свойство <code>border</code>. 
+    Это свойство представляет собой сокращенную запись, позволяющую одновременно задать ширину, стиль и цвет рамки.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Милый кот лежит на спине."&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        img {
+          border: 2px solid red;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Это правило CSS добавляет сплошную (<code>solid</code>) красную (<code>red</code>) рамку шириной 2 пикселя (<code>2px</code>) вокруг всех элементов <code>img</code>. 
+    Вы можете настроить ширину, стиль (например, пунктирную (<code>dashed</code>), точечную (<code>dotted</code>) или двойную(<code>double</code>)) и 
+    цвет в соответствии с вашими дизайнерскими потребностями.
+  </p>
+
+  <p>
+    Если вам требуется более точный контроль над отдельными сторонами границы, вы можете использовать специальные свойства границы для каждой стороны:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Милый кот лежит на спине."&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        img {
+          border-top: 10px solid red;
+          border-right: 10px dashed green;
+          border-bottom: 10px dotted blue;
+          border-left: 10px double purple;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Это позволяет создавать уникальные стили рамок для каждой стороны изображения.
+  </p>
+
+  <p>
+    Ещё один способ создать эффект границы — использовать свойство <code>outline</code>. 
+    Хотя оно похоже на <code>border</code>, свойство <code>outline</code> не влияет на размеры или расположение элемента:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Милый кот лежит на спине."&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        img {
+          outline: 3px solid gold;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    При этом вокруг изображения создается золотой (<code>gold</code>) контур без изменения его размера или положения.
+  </p>
+
+  <p>
+    Если вы хотите создать закругленные углы на границе, вы можете использовать свойство <code>border-radius</code> в сочетании со свойством <code>border</code>:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Милый кот лежит на спине."&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        img {
+          border: 2px solid black;
+          border-radius: 10px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Помните, что эти методы можно комбинировать и настраивать для создания уникальных эффектов оформления границ. 
+    Выбор метода зависит от ваших конкретных требований к дизайну и необходимого уровня сложности.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какое свойство CSS позволяет создать границу, которая не влияет на размеры элемента?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1"><code>border</code></label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2"><code>outline</code></label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3"><code>box-shadow</code></label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4"><code>border-image</code></label>
+    </div>
+
+    <div>
+      <p>Как создать пунктирную красную рамку шириной 3 пикселя только с левой стороны изображения?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">
+        <pre>
+          <code>
+            img {
+              border: 3px dashed red left;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">
+        <pre>
+          <code>
+            img {
+              border-left: 3px dashed red;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">
+        <pre>
+          <code>
+            img {
+              left-border: 3px dashed red;
+            }
+          </code>
+        </pre>
+      </label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">
+        <pre>
+          <code>
+            img {
+              border: left 3px dashed red;
+            }
+          </code>
+        </pre>
+      </label>
+    </div>
+
+    <div>
+      <p>Какое свойство CSS вы бы использовали для скругления углов границы?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>border-style</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>border-radius</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>border-spacing</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>border-bottom</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
