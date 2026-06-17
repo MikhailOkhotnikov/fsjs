@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Создайте открытку для поста в блоге</title>
+</head>
+<body>
+  <h1>Создайте открытку для поста в блоге</h1>
+
+  <p>
+    Создайте приложение, функционально похожее на <a href="final-lab-blog-post-card.html">этот пример проекта</a>. 
+    Старайтесь не копировать пример проекта, придайте ему свой собственный стиль.
+  </p>
+
+  <p>
+    В этой лабораторной работе вы попрактикуетесь в оформлении фона и рамок, создав открытку для блога.
+  </p>
+
+  <p>
+    <strong>Цель:</strong> Выполнить приведенные ниже пользовательские истории и добиться успешного прохождения всех тестов для завершения лабораторной работы.
+  </p>
+
+  <p>Пользовательские истории:</p>
+
+  <ol>
+    <li>
+      Для размещения всех элементов карточек вам понадобится элемент <code>div</code> с классом <code>blog-post-card</code>.
+    </li>
+    <li>
+      Внутри элемента <code>.blog-post-card</code> должен находиться элемент изображения с допустимым атрибутом <code>alt</code> и текстом, а также классом <code>post-img</code>. 
+      В качестве атрибута <code>src</code> для изображения можно использовать <code>https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg</code>.
+    </li>
+    <li>
+      Внутри элемента <code>.blog-post-card</code> должен находиться <code>div</code> с классом <code>post-content</code>, содержащий следующий код:
+      <ul>
+        <li>
+          Элемент <code>h2</code> с классом <code>post-title</code> и текстом для заголовка вашей записи в блоге.
+        </li>
+        <li>
+          Элемент <code>p</code> с классом <code>post-excerpt</code> и текстом для краткого изложения вашего поста в блоге.
+        </li>
+        <li>
+          Элемент <code>a</code> с классом <code>read-more</code> и текстом <code>Читать далее</code>.
+        </li>
+      </ul>
+    </li>
+    <li>
+      Цвет фона элемента <code>body</code> следует установить на значение, отличное от белого.
+    </li>
+    <li>
+      К элементу <code>.blog-post-card</code> следует применить следующие стили:
+      <ul>
+        <li>
+          Белый фон.
+        </li>
+        <li>
+          Закругленные углы.
+        </li>
+        <li>
+          Ширина на ваш выбор.
+        </li>
+        <li>
+          Выравнивание текста по вашему выбору.
+        </li>
+      </ul>
+    </li>
+    <li>
+      Элемент <code>.post-img</code> следует оформить таким образом, чтобы изображение заполняло всю ширину карточки и имело нижнюю границу.
+    </li>
+    <li>
+      Элемент <code>.post-content</code> следует стилизовать таким образом, чтобы внутри карточки был внутренний отступ.
+    </li>
+    <li>
+      Элементы <code>.post-title</code> и <code>.post-excerpt</code> должны иметь цвет текста, отличный от цвета по умолчанию, и внешние отступы со всех сторон.
+    </li>
+    <li>
+      Элемент <code>.read-more</code>` должен быть оформлен как кнопка и содержать:
+      <ul>
+        <li>
+          Цвет текста, отличный от цвета по умолчанию.
+        </li>
+        <li>
+          Цвет фона.
+        </li>
+        <li>
+           Внешние отступы со всех сторон.
+        </li>
+        <li>
+          Внутренние отступы со всех сторон.
+        </li>
+        <li>
+          Закругленные углы.
+        </li>
+        <li>
+          Свойство <code>display</code>, установленное в значение <code>inline-block</code>.
+        </li>
+        <li>
+          Эффект наведения курсора, изменяющий цвет фона.
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>
+    <b>Примечание:</b> Обязательно подключите таблицу стилей в свой HTML-код и примените CSS-стили.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Открытка для блога&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Тесты</h2>
+
+  <ol>
+    <li>
+      У вас должен быть <code>div</code> с классом <code>blog-post-card</code>.
+    </li>
+    <li>
+      У вас должен быть элемент <code>img</code> с классом <code>post-img</code>. 
+      Убедитесь, что у вашего изображения есть атрибут <code>alt</code> и атрибут <code>src</code> с непустыми значениями.
+    </li>
+    <li>
+      У вас должен быть <code>div</code> с классом <code>post-content</code>.
+    </li>
+    <li>
+      У вас должен быть элемент <code>h2</code> с классом <code>post-title</code>. 
+      Убедитесь, что в нем есть текст, соответствующий заголовку вашего поста в блоге.
+    </li>
+    <li>
+      У вас должен быть элемент <code>p</code> с классом <code>post-excerpt</code>. 
+      Убедитесь, что он содержит текстовое содержимое, кратко описывающее содержание вашей записи в блоге.
+    </li>
+    <li>
+      У вас должен быть элемент <code>a</code> с классом <code>read-more</code>.
+    </li>
+    <li>
+      В элементе <code>.read-more</code> должен отображаться текст <code>Читать далее</code>.
+    </li>
+    <li>
+      Элемент <code>.blog-post-card</code> должен иметь свойство <code>border-radius</code> со значением (не должно быть <code>0</code> или отрицательное значение).
+    </li>
+    <li>
+      Элемент <code>.blog-post-card</code> должен иметь белый фон.
+    </li>
+    <li>
+      У элемента <code>body</code> должен быть цвет фона, отличный от белого.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.blog-post-card</code> и задать для него свойство <code>width</code>.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.blog-post-card</code> и задать для него свойство <code>text-align</code>.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.post-content</code> и задать для него свойство <code>padding</code>.
+    </li>
+    <li>
+      Элемент <code>.read-more</code> должен иметь эффект наведения курсора.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.read-more</code> и задать для него свойство <code>color</code>.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.read-more</code> и задать для него свойство <code>background-color</code>.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.read-more</code> и задать для него свойство <code>margin</code>.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.read-more</code> и задать для него свойство <code>display</code>.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.read-more</code> и задать для него свойство <code>border-radius</code>.
+    </li>
+    <li>
+      Вам нужно выбрать элемент <code>.read-more</code> и задать для него свойство <code>padding</code>.
+    </li>
+    <li>
+      Элемент <code>.post-img</code> должен занимать всю ширину карточки.
+    </li>
+    <li>
+      У элемента <code>.post-img</code> должно быть значение <code>border-bottom</code>.
+    </li>
+    <li>
+      Элементы <code>.post-title</code> и <code>.post-excerpt</code> должны иметь внешние отступы и нестандартные цвета текста.
+    </li>
+  </ol>
+
+  <p><a href="final-lab-blog-post-card.html">Проверить результат</a></p>
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>

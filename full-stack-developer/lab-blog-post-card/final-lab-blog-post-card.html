@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Финал</title>
+</head>
+<body>
+
+  <h1>Финиш</h1>
+
+  <h2>В итоге ваш код должен выглядеть следующим образом:</h2>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="ru"&gt;
+        &lt;head&gt;
+            &lt;meta charset="utf-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;title&gt;Открытка для блога&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;div class="blog-post-card"&gt;
+                &lt;img class="post-img" src="https://cdn.freecodecamp.org/curriculum/labs/cover-photo.jpg" alt="Изображение записи в блоге" /&gt;
+                &lt;div class="post-content"&gt;
+                    &lt;h2 class="post-title"&gt;Изучайте веб-разработку в 2026 году&lt;/h2&gt;
+                    &lt;p class="post-excerpt"&gt;Будьте в курсе последних тенденций в веб-разработке. Узнайте, что нового и интересного ждет нас в 2026 году&lt;/p&gt;
+                    &lt;a class="read-more" href="#"&gt;Читать далее&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          background-color: grey;
+        }
+
+        .blog-post-card {
+          background: white;
+          border-radius: 10px;
+          width: 60vh;
+          text-align: center;
+        }
+
+        .post-img {
+          width: 100%;
+          border-bottom: 2px solid black;
+        }
+
+        .post-content {
+          padding: 5px;
+        }
+
+        .post-title, .post-excerpt {
+          color: gray;
+          margin: 5px;
+          text-align: center;
+        }
+
+        .read-more {
+          display: inline-block;
+          color: grey;
+          background-color: #272733;
+          margin: 5px;
+          padding: 5px;
+          border-radius: 5px;
+          text-decoration: none;
+        }
+
+        .read-more:hover {
+          background-color: grey;
+          color: #272733;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p><a href="../index.html">На главную</a></p>
+  
+</body>
+</html>
