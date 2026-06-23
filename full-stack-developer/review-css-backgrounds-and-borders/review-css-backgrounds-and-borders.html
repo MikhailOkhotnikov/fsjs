@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Обзор Списки, ссылки, фон и границы в CSS</title>
+</head>
+<body>
+  <h1>Обзор Списки, ссылки, фон и границы в CSS</h1>
+
+  <h2>Стилизация списков</h2>
+
+  <ul>
+    <li>
+      <strong>Свойство <code>line-height</code></strong>: Это свойство используется для создания пространства между строками текста. 
+      Допустимые значения <code>line-height</code> включают ключевое слово <code>normal</code>, числа, проценты и единицы измерения длины, такие как <code>em</code>.
+    </li>
+    <li>
+      <strong>Свойство <code>list-style-type</code></strong>: это свойство используется для указания маркера элемента списка. 
+      Допустимые значения: кружок, диск или квадрат.
+    </li>
+    <p>
+      Вот пример использования свойства <code>list-style-type</code> для изменения стиля маркера списка:
+    </p>
+
+    <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Элемент 1&lt;/li&gt;
+          &lt;li&gt;Элемент 2&lt;/li&gt;
+          &lt;li&gt;Элемент 3&lt;/li&gt;
+        &lt;/ul&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        ul {
+          list-style-type: square;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+    <li>
+      <strong>Свойство <code>list-style-position</code></strong>: это свойство используется для установки положения маркера списка. 
+      Допустимы только два значения: <code>inside</code> и <code>outside</code>.
+    </li>
+    <p>
+      Вот пример, демонстрирующий разницу между <code>inside</code> и <code>outside</code>:
+    </p>
+
+    <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;ul class="inside-list"&gt;
+          &lt;li&gt;Элемент с внутренней позицией&lt;/li&gt;
+          &lt;li&gt;Элемент с внутренней позицией&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul class="outside-list"&gt;
+          &lt;li&gt;Элемент с внешней позицией&lt;/li&gt;
+          &lt;li&gt;Элемент с внешней позицией&lt;/li&gt;
+        &lt;/ul&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .inside-list {
+          list-style-position: inside;
+        }
+
+        .outside-list {
+          list-style-position: outside;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+    <li>
+      <strong>Свойство <code>list-style-image</code></strong>: это свойство используется для размещения изображения в качестве маркера элемента списка. 
+      Часто используется функция <code>url</code> со значением, указывающим на допустимое местоположение изображения.
+    </li>
+  </ul>
+
+  <h2>Разделение элементов списка с помощью внешних отступов (<code>margin</code>)</h2>
+
+  <ul>
+    <li>
+      Помимо <code>line-height</code>, в CSS можно использовать внешние отступы для увеличения расстояния между элементами списка и улучшения их читабельности.
+    </li>
+    <li>
+      Внешние отступы создают пространство за пределами каждого элемента списка (<code>li</code>), позволяя контролировать расстояние между элементами списка.
+    </li>
+    <li>
+      <code>margin-bottom</code> используется для создания пространства под каждым элементом списка. 
+      Например, <code>margin-bottom: 10px;</code> создаст отступ в 10 пикселей под каждым элементом списка.
+    </li>
+  </ul>
+
+  <p>
+    Вот пример использования свойства <code>margin-bottom</code> для разделения элементов списка:
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+        &lt;ul class="list"&gt;
+          &lt;li&gt;Элемент 1&lt;/li&gt;
+          &lt;li&gt;Элемент 2&lt;/li&gt;
+          &lt;li&gt;Элемент 3&lt;/li&gt;
+        &lt;/ul&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        .list li {
+          margin-bottom: 20px;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <h2>Оформление ссылок</h2>
+
+  <ul>
+    <li>
+      <strong>Псевдокласс (<code>pseudo-class</code>)</strong>: Это ключевое слово, добавляемое к селектору, 
+      которое позволяет выбирать элементы на основе определенного состояния. 
+      К распространенным состояниям относятся <code>:hover</code>, <code>:visited</code> и <code>:focus</code>.
+    </li>
+    <li>
+      <strong>Псевдокласс <code>:link</code></strong>: этот псевдокласс используется для оформления ссылок, которые пользователь не открывал.
+    </li>
+    <p>
+      Вот пример использования псевдокласса <code>:link</code>:
+    </p>
+    
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;a href="/"&gt;Пример ссылки&lt;/a&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          a:link {
+            color: red;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+    <li>
+      <strong>Псевдокласс <code>:visited</code></strong>: этот псевдокласс используется для оформления ссылок, которые пользователь уже посещал.
+    </li>
+    <li>
+      <strong>Псевдокласс <code>:hover</code></strong>: этот псевдокласс используется для оформления элементов, когда пользователь наводит на них курсор.
+    </li>
+    <p>
+      Вот пример использования псевдокласса <code>:hover</code>:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;a href="/"&gt;Наведите курсор на меня!&lt;/a&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          a:hover {
+            color: green;
+            text-decoration: underline;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+    <li>
+      <strong>Псевдокласс <code>:focus</code></strong>: этот псевдокласс используется для оформления элемента, когда он находится в фокусе. 
+      Например, с его помощью можно стилизовать элементы <code>input</code> или <code>select</code>, когда пользователь нажимает на них или переключает на них фокус.
+    </li>
+    <p>
+      Вот пример использования псевдокласса <code>:focus</code>:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;a href="/"&gt;Пример ссылки&lt;/a&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          a:focus {
+            outline: 2px solid orange;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+    <li>
+      <strong>Псевдокласс <code>:active</code></strong>: этот псевдокласс используется для оформления элемента, который был активирован пользователем. 
+      Например, когда пользователь нажимает на кнопку.
+    </li>
+    <p>
+      Вот пример использования псевдокласса <code>:active</code>:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;a href="/"&gt;Нажмите сюда!&lt;/a&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          a:active {
+            color: pink;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+  </ul>
+
+  <h2>Работа с фоном</h2>
+
+  <ul>
+    <li>
+      <strong>Свойство <code>background-size</code></strong>: Это свойство используется для установки размера фона элемента. 
+      Распространенные значения включают <code>cover</code>, чтобы фоновое изображение покрывало весь элемент, 
+      и <code>contain</code>, чтобы фоновое изображение помещалось внутри элемента.
+    </li>
+    <p>
+      Вот пример использования <code>background-size: cover</code>:
+    </p>
+    <pre>
+      <code>
+        &lt;style&gt;
+          body {
+            background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100px;
+          }
+        &lt;/style&gt;
+      </code>
+    </pre>
+    <p>
+      Вот пример использования свойства <code>background-size: contain</code>:
+    </p>
+    <pre>
+      <code>
+        &lt;style&gt;
+          body {
+            background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            min-height: 100px;
+          }
+        &lt;/style&gt;
+      </code>
+    </pre>
+    <li>
+      <strong>Свойство <code>background-repeat</code></strong>: Это свойство используется для определения того, как фоновые изображения должны повторяться 
+      по горизонтальной и вертикальной осям. Значение по умолчанию для <code>background-repeat</code> — <code>repeat</code>, что означает, 
+      что изображение будет повторяться как по горизонтали, так и по вертикали. Вы также можете указать, что повторения быть не должно, используя значение <code>no-repeat</code>.
+    </li>
+    <p>
+      Вот пример использования <code>background-repeat: no-repeat</code>:
+    </p>
+    <pre>
+      <code>
+        &lt;style&gt;
+          body {
+            background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            min-height: 100px;
+          }
+        &lt;/style&gt;
+      </code>
+    </pre>
+    <li>
+      <strong>Свойство <code>background-position</code></strong>: Это свойство используется для указания положения фонового изображения. 
+      Его можно задать на определенную длину, в процентах или в виде ключевых слов, 
+      таких как <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code> и <code>center</code>.
+    </li>
+    <p>
+      Вот пример использования <code>background-position</code>:
+    </p>
+    <pre>
+      <code>
+        &lt;style&gt;
+          body {
+            background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center top;
+            min-height: 100px;
+          }
+        &lt;/style&gt;
+      </code>
+    </pre>
+    <li>
+      <strong>Свойство <code>background-attachment</code></strong>: Это свойство используется для указания того, должно ли фоновое изображение прокручиваться 
+      вместе с содержимым или оставаться неподвижным. 
+      Основные значения: <code>scroll</code> (по умолчанию), при котором фоновое изображение прокручивается вместе с содержимым, 
+      и <code>fixed</code>, при котором фоновое изображение остается в том же положении на экране.
+    </li>
+    <li>
+      <strong>Свойство <code>background-image</code></strong>: Это свойство используется для установки фонового изображения элемента. 
+      Вы можете установить несколько фоновых изображений одновременно и использовать в качестве значений 
+      функции <code>url</code>, <code>radial-gradient</code> или <code>linear-gradient</code>.
+    </li>
+    <p>
+      Вот пример использования <code>background-image</code>:
+    </p>
+    <pre>
+      <code>
+        &lt;style&gt;
+          body {
+            background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+            min-height: 100px;
+          }
+        &lt;/style&gt;
+      </code>
+    </pre>
+    <li>
+      <strong>Свойство <code>background</code></strong>: Это сокращенный способ установки всех свойств фона в одном объявлении. 
+      Вот пример установки фонового изображения и установки параметра «не повторяться»: <code>background: no-repeat url("example-url-goes-here");</code>
+    </li>
+    <p>
+      Вот пример использования сокращенного свойства <code>background</code>:
+    </p>
+    <pre>
+      <code>
+        &lt;style&gt;
+          body {
+            background: center top no-repeat url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+            min-height: 100px;
+          }
+        &lt;/style&gt;
+      </code>
+    </pre>
+    <li>
+      <strong>Хорошая контрастность цветов фона и переднего плана</strong>: Чтобы текст был читабельным, важно обеспечить хорошую контрастность цветов фона и переднего плана. 
+      Согласно Руководству по обеспечению доступности веб-контента (Web Content Accessibility Guidelines, WCAG), 
+      минимальный коэффициент контрастности для обычного текста должен составлять 4,5:1, а для крупного — 3:1.
+    </li>
+  </ul>
+
+  <h2>Работа с границами</h2>
+
+  <ul>
+    <li>
+      <strong>Свойство <code>border-top</code></strong>: Это свойство используется для задания стилей верхней границы элемента. 
+      <code>border-top: 3px solid blue;</code> устанавливает сплошную синюю границу шириной 3 пикселя по верхней стороне элемента.
+    </li>
+    <li>
+      <strong>Свойство <code>border-right</code></strong>: Это свойство используется для настройки стилей правой границы элемента. 
+      <code>border-right: 2px solid red;</code> устанавливает сплошную красную границу шириной 2 пикселя с правой стороны элемента.
+    </li>
+    <li>
+      <strong>Свойство <code>border-bottom</code></strong>: это свойство используется для настройки стилей нижней границы элемента. 
+      <code>border-bottom: 1px dashed green;</code> устанавливает зеленую пунктирную границу шириной 1 пиксель по нижней стороне элемента.
+    </li>
+    <li>
+      <strong>Свойство <code>border-left</code></strong>: это свойство используется для настройки стилей левой границы элемента. 
+      <code>border-left: 4px dotted orange;</code> устанавливает пунктирную оранжевую границу шириной 4 пикселя с левой стороны элемента.
+    </li>
+    <p>
+      Вот пример использования отдельных свойств границ:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;div class="bordered-box"&gt;Коробка с разными границами&lt;/div&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          .bordered-box {
+            border-top: 3px solid blue;
+            border-right: 2px solid red;
+            border-bottom: 1px dashed green;
+            border-left: 4px dotted orange;
+            padding: 20px;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+    <li>
+      <strong>Свойство <code>border</code></strong>: сокращенное свойство для установки ширины, стиля и цвета границы элемента. 
+      <code>border: 1px solid black;</code> устанавливает сплошную черную границу шириной 1 пиксель.
+    </li>
+    <p>
+      Вот пример использования сокращенного свойства <code>border</code>:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Милый кот лежит на спине."&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          img {
+            border: 2px solid red;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+    <li>
+      <strong>Свойство <code>border-radius</code>:</strong> это свойство используется для создания скругленных углов у границы элемента.
+    </li>
+    <p>
+      Вот пример использования <code>border-radius</code>:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="Милый кот лежит на спине."&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          img {
+            border: 2px solid black;
+            border-radius: 10px;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+    <li>
+      <strong>Свойство <code>border-style</code></strong>: это свойство используется для установки стиля границы элемента. 
+      Допустимые значения: <code>solid</code>, <code>dashed</code>, <code>dotted</code> и <code>double</code>.
+    </li>
+    <p>
+      Вот пример с использованием разных значений <code>border-style</code>:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;div class="solid-border"&gt;Сплошная граница&lt;/div&gt;
+          &lt;div class="dashed-border"&gt;Пунктирная граница&lt;/div&gt;
+          &lt;div class="dotted-border"&gt;Точечная граница&lt;/div&gt;
+          &lt;div class="double-border"&gt;Двойная граница&lt;/div&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          .solid-border {
+            border: 3px solid blue;
+            margin-bottom: 10px;
+            padding: 10px;
+          }
+
+          .dashed-border {
+            border: 3px dashed red;
+            margin-bottom: 10px;
+            padding: 10px;
+          }
+
+          .dotted-border {
+            border: 3px dotted green;
+            padding: 10px;
+          }
+
+          .double-border {
+            border: 3px double blueviolet;
+            padding: 10px;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+  </ul>
+
+  <h2>Градиенты</h2>
+
+  <ul>
+    <li>
+      <strong>Функция <code>linear-gradient()</code></strong>: эта функция CSS используется для создания перехода между несколькими цветами по прямой линии.
+    </li>
+    <p>
+      Вот пример использования функции <code>linear-gradient()</code>:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;div class="linear-gradient"&gt;&lt;/div&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          .linear-gradient {
+            background: linear-gradient(to right, red, blue);
+            height: 40vh;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+    <li>
+      <strong>Функция <code>radial-gradient()</code></strong>: эта функция CSS создает изображение, которое расходится от определенной точки, 
+      например круга или эллипса, и постепенно переходит от одного цвета к другому.
+    </li>
+    <p>
+      Вот пример использования функции <code>radial-gradient()</code>:
+    </p>
+
+    <fieldset class="html chapter">
+      <legend>Файл index.html</legend>
+      <pre>
+        <code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+          &lt;div class="radial-gradient"&gt;&lt;/div&gt;
+        </code>
+      </pre>
+    </fieldset>
+
+    <fieldset class="css chapter">
+      <legend>Файл styles.css</legend>
+      <pre>
+        <code>
+          .radial-gradient {
+            background: radial-gradient(circle, red, blue);
+            height: 40vh;
+          }
+        </code>
+      </pre>
+    </fieldset>
+
+  </ul>
+
+  <h3>Назначение</h3>
+
+  <div>
+    <input type="checkbox" name="assignment" id="assignment">
+    <label for="assignment">Ознакомились с темами и понятиями, связанными с фоном и границами в CSS.</label>
+  </div>
+
+  <p><a href="../index.html">На главную</a></p>
+
+</body>
+</html>
