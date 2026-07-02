@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Какие распространенные термины в области дизайна помогут вам в общении с дизайнерами?</title>
+</head>
+<body>
+  <h1>Какие распространенные термины в области дизайна помогут вам в общении с дизайнерами?</h1>
+
+  <p>
+    <strong>ПРИМЕЧАНИЕ</strong>: В некоторых интерактивных примерах может использоваться CSS, с которым вы еще не знакомы. 
+    Не пытайтесь разобраться во всем коде. Цель этих примеров — показать вам предварительные варианты реализации этих концепций дизайна, 
+    чтобы вы лучше понимали, как все работает.
+  </p>
+
+  <p>
+    Разработчикам, возможно, придётся тесно сотрудничать с дизайнерами. Если вы понимаете базовую терминологию дизайна, у вас будет общий словарный запас, 
+    и вы сможете более активно участвовать в процессе проектирования. Это может сделать вашу работу более эффективной и привести к улучшению пользовательского опыта.
+  </p>
+
+  <p>
+    Итак, приступим. Начнем с термина <strong>макет</strong> (layout). 
+    Макет — это способ расположения визуальных элементов на странице или экране для передачи определенного сообщения. 
+    К таким элементам могут относиться текст, изображения и свободное пространство. Макет — это своего рода план дизайна. 
+    Дизайнеры должны продумать расположение, размер и иерархию каждого элемента.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css" /&gt;
+
+        &lt;header&gt;
+          &lt;div class="container"&gt;
+            &lt;h1&gt;Компаньон&lt;/h1&gt;
+            &lt;nav&gt;
+              &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Главная&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Магазин&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;О нас&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Корзина (2)&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/nav&gt;
+          &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;main&gt;
+          &lt;section class="hero"&gt;
+            &lt;h2&gt;Осенняя коллекция 2026&lt;/h2&gt;
+            &lt;p&gt;Узнайте о последних трендах&lt;/p&gt;
+            &lt;a href="#" class="btn"&gt;Купить сейчас&lt;/a&gt;
+          &lt;/section&gt;
+
+          &lt;section class="products container"&gt;
+            &lt;h3&gt;Рекомендуемые товары&lt;/h3&gt;
+            &lt;div class="product-grid"&gt;
+              &lt;div class="product-card"&gt;
+                &lt;img src="https://placehold.co/300x200" alt="Product 1" /&gt;
+                &lt;h4&gt;Товар 1&lt;/h4&gt;
+                &lt;p&gt;4 999 ₽&lt;/p&gt;
+                &lt;button&gt;Добавить в корзину&lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class="product-card"&gt;
+                &lt;img src="https://placehold.co/300x200" alt="Product 2" /&gt;
+                &lt;h4&gt;Товар 2&lt;/h4&gt;
+                &lt;p&gt;5 999 ₽&lt;/p&gt;
+                &lt;button&gt;Добавить в корзину&lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class="product-card"&gt;
+                &lt;img src="https://placehold.co/300x200" alt="Product 3" /&gt;
+                &lt;h4&gt;Товар 3&lt;/h4&gt;
+                &lt;p&gt;3 999 ₽&lt;/p&gt;
+                &lt;button&gt;Добавить в корзину&lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class="product-card"&gt;
+                &lt;img src="https://placehold.co/300x200" alt="Product 4" /&gt;
+                &lt;h4&gt;Товар 4&lt;/h4&gt;
+                &lt;p&gt;2 999 ₽&lt;/p&gt;
+                &lt;button&gt;Добавить в корзину&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+        &lt;/main&gt;
+
+        &lt;footer&gt;
+          &lt;div class="container"&gt;
+            &lt;p&gt;&copy; 2026 Компаньон. Все права защищены.&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/footer&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          line-height: 1.6;
+          background: #f9f9f9;
+          color: #333;
+        }
+
+        .container{
+          width: 90%;
+          max-width: 1200px;
+          margin: auto;
+        }
+
+        header .container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        header {
+          background: #fff;
+          border-bottom: 1px solid #ddd;
+          padding: 1rem 0;
+        }
+
+        header h1 {
+          color: #2c3e50;
+        }
+
+        nav ul {
+          list-style: none;
+          display: flex;
+          gap: 1.5rem;
+          justify-content: flex-end;
+        }
+
+        nav a {
+          text-decoration: none;
+          color: #2c3e50;
+          font-weight: 500;
+        }
+
+        .hero {
+          background-color: lightgrey;
+          text-align: center;
+          padding: 4rem 1rem;
+          margin-bottom: 2rem;
+        }
+
+        .hero h2 {
+          font-size: 2.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        .hero .btn {
+          display: inline-block;
+          margin-top: 1rem;
+          padding: 0.75rem 1.5rem;
+          background: #2c3e50;
+          color: white;
+          text-decoration: none;
+          border-radius: 4px;
+        }
+
+        .products h3 {
+          margin-bottom: 1rem;
+          font-size: 1.8rem;
+          color: #2c3e50;
+        }
+
+        .product-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 2rem;
+        }
+
+        .product-card {
+          background: white;
+          padding: 1rem;
+          border-radius: 8px;
+          text-align: center;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+          max-width: 100%;
+          border-radius: 6px;
+          margin-bottom: 1rem;
+        }
+
+        .product-card h4 {
+          margin: 0.5rem 0;
+        }
+
+        .product-card button {
+          background: #27ae60;
+          color: white;
+          border: none;
+          padding: 0.5rem 1rem;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+
+        .product-card button:hover {
+          background: #219150;
+        }
+
+        footer {
+          background: #2c3e50;
+          color: white;
+          text-align: center;
+          padding: 1rem 0;
+          margin-top: 2rem;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Термин, тесно связанный с компоновкой, — это выравнивание(alignment). Выравнивание — это то, как элементы расположены относительно друг друга. 
+    Правильное использование выравнивания помогает придать дизайну аккуратный и организованный вид. 
+    Дизайнеры создают визуальный порядок, выравнивая элементы вдоль воображаемых линий, краев или центральной точки.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css" /&gt;
+
+        &lt;div class="container"&gt;
+          &lt;section class="alignment left"&gt;
+            &lt;h2&gt;Выравнивание по левому краю&lt;/h2&gt;
+            &lt;p&gt;Этот контент выровнен по левому краю. Выравнивание по левому краю наиболее распространено для основного текста, поскольку оно соответствует естественному потоку чтения в языках с направлением чтения слева направо.&lt;/p&gt;
+          &lt;/section&gt;
+
+          &lt;section class="alignment center"&gt;
+            &lt;h2&gt;Выравнивание по центру&lt;/h2&gt;
+            &lt;p&gt;Этот контент выровнен по центру. Выравнивание по центру полезно для заголовков, подзаголовков и контента, который должен быть в центре внимания.&lt;/p&gt;
+          &lt;/section&gt;
+
+          &lt;section class="alignment right"&gt;
+            &lt;h2&gt;Выравнивание по правому краю&lt;/h2&gt;
+            &lt;p&gt;Этот контент выровнен по правому краю. Выравнивание по правому краю может использоваться для стилистического акцента или при выравнивании контента по правому краю контейнера.&lt;/p&gt;
+          &lt;/section&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          line-height: 1.6;
+          background: #f4f4f4;
+          color: #333;
+          padding: 2rem;
+        }
+
+        .container {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        .alignment {
+          background: #fff;
+          border-left: 4px solid #3498db;
+          padding: 1.5rem;
+          margin-bottom: 2rem;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+          transition: all 0.3s ease;
+        }
+
+        .alignment:hover {
+          transform: scale(1.02);
+        }
+
+        .alignment h2 {
+          margin-bottom: 0.5rem;
+          color: #3498db;
+        }
+
+        .left {
+          text-align: left;
+        }
+
+        .center {
+          text-align: center;
+        }
+
+        .right {
+          text-align: right;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Отлично. Теперь поговорим о композиции (composition). Композиция — это искусство расположения элементов для создания гармоничного дизайна. 
+    Она определяет, как такие элементы, как изображения, текст и формы, соотносятся друг с другом и вносят художественный вклад в дизайн. 
+    В то время как макет в основном фокусируется на размещении элементов, композиция также учитывает художественное воздействие, которое это размещение окажет на общий дизайн.
+  </p>
+
+  <p>
+    Композиция тесно связана с понятием баланса (balance). Баланс — это то, как визуальный вес распределяется в композиции. 
+    Дизайнеры стремятся создать равновесие посредством симметричного или асимметричного расположения элементов. Сбалансированный дизайн воспринимается как гармоничный.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;h1&gt;Композиция и баланс&lt;/h1&gt;
+
+        &lt;div class="section symmetrical"&gt;
+          &lt;div class="box-container"&gt;
+            &lt;div class="box"&gt;A&lt;/div&gt;
+            &lt;div class="box"&gt;B&lt;/div&gt;
+            &lt;div class="box"&gt;A&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="description"&gt;Симметричное равновесие – равный вес с обеих сторон.&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="section asymmetrical"&gt;
+          &lt;div class="box-container"&gt;
+            &lt;div class="box"&gt;A&lt;/div&gt;
+            &lt;div class="box"&gt;C&lt;/div&gt;
+            &lt;div class="box"&gt;B&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="description"&gt;Асимметричное равновесие – неравное, но все же гармоничное.&lt;/div&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 40px;
+          background: #f4f4f4;
+        }
+
+        h1 {
+          text-align: center;
+          margin-bottom: 40px;
+        }
+
+        .section {
+          margin-bottom: 60px;
+        }
+
+        .box-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .box {
+          width: 100px;
+          height: 100px;
+          background: #3498db;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          border-radius: 8px;
+        }
+
+        .asymmetrical .box:nth-child(2) {
+          transform: scale(1.5);
+          background: #e74c3c;
+        }
+
+        .description {
+          text-align: center;
+          margin-top: 50px;
+          font-style: italic;
+          color: #333;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Иерархия (hierarchy) — ещё одно важное понятие, которое следует знать. Иерархия устанавливает порядок важности элементов в дизайне. 
+    Речь идёт о том, чтобы наиболее важная информация была замечена в первую очередь. 
+    Визуальную иерархию можно реализовать с помощью размера, цвета, контраста, выравнивания, пустого пространства и даже типографики.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;div class="card"&gt;
+          &lt;div class="headline"&gt;Перейти на Pro&lt;/div&gt;
+          &lt;div class="subheadline"&gt;Получите больше функций и места для хранения данных.&lt;/div&gt;
+          &lt;div class="body-text"&gt;
+            План Pro предлагает расширенные инструменты, приоритетную поддержку и в 10 раз больше места для хранения данных. Идеально подходит для профессионалов и команд, стремящихся повысить свою производительность.
+          &lt;/div&gt;
+          &lt;a href="#" class="call-to-action"&gt;Попробовать бесплатно&lt;/a&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #fefefe;
+          margin: 40px;
+          line-height: 1.6;
+          color: #333;
+        }
+
+        .card {
+          max-width: 600px;
+          margin: 0 auto;
+          background: #ffffff;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          padding: 30px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .headline {
+          font-size: 32px;
+          color: #2c3e50;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .subheadline {
+          font-size: 20px;
+          color: #555;
+          margin-bottom: 20px;
+        }
+
+        .body-text {
+          font-size: 16px;
+          color: #666;
+          margin-bottom: 20px;
+        }
+
+        .call-to-action {
+          display: inline-block;
+          background-color: #3498db;
+          color: white;
+          text-decoration: none;
+          padding: 12px 24px;
+          border-radius: 5px;
+          font-weight: bold;
+          transition: background 0.3s ease;
+        }
+
+        .call-to-action:hover {
+          background-color: #2980b9;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Для создания четких различий между элементами можно использовать контраст (contrast). Контраст помогает направить внимание пользователя на то, что вы хотите подчеркнуть. 
+    Этого можно добиться с помощью изменений цвета, размера, формы, текстуры или любой другой визуальной характеристики. 
+    Сильный контраст также способствует улучшению читаемости.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;div class="container"&gt;
+          &lt;h1&gt;Контраст в дизайне&lt;/h1&gt;
+          &lt;p&gt;
+            Контраст помогает привлечь внимание к важным элементам. Он также делает контент более читабельным и визуально привлекательным.
+          &lt;/p&gt;
+
+          &lt;div class="highlight-box"&gt;
+            Этот блок выделяется благодаря сильному цветовому контрасту.
+          &lt;/div&gt;
+
+          &lt;button class="high-contrast-button"&gt;Пример кнопки&lt;/button&gt;
+
+          &lt;p class="low-contrast-text"&gt;
+            Этот текст труднее читать из-за низкого контраста с фоном.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f6f6f6;
+          margin: 40px;
+          color: #333;
+        }
+
+        .container {
+          max-width: 700px;
+          margin: 0 auto;
+          padding: 30px;
+          background-color: #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+          font-size: 36px;
+          margin-bottom: 10px;
+          color: #111;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 1.6;
+          margin-bottom: 25px;
+        }
+
+        .highlight-box {
+          background-color: #222;
+          color: #ffffff;
+          padding: 20px;
+          border-radius: 8px;
+          font-size: 20px;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .low-contrast-text {
+          color: #999999;
+          font-size: 16px;
+          margin-top: 30px;
+        }
+
+        .high-contrast-button {
+          background-color: #e74c3c;
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+          transition: background 0.3s ease;
+        }
+
+        .high-contrast-button:hover {
+          background-color: #c0392b;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Ещё один полезный термин — белое пространство (white space). Белое пространство, также известное как «негативное пространство», — это пустое пространство в дизайне. 
+    Это область, окружающая элементы. Возможно, вас удивит, что белое пространство не обязательно белое. На самом деле, это может быть пространство любого цвета или текстуры. 
+    Его цель — улучшить читаемость и усилить визуальную иерархию дизайна.
+  </p>
+
+  <fieldset class="html chapter">
+    <legend>Файл index.html</legend>
+    <pre>
+      <code>
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+
+        &lt;div class="container"&gt;
+          &lt;h1&gt;Сила свободного пространства&lt;/h1&gt;
+          &lt;p&gt;
+            Белое пространство (или негативное пространство) — это пустое пространство вокруг элементов. Это не просто «пустота» — оно даёт контенту пространство для «дыхания», улучшает концентрацию внимания и добавляет элегантности дизайну.
+          &lt;/p&gt;
+          &lt;a href="#" class="button"&gt;Узнать больше&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;div class="no-whitespace"&gt;
+          &lt;strong&gt;Без пустого пространства:&lt;/strong&gt; Этот блок имеет минимальный отступ, из-за чего контент кажется тесным, его сложнее читать и он менее привлекателен.
+        &lt;/div&gt;
+      </code>
+    </pre>
+  </fieldset>
+
+  <fieldset class="css chapter">
+    <legend>Файл styles.css</legend>
+    <pre>
+      <code>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f0f0f0;
+        }
+
+        .container {
+          max-width: 800px;
+          margin: 60px auto;
+          background-color: #ffffff;
+          padding: 60px;
+          border-radius: 10px;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+          font-size: 36px;
+          margin-bottom: 20px;
+          color: #2c3e50;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 1.8;
+          color: #555;
+          margin-bottom: 30px;
+        }
+
+        .button {
+          display: inline-block;
+          padding: 14px 28px;
+          background-color: #27ae60;
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+          border: none;
+          border-radius: 5px;
+          text-decoration: none;
+          transition: background 0.3s ease;
+        }
+
+        .button:hover {
+          background-color: #219150;
+        }
+
+        .no-whitespace {
+          background-color: #ffffff;
+          padding: 10px;
+          margin: 60px auto;
+          width: 800px;
+          box-shadow: 0 0 0 1px #ccc;
+          font-size: 16px;
+          color: #222;
+        }
+      </code>
+    </pre>
+  </fieldset>
+
+  <p>
+    Это общие концепции проектирования, с которыми вы будете часто сталкиваться, но вы также можете встретить термины проектирования, 
+    более тесно связанные с разработкой программного обеспечения.
+  </p>
+
+  <p>
+    Пользовательский интерфейс (user interface), также известный как UI, — это способ взаимодействия человека с компьютером. 
+    Пользовательский интерфейс включает в себя визуальные и интерактивные элементы, которые пользователи видят на своих экранах, такие как значки, 
+    изображения, текст, меню, ссылки и кнопки.
+  </p>
+
+  <p>
+    Пользовательский опыт (user experience), также известный как UX, — это то, как пользователи чувствуют себя при использовании продукта или услуги. 
+    Приложение с хорошо продуманным пользовательским интерфейсом интуитивно понятно, просто в использовании, эффективно, доступно и доставляет удовольствие. 
+    Пользовательский интерфейс играет ключевую роль в обеспечении максимально удобного и приятного пользовательского опыта, поэтому они тесно взаимосвязаны.
+  </p>
+
+  <p>
+    Это лишь некоторые из распространенных терминов, которые вам следует знать для общения с дизайнерами. 
+    Обладая этими знаниями, вы можете принимать более активное участие в процессе проектирования.
+  </p>
+
+  <h2>Вопросы</h2>
+
+  <form>
+    <div>
+      <p>Какой принцип дизайна относится к визуальному распределению веса в макете?</p>
+      <input type="radio" id="question1-1" name="question1" value="Option1" />
+      <label for="question1-1">Выравнивание</label>
+      <br>
+      <input type="radio" id="question1-2" name="question1" value="Option2" />
+      <label for="question1-2">Баланс</label>
+      <br>
+      <input type="radio" id="question1-3" name="question1" value="Option3" />
+      <label for="question1-3">Иерархия</label>
+      <br>
+      <input type="radio" id="question1-4" name="question1" value="Option4" />
+      <label for="question1-4">Контраст</label>
+    </div>
+
+    <div>
+      <p>Как называется пустое пространство вокруг элементов в дизайне?</p>
+      <input type="radio" id="question2-1" name="question2" value="Option1" />
+      <label for="question2-1">Макет</label>
+      <br>
+      <input type="radio" id="question2-2" name="question2" value="Option2" />
+      <label for="question2-2">Иерархия</label>
+      <br>
+      <input type="radio" id="question2-3" name="question2" value="Option3" />
+      <label for="question2-3">Белое пространство</label>
+      <br>
+      <input type="radio" id="question2-4" name="question2" value="Option4" />
+      <label for="question2-4">Контраст</label>
+    </div>
+
+    <div>
+      <p>Какой принцип проектирования определяет порядок важности элементов в дизайне?</p>
+      <input type="radio" id="question3-1" name="question3" value="Option1" />
+      <label for="question3-1"><code>Выравнивание</code></label>
+      <br>
+      <input type="radio" id="question3-2" name="question3" value="Option2" />
+      <label for="question3-2"><code>Контраст</code></label>
+      <br>
+      <input type="radio" id="question3-3" name="question3" value="Option3" />
+      <label for="question3-3"><code>Иерархия</code></label>
+      <br>
+      <input type="radio" id="question3-4" name="question3" value="Option4" />
+      <label for="question3-4"><code>Близость</code></label>
+    </div>
+
+    <br>
+
+    <div>
+      <button type="submit">Проверьте свои ответы</button>
+    </div>
+  </form>
+
+  <br>
+
+  <a href="../index.html">На главную</a>
+
+</body>
+</html>
